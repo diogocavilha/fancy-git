@@ -50,7 +50,7 @@ git_branch_status() {
         fi
     fi
 
-    echo $icon
+    echo -e $icon
 }
 
 #------------------------------------------------------------
@@ -80,19 +80,19 @@ git_parse_branch() {
         fi
     fi
 
-    echo $branch_full_info
+    echo -e $branch_full_info
 }
 
 PS1="\e]0;\[\u\]@\[\h\]\[:\] \[\w\]\[\a\]\[${debian_chroot:+($debian_chroot)}\]\[\u\]@\[\h\]\[:\]\[\w\]\[\$\] "
-PS1="$PS1\[\$(git_parse_branch)\]"
+PS1="$PS1$(git_parse_branch)"
 
 if [ "$CONFIG_PS1_COLOR" = "true" ]; then
-    PS1="$BOLD_GREEN\[\u\]$BOLD_YELLOW@$BOLD_GREEN\[\h\]$BOLD_YELLOW:\[\w\]\[\$\]$DEFAULT_COLOR \[\$(git_parse_branch)\]"
+    PS1="$BOLD_GREEN\[\u\]$BOLD_YELLOW@$BOLD_GREEN\[\h\]$BOLD_YELLOW:\[\w\]\[\$\]$DEFAULT_COLOR $(git_parse_branch)"
 fi
 
 case $CONFIG_PS1_STYLE in
     "1")
-        PS1=$PS1
+        PS1="$PS1"
     ;;
     "2")
         PS1="[\u]@[${HOSTNAME%%.*}]: \w \$(git_parse_branch) \n\\$ "
@@ -119,6 +119,6 @@ case $CONFIG_PS1_STYLE in
         fi
     ;;
     *)
-        PS1=$PS1
+        PS1="$PS1"
     ;;
 esac
