@@ -84,10 +84,10 @@ git_parse_branch() {
 }
 
 PS1="\e]0;\[\u\]@\[\h\]\[:\] \[\w\]\[\a\]\[${debian_chroot:+($debian_chroot)}\]\[\u\]@\[\h\]\[:\]\[\w\]\[\$\] "
-PS1="$PS1\$(git_parse_branch)"
+PS1="$PS1\[\$(git_parse_branch)\]"
 
 if [ "$CONFIG_PS1_COLOR" = "true" ]; then
-    PS1="$BOLD_GREEN\u$BOLD_YELLOW@$BOLD_GREEN\h$BOLD_YELLOW\\$$DEFAULT_COLOR\$(git_parse_branch)"
+    PS1="$BOLD_GREEN\[\u\]$BOLD_YELLOW@$BOLD_GREEN\[\h\]$BOLD_YELLOW:\[\w\]\[\$\]$DEFAULT_COLOR \[\$(git_parse_branch)\]"
 fi
 
 case $CONFIG_PS1_STYLE in
