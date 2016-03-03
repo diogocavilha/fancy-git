@@ -2,7 +2,7 @@
 
 ### Installing
 ```sh
-git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git && echo "source ~/.fancy-git/main.sh" >> ~/.bashrc && . ~/.bashrc
+git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git && echo ". ~/.fancy-git/main.sh" >> ~/.bashrc && . ~/.bashrc
 ```
 
 ### About

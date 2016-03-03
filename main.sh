@@ -3,7 +3,7 @@ FG_CONFIG_BRANCH_DELIMITERS[1]=")"
 FG_CONFIG_BRANCH_ICON_CHANGED="✖"   # icons: ✖, x
 FG_CONFIG_BRANCH_ICON_UNCHANGED="✔" # icons: ✔
 
-source ~/.fancy-git/aliases
+. ~/.fancy-git/aliases
 
 fg_branch_status() {
     local icon=""
