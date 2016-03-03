@@ -1,3 +1,4 @@
+alias fancygit="sh ~/.fancy-git/fancygit $1"
 alias fancy-git.update="$current_dir=$(pwd) && cd ~/.fancy-git && git pull && cd $current_dir"
 alias fancy-git.help="cat ~/.fancy-git/help"
 alias g.s="clear && git status"

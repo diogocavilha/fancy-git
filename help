@@ -1,14 +1,19 @@
-╔═╗┌─┐┌┐┌┌─┐┬ ┬  ╔═╗┬┌┬┐  ╦ ╦┌─┐┬  ┌─┐
-╠╣ ├─┤││││  └┬┘  ║ ╦│ │   ╠═╣├┤ │  ├─┘
-╚  ┴ ┴┘└┘└─┘ ┴   ╚═╝┴ ┴   ╩ ╩└─┘┴─┘┴
 
-fancy-git.update    Updates fancy-git code with the last release from github
-g.s                 git status
-g.a <file>          git add <file>
-g.d                 clear screen and git diff
-g.cm                git commit
-g.ck <file>         git checkout -- <file>
-g.l                 git log
-g.lp                git log --pretty=oneline
-g.remove.origfiles  Removes all .orig files from project
-g.force.ignore      Ignores a file even if this one has already been tracked
+ ╔═╗┌─┐┌┐┌┌─┐┬ ┬  ╔═╗┬┌┬┐  ╦ ╦┌─┐┬  ┌─┐
+ ╠╣ ├─┤││││  └┬┘  ║ ╦│ │   ╠═╣├┤ │  ├─┘
+ ╚  ┴ ┴┘└┘└─┘ ┴   ╚═╝┴ ┴   ╩ ╩└─┘┴─┘┴
+
+ fancygit -h | --help     Shows this help.
+ fancygit -v | --version  Shows the fancygit version.
+ fancygit self-update     Updates fancygit code with the last release from github.
+
+ g.s                 git status
+ g.a <file>          git add <file>
+ g.d                 clear screen and git diff
+ g.cm                git commit
+ g.ck <file>         git checkout -- <file>
+ g.l                 git log
+ g.lp                git log --pretty=oneline
+ g.remove.origfiles  Removes all .orig files from project.
+ g.force.ignore      Ignores a file even if this one has already been tracked.
+
