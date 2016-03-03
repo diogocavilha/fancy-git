@@ -17,6 +17,7 @@ As a picture is worth a thousand words...
 
 | Alias              | Action                                                     |
 | ------------------ | ---------------------------------------------------------- |
+| fancy-git.help     | Shows the fancy-git commands                               |
 | fancy-git.update   | Updates fancy-git code with the last release from github   |
 | g.s                | git status                                                 |
 | g.a                | git add [file]                                             |
