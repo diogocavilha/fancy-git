@@ -2,7 +2,7 @@
 
 ### Installing
 ```sh
-git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git && echo "source ~/.fancy-git/fancy_git.sh" >> ~/.bashrc && . ~/.bashrc
+git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git && echo "source ~/.fancy-git/main.sh" >> ~/.bashrc && . ~/.bashrc
 ```
 
 ### About
@@ -27,6 +27,7 @@ As a picture is worth a thousand words...
 | ------------------   | ---------------------------------------------------------- |
 | g.s                  | git status                                                 |
 | g.a                  | git add [file]                                             |
+| g.aa                 | git add --all                                              |
 | g.d                  | clear screen and git diff                                  |
 | g.cm                 | git commit                                                 |
 | g.ck                 | git checkout -- [file]                                     |
