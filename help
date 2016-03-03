@@ -7,13 +7,13 @@
  fancygit -v, --version  Shows the fancygit version.
  fancygit self-update    Updates fancygit code with the last release from github.
 
- g.s                 git status
- g.a <file>          git add <file>
- g.d                 clear screen and git diff
- g.cm                git commit
- g.ck <file>         git checkout -- <file>
- g.l                 git log
- g.lp                git log --pretty=oneline
- g.remove.origfiles  Removes all .orig files from project.
- g.force.ignore      Ignores a file even if this one has already been tracked.
+ gs                 git status
+ ga <file>          git add <file>
+ gd                 clear screen and git diff
+ gcm                git commit
+ gck <file>         git checkout -- <file>
+ gl                 git log
+ glp                git log --pretty=oneline
+ gremove.origfiles  Removes all .orig files from project.
+ gforce.ignore      Ignores a file even if this one has already been tracked.
 

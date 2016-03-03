@@ -24,14 +24,14 @@ As a picture is worth a thousand words...
 ### Aliases
 
 | Alias                | Description                                                |
-| ------------------   | ---------------------------------------------------------- |
-| g.s                  | git status                                                 |
-| g.a                  | git add [file]                                             |
-| g.aa                 | git add --all                                              |
-| g.d                  | clear screen and git diff                                  |
-| g.cm                 | git commit                                                 |
-| g.ck                 | git checkout -- [file]                                     |
-| g.l                  | git log                                                    |
-| g.lp                 | git log --pretty=oneline                                   |
-| g.remove.origfiles   | Removes all .orig files from project                       |
-| g.force.ignore       | Ignores a file even if this one has already been tracked   |
+| -------------------- | ---------------------------------------------------------- |
+| gs                   | git status                                                 |
+| ga                   | git add [file]                                             |
+| gaa                  | git add --all                                              |
+| gd                   | clear screen and git diff                                  |
+| gcm                  | git commit                                                 |
+| gck                  | git checkout -- [file]                                     |
+| gl                   | git log                                                    |
+| glp                  | git log --pretty=oneline                                   |
+| gremove.origfiles    | Removes all .orig files from project                       |
+| gforce.ignore        | Ignores a file even if this one has already been tracked   |
