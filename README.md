@@ -17,8 +17,8 @@ As a picture is worth a thousand words...
 
 | Command                 | Description                                                |
 | ------------------      | ---------------------------------------------------------- |
-| fancygit -h | --help    | Shows the fancygit help                                    |
-| fancygit -v | --version | Shows the fancygit version                                 |
+| fancygit -h, --help     | Shows the fancygit help                                    |
+| fancygit -v, --version  | Shows the fancygit version                                 |
 | fancygit self-update    | Updates fancygit code with the last release from github    |
 
 ### Aliases
