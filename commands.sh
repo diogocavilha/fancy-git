@@ -2,38 +2,38 @@
 
 VERSION="1.0"
 
-helpScript()
+fg_script_help()
 {
     cat ~/.fancy-git/help
 }
 
-showVersion()
+fg_show_version()
 {
     echo "v$VERSION"
     echo ""
 }
 
-selfUpdate()
+fg_self_update()
 {
-    local currentFolder=$(pwd)
+    local current_dir=$(pwd)
     cd ~/.fancy-git/ && git pull
-    cd "$currentFolder"
+    cd "$current_dir"
     echo ""
     echo " Fancy git is up-to-date."
     echo " Version: $VERSION"
     echo ""
 }
 
-notFound()
+fg_command_not_found()
 {
     echo ""
     echo "$1: Command not found."
-    helpScript
+    fg_script_help
 }
 
 case $1 in
-    "-h"|"--help") helpScript;;
-    "-v"|"--version") showVersion;;
-    "self-update") selfUpdate;;
-    *) notFound "$1";;
+    "-h"|"--help") fg_script_help;;
+    "-v"|"--version") fg_show_version;;
+    "self-update") fg_self_update;;
+    *) fg_command_not_found "$1";;
 esac
