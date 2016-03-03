@@ -3,9 +3,9 @@
  ╠╣ ├─┤││││  └┬┘  ║ ╦│ │   ╠═╣├┤ │  ├─┘
  ╚  ┴ ┴┘└┘└─┘ ┴   ╚═╝┴ ┴   ╩ ╩└─┘┴─┘┴
 
- fancygit -h | --help     Shows this help.
- fancygit -v | --version  Shows the fancygit version.
- fancygit self-update     Updates fancygit code with the last release from github.
+ fancygit -h, --help     Shows this help.
+ fancygit -v, --version  Shows the fancygit version.
+ fancygit self-update    Updates fancygit code with the last release from github.
 
  g.s                 git status
  g.a <file>          git add <file>
