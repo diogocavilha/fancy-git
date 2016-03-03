@@ -1,6 +1,4 @@
-alias fancygit="sh ~/.fancy-git/commands $1"
-alias fancy-git.update="$current_dir=$(pwd) && cd ~/.fancy-git && git pull && cd $current_dir"
-alias fancy-git.help="cat ~/.fancy-git/help"
+alias fancygit="sh ~/.fancy-git/commands.sh $1"
 alias g.s="clear && git status"
 alias g.a="git add"
 alias g.aa="git add --all"
