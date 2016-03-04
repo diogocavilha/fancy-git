@@ -36,5 +36,5 @@ As a picture is worth a thousand words...
 | gdbr \<branch-name\> | git push origin --delete \<branch-name\>           | Delete a remote branch.
 | gl                   | git log                                            | Show git log.
 | glp                  | git log --pretty=oneline                           | Show git log compact.
-| gdof                 | find . -name "*.orig" | xargs rm -rf               | Removes all .orig files from project.
+| gdof                 | find . -name "*.orig" \| xargs rm -rf              | Remove all .orig files from project.
 | gfi \<file\>         | git update-index --assume-unchanged \<file\>       | Force git to ignore a file.
