@@ -27,7 +27,7 @@ fg_self_update()
 fg_command_not_found()
 {
     echo ""
-    echo "$1: Command not found."
+    echo " $1: Command not found."
     fg_script_help
 }
 

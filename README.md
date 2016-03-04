@@ -38,3 +38,4 @@ As a picture is worth a thousand words...
 | glp                  | git log --pretty=oneline                           | Show git log compact.
 | gdof                 | find . -name "*.orig" \| xargs rm -rf              | Remove all .orig files from project.
 | gfi \<file\>         | git update-index --assume-unchanged \<file\>       | Force git to ignore a file.
+| gurl                 | link to file                                       | Show git repository URL.
