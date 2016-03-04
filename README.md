@@ -15,23 +15,26 @@ As a picture is worth a thousand words...
 
 ### Commands
 
-| Command                 | Description                                                |
-| ------------------      | ---------------------------------------------------------- |
-| fancygit -h, --help     | Shows the fancygit help                                    |
-| fancygit -v, --version  | Shows the fancygit version                                 |
-| fancygit self-update    | Updates fancygit code with the last release from github    |
+| Command                 | Description                                               |
+| ------------------      | --------------------------------------------------------- |
+| fancygit -h, --help     | Show the fancygit help                                    |
+| fancygit -v, --version  | Show the fancygit version                                 |
+| fancygit self-update    | Update fancygit code with the last release from github    |
 
 ### Aliases
 
-| Alias                | Description                                                |
-| -------------------- | ---------------------------------------------------------- |
-| gs                   | git status                                                 |
-| ga                   | git add [file]                                             |
-| gaa                  | git add --all                                              |
-| gd                   | clear screen and git diff                                  |
-| gcm                  | git commit                                                 |
-| gck                  | git checkout -- [file]                                     |
-| gl                   | git log                                                    |
-| glp                  | git log --pretty=oneline                                   |
-| gremove.origfiles    | Removes all .orig files from project                       |
-| gforce.ignore        | Ignores a file even if this one has already been tracked   |
+| Alias                | Command                                            | Description
+| -------------------- | ---------------------------------------------------|---------------------------------------------------
+| gs                   | git status                                         | Show git status.
+| ga \<file\>          | git add \<file\>                                   | Add a file in order to commit.
+| gaa                  | git add --all                                      | Add all files in order to commit.
+| gd                   | clear && git diff                                  | Clear screen and git diff
+| gcm                  | git commit                                         | Start committing.
+| gck \<file\>         | git checkout -- \<file\>                           | Rollback file changes.
+| gcb                  | git checkout -b [branch-name]                      | Create and switch to the new branch.
+| gdb                  | git branch -D [branch-name]                        | Delete a local branch.
+| gdbr \<branch-name\> | git push origin --delete \<branch-name\>           | Delete a remote branch.
+| gl                   | git log                                            | Show git log.
+| glp                  | git log --pretty=oneline                           | Show git log compact.
+| gdof                 | find . -name "*.orig" | xargs rm -rf               | Removes all .orig files from project.
+| gfi \<file\>         | git update-index --assume-unchanged \<file\>       | Force git to ignore a file.
