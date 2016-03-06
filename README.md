@@ -30,9 +30,10 @@ As a picture is worth a thousand words...
 | gaa                  | git add --all                                      | Add all files in order to commit.
 | gd                   | clear && git diff                                  | Clear screen and git diff
 | gcm                  | git commit                                         | Start committing.
+| gcmm                 | git commit -m "\<message\>"                        | Start committing with a message.
 | gck \<file\>         | git checkout -- \<file\>                           | Rollback file changes.
-| gcb                  | git checkout -b [branch-name]                      | Create and switch to the new branch.
-| gdb                  | git branch -D [branch-name]                        | Delete a local branch.
+| gcb \<branch-name\>  | git checkout -b \<branch-name\>                    | Create and switch to the new branch.
+| gdb \<branch-name\>  | git branch -D \<branch-name\>                      | Delete a local branch.
 | gdbr \<branch-name\> | git push origin --delete \<branch-name\>           | Delete a remote branch.
 | gl                   | git log                                            | Show git log.
 | glp                  | git log --pretty=oneline                           | Show git log compact.
