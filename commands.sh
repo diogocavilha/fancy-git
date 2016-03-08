@@ -22,6 +22,7 @@ fg_self_update()
     echo " Fancy git is up-to-date."
     echo " Version: $VERSION"
     echo ""
+    . ~/.bashrc
 }
 
 fg_command_not_found()
