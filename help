@@ -14,6 +14,7 @@
  gcm                  Start committing.
  gcmm "message"       Start committing with a message.
  gck <file>           Rollback file changes.
+ gckb <branch-name>   Switch to a branch.
  gcb <branch-name>    Create and switch to the new branch.
  gdb <branch-name>    Delete a local branch.
  gdbr <branch-name>   Delete a remote branch.

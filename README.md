@@ -32,6 +32,7 @@ As a picture is worth a thousand words...
 | gcm                  | git commit                                         | Start committing.
 | gcmm                 | git commit -m "\<message\>"                        | Start committing with a message.
 | gck \<file\>         | git checkout -- \<file\>                           | Rollback file changes.
+| gckb \<branch-name\> | git checkout \<branch-name\>                       | Switch to a branch.
 | gcb \<branch-name\>  | git checkout -b \<branch-name\>                    | Create and switch to the new branch.
 | gdb \<branch-name\>  | git branch -D \<branch-name\>                      | Delete a local branch.
 | gdbr \<branch-name\> | git push origin --delete \<branch-name\>           | Delete a remote branch.
