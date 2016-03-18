@@ -41,3 +41,4 @@ As a picture is worth a thousand words...
 | gdof                 | find . -name "*.orig" \| xargs rm -rf              | Remove all .orig files from project.
 | gfi \<file\>         | git update-index --assume-unchanged \<file\>       | Force git to ignore a file.
 | gurl                 | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gurl.sh)                                       | Show git repository URL.
+| guser                | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/guser.sh)                                       | Show git user information.

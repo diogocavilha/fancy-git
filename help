@@ -23,4 +23,5 @@
  gdof                 Remove all .orig files from project.
  gfi                  Ignore a file even if this one has already been tracked.
  gurl                 Show git repository URL.
+ guser                Show git user information.
 
