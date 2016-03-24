@@ -1,0 +1,16 @@
+# /etc/bash_completion.d/
+_fancygit()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts='-h --help -v --version self-update gs ga gaa gd gcm gcmm gck gckb gcb gdb gdbr gl glp gdof gfi gurl guser'
+
+    if [[ ${cur} == * ]] ; then
+    #if [ $COMP_CWORD -eq 1 ]; then
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+    fi
+}
+complete -F _fancygit fancygit
