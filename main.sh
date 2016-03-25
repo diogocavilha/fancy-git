@@ -4,6 +4,7 @@ FG_CONFIG_BRANCH_ICON_CHANGED="✖"   # icons: ✖, x
 FG_CONFIG_BRANCH_ICON_UNCHANGED="✔" # icons: ✔
 
 . ~/.fancy-git/aliases
+. ~/.fancy-git/fancygit-completion
 
 fg_branch_status() {
     local icon=""
