@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.4"
+VERSION="1.5"
 
 fg_script_help()
 {
@@ -17,12 +17,12 @@ fg_self_update()
 {
     local current_dir=$(pwd)
     cd ~/.fancy-git/ && git pull
+    . ~/.bashrc
     cd "$current_dir"
     echo ""
     echo " Fancy git is up-to-date."
     echo " Version: $VERSION"
     echo ""
-    . ~/.bashrc
 }
 
 fg_command_not_found()
