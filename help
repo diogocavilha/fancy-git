@@ -13,6 +13,8 @@
  gd                   Clear screen and git diff.
  gcm                  Start committing.
  gcmm "message"       Start committing with a message.
+ gpl                  Git pull.
+ gps                  Git push.
  gck <file>           Rollback file changes.
  gckb <branch-name>   Switch to a branch.
  gcb <branch-name>    Create and switch to the new branch.

@@ -30,7 +30,9 @@ As a picture is worth a thousand words...
 | gaa                  | git add --all                                      | Add all files in order to commit.
 | gd                   | clear && git diff                                  | Clear screen and git diff
 | gcm                  | git commit                                         | Start committing.
-| gcmm                 | git commit -m "\<message\>"                        | Start committing with a message.
+| gcmm "\<message\>"   | git commit -m "\<message\>"                        | Start committing with a message.
+| gpl                  | git pull                                           | Git pull.
+| gps                  | git push                                           | Git push.
 | gck \<file\>         | git checkout -- \<file\>                           | Rollback file changes.
 | gckb \<branch-name\> | git checkout \<branch-name\>                       | Switch to a branch.
 | gcb \<branch-name\>  | git checkout -b \<branch-name\>                    | Create and switch to the new branch.
