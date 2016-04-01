@@ -15,6 +15,8 @@
  gcmm "message"       Start committing with a message.
  gpl                  Git pull.
  gps                  Git push.
+ gplo                 Git pull from remote branch to local branch.
+ gpso                 Git push from local branch to remote branch.
  gck <file>           Rollback file changes.
  gckb <branch-name>   Switch to a branch.
  gcb <branch-name>    Create and switch to the new branch.

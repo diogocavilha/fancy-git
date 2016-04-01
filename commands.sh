@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.6"
+VERSION="1.7"
 
 fg_script_help()
 {
