@@ -33,6 +33,8 @@ As a picture is worth a thousand words...
 | gcmm "\<message\>"   | git commit -m "\<message\>"                        | Start committing with a message.
 | gpl                  | git pull                                           | Git pull.
 | gps                  | git push                                           | Git push.
+| gplo \<branch-name\> | git pull origin \<branch-name\>                    | Git pull from \<branch-name\> to current local branch.
+| gpso \<branch-name\> | git push origin \<branch-name\>                    | Git push from current local branch to \<branch-name\>.
 | gplob                | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gplob.sh)                                       | Git pull from remote branch to local branch.
 | gpsob                | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpsob.sh)                                       | Git push from local branch to remote branch.
 | gck \<file\>         | git checkout -- \<file\>                           | Rollback file changes.
