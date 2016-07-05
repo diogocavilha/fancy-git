@@ -39,6 +39,7 @@ As a picture is worth a thousand words...
 | gpsob                    | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpsob.sh)                                       | Git push from local branch to remote branch.
 | gck \<file\>             | git checkout -- \<file\>                           | Rollback file changes.
 | gckb \<branch-name\>     | git checkout \<branch-name\>                       | Switch to a branch.
+| gckbt \<branch-name\>    | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gckbt.sh)        | Switch to a branch with --track option.
 | gcb \<branch-name\>      | git checkout -b \<branch-name\>                    | Create and switch to the new branch.
 | gdb \<branch-name\>      | git branch -D \<branch-name\>                      | Delete a local branch.
 | gdbr \<branch-name\>     | git push origin --delete \<branch-name\>           | Delete a remote branch.

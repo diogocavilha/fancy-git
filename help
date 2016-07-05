@@ -21,6 +21,7 @@
  gpsob                  Git push from local branch to remote branch.
  gck <file>             Rollback file changes.
  gckb <branch-name>     Switch to a branch.
+ gckbt <branch-name>    Switch to a branch with --track option.
  gcb <branch-name>      Create and switch to the new branch.
  gdb <branch-name>      Delete a local branch.
  gdbr <branch-name>     Delete a remote branch.
