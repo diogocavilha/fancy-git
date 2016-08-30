@@ -27,7 +27,7 @@
  grb <new-branch-name>  Rename a local branch.
  grba <new-branch-name> Rename a branch (local and remote).
  gl                     Show git log.
- glp                    Show git log compact.
+ glp                    Show git log as "hash | relative time | author ==> subject".
  gdof                   Remove all .orig files from project.
  gfi                    Ignore a file even if this one has already been tracked.
  gurl                   Show git repository URL.
