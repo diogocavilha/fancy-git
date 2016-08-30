@@ -9,7 +9,8 @@ fg_script_help()
 
 fg_show_version()
 {
-    echo "v$VERSION"
+    echo "Fancy Git $VERSION"
+    echo "Copyleft (ɔ) 2016 by Diogo Alexsander Cavilha."
     echo ""
 }
 
