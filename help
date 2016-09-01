@@ -28,9 +28,12 @@
  grb <new-branch-name>  Rename a local branch.
  grba <new-branch-name> Rename a branch (local and remote).
  gl                     Show git log.
- glp                    Show git log as "hash | relative time | author ==> subject".
+ glp                    Show compact git log.
  gdof                   Remove all .orig files from project.
  gfi                    Ignore a file even if this one has already been tracked.
  gurl                   Show git repository URL.
  guser                  Show git user information.
 
+ FILTERING COMMITS
+
+ glp ["filter 1" "filter 2"... "filter 5"] It allows you to do nested filters.
