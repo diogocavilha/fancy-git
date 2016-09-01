@@ -46,7 +46,7 @@ As a picture is worth a thousand words...
 | grb \<new-branch-name\>  | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grb.sh)           | Rename current branch (local).
 | grba \<new-branch-name\> | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grba.sh)           | Rename current branch (local and remote).
 | gl                       | git log                                            | Show git log.
-| glp                      | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/glp.sh    | Show git log compact and allow you to filter results.
+| glp                      | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/glp.sh)    | Show git log compact and allow you to filter results.
 | gdof                     | find . -name "*.orig" \| xargs rm -rf              | Remove all .orig files from project.
 | gfi \<file\>             | git update-index --assume-unchanged \<file\>       | Force git to ignore a file.
 | gurl                     | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gurl.sh)                                       | Show git repository URL.
