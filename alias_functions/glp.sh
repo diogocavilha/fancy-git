@@ -31,5 +31,3 @@ if [ "$5" != "" ]; then
 fi
 
 eval $logCmd
-commitCount=$logCmd" | wc -l | xargs echo Results: "
-eval $commitCount
