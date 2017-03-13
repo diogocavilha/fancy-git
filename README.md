@@ -26,8 +26,8 @@ As a picture is worth a thousand words...
 | Alias                    | Command                                            | Description
 | ------------------------ | ---------------------------------------------------|---------------------------------------------------
 | gs                       | git status                                         | Show git status.
-| ga \<file\> ...          | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/ga.sh                                   | Add a file in order to commit.
-| gaa                      | git add --all                                      | Add all files in order to commit.
+| ga \<file\> ...          | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/ga.sh)                                   | Add a file in order to commit.
+| gaa                      | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gaa.sh)                                      | Add all files in order to commit.
 | gd                       | clear && git diff                                  | Clear screen and git diff
 | gcm                      | git commit                                         | Start committing.
 | gcmm "\<message\>"       | git commit -m "\<message\>"                        | Start committing with a message.
