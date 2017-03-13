@@ -1,6 +1,6 @@
 alias fancygit="sh ~/.fancy-git/commands.sh $1"
 alias gs="clear && git status"
-alias ga="git add"
+alias ga="sh ~/.fancy-git/alias_functions/ga.sh"
 alias gaa="git add --all"
 alias gd="clear && git diff"
 alias gcm="git commit -v"
