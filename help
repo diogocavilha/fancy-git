@@ -8,7 +8,7 @@
  fancygit self-update    Update fancygit code with the last release from github.
 
  gs                         Show git status.
- ga <file> [<other_file>]   Add a file(s) in order to commit.
+ ga <file> [<other_file>]   Add files in order to commit.
  gaa                        Add all files in order to commit.
  gd                         Clear screen and git diff.
  gcm                        Start committing.
@@ -17,8 +17,8 @@
  gps                        Git push.
  gplo <branch-name>         Git pull from <branch-name> to current local branch.
  gpso <branch-name>         Git push from current local branch to <branch-name>.
- gplob                      Git pull from remote branch to local branch.
- gpsob                      Git push from local branch to remote branch.
+ gplob                      Git pull from remote current branch to local current branch.
+ gpsob                      Git push from local current branch to remote current branch.
  gck <file>                 Rollback file changes.
  gckb <branch-name>         Switch to a branch.
  gckbt <branch-name>        Switch to a branch with --track option.
