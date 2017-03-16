@@ -19,7 +19,7 @@
  gpso <branch-name>         Git push from current local branch to <branch-name>.
  gplob                      Git pull from remote current branch to local current branch.
  gpsob                      Git push from local current branch to remote current branch.
- gck <file>                 Rollback file changes.
+ gck <file> [<other_file>]  Rollback file changes.
  gckb <branch-name>         Switch to a branch.
  gckbt <branch-name>        Switch to a branch with --track option.
  gcb <branch-name>          Create and switch to the new branch.
