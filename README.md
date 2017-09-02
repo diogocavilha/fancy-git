@@ -51,3 +51,9 @@ As a picture is worth a thousand words...
 | gfi \<file\>             | git update-index --assume-unchanged \<file\>       | Force git to ignore a file.
 | gurl                     | Show git repository URL. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gurl.sh)                                       | Show git repository URL.
 | guser                    | Show git user information. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/guser.sh)                                       | Show git user information.
+
+### Donation
+
+```
+1Na7pB6xMYZvH9ast7aP1rhdG9J5LEXd5C
+```
