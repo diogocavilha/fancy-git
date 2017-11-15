@@ -15,7 +15,7 @@ fg_show_version() {
 fg_self_update() {
     local current_dir
     current_dir=$(pwd)
-    cd ~/.fancy-git/ && git pull
+    cd ~/.fancy-git/ && git pull origin powerline-style
     . ~/.bashrc
     cd "$current_dir" || return
     echo ""
