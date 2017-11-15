@@ -1,33 +1,30 @@
 #!/bin/bash
 
-VERSION="3.1"
+fg_version="3.1"
 
-fg_script_help()
-{
+fg_script_help() {
     cat ~/.fancy-git/help
 }
 
-fg_show_version()
-{
-    echo "Fancy Git $VERSION"
-    echo "Copyleft (ɔ) 2016 by Diogo Alexsander Cavilha."
+fg_show_version() {
+    echo "Fancy Git $fg_version"
+    echo "Copyleft (ɔ) 2016 by Diogo Alexsander Cavilha. <diogocavilha@gmail.com>"
     echo ""
 }
 
-fg_self_update()
-{
-    local current_dir=$(pwd)
+fg_self_update() {
+    local current_dir
+    current_dir=$(pwd)
     cd ~/.fancy-git/ && git pull
     . ~/.bashrc
-    cd "$current_dir"
+    cd "$current_dir" || return
     echo ""
     echo " Fancy git is up-to-date."
-    echo " Version: $VERSION"
+    echo " Version: $fg_version"
     echo ""
 }
 
-fg_command_not_found()
-{
+fg_command_not_found() {
     echo ""
     echo " $1: Command not found."
     fg_script_help
