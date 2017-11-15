@@ -21,6 +21,7 @@ background_path="$bg_blue"
 background_user_symbol="$bg_dark_gray"
 
 separator=""
+branch_icon=""
 
 s_darkgray_bgblue="${dark_gray}${bg_blue}${separator}${bg_none}${none}"
 s_blue_bgdarkgray="${blue}${bg_dark_gray}${separator}${bg_none}${none}${bg_none}"
@@ -53,7 +54,7 @@ fg_prompt_builder() {
     if [ "$branch_name" != "" ]
     then
         PS1=$PS1"${background_user_symbol}${bold}${white} \$ ${none}${bold_none}${bg_none}${none}"
-        PS1=$PS1"${branch} ${branch_name} ${branch_end} "
+        PS1=$PS1"${branch} ${branch_icon} ${branch_name} ${branch_end} "
         return
     fi
 
