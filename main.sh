@@ -62,4 +62,4 @@ fg_prompt_builder() {
 
 fg_prompt_builder
 
-PROMPT_COMMAND+="fg_prompt_builder"
+PROMPT_COMMAND="fg_prompt_builder"
