@@ -8,6 +8,8 @@
  fancygit -h, --help     Show this help.
  fancygit -v, --version  Show the fancygit version.
  fancygit self-update    Update fancygit code with the last release from github.
+ fancygit wow            Change to powerline style. Bear in mind that it's not really powerline, just a color scheme.
+ fancygit default        Change to default fancy git style.
 
  gs                         Show git status.
  ga <file> [<other_file>]   Add files in order to commit.
