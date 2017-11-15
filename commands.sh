@@ -42,10 +42,16 @@ fg_change_to_default_style()
     echo ""
 }
 
+fg_install_fonts() {
+    cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
+    fc-cache -fv
+}
+
 case $1 in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
     "self-update") fg_self_update;;
     "default") fg_change_to_default_style;;
+    "configure-fonts") fg_install_fonts;;
     *) fg_command_not_found "$1";;
 esac
