@@ -6,12 +6,14 @@ fancygit_prompt_builder() {
     local separator
     local branch_icon
     local is_git_repo
+    local has_untracked_files
 
     # Git info
     local branch_name
     local branch_status
     local staged_files
     local git_stash
+    local git_untracked_files
 
     # Colors
     local none
@@ -57,12 +59,14 @@ fancygit_prompt_builder() {
     branch_icon=""
     is_git_repo=""
     has_git_stash=" "
+    has_untracked_files=" "
 
     # Git info
     branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
     branch_status=$(git status -s 2> /dev/null)
     staged_files=$(git diff --name-only --cached 2> /dev/null)
     git_stash=$(git stash list 2> /dev/null)
+    git_untracked_files=$(git ls-files --others --exclude-standard 2> /dev/null)
 
     # Colors
     none="\\[\\e[39m\\]"
@@ -123,13 +127,18 @@ fancygit_prompt_builder() {
         has_git_stash=""
     fi
 
+    if [ "$git_untracked_files" = "" ]
+    then
+        has_untracked_files=""
+    fi
+
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
     prompt_path="${path}${bold}${white} \\w ${path_end}${s_blue}"
 
     if [ "$branch_name" != "" ]
     then
-        prompt_path="${path_git}${has_git_stash} \\w ${path_end}"
+        prompt_path="${path_git}${has_git_stash}${has_untracked_files} \\w ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
         PS1="${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
         return
