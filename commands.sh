@@ -43,6 +43,7 @@ fg_change_to_default_style()
 }
 
 fg_install_fonts() {
+    mkdir ~/.fonts
     cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
     fc-cache -fv
 }
