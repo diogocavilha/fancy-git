@@ -15,11 +15,21 @@ As a picture is worth a thousand words...
 
 ### Commands
 
-| Command                 | Description                                               |
-| ------------------      | --------------------------------------------------------- |
-| fancygit -h, --help     | Show the fancygit help                                    |
-| fancygit -v, --version  | Show the fancygit version                                 |
-| fancygit self-update    | Update fancygit code with the last release from github    |
+| Command                 | Description                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------- |
+| fancygit -h, --help     | Show the fancygit help                                                                       |
+| fancygit -v, --version  | Show the fancygit version                                                                    |
+| fancygit self-update    | Update fancygit code with the last release from github                                       |
+| fancygit wow            | Change to powerline style. Bear in mind that it's not really powerline, just a color scheme. |
+
+### Installing font
+
+If you are using the `wow` mode, probably the icons will not be rendered properly.
+In this case, you can run `fancygit configure-fonts`.
+
+This command does not exist when you are using the `default` fancy-git mode.
+
+Once you are using the `wow` mode and you want to use the `default` mode, just run `fancygit default`.
 
 ### Aliases
 
