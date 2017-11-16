@@ -3,12 +3,14 @@
  ╠╣ ├─┤││││  └┬┘  ║ ╦│ │   ╠═╣├┤ │  ├─┘
  ╚  ┴ ┴┘└┘└─┘ ┴   ╚═╝┴ ┴   ╩ ╩└─┘┴─┘┴
  Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
- Since: 02.28.2016
+ Date: 02.28.2016
 
  fancygit -h, --help     Show this help.
  fancygit -v, --version  Show the fancygit version.
  fancygit self-update    Update fancygit code with the last release from github.
  fancygit wow            Change to powerline style. Bear in mind that it's not really powerline, just a color scheme.
+
+ ALIASES
 
  gs                         Show git status.
  ga <file> [<other_file>]   Add files in order to commit.
