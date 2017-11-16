@@ -10,6 +10,8 @@ fancygit_prompt_builder() {
     # Git info
     local branch_name
     local branch_status
+    local staged_files
+    local git_stash
 
     # Colors
     local none
@@ -27,6 +29,7 @@ fancygit_prompt_builder() {
     local white
     local light_yellow
     local light_magenta
+    local light_green
 
     # Separator styles
     local s_yellow
@@ -53,10 +56,13 @@ fancygit_prompt_builder() {
     separator=""
     branch_icon=""
     is_git_repo=""
+    has_git_stash=" "
 
     # Git info
     branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
     branch_status=$(git status -s 2> /dev/null)
+    staged_files=$(git diff --name-only --cached 2> /dev/null)
+    git_stash=$(git stash list 2> /dev/null)
 
     # Colors
     none="\\[\\e[39m\\]"
@@ -65,6 +71,7 @@ fancygit_prompt_builder() {
     bg_none="\\[\\e[49m\\]"
     bg_dark_gray="\\[\\e[100m\\]"
     bg_light_yellow="\\[\\e[103m\\]"
+    bg_light_green="\\[\\e[102m\\]"
     bg_white="\\[\\e[107m\\]"
     bg_blue="\\[\\e[44m\\]"
     bg_light_magenta="\\[\\e[105m\\]"
@@ -74,13 +81,16 @@ fancygit_prompt_builder() {
     white="\\[\\e[97m\\]"
     light_yellow="\\[\\e[93m\\]"
     light_magenta="\\[\\e[95m\\]"
+    light_green="\\[\\e[92m\\]"
 
     # Separator styles
     s_darkgray_bglightmagenta="${dark_gray}${bg_light_magenta}${separator}${bg_none}${none}"
     s_lightmagenta_bgblue="${light_magenta}${bg_blue}${separator}${bg_none}${none}"
     s_blue_bgyellow="${blue}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
+    s_blue_bglightgreen="${blue}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
     s_blue_bgwhite="${blue}${bg_white}${separator}${bg_none}${none}${bg_none}"
     s_yellow="${light_yellow}${separator}${none}"
+    s_green="${light_green}${separator}${none}"
     s_white="${white}${separator}${none}"
     s_blue="${blue}${separator}${none}"
 
@@ -102,13 +112,24 @@ fancygit_prompt_builder() {
         branch_end="${bg_none}${bold_none}${s_yellow}"
     fi
 
+    if [ "$staged_files" != "" ]
+    then
+        branch="${s_blue_bglightgreen}${bg_light_green}${black}${bold}"
+        branch_end="${bg_none}${bold_none}${s_green}"
+    fi
+
+    if [ "$git_stash" = "" ]
+    then
+        has_git_stash=""
+    fi
+
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
     prompt_path="${path}${bold}${white} \\w ${path_end}${s_blue}"
 
     if [ "$branch_name" != "" ]
     then
-        prompt_path="${path_git} \\w ${path_end}"
+        prompt_path="${path_git}${has_git_stash} \\w ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
         PS1="${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
         return
