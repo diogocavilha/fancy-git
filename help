@@ -5,11 +5,13 @@
  Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
  Date: 02.28.2016
 
- fancygit -h, --help     Show this help.
- fancygit -v, --version  Show the fancygit version.
- fancygit self-update    Update fancygit code with the last release from github.
- fancygit wow            Change to powerline style. Bear in mind that it's not really powerline, just a color scheme.
-
+ fancygit -h, --help        Show this help.
+ fancygit -v, --version     Show the fancygit version.
+ fancygit self-update       Update fancygit code with the last release from github.
+ fancygit simple            Change to default fancy git style.
+ fancygit wow               Change to powerline style. Bear in mind that it's not really powerline, just a color scheme.
+ fancygit configure-fonts   Install font in order to render icons properly.
+ 
  ALIASES
 
  gs                         Show git status.

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-fg_version="3.1"
+fg_version="3.2"
 
 fg_script_help() {
     cat ~/.fancy-git/help
@@ -30,11 +30,11 @@ fg_command_not_found() {
     fg_script_help
 }
 
-fg_change_to_powerline_style()
+fg_change_to_simple_style()
 {
     local current_dir
     current_dir=$(pwd)
-    cd ~/.fancy-git/ && git checkout powerline-style
+    cd ~/.fancy-git/ && git checkout simple
     . ~/.bashrc
     cd "$current_dir" || return
     echo ""
@@ -42,10 +42,18 @@ fg_change_to_powerline_style()
     echo ""
 }
 
+fg_install_fonts() {
+    mkdir ~/.fonts
+    cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
+    fc-cache -fv
+}
+
 case $1 in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
     "self-update") fg_self_update;;
+    "simple") fg_change_to_simple_style;;
+    "configure-fonts") fg_install_fonts;;
     "wow") fg_change_to_powerline_style;;
     *) fg_command_not_found "$1";;
 esac
