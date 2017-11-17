@@ -75,7 +75,7 @@ fancygit_prompt_builder() {
     git_stash=$(git stash list 2> /dev/null)
     git_untracked_files=$(git ls-files --others --exclude-standard 2> /dev/null)
     git_changed_files=$(git ls-files -m 2> /dev/null)
-    git_has_no_pushed_commits=$(git log origin..HEAD 2> /dev/null)
+    git_has_no_pushed_commits=$(git log origin/$branch_name..HEAD 2> /dev/null)
 
     # Colors
     none="\\[\\e[39m\\]"
