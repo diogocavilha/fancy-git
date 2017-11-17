@@ -10,6 +10,11 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
 ```
 
+### Uninstalling on MAC OS
+```sh
+curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall_mac.sh | sh
+```
+
 ### After installing
 
 1. Change your terminal font to "SourceCodePro+Powerline+Awesome+Regular". (It's necessary for rendering the icons properly)
