@@ -5,7 +5,7 @@
 #
 # Fancygit installer.
 
-fg_uname=`uname`
+fg_uname=$(uname)
 
 if [[ "$fg_uname" = "Linux" ]]; then
     sed -i '/. ~\/.fancy-git\/prompt.sh/d' ~/.bashrc
