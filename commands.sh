@@ -48,12 +48,16 @@ fg_install_fonts() {
     fc-cache -fv
 }
 
+fg_fancygit_reload() {
+    . ~/.bashrc
+}
+
 case $1 in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
     "self-update") fg_self_update;;
     "simple") fg_change_to_simple_style;;
     "configure-fonts") fg_install_fonts;;
-    "wow") fg_change_to_powerline_style;;
+    "reload") fg_fancygit_reload;;
     *) fg_command_not_found "$1";;
 esac
