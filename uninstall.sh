@@ -7,13 +7,11 @@
 
 fg_uname=`uname`
 
-if [[ "$fg_uname" = "Linux" ]]
-then
+if [[ "$fg_uname" = "Linux" ]]; then
     sed -i '/. ~\/.fancy-git\/prompt.sh/d' ~/.bashrc
 fi
 
-if [[ "$fg_uname" = "Darwin" ]]
-then
+if [[ "$fg_uname" = "Darwin" ]]; then
     sed -i '' '/. ~\/.fancy-git\/prompt.sh/d' ~/.bashrc
 fi
 
