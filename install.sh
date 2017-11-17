@@ -6,6 +6,8 @@
 # Fancygit installation script.
 
 git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git
+cp -f ~/.bashrc ~/.bashrc.backup
+echo "" >> .bashrc
 echo ". ~/.fancy-git/main.sh" >> ~/.bashrc
 . ~/.bashrc
 
