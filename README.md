@@ -1,6 +1,6 @@
 # Fancy Git
 
-### Installing
+### Installing (Linux and MAC OS)
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
@@ -26,6 +26,12 @@ If you can't find the font, it's still possible to install it manually by runnin
 
 As a picture is worth a thousand words...
 
+Default mode
+
+> Images soon
+
+Simple mode
+
 ![001](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/001.png)
 ![002](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/002.png)
 ![003](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/003.png)
@@ -37,7 +43,8 @@ As a picture is worth a thousand words...
 | fancygit -h, --help     | Show the fancygit help                                                                       |
 | fancygit -v, --version  | Show the fancygit version                                                                    |
 | fancygit self-update    | Update fancygit code with the last release from github                                       |
-| fancygit wow            | Change to powerline style. Bear in mind that it's not really powerline, just a color scheme. |
+| fancygit simple         | Change to simple mode.                                                                       |
+| fancygit default        | Change to the colored mode.                                                                  |
 
 ### Git suggested colors
 
