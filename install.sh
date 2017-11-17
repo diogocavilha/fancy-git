@@ -9,5 +9,10 @@ git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git
 cp -f ~/.bashrc ~/.bashrc.backup
 echo "" >> ~/.bashrc
 echo ". ~/.fancy-git/prompt.sh" >> ~/.bashrc
+
+mkdir ~/.fonts
+cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
+fc-cache -fv
+
 . ~/.bashrc
 
