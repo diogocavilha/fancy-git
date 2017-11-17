@@ -15,7 +15,7 @@ fg_show_version() {
 fg_self_update() {
     local current_dir
     current_dir=$(pwd)
-    cd ~/.fancy-git/ && git pull origin powerline-style
+    cd ~/.fancy-git/ && git pull
     . ~/.bashrc
     cd "$current_dir" || return
     echo ""
@@ -30,11 +30,11 @@ fg_command_not_found() {
     fg_script_help
 }
 
-fg_change_to_default_style()
+fg_change_to_simple_style()
 {
     local current_dir
     current_dir=$(pwd)
-    cd ~/.fancy-git/ && git checkout master
+    cd ~/.fancy-git/ && git checkout simple
     . ~/.bashrc
     cd "$current_dir" || return
     echo ""
@@ -52,7 +52,8 @@ case $1 in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
     "self-update") fg_self_update;;
-    "default") fg_change_to_default_style;;
+    "simple") fg_change_to_simple_style;;
     "configure-fonts") fg_install_fonts;;
+    "wow") fg_change_to_powerline_style;;
     *) fg_command_not_found "$1";;
 esac
