@@ -42,6 +42,18 @@ fg_change_to_simple_style()
     echo ""
 }
 
+fg_change_to_default_style()
+{
+    local current_dir
+    current_dir=$(pwd)
+    cd ~/.fancy-git/ && git checkout master
+    . ~/.bashrc
+    cd "$current_dir" || return
+    echo ""
+    echo " If you cannot see any changes yet, please restart the terminal."
+    echo ""
+}
+
 fg_install_fonts() {
     mkdir ~/.fonts
     cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
@@ -57,6 +69,7 @@ case $1 in
     "-v"|"--version") fg_show_version;;
     "self-update") fg_self_update;;
     "simple") fg_change_to_simple_style;;
+    "default") fg_change_to_default_style;;
     "configure-fonts") fg_install_fonts;;
     "reload") fg_fancygit_reload;;
     *) fg_command_not_found "$1";;

@@ -8,9 +8,10 @@
  fancygit -h, --help        Show this help.
  fancygit -v, --version     Show the fancygit version.
  fancygit self-update       Update fancygit code with the last release from github.
- fancygit simple            Change to default fancy git style.
- fancygit wow               Change to powerline style. Bear in mind that it's not really powerline, just a color scheme.
+ fancygit simple            Change prompt to simple mode.
+ fancygit defautl           Change prompt to default (colored) mode.
  fancygit configure-fonts   Install font in order to render icons properly.
+ fancygit reload            Reload de ~/.bashrc file.
  
  ALIASES
 
