@@ -31,6 +31,23 @@ This command does not exist when you are using the `default` fancy-git mode.
 
 Once you are using the `wow` mode and you want to use the `default` mode, just run `fancygit default`.
 
+### Git suggested colors
+
+```bash
+[color]
+    ui = auto
+[color "diff"]
+    meta = cyan bold
+    old = magenta bold
+    new = green bold
+[color "status"]
+    added = green bold
+    changed = yellow
+    untracked = cyan
+```
+
+I suggest you to use this scheme color because fancygit will paint the background branch according to the current repo status.
+
 ### Aliases
 
 | Alias                    | Command                                            | Description
