@@ -17,6 +17,7 @@ fancygit_prompt_builder() {
     local git_stash
     local git_untracked_files
     local git_changed_files
+    local git_has_no_pushed_commits
 
     # Colors
     local none
@@ -65,6 +66,7 @@ fancygit_prompt_builder() {
     has_untracked_files=" "
     has_changed_files="  "
     has_added_files="  "
+    has_no_pushed_commits="  "
 
     # Git info
     branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
@@ -73,6 +75,7 @@ fancygit_prompt_builder() {
     git_stash=$(git stash list 2> /dev/null)
     git_untracked_files=$(git ls-files --others --exclude-standard 2> /dev/null)
     git_changed_files=$(git ls-files -m 2> /dev/null)
+    git_has_no_pushed_commits=$(git log origin..HEAD 2> /dev/null)
 
     # Colors
     none="\\[\\e[39m\\]"
@@ -148,13 +151,18 @@ fancygit_prompt_builder() {
         has_changed_files=""
     fi
 
+    if [ "$git_has_no_pushed_commits" = "" ]
+    then
+        has_no_pushed_commits=""
+    fi
+
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
     prompt_path="${path}${bold}${white} \\w ${path_end}${s_blue}"
 
     if [ "$branch_name" != "" ]
     then
-        prompt_path="${path_git}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"
+        prompt_path="${path_git}${has_no_pushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
         PS1="${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
         return
