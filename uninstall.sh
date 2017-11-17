@@ -5,6 +5,6 @@
 #
 # Fancygit installer.
 
-sed -i ',. ~/.fancy-git/prompt.sh,d' ~/.bashrc
+sed -i '/. ~\/.fancy-git\/prompt.sh/d' ~/.bashrc
 rm -rf ~/.fancy-git
 
