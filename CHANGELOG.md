@@ -12,3 +12,7 @@
 - Add "icons meaning" session on help.
 - Change "self-update" command to "update".
 - Remove "reload" command.
+
+### v4.0.1
+
+- Add pagination to the help.

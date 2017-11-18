@@ -3,7 +3,7 @@
 . ~/.fancy-git/version.sh
 
 fg_script_help() {
-    sh ~/.fancy-git/help.sh
+    sh ~/.fancy-git/help.sh | less
 }
 
 fg_show_version() {
