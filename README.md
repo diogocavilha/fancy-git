@@ -1,18 +1,15 @@
 # Fancy Git
 
+That's a prompt changer to show a few cool git informations about your repository on terminal.
+
 ### Installing (Linux and MAC OS)
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
-### Uninstalling on Linux
+### Uninstalling (Linux and MAC OS)
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
-```
-
-### Uninstalling on MAC OS
-```sh
-curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall_mac.sh | sh
 ```
 
 ### After installing
@@ -38,13 +35,14 @@ Simple mode
 
 ### Commands
 
-| Command                 | Description                                                                                  |
-| ----------------------- | -------------------------------------------------------------------------------------------- |
-| fancygit -h, --help     | Show the fancygit help                                                                       |
-| fancygit -v, --version  | Show the fancygit version                                                                    |
-| fancygit self-update    | Update fancygit code with the last release from github                                       |
-| fancygit simple         | Change to simple mode.                                                                       |
-| fancygit default        | Change to the colored mode.                                                                  |
+| Command                  | Description                                                                                  |
+| ------------------------ | -------------------------------------------------------------------------------------------- |
+| fancygit -h, --help      | Show this help.
+| fancygit -v, --version   | Show the fancygit version.
+| fancygit self-update     | Update fancygit code with the last release from github.
+| fancygit simple          | Change prompt to simple mode.
+| fancygit defautl         | Change prompt to default (colored) mode.
+| fancygit configure-fonts | Install font in order to render icons properly.                                                                 |
 
 ### Git suggested colors
 

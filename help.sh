@@ -1,18 +1,28 @@
+#!/bin/bash
 
- ╔═╗┌─┐┌┐┌┌─┐┬ ┬  ╔═╗┬┌┬┐  ╦ ╦┌─┐┬  ┌─┐
- ╠╣ ├─┤││││  └┬┘  ║ ╦│ │   ╠═╣├┤ │  ├─┘
- ╚  ┴ ┴┘└┘└─┘ ┴   ╚═╝┴ ┴   ╩ ╩└─┘┴─┘┴
- Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
- Date: 02.28.2016
+. ~/.fancy-git/version.sh
+
+echo " Fancy Git v$FANCYGIT_VERSION by Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+ Prompt changer to show a few cool git informations about your repository on terminal.
+
+ COMMANDS
 
  fancygit -h, --help        Show this help.
  fancygit -v, --version     Show the fancygit version.
- fancygit self-update       Update fancygit code with the last release from github.
+ fancygit update            Update fancygit code with the last release from github.
  fancygit simple            Change prompt to simple mode.
  fancygit defautl           Change prompt to default (colored) mode.
  fancygit configure-fonts   Install font in order to render icons properly.
- fancygit reload            Reload de ~/.bashrc file.
- 
+
+ ICONS MEANING
+
+    = The current directory is a git repository.
+    = There are untracked files.
+    = There are modified files.
+    = There are added files waiting to be committed.
+    = There are stashes.
+    = There are commits waiting to be pushed.
+
  ALIASES
 
  gs                         Show git status.
@@ -20,7 +30,7 @@
  gaa                        Add all files in order to commit.
  gd                         Clear screen and git diff.
  gcm                        Start committing.
- gcmm "message"             Start committing with a message.
+ gcmm \"message\"             Start committing with a message.
  gpl                        Git pull.
  gps                        Git push.
  gplo <branch-name>         Git pull from <branch-name> to current local branch.
@@ -44,4 +54,9 @@
 
  FILTERING COMMITS
 
- glp ["filter 1" "filter 2"... "filter 5"] It allows you to do nested filters.
+ glp [\"filter 1\" \"filter 2\"... \"filter 5\"] It allows you to do nested filters.
+
+ By: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+ Date: 02.28.2016
+ Source code available at: <https://github.com/diogocavilha/fancy-git>
+"
