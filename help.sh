@@ -2,7 +2,9 @@
 
 . ~/.fancy-git/version.sh
 
-echo " Fancy Git v$FANCYGIT_VERSION by Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+fg_current_year=$(date +%Y)
+
+echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cavilha <diogocavilha@gmail.com>.
  Prompt changer to show a few cool git informations about your repository on terminal.
 
  COMMANDS
