@@ -25,7 +25,12 @@ As a picture is worth a thousand words...
 
 Default mode
 
-> Images soon
+![001](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_001.png)
+![002](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_002.png)
+![003](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_003.png)
+![004](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_004.png)
+![005](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_005.png)
+![006](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_006.png)
 
 Simple mode
 
