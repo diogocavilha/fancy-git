@@ -1,4 +1,4 @@
-![logo](https://github.com/diogocavilha/fancy-git/blob/master/logo.png)
+![logo](https://github.com/diogocavilha/fancy-git/blob/master/images/logo.png)
 
 That's a prompt changer to show a few cool git informations about your repository on terminal.
 
@@ -25,13 +25,13 @@ As a picture is worth a thousand words...
 
 **Default mode**
 
-![001](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_001.png)
-![002](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_002.png)
-![003](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_003.png)
-![004](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_004.png)
-![005](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_005.png)
-![006](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_006.png)
-![007](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_007.png)
+![001](https://github.com/diogocavilha/fancy-git/blob/master/images/default_001.png)
+![002](https://github.com/diogocavilha/fancy-git/blob/master/images/default_002.png)
+![003](https://github.com/diogocavilha/fancy-git/blob/master/images/default_003.png)
+![004](https://github.com/diogocavilha/fancy-git/blob/master/images/default_004.png)
+![005](https://github.com/diogocavilha/fancy-git/blob/master/images/default_005.png)
+![006](https://github.com/diogocavilha/fancy-git/blob/master/images/default_006.png)
+![007](https://github.com/diogocavilha/fancy-git/blob/master/images/default_007.png)
 
 > In case you are in doubt about what some icon means, you can type `fancygit -h` or `fancygit --help`.
 
@@ -39,9 +39,9 @@ As a picture is worth a thousand words...
 
 In order to change to the **simple mode** you can type `fancygit simple`. And if you want to return to the **default mode** (colored), you can type `fancygit default`.
 
-![001](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/001.png)
-![002](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/002.png)
-![003](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/003.png)
+![001](https://github.com/diogocavilha/fancy-git/blob/master/images/001.png)
+![002](https://github.com/diogocavilha/fancy-git/blob/master/images/002.png)
+![003](https://github.com/diogocavilha/fancy-git/blob/master/images/003.png)
 
 ### Commands
 
