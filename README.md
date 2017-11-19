@@ -37,6 +37,10 @@ As a picture is worth a thousand words...
 
 **Simple mode**
 
+If you're running it on a server and you don't want to be so "fancy", you can choose to use the simple mode.
+
+> Once you're using the simple mode, it'll not show you lots of cool informations about the git repository. The only information it'll give you is the branch name and whether or not it has changes.
+
 In order to change to the **simple mode** you can type `fancygit simple`. And if you want to return to the **default mode** (colored), you can type `fancygit default`.
 
 ![001](https://github.com/diogocavilha/fancy-git/blob/master/images/001.png)
