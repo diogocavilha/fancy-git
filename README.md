@@ -47,9 +47,9 @@ As a picture is worth a thousand words...
 | ------------------------ | -------------------------------------------------------------------------------------------- |
 | fancygit -h, --help      | Show this help.
 | fancygit -v, --version   | Show the fancygit version.
-| fancygit self-update     | Update fancygit code with the last release from github.
+| fancygit update          | Update fancygit code with the last release from github.
 | fancygit simple          | Change prompt to simple mode.
-| fancygit defautl         | Change prompt to default (colored) mode.
+| fancygit default         | Change prompt to default (colored) mode.
 | fancygit configure-fonts | Install font in order to render icons properly.                                                                 |
 
 ### Git suggested colors

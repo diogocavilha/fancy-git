@@ -13,7 +13,7 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
  fancygit -v, --version     Show the fancygit version.
  fancygit update            Update fancygit code with the last release from github.
  fancygit simple            Change prompt to simple mode.
- fancygit defautl           Change prompt to default (colored) mode.
+ fancygit default           Change prompt to default (colored) mode.
  fancygit configure-fonts   Install font in order to render icons properly.
 
  ICONS MEANING
