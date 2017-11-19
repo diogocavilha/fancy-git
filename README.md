@@ -106,6 +106,6 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 | gurl                     | Show git repository URL. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gurl.sh)                                       | Show git repository URL.
 | guser                    | Show git user information. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/guser.sh)                                       | Show git user information.
 
-That's the beginning of the project, it could be better and it will, I promiss it.
+That's the beginning of the project. It could be better and it will, I promiss it.
 
 ### [Donate with PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QFCN8W7PRX696&lc=BR&item_name=diogocavilha%2fFancyGit&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
