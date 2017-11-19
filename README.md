@@ -23,7 +23,7 @@ If you can't find the font, it's still possible to install it manually by runnin
 
 As a picture is worth a thousand words...
 
-Default mode
+**Default mode**
 
 ![001](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_001.png)
 ![002](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_002.png)
@@ -33,7 +33,9 @@ Default mode
 ![006](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_006.png)
 ![007](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_007.png)
 
-Simple mode
+> In case you are in doubt about what some icon means, you can type `fancygit -h` or `fancygit --help`.
+
+**Simple mode**
 
 ![001](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/001.png)
 ![002](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/002.png)
