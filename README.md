@@ -1,4 +1,4 @@
-# Fancy Git
+![logo](https://github.com/diogocavilha/fancy-git/blob/master/logo.png)
 
 That's a prompt changer to show a few cool git informations about your repository on terminal.
 
