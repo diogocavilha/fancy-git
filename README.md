@@ -37,7 +37,7 @@ As a picture is worth a thousand words...
 
 **Simple mode**
 
-If you're running it on a server and you don't want to be so "fancy", you can choose to use the simple mode.
+If you're running it on a server and you don't want to be too "fancy", you can choose using the simple mode.
 
 > Once you're using the simple mode, it'll not show you lots of cool informations about the git repository. The only information it'll give you is the branch name and whether or not it has changes.
 
