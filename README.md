@@ -17,9 +17,9 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
 1. Change your terminal font to "SourceCodePro+Powerline+Awesome+Regular". (It's necessary for rendering the icons properly)
 2. Restart your terminal.
 
-If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts`.
+If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts` or even installing the ttf file placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
 
-### About
+### Overview
 
 As a picture is worth a thousand words...
 
