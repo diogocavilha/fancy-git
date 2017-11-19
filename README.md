@@ -37,6 +37,8 @@ As a picture is worth a thousand words...
 
 **Simple mode**
 
+In order to change to the **simple mode** you can type `fancygit simple`. And if you want to return to the **default mode** (colored), you can type `fancygit default`.
+
 ![001](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/001.png)
 ![002](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/002.png)
 ![003](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/003.png)
