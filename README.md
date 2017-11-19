@@ -31,6 +31,7 @@ Default mode
 ![004](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_004.png)
 ![005](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_005.png)
 ![006](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_006.png)
+![007](https://github.com/diogocavilha/fancy-git/blob/master/screenshots/default_007.png)
 
 Simple mode
 
