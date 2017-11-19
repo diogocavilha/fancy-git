@@ -16,3 +16,7 @@
 ### v4.0.1
 
 - Add pagination to the help.
+
+### v4.0.2
+
+- Show number of commits to be pushed besides the icon.
