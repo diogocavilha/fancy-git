@@ -17,12 +17,14 @@ fi
 
 git diff "$1"
 
-echo -ne "\n Add this file to commit? [s/N]: "
-read r
+echo ""
+read -p " Add this file to commit? [y/N]: " r
 
-if [ "$r" = "s" ]
+if [ "$r" = "y" ]
 then
-    ga "$1"
+    git add "$1"
 fi
 
+clear
 git status
+
