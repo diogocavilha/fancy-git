@@ -82,7 +82,7 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 | gs                       | git status                                         | Show git status.
 | ga \<file\> ...          | Add files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/ga.sh)                                   | Add a file in order to commit.
 | gaa                      | Add all files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gaa.sh)                                      | Add all files in order to commit.
-| gd                       | clear && git diff                                  | Clear screen and git diff
+| gd                       | Show changes of a file and suggests to add it. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gd.sh) | Clear screen and git diff
 | gcm                      | git commit                                         | Start committing.
 | gcmm "\<message\>"       | git commit -m "\<message\>"                        | Start committing with a message.
 | gpl                      | git pull                                           | Git pull.
