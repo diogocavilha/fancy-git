@@ -22,9 +22,8 @@ read -p " Add this file to commit? [y/N]: " r
 
 if [ "$r" = "y" ]
 then
-    git add "$1"
+    ga "$1"
 fi
 
 clear
 git status
-
