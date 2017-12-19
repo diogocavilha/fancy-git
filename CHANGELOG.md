@@ -20,3 +20,8 @@
 ### v4.0.2
 
 - Show number of commits to be pushed besides the icon.
+
+### v4.0.3
+
+- Improve `gd` alias. If you run it for a specific file, it'll suggest you to add it in order to commit.
+- Improve `glp` alias. Remove its nested filters. It can handle parameters now.

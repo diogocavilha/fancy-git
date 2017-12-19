@@ -82,7 +82,7 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 | gs                       | git status                                         | Show git status.
 | ga \<file\> ...          | Add files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/ga.sh)                                   | Add a file in order to commit.
 | gaa                      | Add all files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gaa.sh)                                      | Add all files in order to commit.
-| gd                       | clear && git diff                                  | Clear screen and git diff
+| gd                       | Show changes of a file and suggests to add it. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gd.sh) | Clear screen and git diff
 | gcm                      | git commit                                         | Start committing.
 | gcmm "\<message\>"       | git commit -m "\<message\>"                        | Start committing with a message.
 | gpl                      | git pull                                           | Git pull.
@@ -100,7 +100,7 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 | grb \<new-branch-name\>  | Rename a local branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grb.sh)           | Rename current branch (local).
 | grba \<new-branch-name\> | Rename a branch (local and remote). [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grba.sh)           | Rename current branch (local and remote).
 | gl                       | git log                                            | Show git log.
-| glp                      | Show compact git log. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/glp.sh)    | Show git log compact and allow you to filter results.
+| glp                      | Show pretty git log. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/glp.sh)    | Show pretty git log.
 | gdof                     | find . -name "*.orig" \| xargs rm -rf              | Remove all .orig files from project.
 | gfi \<file\>             | git update-index --assume-unchanged \<file\>       | Force git to ignore a file.
 | gurl                     | Show git repository URL. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gurl.sh)                                       | Show git repository URL.

@@ -53,10 +53,7 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
  gfi                        Ignore a file even if this one has already been tracked.
  gurl                       Show git repository URL.
  guser                      Show git user information.
-
- FILTERING COMMITS
-
- glp [\"filter 1\" \"filter 2\"... \"filter 5\"] It allows you to do nested filters.
+ glp                        Show pretty git log.
 
  By: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
  Date: 02.28.2016
