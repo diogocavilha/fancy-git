@@ -110,6 +110,7 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 | gsts                     | git stash save "\<message\>"                       | Create new stash with custom message.
 | gstsw                    | git stash show [<stash>]                           | Show stash diffs.
 | gsta                     | git stash apply [<stash>]                          | Apply stash.
+| gstd                     | git stash drop [<stash>]                           | Drop specific stash.
 
 That's the beginning of the project. It could be better and it will, I promiss it.
 

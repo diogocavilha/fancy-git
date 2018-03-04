@@ -25,3 +25,7 @@
 
 - Improve `gd` alias. If you run it for a specific file, it'll suggest you to add it in order to commit.
 - Improve `glp` alias. Remove its nested filters. It can handle parameters now.
+
+### v4.0.4
+
+- Add six new aliases to use `git stash` command.

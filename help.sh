@@ -59,6 +59,7 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
  gsts \"message\"             Create new stash with custom message.
  gstsw <stash>              Show stash diffs.
  gsta <stash>               Apply stash.
+ gstd <stash>               Drop specific stash.
 
  By: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
  Date: 02.28.2016
