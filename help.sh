@@ -54,6 +54,12 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
  gurl                       Show git repository URL.
  guser                      Show git user information.
  glp                        Show pretty git log.
+ gst                        Create new stash with default message.
+ gstl                       List all stashes.
+ gsts \"message\"             Create new stash with custom message.
+ gstsw <stash>              Show stash diffs.
+ gsta <stash>               Apply stash.
+ gstd <stash>               Drop specific stash.
 
  By: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
  Date: 02.28.2016
