@@ -105,6 +105,12 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 | gfi \<file\>             | git update-index --assume-unchanged \<file\>       | Force git to ignore a file.
 | gurl                     | Show git repository URL. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gurl.sh)                                       | Show git repository URL.
 | guser                    | Show git user information. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/guser.sh)                                       | Show git user information.
+| gst                      | git stash                                          | Create new stash with default message.
+| gstl                     | git stash list                                     | List all stashes.
+| gstm                     | git stash save "\<message\>"                       | Create new stash with custom message.
+| gstw                     | git stash show [<stash>]                           | Show stash diffs.
+| gsta                     | git stash apply [<stash>]                          | Apply stash.
+| gstd                     | git stash drop [<stash>]                           | Drop specific stash.
 
 That's the beginning of the project. It could be better and it will, I promiss it.
 
