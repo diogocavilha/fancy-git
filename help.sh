@@ -57,9 +57,9 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
  gst                        Create new stash with default message.
  gstl                       List all stashes.
  gstm \"message\"             Create new stash with custom message.
- gstw <stash>               Show stash diffs.
- gsta <stash>               Apply stash.
- gstd <stash>               Drop specific stash.
+ gstw <stash_id>            Show stash diffs by its numeric ID.
+ gsta <stash_id>            Apply stash by its numeric ID.
+ gstd <stash_id>            Drop a specific stash by its numeric ID.
 
  By: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
  Date: 02.28.2016
