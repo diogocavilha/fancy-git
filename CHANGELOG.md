@@ -29,3 +29,7 @@
 ### v4.0.4
 
 - Add six new aliases to use `git stash` command.
+
+### v4.0.5
+
+- Add `gg` alias to do all the tipical sequence until push.
