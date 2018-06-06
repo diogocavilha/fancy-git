@@ -28,6 +28,7 @@ fg_command_not_found() {
 }
 
 fg_change_mode() {
+    echo "default" > ~/.fancy-git/mode
     echo ""
     echo " If you cannot see any changes yet, please restart the terminal."
     echo ""
