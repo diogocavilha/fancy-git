@@ -28,10 +28,6 @@ fg_command_not_found() {
 }
 
 fg_change_mode() {
-    local current_dir
-    current_dir=$(pwd)
-    cd ~/.fancy-git/ && git checkout "$1"
-    cd "$current_dir" || return
     echo ""
     echo " If you cannot see any changes yet, please restart the terminal."
     echo ""
@@ -48,7 +44,7 @@ case $1 in
     "-v"|"--version") fg_show_version;;
     "update") fg_update;;
     "simple") fg_change_mode "simple";;
-    "default") fg_change_mode "master";;
+    "default") fg_change_mode "default";;
     "double-line") fg_change_mode "fancy-double-line";;
     "configure-fonts") fg_install_fonts;;
     *) fg_command_not_found "$1";;

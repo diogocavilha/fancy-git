@@ -15,7 +15,7 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
  fancygit simple            Change prompt to simple mode.
  fancygit default           Change prompt to default (colored) mode.
  fancygit double-line       Change prompt to default (colored) mode in double line.
- fancygit configure-fonts   Install font in order to render icons properly.
+ fancygit configure-fonts   Install font in order to render icons properly. (only for colored styles).
 
  ICONS MEANING
 
