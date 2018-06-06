@@ -191,6 +191,77 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "config",
+			"settings":
+			{
+				"buffer_size": 2887,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "commands.sh",
+			"settings":
+			{
+				"buffer_size": 1183,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "install.sh",
+			"settings":
+			{
+				"buffer_size": 795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prompt_styles/fancy-original.sh",
+			"settings":
+			{
+				"buffer_size": 2144,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prompt-changer.sh",
+			"settings":
+			{
+				"buffer_size": 362,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prompt_styles/fancy-double-line.sh",
+			"settings":
+			{
+				"buffer_size": 2130,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 28,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/diogo/.bashrc",
+			"settings":
+			{
+				"buffer_size": 4008,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -199,10 +270,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 214.0,
+		"last_filter": "bash",
 		"selected_items":
 		[
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
 			[
 				"menu",
 				"View: Toggle Menu"
@@ -460,7 +535,7 @@
 				"View: Toggle Menu"
 			]
 		],
-		"width": 479.0
+		"width": 551.0
 	},
 	"console":
 	{
@@ -483,10 +558,21 @@
 	},
 	"expanded_folders":
 	[
-		"/home/diogo/.fancy-git"
+		"/home/diogo/.fancy-git",
+		"/home/diogo/.fancy-git/prompt_styles"
 	],
 	"file_history":
 	[
+		"/home/diogo/.fancy-git/install.sh",
+		"/home/diogo/.fancy-git/version.sh",
+		"/home/diogo/.fancy-git/CHANGELOG.md",
+		"/home/diogo/.fancy-git/uninstall.sh",
+		"/home/diogo/.fancy-git/README.md",
+		"/home/diogo/.fancy-git/commands.sh",
+		"/home/diogo/.fancy-git/prompt_styles/simple.sh",
+		"/home/diogo/.fancy-git/prompt_styles/fancy.sh",
+		"/home/diogo/.fancy-git/help.sh",
+		"/home/diogo/.fancy-git/mode",
 		"/home/diogo/git/amigo-pet/Amigo Pet.sublime-project",
 		"/home/diogo/Videos/La_casa_de_papel/S01/La.Casa.De.Papel.1x01.HDTV.XviD.[www.DivxTotaL.com].srt",
 		"/home/diogo/Documents/IR_2018/inscricaoImobiliaria.txt",
@@ -604,21 +690,11 @@
 		"/home/diogo/git/amigo-pet/_app/Repositories/OwnerRepository.php",
 		"/home/diogo/git/amigo-pet/routes/owner.php",
 		"/home/diogo/git/amigo-pet/app/Http/Middleware/ValidateOwner.php",
-		"/home/diogo/git/amigo-pet/routes/auth.php",
-		"/home/diogo/git/amigo-pet/bootstrap/app.php",
-		"/home/diogo/git/amigo-pet/routes/web.php",
-		"/home/diogo/git/amigo-pet/app/Http/Middleware/ValidateTokenData.php",
-		"/home/diogo/git/amigo-pet/tests/app/Repositories/LoginsRepositoryTest.php",
-		"/home/diogo/git/amigo-pet/tests/app/Repositories/OwnerRepositoryTest.php",
-		"/home/diogo/git/amigo-pet/app/Http/Controllers/Controller.php",
-		"/home/diogo/git/amigo-pet/app/Http/Controllers/Authentication/AuthenticationController.php",
-		"/home/diogo/git/amigo-pet/_src/Amigopet/Modules/Authentication/Controllers/AuthenticationController.php",
-		"/home/diogo/git/amigo-pet/app/Repositories/RepositoryInterface.php",
-		"/home/diogo/git/amigo-pet/app/Repositories/RepositoryAbstract.php"
+		"/home/diogo/git/amigo-pet/routes/auth.php"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -632,6 +708,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"s_darkgray_bglightmagenta",
+			"local "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -649,14 +727,262 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "config",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2887,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2094,
+								2076
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1248.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "commands.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								548,
+								548
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "install.sh",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								400,
+								434
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "prompt_styles/fancy-original.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								118
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "prompt-changer.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								315,
+								315
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "prompt_styles/fancy-double-line.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								680,
+								680
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 28,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/zzz A File Icon zzz/aliases/Shell Script (Git).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/diogo/.bashrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4008,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2658,
+								2658
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1136.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 24.0
 	},
 	"input":
 	{
@@ -709,7 +1035,7 @@
 	"project": "Fancy Git.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1113,7 +1439,7 @@
 		[
 			[
 				"",
-				"~/git/piano-accessor/Piano Accessor.sublime-project"
+				"/www/operand_api_vuejs/API 2.0.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1135,7 +1461,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 199.0,
+	"side_bar_width": 232.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
