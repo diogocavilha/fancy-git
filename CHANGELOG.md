@@ -33,3 +33,7 @@
 ### v4.0.5
 
 - Add `gg` alias to do all the tipical sequence until push.
+
+### v4.0.6
+
+- Add `double-line` mode.

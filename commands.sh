@@ -27,22 +27,10 @@ fg_command_not_found() {
     fg_script_help
 }
 
-fg_change_to_simple_style()
-{
+fg_change_mode() {
     local current_dir
     current_dir=$(pwd)
-    cd ~/.fancy-git/ && git checkout simple
-    cd "$current_dir" || return
-    echo ""
-    echo " If you cannot see any changes yet, please restart the terminal."
-    echo ""
-}
-
-fg_change_to_default_style()
-{
-    local current_dir
-    current_dir=$(pwd)
-    cd ~/.fancy-git/ && git checkout master
+    cd ~/.fancy-git/ && git checkout "$1"
     cd "$current_dir" || return
     echo ""
     echo " If you cannot see any changes yet, please restart the terminal."
@@ -59,8 +47,9 @@ case $1 in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
     "update") fg_update;;
-    "simple") fg_change_to_simple_style;;
-    "default") fg_change_to_default_style;;
+    "simple") fg_change_mode "simple";;
+    "default") fg_change_mode "master";;
+    "double-line") fg_change_mode "fancy-double-line";;
     "configure-fonts") fg_install_fonts;;
     *) fg_command_not_found "$1";;
 esac
