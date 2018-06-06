@@ -100,10 +100,13 @@ fancygit_prompt_builder() {
 
     # Separator styles
     s_darkgray_bglightmagenta="${dark_gray}${bg_light_magenta}${separator}${bg_none}${none}"
+    s_darkgray_bgblue="${dark_gray}${bg_blue}${separator}${bg_blue}${none}"
     s_lightmagenta_bgblue="${light_magenta}${bg_blue}${separator}${bg_none}${none}"
+    s_lightmagenta_bgnone="${light_magenta}${bg_none}${separator}${bg_none}${none}"
     s_blue_bgyellow="${blue}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
     s_blue_bglightgreen="${blue}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
     s_blue_bgwhite="${blue}${bg_white}${separator}${bg_none}${none}${bg_none}"
+    s_dark_gray_bgnone="${dark_gray}${separator}${none}${bg_none}"
     s_yellow="${light_yellow}${separator}${none}"
     s_green="${light_green}${separator}${none}"
     s_white="${white}${separator}${none}"
@@ -111,12 +114,12 @@ fancygit_prompt_builder() {
 
     # Prompt style
     user_at_host="${white}${bg_dark_gray}${bold}"
-    user_at_host_end="${bold_none}${bg_none}${s_darkgray_bglightmagenta}"
+    user_at_host_end="${bold_none}${bg_none}${s_darkgray_bgblue}"
     path="${bg_blue}${white}${bold}"
     path_git="${bg_blue}${white}  ${is_git_repo} ${bold}"
     path_end="${none}${bold_none}"
-    user_symbol="${bg_light_magenta}${bold}${white}"
-    user_symbol_end="${none}${bold_none}${bg_none}${s_lightmagenta_bgblue}"
+    user_symbol="${bg_dark_gray}${bold}${white}"
+    user_symbol_end="${none}${bold_none}${bg_none}${s_dark_gray_bgnone}"
     branch="${s_blue_bgwhite}${bg_white}${black}${bold}"
     branch_end="${bg_none}${none}${bold_none}${s_white}"
 
@@ -160,18 +163,18 @@ fancygit_prompt_builder() {
     fi
 
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
-    prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
+    prompt_symbol="\n${user_symbol}\$ ${user_symbol_end}"
     prompt_path="${path}${bold}${white} \\w ${path_end}${s_blue}"
 
     if [ "$branch_name" != "" ]
     then
         prompt_path="${path_git}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
-        PS1="${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
+        PS1="${prompt_user}${prompt_path}${prompt_branch}${prompt_symbol} "
         return
     fi
 
-    PS1="${prompt_user}${prompt_symbol}${prompt_path} "
+    PS1="${prompt_user}${prompt_path}${prompt_symbol} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
