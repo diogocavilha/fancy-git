@@ -13,7 +13,7 @@ if [ "$fg_os" = "Linux" ]
 then
     cp -f ~/.bashrc ~/.bashrc.backup
     echo "" >> ~/.bashrc
-    echo ". ~/.fancy-git/prompt-changer.sh" >> ~/.bashrc
+    echo ". ~/.fancy-git/prompt.sh" >> ~/.bashrc
 
     touch -f ~/.fancy-git/mode
     echo "default" > ~/.fancy-git/mode
@@ -23,7 +23,7 @@ if [ "$fg_os" = "Darwin" ]
 then
     cp -f ~/.bash_profile ~/.bash_profile.backup
     echo "" >> ~/.bash_profile
-    echo ". ~/.fancy-git/prompt-changer.sh" >> ~/.bash_profile
+    echo ". ~/.fancy-git/prompt.sh" >> ~/.bash_profile
 
     touch -f ~/.fancy-git/mode
     echo "default" > ~/.fancy-git/mode
