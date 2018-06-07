@@ -29,6 +29,6 @@ then
     echo "default" > ~/.fancy-git/mode
 fi
 
-mkdir ~/.fonts
+mkdir -p ~/.fonts
 cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
 fc-cache -fv
