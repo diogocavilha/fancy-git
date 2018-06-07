@@ -37,3 +37,7 @@
 ### v4.0.6
 
 - Add `double-line` mode.
+
+### v5.0.0
+
+- Change the script core to allow more styles to be created.
