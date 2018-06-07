@@ -7,7 +7,7 @@
 
 fg_os=$(uname)
 
-git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git -b 5.x
+git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git
 
 if [ "$fg_os" = "Linux" ]
 then
