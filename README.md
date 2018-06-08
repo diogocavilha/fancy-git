@@ -61,7 +61,7 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
 | Command                  | Description
 | ------------------------ | ---------------------------------------------------------
 | fancygit simple          | Change prompt to simple mode.
-| fancygit default         | Change prompt to default (colored) mode.
+| fancygit default         | Change prompt to default (colored) mode. (This is the fallback style).
 | fancygit double-line     | Change prompt to default (colored) mode in double line.
 
 ### Git suggested colors
