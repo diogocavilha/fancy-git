@@ -1,13 +1,11 @@
-FANCYGIT_PROMPT_MODE=$(cat ~/.fancy-git/mode)
+fancygit_prompt_mode=$(cat ~/.fancy-git/mode)
+fancygit_styles_dir="/home/$USER/.fancy-git/prompt_styles"
+fancygit_style_path="$fancygit_styles_dir/$fancygit_prompt_mode.sh"
+fancygit_prompt_command=". $fancygit_style_path"
+fancygit_prompt_command_fallback=". $fancygit_styles_dir/default.sh"
 
-if [ "$FANCYGIT_PROMPT_MODE" = "fancy-double-line" ]; then
-    . ~/.fancy-git/prompt_styles/fancy-double-line.sh
-fi
-
-if [ "$FANCYGIT_PROMPT_MODE" = "default" ]; then
-    . ~/.fancy-git/prompt_styles/fancy-original.sh
-fi
-
-if [ "$FANCYGIT_PROMPT_MODE" = "simple" ]; then
-    . ~/.fancy-git/prompt_styles/simple.sh
+if [ -e "$fancygit_style_path" ]; then
+    eval $fancygit_prompt_command
+else
+    eval $fancygit_prompt_command_fallback
 fi

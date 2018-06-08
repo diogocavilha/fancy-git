@@ -41,3 +41,7 @@
 ### v5.0.0
 
 - Change the script core to allow more styles to be created.
+
+### v5.0.1
+
+- Add a fallback style
