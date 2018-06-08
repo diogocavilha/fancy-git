@@ -54,10 +54,15 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
 | fancygit -h, --help      | Show this help.
 | fancygit -v, --version   | Show the fancygit version.
 | fancygit update          | Update fancygit code with the last release from github.
+| fancygit configure-fonts | Install font in order to render icons properly. (only for colored styles).
+
+### Styles
+
+| Command                  | Description
+| ------------------------ | ---------------------------------------------------------
 | fancygit simple          | Change prompt to simple mode.
 | fancygit default         | Change prompt to default (colored) mode.
 | fancygit double-line     | Change prompt to default (colored) mode in double line.
-| fancygit configure-fonts | Install font in order to render icons properly. (only for colored styles).
 
 ### Git suggested colors
 
