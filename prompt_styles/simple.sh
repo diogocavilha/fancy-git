@@ -23,7 +23,7 @@ fg_branch_name() {
     local branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 
     if [ "$branch_name" != "" ]; then
-        branch_name="${FG_CONFIG_BRANCH_DELIMITERS[0]}$branch_name${FG_CONFIG_BRANCH_DELIMITERS[1]} $(fg_branch_status) "
+        branch_name="${FG_CONFIG_BRANCH_DELIMITERS[0]}$branch_name${FG_CONFIG_BRANCH_DELIMITERS[1]} $(fg_branch_status)"
     fi
 
     echo "$branch_name"
@@ -32,7 +32,17 @@ fg_branch_name() {
 fancygit_prompt_builder() {
     . ~/.fancy-git/config
 
-    PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ $(fg_branch_name)"
+    local user
+    local at
+    local host
+    local where
+
+    user="${light_green}\u${none}"
+    at="${none}@${none}"
+    host="${light_green}\h${none}"
+    where="${blue}\w${none}"
+
+    PS1="${bold}$user$at$host:$where\$ $(fg_branch_name)${bold_none} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
