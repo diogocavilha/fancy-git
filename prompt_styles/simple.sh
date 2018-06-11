@@ -1,29 +1,39 @@
-FG_CONFIG_BRANCH_DELIMITERS[0]="("
-FG_CONFIG_BRANCH_DELIMITERS[1]=")"
-FG_CONFIG_BRANCH_ICON_CHANGED="✖"   # icons: ✖, x
-FG_CONFIG_BRANCH_ICON_UNCHANGED="✔" # icons: ✔
-
 . ~/.fancy-git/aliases
 . ~/.fancy-git/fancygit-completion
 
 fg_branch_status() {
-    local icon=""
-    local branch_status=$(git status -s 2> /dev/null)
+    . ~/.fancy-git/config
 
-    icon=$FG_CONFIG_BRANCH_ICON_UNCHANGED
+    local branch_icon
+    local branch_icon_changed
+    local branch_icon_unchanged
+    local branch_status
+    local icon
+
+    branch_icon="⚫"
+
+    branch_status=$(git status -s 2> /dev/null)
+    icon=${light_green}$branch_icon${none}
 
     if [ "$branch_status" != "" ]; then
-        icon=$FG_CONFIG_BRANCH_ICON_CHANGED
+        icon=${light_yellow}$branch_icon${none}
     fi
 
-    echo $icon
+    if [ "$git_has_unpushed_commits" != "" ]
+    then
+        icon=${red}$branch_icon${none}
+    fi
+
+    echo "$icon"
 }
 
 fg_branch_name() {
-    local branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+    local branch_name
+
+    branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 
     if [ "$branch_name" != "" ]; then
-        branch_name="${FG_CONFIG_BRANCH_DELIMITERS[0]}$branch_name${FG_CONFIG_BRANCH_DELIMITERS[1]} $(fg_branch_status)"
+        branch_name="($branch_name) $(fg_branch_status)"
     fi
 
     echo "$branch_name"
