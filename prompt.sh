@@ -1,12 +1,31 @@
-fancygit_prompt_mode=$(cat ~/.fancy-git/mode)
-fancygit_fallback_style="default.sh"
-fancygit_styles_dir="/home/$USER/.fancy-git/prompt_styles"
-fancygit_style_path="$fancygit_styles_dir/$fancygit_prompt_mode.sh"
-fancygit_prompt_command=". $fancygit_style_path"
-fancygit_prompt_command_fallback=". $fancygit_styles_dir/$fancygit_fallback_style"
+#!/bin/bash
+#
+# Author:   Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:     06.11.2018
+#
+# Changes de prompt by loading the style configured in ~/.fancygit/mode file.
 
-if [ -e "$fancygit_style_path" ]; then
-    eval $fancygit_prompt_command
-else
-    eval $fancygit_prompt_command_fallback
-fi
+function fancygit_prompt_changer() {
+    local mode
+    local fallback_style
+    local styles_dir
+    local style_path
+    local prompt_command
+    local prompt_command_fallback
+
+    mode=$(cat ~/.fancy-git/mode)
+    fallback_style="default.sh"
+    styles_dir="/home/$USER/.fancy-git/prompt_styles"
+    style_path="$styles_dir/$mode.sh"
+    prompt_command=". $style_path"
+    prompt_command_fallback=". $styles_dir/$fallback_style"
+
+    if [ -e "$style_path" ]; then
+        eval $prompt_command
+        return
+    fi
+
+    eval $prompt_command_fallback
+}
+
+fancygit_prompt_changer
