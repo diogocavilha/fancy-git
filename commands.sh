@@ -57,6 +57,7 @@ case $1 in
     "simple") fg_change_mode "simple";;
     "default") fg_change_mode "default";;
     "double-line") fg_change_mode "fancy-double-line";;
+    "human") fg_change_mode "human";;
     "configure-fonts") fg_install_fonts;;
     *) fg_command_not_found "$1";;
 esac
