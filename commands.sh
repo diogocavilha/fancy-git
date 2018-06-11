@@ -15,8 +15,18 @@ fg_show_version() {
 
 fg_update() {
     local current_dir
+    local mode_file
+
     current_dir=$(pwd)
+    mode_file="/home/$USER/.fancy-git/mode"
+
     cd ~/.fancy-git/ && git pull
+
+    if [ ! -f "$mode_file" ]; then
+        touch -f "$mode_file"
+        echo "default" > "$mode_file"
+    fi
+
     cd "$current_dir" || return
     cat ~/.fancy-git/CHANGELOG.md
 }
