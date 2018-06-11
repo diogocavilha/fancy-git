@@ -21,7 +21,7 @@ fg_branch_status() {
         icon=${red}$branch_icon${none}
     fi
 
-    echo "$icon"
+    echo "$icon "
 }
 
 fg_branch_name() {
@@ -33,7 +33,7 @@ fg_branch_name() {
         branch_name="($branch_name) $(fg_branch_status)"
     fi
 
-    echo "$branch_name"
+    echo " $branch_name"
 }
 
 fancygit_prompt_builder() {
@@ -49,7 +49,7 @@ fancygit_prompt_builder() {
     host="${light_green}\h${none}"
     where="${blue}\w${none}"
 
-    PS1="${bold}$user$at$host:$where\$ $(fg_branch_name)${bold_none} "
+    PS1="${bold}$user$at$host:$where\$$(fg_branch_name)${bold_none}"
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
