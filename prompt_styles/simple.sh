@@ -5,13 +5,10 @@ fg_branch_status() {
     . ~/.fancy-git/config
 
     local branch_icon
-    local branch_icon_changed
-    local branch_icon_unchanged
     local branch_status
     local icon
 
     branch_icon="⚫"
-
     branch_status=$(git status -s 2> /dev/null)
     icon=${light_green}$branch_icon${none}
 
