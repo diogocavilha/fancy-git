@@ -18,7 +18,7 @@ fg_branch_status() {
 
     if [ "$git_has_unpushed_commits" != "" ]
     then
-        icon=${light_yellow}▲${none}
+        icon="+${git_number_unpushed_commits} ${light_yellow}▲${none}"
     fi
 
     echo "$icon "
