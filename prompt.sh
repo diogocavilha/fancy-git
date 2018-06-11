@@ -21,11 +21,11 @@ function fancygit_prompt_changer() {
     prompt_command_fallback=". $styles_dir/$fallback_style"
 
     if [ -e "$style_path" ]; then
-        eval $prompt_command
+        eval "$prompt_command"
         return
     fi
 
-    eval $prompt_command_fallback
+    eval "$prompt_command_fallback"
 }
 
 fancygit_prompt_changer
