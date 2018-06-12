@@ -47,3 +47,8 @@
 - Add a fallback style.
 - Improve script core.
 - Improve simple style.
+
+### v5.0.2
+
+- Add (+nf) information on simple mode, which means the number of added files.
+- Add (+nc) information on simple mode, which means the number of unpushed commits.
