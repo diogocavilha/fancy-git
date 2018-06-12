@@ -44,4 +44,6 @@
 
 ### v5.0.1
 
-- Add a fallback style
+- Add a fallback style.
+- Improve script core.
+- Improve simple style.
