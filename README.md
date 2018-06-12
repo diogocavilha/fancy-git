@@ -54,10 +54,16 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
 | fancygit -h, --help      | Show this help.
 | fancygit -v, --version   | Show the fancygit version.
 | fancygit update          | Update fancygit code with the last release from github.
-| fancygit simple          | Change prompt to simple mode.
-| fancygit default         | Change prompt to default (colored) mode.
-| fancygit double-line     | Change prompt to default (colored) mode in double line.
 | fancygit configure-fonts | Install font in order to render icons properly. (only for colored styles).
+
+### Styles
+
+| Command                  | Description
+| ------------------------ | ---------------------------------------------------------
+| fancygit simple          | Change prompt to simple mode.
+| fancygit default         | Change prompt to default (colored) mode. (This is the fallback style).
+| fancygit double-line     | Change prompt to default (colored) mode in double line.
+| fancygit human           | Change prompt to human readable mode.
 
 ### Git suggested colors
 
@@ -74,7 +80,7 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
     untracked = cyan
 ```
 
-I suggest you to use this scheme color because fancygit will paint the background branch according to the current repo status.
+I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors according to the current repo status.
 
 ### Aliases
 

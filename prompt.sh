@@ -1,13 +1,31 @@
-FANCYGIT_PROMPT_MODE=$(cat ~/.fancy-git/mode)
+#!/bin/bash
+#
+# Author:   Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:     06.11.2018
+#
+# Changes de prompt by loading the style configured in ~/.fancygit/mode file.
 
-if [ "$FANCYGIT_PROMPT_MODE" = "fancy-double-line" ]; then
-    . ~/.fancy-git/prompt_styles/fancy-double-line.sh
-fi
+function fancygit_prompt_changer() {
+    local mode
+    local fallback_style
+    local styles_dir
+    local style_path
+    local prompt_command
+    local prompt_command_fallback
 
-if [ "$FANCYGIT_PROMPT_MODE" = "default" ]; then
-    . ~/.fancy-git/prompt_styles/fancy-original.sh
-fi
+    mode=$(cat ~/.fancy-git/mode)
+    fallback_style="default.sh"
+    styles_dir="/home/$USER/.fancy-git/prompt_styles"
+    style_path="$styles_dir/$mode.sh"
+    prompt_command=". $style_path"
+    prompt_command_fallback=". $styles_dir/$fallback_style"
 
-if [ "$FANCYGIT_PROMPT_MODE" = "simple" ]; then
-    . ~/.fancy-git/prompt_styles/simple.sh
-fi
+    if [ -e "$style_path" ]; then
+        eval "$prompt_command"
+        return
+    fi
+
+    eval "$prompt_command_fallback"
+}
+
+fancygit_prompt_changer

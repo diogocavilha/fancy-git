@@ -18,7 +18,7 @@ fg_branch_status() {
 
     if [ "$git_has_unpushed_commits" != "" ]
     then
-        icon="+${git_number_unpushed_commits} ${light_yellow}▲${none}"
+        icon=${light_yellow}▲${none}
     fi
 
     echo "$icon "
@@ -45,11 +45,11 @@ fancygit_prompt_builder() {
     local where
 
     user="${light_green}\u${none}"
-    at="${none}@${none}"
+    at="${none} at ${none}"
     host="${light_green}\h${none}"
     where="${blue}\w${none}"
 
-    PS1="${bold}$user$at$host:$where\$$(fg_branch_name)${bold_none}"
+    PS1="${bold}$user$at$host in $where\$$(fg_branch_name)${bold_none}"
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
