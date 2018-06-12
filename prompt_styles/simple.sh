@@ -6,8 +6,8 @@ fg_branch_status() {
 
     local branch_icon
     local branch_status
-    local icon
     local info
+    local icon
 
     branch_icon="⚫"
     branch_status=$(git status -s 2> /dev/null)
@@ -20,8 +20,8 @@ fg_branch_status() {
 
     if [ "$git_has_unpushed_commits" != "" ]
     then
-        info="${info} +${git_number_unpushed_commits}c"
-        icon=" ${light_yellow}▲${none}"
+        info="${info}+${git_number_unpushed_commits}c "
+        icon="${light_yellow}▲${none}"
     fi
 
     if [ "$git_untracked_files" != "" ]
@@ -29,8 +29,8 @@ fg_branch_status() {
         local total_new_files
         total_new_files=$(echo "$git_untracked_files" | wc -w)
 
-        info="${info}+${total_new_files}f"
-        icon=" ${light_yellow}${branch_icon}${none}"
+        info="${info}+${total_new_files}f "
+        icon="${light_yellow}${branch_icon}${none}"
     fi
 
     echo "$info$icon "
