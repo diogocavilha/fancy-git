@@ -52,3 +52,8 @@
 
 - Add (+nf) information on simple mode, which means the number of added files.
 - Add (+nc) information on simple mode, which means the number of unpushed commits.
+
+### v5.0.3
+
+- Add simple mode in double line
+
