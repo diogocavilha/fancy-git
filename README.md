@@ -80,7 +80,7 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
     untracked = cyan
 ```
 
-I suggest you to use this scheme color because fancygit will paint the background branch according to the current repo status.
+I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors according to the current repo status.
 
 ### Aliases
 
