@@ -55,5 +55,5 @@
 
 ### v5.0.3
 
-- Add simple mode in double line
-
+- Add simple mode in double line.
+- Add information about how many files have changed.

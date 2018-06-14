@@ -5,12 +5,10 @@ fg_branch_status() {
     . ~/.fancy-git/config
 
     local branch_icon
-    local branch_status
     local info
     local icon
 
     branch_icon="⚫"
-    branch_status=$(git status -s 2> /dev/null)
     icon=${light_green}${branch_icon}${none}
     info=""
 
@@ -24,12 +22,15 @@ fg_branch_status() {
         icon="${light_yellow}▲${none}"
     fi
 
-    if [ "$git_untracked_files" != "" ]
+    if [ "$git_untracked_files_number" -gt 0 ]
     then
-        local total_new_files
-        total_new_files=$(echo "$git_untracked_files" | wc -w)
+        info="${info}+${git_untracked_files_number}f "
+        icon="${light_yellow}${branch_icon}${none}"
+    fi
 
-        info="${info}+${total_new_files}f "
+    if [ "$git_changed_files_number" -gt 0 ]
+    then
+        info="${info}${git_changed_files_number}m "
         icon="${light_yellow}${branch_icon}${none}"
     fi
 
