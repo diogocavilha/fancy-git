@@ -15,7 +15,7 @@ function fancygit_prompt_changer() {
 
     mode=$(cat ~/.fancy-git/mode)
     fallback_style="default.sh"
-    styles_dir="/home/$USER/.fancy-git/prompt_styles"
+    styles_dir="/Users/$USER/.fancy-git/prompt_styles"
     style_path="$styles_dir/$mode.sh"
     prompt_command=". $style_path"
     prompt_command_fallback=". $styles_dir/$fallback_style"
