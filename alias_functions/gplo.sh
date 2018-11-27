@@ -1,9 +1,12 @@
 #!/bin/bash
 
-branch="$1"
+. ~/.fancy-git/random_messages.sh
 
-git pull origin $branch
+run() {
+    local branch
+    branch="$1"
 
-echo ""
-echo "Start to pray."
-echo ""
+    git pull origin $branch
+
+    _fancygit_after_pulling_random_message
+}

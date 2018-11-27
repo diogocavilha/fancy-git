@@ -1,9 +1,12 @@
 #!/bin/bash
 
-branch=$(git branch | grep -oP '(?<=\* ).*')
+. ~/.fancy-git/random_messages.sh
 
-git pull origin $branch
+run() {
+    local branch
+    branch=$(git branch | grep -oP '(?<=\* ).*')
 
-echo ""
-echo "Start to pray."
-echo ""
+    git pull origin $branch
+
+    _fancygit_after_pulling_random_message
+}

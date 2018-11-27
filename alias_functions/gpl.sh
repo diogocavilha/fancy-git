@@ -1,7 +1,9 @@
 #!/bin/bash
 
-git pull
+. ~/.fancy-git/random_messages.sh
 
-echo ""
-echo "Start to pray."
-echo ""
+run() {
+    git pull
+
+    _fancygit_after_pulling_random_message
+}

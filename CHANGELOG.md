@@ -1,5 +1,10 @@
 # Changelog
 
+### v5.0.5
+
+- Add a list of funny string information after pulling.
+- Fix minor bugs.
+
 ### v5.0.4
 
 - Improve `gplo` command.
