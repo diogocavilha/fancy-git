@@ -1,6 +1,6 @@
 #!/bin/bash
 
-branch=$(git branch | grep -oP '(?<=\* ).*')
+branch="$1"
 
 git pull origin $branch
 
