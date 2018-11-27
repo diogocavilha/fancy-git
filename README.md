@@ -92,7 +92,7 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 | gd                       | Show changes of a file and suggests to add it. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gd.sh)                     | Clear screen and git diff
 | gcm                      | git commit                                                                                                                                             | Start committing.
 | gcmm "\<message\>"       | git commit -m "\<message\>"                                                                                                                            | Start committing with a message.
-| gpl                      | git pull                                                                                                                                               | Git pull.
+| gpl                      | git pull. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpl.sh)                                                          | Git pull.
 | gps                      | git push                                                                                                                                               | Git push.
 | gplo \<branch-name\>     | git pull origin \<branch-name\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gplo.sh)                                  | Git pull from \<branch-name\> to current local branch.
 | gpso \<branch-name\>     | git push origin \<branch-name\>                                                                                                                        | Git push from current local branch to \<branch-name\>.
