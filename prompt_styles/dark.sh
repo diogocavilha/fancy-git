@@ -6,9 +6,9 @@ fancygit_prompt_builder() {
 
     # Prompt style
     user_at_host="${white}${bg_dark_gray_01}${bold}"
-    user_at_host_end="${bold_none}${bg_none}${s_darkgray01_bgdarkgray02}"
-    user_symbol="${bg_dark_gray_02}${bold}${white}"
-    user_symbol_end="${none}${bold_none}${bg_none}${s_darkgray02_bgdarkgray01}"
+    user_at_host_end="${bold_none}${bg_none}${s_darkgray01_bgdarkgray}"
+    user_symbol="${bg_dark_gray}${bold}${white}"
+    user_symbol_end="${none}${bold_none}${bg_none}${s_darkgray_bgdarkgray01}"
     path="${bg_dark_gray_01}${white}${bold}"
     path_git="${bg_dark_gray_01}${white}  ${is_git_repo} ${bold}"
     path_end="${none}${bold_none}"

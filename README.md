@@ -60,10 +60,11 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
 
 | Command                  | Description
 | ------------------------ | ---------------------------------------------------------
-| fancygit simple          | Change prompt to simple mode.
-| fancygit default         | Change prompt to default (colored) mode. (This is the fallback style).
-| fancygit double-line     | Change prompt to default (colored) mode in double line.
-| fancygit human           | Change prompt to human readable mode.
+| fancygit simple          | Change prompt to the simple style.
+| fancygit default         | Change prompt to the default (colored) style. (This is the fallback style).
+| fancygit double-line     | Change prompt to the default (colored) style in double line.
+| fancygit human           | Change prompt to the human readable style.
+| fancygit dark            | Change prompt to the dark style.
 
 ### Git suggested colors
 
@@ -92,9 +93,9 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 | gd                       | Show changes of a file and suggests to add it. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gd.sh)                     | Clear screen and git diff
 | gcm                      | git commit                                                                                                                                             | Start committing.
 | gcmm "\<message\>"       | git commit -m "\<message\>"                                                                                                                            | Start committing with a message.
-| gpl                      | git pull                                                                                                                                               | Git pull.
+| gpl                      | git pull. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpl.sh)                                                          | Git pull.
 | gps                      | git push                                                                                                                                               | Git push.
-| gplo \<branch-name\>     | git pull origin \<branch-name\>                                                                                                                        | Git pull from \<branch-name\> to current local branch.
+| gplo \<branch-name\>     | git pull origin \<branch-name\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gplo.sh)                                  | Git pull from \<branch-name\> to current local branch.
 | gpso \<branch-name\>     | git push origin \<branch-name\>                                                                                                                        | Git push from current local branch to \<branch-name\>.
 | gplob                    | Git pull from remote current branch to local current branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gplob.sh)    | Git pull from remote branch to local branch.
 | gpsob                    | Git push from local current branch to remote current branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpsob.sh)    | Git push from local branch to remote branch.

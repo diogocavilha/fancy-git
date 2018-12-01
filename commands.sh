@@ -16,9 +16,16 @@ fg_show_version() {
 fg_update() {
     local current_dir
     local mode_file
+    local base_path
+
+    base_path="/home/$USER/.fancy-git"
+
+    if [ ! -d "$base_path" ]; then
+        styles_dir="/Users/$USER/.fancy-git"
+    fi
 
     current_dir=$(pwd)
-    mode_file="/home/$USER/.fancy-git/mode"
+    mode_file="$base_path/mode"
 
     cd ~/.fancy-git/ && git pull
 

@@ -86,21 +86,26 @@ light_green="\\[\\e[92m\\]"
 local s_darkgray_bglightmagenta
 local s_darkgray_bgblue
 local s_lightmagenta_bgblue
+local s_darkgray_bgdarkgray01
 local s_lightmagenta_bgnone
 local s_blue_bgyellow
+local s_darkgray01_bgyellow
 local s_blue_bglightgreen
+local s_darkgray01_bglightgreen
 local s_blue_bgwhite
+local s_darkgray01_bgwhite
 local s_dark_gray_bgnone
 local s_yellow
 local s_green
 local s_white
 local s_blue
-local s_darkgray01_bgdarkgray02
+local s_darkgray01
+local s_darkgray01_bgdarkgray
 
 s_darkgray_bglightmagenta="${dark_gray}${bg_light_magenta}${separator}${bg_none}${none}"
 s_darkgray_bgblue="${dark_gray}${bg_blue}${separator}${bg_blue}${none}"
 s_lightmagenta_bgblue="${light_magenta}${bg_blue}${separator}${bg_none}${none}"
-s_darkgray02_bgdarkgray01="${dark_gray_02}${bg_dark_gray_01}${separator}${bg_none}${none}"
+s_darkgray_bgdarkgray01="${dark_gray}${bg_dark_gray_01}${separator}${bg_none}${none}"
 s_lightmagenta_bgnone="${light_magenta}${bg_none}${separator}${bg_none}${none}"
 s_blue_bgyellow="${blue}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
 s_darkgray01_bgyellow="${dark_gray_01}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
@@ -114,4 +119,4 @@ s_green="${light_green}${separator}${none}"
 s_white="${white}${separator}${none}"
 s_blue="${blue}${separator}${none}"
 s_darkgray01="${dark_gray_01}${separator}${none}"
-s_darkgray01_bgdarkgray02="${dark_gray_01}${bg_dark_gray_02}${separator}${bg_none}${none}"
+s_darkgray01_bgdarkgray="${dark_gray_01}${bg_dark_gray}${separator}${bg_none}${none}"
