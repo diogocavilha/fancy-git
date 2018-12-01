@@ -1,5 +1,10 @@
 # Changelog
 
+### v5.0.6
+
+- Add new dark style.
+- Show the first 20 lines of the changelog, instead of cat it after updating.
+
 ### v5.0.5
 
 - Add a list of funny string information after pulling.
