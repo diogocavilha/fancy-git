@@ -42,6 +42,9 @@ local bold
 local bold_none
 local bg_none
 local bg_dark_gray
+local bg_dark_gray_01
+local bg_dark_gray_02
+local bg_dark_gray_03
 local bg_light_yellow
 local bg_white
 local bg_blue
@@ -59,6 +62,12 @@ bold="\\[\\e[1m\\]"
 bold_none="\\[\\e[0m\\]"
 bg_none="\\[\\e[49m\\]"
 bg_dark_gray="\\[\\e[100m\\]"
+bg_dark_gray_01="\\[\\e[48;5;234m\\]"
+bg_dark_gray_02="\\[\\e[48;5;236m\\]"
+bg_dark_gray_03="\\[\\e[48;5;239m\\]"
+dark_gray_01="\\[\\e[38;5;234m\\]"
+dark_gray_02="\\[\\e[30;5;236m\\]"
+dark_gray_03="\\[\\e[30;5;239m\\]"
 bg_light_yellow="\\[\\e[103m\\]"
 bg_light_green="\\[\\e[102m\\]"
 bg_white="\\[\\e[107m\\]"
@@ -86,16 +95,23 @@ local s_yellow
 local s_green
 local s_white
 local s_blue
+local s_darkgray01_bgdarkgray02
 
 s_darkgray_bglightmagenta="${dark_gray}${bg_light_magenta}${separator}${bg_none}${none}"
 s_darkgray_bgblue="${dark_gray}${bg_blue}${separator}${bg_blue}${none}"
 s_lightmagenta_bgblue="${light_magenta}${bg_blue}${separator}${bg_none}${none}"
+s_darkgray02_bgdarkgray01="${dark_gray_02}${bg_dark_gray_01}${separator}${bg_none}${none}"
 s_lightmagenta_bgnone="${light_magenta}${bg_none}${separator}${bg_none}${none}"
 s_blue_bgyellow="${blue}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
+s_darkgray01_bgyellow="${dark_gray_01}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
 s_blue_bglightgreen="${blue}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
+s_darkgray01_bglightgreen="${dark_gray_01}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
 s_blue_bgwhite="${blue}${bg_white}${separator}${bg_none}${none}${bg_none}"
+s_darkgray01_bgwhite="${dark_gray_01}${bg_white}${separator}${bg_none}${none}${bg_none}"
 s_dark_gray_bgnone="${dark_gray}${separator}${none}${bg_none}"
 s_yellow="${light_yellow}${separator}${none}"
 s_green="${light_green}${separator}${none}"
 s_white="${white}${separator}${none}"
 s_blue="${blue}${separator}${none}"
+s_darkgray01="${dark_gray_01}${separator}${none}"
+s_darkgray01_bgdarkgray02="${dark_gray_01}${bg_dark_gray_02}${separator}${bg_none}${none}"

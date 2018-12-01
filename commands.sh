@@ -28,7 +28,7 @@ fg_update() {
     fi
 
     cd "$current_dir" || return
-    cat ~/.fancy-git/CHANGELOG.md
+    head -n 20 ~/.fancy-git/CHANGELOG.md
 }
 
 fg_command_not_found() {
@@ -59,6 +59,7 @@ case $1 in
     "double-line") fg_change_mode "fancy-double-line";;
     "simple-double-line") fg_change_mode "simple-double-line";;
     "human") fg_change_mode "human";;
+    "dark") fg_change_mode "dark";;
     "configure-fonts") fg_install_fonts;;
     *) fg_command_not_found "$1";;
 esac
