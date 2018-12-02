@@ -1,3 +1,9 @@
+[![Bash Shell](https://badges.frapsoft.com/bash/v1/bash.png?v=103)](https://github.com/diogocavilha/fancy-git)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://github.com/diogocavilha/fancy-git/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
+[![GitHub forks](https://img.shields.io/github/forks/diogocavilha/fancy-git.svg)](https://gitHub.com/diogocavilha/fancy-git/)
+
 ![logo](https://github.com/diogocavilha/fancy-git/blob/master/images/logo.png)
 
 That's a prompt changer to show a few cool git informations about your repository on terminal.
