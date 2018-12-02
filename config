@@ -101,22 +101,29 @@ local s_white
 local s_blue
 local s_darkgray01
 local s_darkgray01_bgdarkgray
+local s_darkgray_bglightgreen
+local s_darkgray_bgyellow
+local s_darkgray
 
-s_darkgray_bglightmagenta="${dark_gray}${bg_light_magenta}${separator}${bg_none}${none}"
-s_darkgray_bgblue="${dark_gray}${bg_blue}${separator}${bg_blue}${none}"
 s_lightmagenta_bgblue="${light_magenta}${bg_blue}${separator}${bg_none}${none}"
-s_darkgray_bgdarkgray01="${dark_gray}${bg_dark_gray_01}${separator}${bg_none}${none}"
 s_lightmagenta_bgnone="${light_magenta}${bg_none}${separator}${bg_none}${none}"
 s_blue_bgyellow="${blue}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
-s_darkgray01_bgyellow="${dark_gray_01}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
 s_blue_bglightgreen="${blue}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
-s_darkgray01_bglightgreen="${dark_gray_01}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
 s_blue_bgwhite="${blue}${bg_white}${separator}${bg_none}${none}${bg_none}"
-s_darkgray01_bgwhite="${dark_gray_01}${bg_white}${separator}${bg_none}${none}${bg_none}"
-s_dark_gray_bgnone="${dark_gray}${separator}${none}${bg_none}"
 s_yellow="${light_yellow}${separator}${none}"
 s_green="${light_green}${separator}${none}"
 s_white="${white}${separator}${none}"
 s_blue="${blue}${separator}${none}"
+s_darkgray="${dark_gray}${separator}${none}"
+s_dark_gray_bgnone="${dark_gray}${separator}${none}${bg_none}"
+s_darkgray_bglightmagenta="${dark_gray}${bg_light_magenta}${separator}${bg_none}${none}"
+s_darkgray_bgblue="${dark_gray}${bg_blue}${separator}${bg_blue}${none}"
+s_darkgray_bgdarkgray01="${dark_gray}${bg_dark_gray_01}${separator}${bg_none}${none}"
+s_darkgray_bgyellow="${dark_gray}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
+s_darkgray_bglightgreen="${dark_gray}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
+s_darkgray_bgwhite="${dark_gray}${bg_white}${separator}${bg_none}${none}${bg_none}"
+s_darkgray01_bgyellow="${dark_gray_01}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
+s_darkgray01_bglightgreen="${dark_gray_01}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
+s_darkgray01_bgwhite="${dark_gray_01}${bg_white}${separator}${bg_none}${none}${bg_none}"
 s_darkgray01="${dark_gray_01}${separator}${none}"
 s_darkgray01_bgdarkgray="${dark_gray_01}${bg_dark_gray}${separator}${bg_none}${none}"

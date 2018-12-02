@@ -3,7 +3,19 @@ _fancygit() {
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts='-h --help -v --version update simple default double-line simple-double-line human dark configure-fonts'
+    opts='-h \
+        --help \
+        -v \
+        --version \
+        update \
+        simple \
+        default \
+        double-line \
+        simple-double-line \
+        human dark \
+        dark-double-line \
+        configure-fonts
+    '
 
     if [[ ${cur} == * ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
