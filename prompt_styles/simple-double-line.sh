@@ -8,7 +8,9 @@ fg_branch_status() {
     local info
     local icon
 
-    branch_icon="⚫"
+    branch_icon="*" # ⚫, *
+    unpushed_commits_icon="*" # ▲, *
+
     icon=${light_green}${branch_icon}${none}
     info=""
 
@@ -19,7 +21,7 @@ fg_branch_status() {
     if [ "$git_has_unpushed_commits" != "" ]
     then
         info="${info}+${git_number_unpushed_commits}c "
-        icon="${light_yellow}▲${none}"
+        icon="${light_yellow}${unpushed_commits_icon}${none}"
     fi
 
     if [ "$git_untracked_files_number" -gt 0 ]
