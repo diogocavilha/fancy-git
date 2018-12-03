@@ -1,5 +1,10 @@
 # Changelog
 
+### v5.0.7
+
+- Improve simple style.
+- Improve simple-double-line style.
+
 ### v5.0.6
 
 - Add new dark style.

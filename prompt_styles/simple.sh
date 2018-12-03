@@ -4,52 +4,53 @@
 fg_branch_status() {
     . ~/.fancy-git/config
 
-    local branch_icon
-    local unpushed_commits_icon
     local info
-    local icon
-
-    branch_icon="*" # ⚫, *
-    unpushed_commits_icon="*" # ▲, *
-
-    icon=${light_green}${branch_icon}${none}
     info=""
-
-    if [ "$branch_status" != "" ]; then
-        icon=${light_yellow}${branch_icon}${none}
-    fi
 
     if [ "$git_has_unpushed_commits" != "" ]
     then
-        info="${info}+${git_number_unpushed_commits}c "
-        icon="${light_yellow}${unpushed_commits_icon}${none}"
+        info="${light_yellow}${info}+${git_number_unpushed_commits}c${none}"
     fi
 
     if [ "$git_number_untracked_files" -gt 0 ]
     then
-        info="${info}+${git_number_untracked_files}f "
-        icon="${light_yellow}${branch_icon}${none}"
+        info="${light_yellow}${info}+${git_number_untracked_files}f${none}"
     fi
 
     if [ "$git_number_changed_files" -gt 0 ]
     then
-        info="${info}${git_number_changed_files}m "
-        icon="${light_yellow}${branch_icon}${none}"
+        info="${light_yellow}${info}${git_number_changed_files}m${none}"
     fi
 
-    echo "$info$icon "
+    if [ "$info" != "" ]; then
+        echo "$info"
+        return
+    fi
+
+    echo ""
 }
 
 fg_branch_name() {
     local branch_name
+    local branch_status
 
     branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+    branch_status=$(fg_branch_status)
 
-    if [ "$branch_name" != "" ]; then
-        branch_name="($branch_name) $(fg_branch_status)"
+    if [ "$branch_status" != "" ]; then
+        branch_name="$branch_name | "
     fi
 
-    echo " $branch_name"
+    if [ "$branch_name" != "" ]; then
+        branch_name="($branch_name$branch_status)"
+    fi
+
+    if [ "$branch_name" != "" ]; then
+        echo " $branch_name"
+        return
+    fi
+
+    echo ""
 }
 
 fancygit_prompt_builder() {
@@ -65,8 +66,7 @@ fancygit_prompt_builder() {
     host="${light_green}\h${none}"
     where="${blue}\w${none}"
 
-    PS1="${bold}$user$at$host:$where\$$(fg_branch_name)${bold_none}"
+    PS1="${bold}$user$at$host:$where\$$(fg_branch_name)${bold_none} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
-
