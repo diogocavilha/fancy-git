@@ -75,6 +75,8 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
 | fancygit human              | Change prompt to the human readable style.
 | fancygit dark               | Change prompt to the dark style.
 | fancygit dark-double-line   | Change prompt to the dark style in double line.
+| fancygit light              | Change prompt to the light style.
+| fancygit light-double-line  | Change prompt to the light style in double line.
 
 ### Git suggested colors
 
