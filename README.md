@@ -78,6 +78,8 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
 
 ### Git suggested colors
 
+Color configuration to put on your `~/.gitconfig` file.
+
 ```bash
 [color]
     ui = auto
