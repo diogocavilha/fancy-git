@@ -1,5 +1,10 @@
 # Changelog
 
+### v5.1.0
+
+- Add new light style.
+- Improve the space after the user symbol when in double line style.
+
 ### v5.0.8
 
 - Fix spaces among the statuses of simple style.
