@@ -14,6 +14,8 @@ _fancygit() {
         simple-double-line \
         human dark \
         dark-double-line \
+        light \
+        light-double-line \
         configure-fonts
     '
 

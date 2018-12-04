@@ -5,20 +5,20 @@ fancygit_prompt_builder() {
     . ~/.fancy-git/config
 
     # Prompt style
-    user_at_host="${white}${bg_dark_gray_01}${bold}"
-    user_at_host_end="${bold_none}${bg_none}${s_darkgray01_bgdarkgray}"
-    user_symbol="${bg_dark_gray}${bold}${white}"
-    user_symbol_end="${none}${bold_none}${bg_none}${s_darkgray_bgdarkgray01}"
-    path="${bg_dark_gray_01}${white}${bold}"
-    path_git="${bg_dark_gray_01}${white}  ${is_git_repo} ${bold}"
+    user_at_host="${black}${bg_light_gray}${bold}"
+    user_at_host_end="${bold_none}${bg_none}${s_lightgray_bgwhite}"
+    user_symbol="${bg_white}${bold}${black}"
+    user_symbol_end="${none}${bold_none}${bg_none}${s_white_bglightgray}"
+    path="${bg_light_gray}${black}${bold}"
+    path_git="${bg_light_gray}${black}  ${is_git_repo} ${bold}"
     path_end="${none}${bold_none}"
-    branch="${s_darkgray01_bgwhite}${bg_white}${black}${bold}"
+    branch="${s_lightgray_bgwhite}${bg_white}${black}${bold}"
     branch_end="${bg_none}${none}${bold_none}${s_white}"
 
     # Building prompt
     if [ "$branch_status" != "" ]
     then
-        branch="${s_darkgray01_bglightyellow}${bg_light_yellow}${black}${bold}"
+        branch="${s_lightgray_bglightyellow}${bg_light_yellow}${black}${bold}"
         branch_end="${bg_none}${bold_none}${s_lightyellow}"
     fi
 
@@ -29,7 +29,7 @@ fancygit_prompt_builder() {
 
     if [ "$staged_files" != "" ]
     then
-        branch="${s_darkgray01_bglightgreen}${bg_light_green}${black}${bold}"
+        branch="${s_lightgray_bglightgreen}${bg_light_green}${black}${bold}"
         branch_end="${bg_none}${bold_none}${s_green}"
     fi
 
@@ -56,7 +56,7 @@ fancygit_prompt_builder() {
 
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
-    prompt_path="${path}${bold}${white} \\w ${path_end}${s_darkgray01}"
+    prompt_path="${path}${bold}${black} \\w ${path_end}${s_lightgray}"
 
     if [ "$branch_name" != "" ]
     then
