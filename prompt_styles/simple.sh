@@ -9,17 +9,17 @@ fg_branch_status() {
 
     if [ "$git_has_unpushed_commits" != "" ]
     then
-        info="${light_yellow}${info}+${git_number_unpushed_commits}c${none} "
+        info="${info}${light_green}+${git_number_unpushed_commits}c${none} "
     fi
 
     if [ "$git_number_untracked_files" -gt 0 ]
     then
-        info="${light_yellow}${info}+${git_number_untracked_files}f${none} "
+        info="${info}${blue}+${git_number_untracked_files}f${none} "
     fi
 
     if [ "$git_number_changed_files" -gt 0 ]
     then
-        info="${light_yellow}${info}${git_number_changed_files}m${none} "
+        info="${info}${light_yellow}${git_number_changed_files}m${none} "
     fi
 
     if [ "$info" != "" ]; then
