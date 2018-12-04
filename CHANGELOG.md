@@ -1,5 +1,9 @@
 # Changelog
 
+### v5.0.8
+
+- Fix spaces among the statuses of simple style.
+
 ### v5.0.7
 
 - Improve simple style.

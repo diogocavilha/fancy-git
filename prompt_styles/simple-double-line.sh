@@ -23,6 +23,7 @@ fg_branch_status() {
     fi
 
     if [ "$info" != "" ]; then
+        info=$(echo "$info" | sed -e 's/[[:space:]]*$//')
         echo "$info"
         return
     fi
