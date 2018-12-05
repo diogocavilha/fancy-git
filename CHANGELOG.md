@@ -1,4 +1,4 @@
-# Changelog
+# Fancy Git Changelog
 
 ### v5.2.1
 
