@@ -10,6 +10,8 @@
 
 That's a prompt changer to show a few cool git informations about your repository on terminal.
 
+[You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
+
 ### Installing (Linux and MAC OS)
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
