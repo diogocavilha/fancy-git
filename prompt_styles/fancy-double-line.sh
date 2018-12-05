@@ -18,8 +18,8 @@ fancygit_prompt_builder() {
     # Building prompt
     if [ "$branch_status" != "" ]
     then
-        branch="${s_blue_bgyellow}${bg_light_yellow}${black}${bold}"
-        branch_end="${bg_none}${bold_none}${s_yellow}"
+        branch="${s_blue_bglightyellow}${bg_light_yellow}${black}${bold}"
+        branch_end="${bg_none}${bold_none}${s_lightyellow}"
     fi
 
     if [ "$staged_files" = "" ]
@@ -55,7 +55,7 @@ fancygit_prompt_builder() {
     fi
 
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
-    prompt_symbol="\n${user_symbol}\$ ${user_symbol_end}"
+    prompt_symbol="\n${user_symbol}\$${user_symbol_end}"
     prompt_path="${path}${bold}${white} \\w ${path_end}${s_blue}"
 
     if [ "$branch_name" != "" ]

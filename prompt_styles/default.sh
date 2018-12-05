@@ -18,8 +18,8 @@ fancygit_prompt_builder() {
     # Building prompt
     if [ "$branch_status" != "" ]
     then
-        branch="${s_blue_bgyellow}${bg_light_yellow}${black}${bold}"
-        branch_end="${bg_none}${bold_none}${s_yellow}"
+        branch="${s_blue_bglightyellow}${bg_light_yellow}${black}${bold}"
+        branch_end="${bg_none}${bold_none}${s_lightyellow}"
     fi
 
     if [ "$staged_files" = "" ]

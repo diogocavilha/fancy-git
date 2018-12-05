@@ -75,6 +75,8 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
 | fancygit human              | Change prompt to the human readable style.
 | fancygit dark               | Change prompt to the dark style.
 | fancygit dark-double-line   | Change prompt to the dark style in double line.
+| fancygit light              | Change prompt to the light style.
+| fancygit light-double-line  | Change prompt to the light style in double line.
 
 ### Git suggested colors
 
@@ -98,40 +100,42 @@ I suggest you to use this scheme color because fancygit will paint the backgroun
 ### Aliases
 
 | Alias                    | Command                                                                                                                                                | Description
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------
-| gs                       | git status                                                                                                                                             | Show git status.
-| ga \<file\> ...          | Add files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/ga.sh)                                      | Add a file in order to commit.
-| gaa                      | Add all files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gaa.sh)                                 | Add all files in order to commit.
-| gd                       | Show changes of a file and suggests to add it. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gd.sh)                     | Clear screen and git diff
-| gcm                      | git commit                                                                                                                                             | Start committing.
-| gcmm "\<message\>"       | git commit -m "\<message\>"                                                                                                                            | Start committing with a message.
-| gpl                      | git pull. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpl.sh)                                                          | Git pull.
-| gps                      | git push                                                                                                                                               | Git push.
-| gplo \<branch-name\>     | git pull origin \<branch-name\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gplo.sh)                                  | Git pull from \<branch-name\> to current local branch.
-| gpso \<branch-name\>     | git push origin \<branch-name\>                                                                                                                        | Git push from current local branch to \<branch-name\>.
-| gplob                    | Git pull from remote current branch to local current branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gplob.sh)    | Git pull from remote branch to local branch.
-| gpsob                    | Git push from local current branch to remote current branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpsob.sh)    | Git push from local branch to remote branch.
-| gck \<file\> ...         | git checkout -- \<file\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gck.sh)                                          | Rollback file changes.
-| gckb \<branch-name\>     | git checkout \<branch-name\>                                                                                                                           | Switch to a branch.
-| gckbt \<branch-name\>    | Switch to a branch with --track option. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gckbt.sh)                         | Switch to a branch with --track option.
-| gcb \<branch-name\>      | git checkout -b \<branch-name\>                                                                                                                        | Create and switch to the new branch.
-| gdb \<branch-name\>      | git branch -D \<branch-name\>                                                                                                                          | Delete a local branch.
-| gdbr \<branch-name\>     | git push origin --delete \<branch-name\>                                                                                                               | Delete a remote branch.
-| grb \<new-branch-name\>  | Rename a local branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grb.sh)                                            | Rename current branch (local).
-| grba \<new-branch-name\> | Rename a branch (local and remote). [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grba.sh)                              | Rename current branch (local and remote).
-| gl                       | git log                                                                                                                                                | Show git log.
-| glp                      | Show pretty git log. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/glp.sh)                                              | Show pretty git log.
-| gdof                     | find . -name "*.orig" \| xargs rm -rf                                                                                                                  | Remove all .orig files from project.
-| gfi \<file\>             | git update-index --assume-unchanged \<file\>                                                                                                           | Force git to ignore a file.
-| gurl                     | Show git repository URL. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gurl.sh)                                         | Show git repository URL.
-| guser                    | Show git user information. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/guser.sh)                                      | Show git user information.
-| gst                      | git stash                                                                                                                                              | Create new stash with default message.
-| gstl                     | git stash list                                                                                                                                         | List all stashes.
-| gstm                     | git stash save "\<message\>"                                                                                                                           | Create new stash with custom message.
-| gstw                     | git stash show \<stash_id\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gstw.sh)                                      | Show stash diffs.
-| gsta                     | git stash apply \<stash_id\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gsta.sh)                                     | Apply stash.
-| gstd                     | git stash drop \<stash_id\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gstd.sh)                                      | Drop specific stash.
-| gg "\<message\>"         | git add --all && git commit -m "\<message\>" && git push [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gg.sh)           | Add all changes, then commit and push them.
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------
+| gs                         | git status                                                                                                                                             | Show git status.
+| ga \<file\> [<other_file>] | Add files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/ga.sh)                                      | Add a file in order to commit.
+| gap \<file\>               | Add part of a files in order to commit.                                                                                                                | Add a file in order to commit.
+| gaa                        | Add all files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gaa.sh)                                 | Add all files in order to commit.
+| gd                         | Show changes of a file and suggests to add it. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gd.sh)                     | Clear screen and git diff
+| gcm                        | git commit                                                                                                                                             | Start committing.
+| gcmm "\<message\>"         | git commit -m "\<message\>"                                                                                                                            | Start committing with a message.
+| gpl                        | git pull. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpl.sh)                                                         | Git pull.
+| gps                        | git push                                                                                                                                               | Git push.
+| gplo \<branch-name\>       | git pull origin \<branch-name\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gplo.sh)                                  | Git pull from \<branch-name\> to current local branch.
+| gpso \<branch-name\>       | git push origin \<branch-name\>                                                                                                                        | Git push from current local branch to \<branch-name\>.
+| gplob                      | Git pull from remote current branch to local current branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gplob.sh)    | Git pull from remote branch to local branch.
+| gpsob                      | Git push from local current branch to remote current branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gpsob.sh)    | Git push from local branch to remote branch.
+| gck \<file\> ...           | git checkout -- \<file\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gck.sh)                                          | Rollback file changes.
+| gckb \<branch-name\>       | git checkout \<branch-name\>                                                                                                                           | Switch to a branch.
+| gckbt \<branch-name\>      | Switch to a branch with --track option. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gckbt.sh)                         | Switch to a branch with --track option.
+| gcb \<branch-name\>        | git checkout -b \<branch-name\>                                                                                                                        | Create and switch to the new branch.
+| gdb \<branch-name\>        | git branch -D \<branch-name\>                                                                                                                          | Delete a local branch.
+| gdbr \<branch-name\>       | git push origin --delete \<branch-name\>                                                                                                               | Delete a remote branch.
+| grb \<new-branch-name\>    | Rename a local branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grb.sh)                                            | Rename current branch (local).
+| grba \<new-branch-name\>   | Rename a branch (local and remote). [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grba.sh)                              | Rename current branch (local and remote).
+| gl                         | git log                                                                                                                                                | Show git log.
+| glp                        | Show pretty git log. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/glp.sh)                                              | Show pretty git log.
+| gdof                       | find . -name "*.orig" \| xargs rm -rf                                                                                                                  | Remove all .orig files from project.
+| gfi \<file\>               | git update-index --assume-unchanged \<file\>                                                                                                           | Force git to ignore a file.
+| gurl                       | Show git repository URL. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gurl.sh)                                         | Show git repository URL.
+| guser                      | Show git user information. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/guser.sh)                                      | Show git user information.
+| gst                        | git stash                                                                                                                                              | Create new stash with default message.
+| gstl                       | git stash list                                                                                                                                         | List all stashes.
+| gstm                       | git stash save "\<message\>"                                                                                                                           | Create new stash with custom message.
+| gstw                       | git stash show \<stash_id\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gstw.sh)                                      | Show stash diffs.
+| gsta                       | git stash apply \<stash_id\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gsta.sh)                                     | Apply stash.
+| gstd                       | git stash drop \<stash_id\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gstd.sh)                                      | Drop specific stash.
+| gg "\<message\>"           | git add --all && git commit -m "\<message\>" && git push [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gg.sh)           | Add all changes, then commit and push them.
+| gu \<file\> [<other_file>] | git reset HEAD \<file\>                                                                                                                                | Remove files from staging area.
 
 That's the beginning of the project. It could be better and it will, I promiss it.
 
