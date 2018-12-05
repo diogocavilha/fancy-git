@@ -72,7 +72,7 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
  gsta <stash_id>            Apply stash by its numeric ID.
  gstd <stash_id>            Drop a specific stash by its numeric ID.
  gg \"message\"               Add all changes, then commit and push them.
- gu <file> [<other_file>]   Reset HEAD.
+ gu <file> [<other_file>]   Remove files from staging area.
 
  By: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
  Date: 02.28.2016
