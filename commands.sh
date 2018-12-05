@@ -60,18 +60,25 @@ fg_install_fonts() {
 fg_update_checker() {
     local updates
     local option
+    local branch_name
     local manual_update
 
     manual_update=${1:-yes} # yes, no
 
-    # if [ "$manual_update" = "yes" ]
-    # then
-    #     fg_update
-    #     return
-    # fi
+    if [ "$manual_update" = "yes" ]
+    then
+        fg_update
+        return
+    fi
 
-    git fetch origin 2> /dev/null
-    updates=$(git diff origin/update-checker)
+    branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+    if [ "$branch_name" = "" ]
+    then
+        return
+    fi
+
+    cd ~/.fancy-git && git fetch origin 2> /dev/null
+    updates=$(cd ~/.fancy-git && git diff origin/update-checker)
     option="n"
 
     if [ "$updates" != "" ]
@@ -79,18 +86,13 @@ fg_update_checker() {
         echo ""
         echo " Hey! A new Fancy Git update has been released!"
         read -p " Would you like to update it? [Y/n]: " option
-
-        if [ "$option" = "y" ]
-        then
-            echo ""
-            fg_update
-            return
-        fi
-
-        return
     fi
 
-    fg_update
+    if [ "$option" = "y" ]
+    then
+        echo ""
+        fg_update
+    fi
 }
 
 case $1 in
@@ -107,5 +109,6 @@ case $1 in
     "light") fg_change_mode "light";;
     "light-double-line") fg_change_mode "light-double-line";;
     "configure-fonts") fg_install_fonts;;
+    "") return;;
     *) fg_command_not_found "$1";;
 esac
