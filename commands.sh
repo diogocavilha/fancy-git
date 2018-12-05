@@ -27,7 +27,7 @@ fg_update() {
     current_dir=$(pwd)
     mode_file="$base_path/mode"
 
-    cd ~/.fancy-git/ && git pull
+    cd ~/.fancy-git/ && git pull origin update-checker
 
     if [ ! -f "$mode_file" ]; then
         touch -f "$mode_file"
@@ -57,10 +57,46 @@ fg_install_fonts() {
     fc-cache -fv
 }
 
+fg_update_checker() {
+    local updates
+    local option
+    local manual_update
+
+    manual_update=${1:-yes} # yes, no
+
+    # if [ "$manual_update" = "yes" ]
+    # then
+    #     fg_update
+    #     return
+    # fi
+
+    git fetch origin 2> /dev/null
+    updates=$(git diff origin/update-checker)
+    option="n"
+
+    if [ "$updates" != "" ]
+    then
+        echo ""
+        echo " Hey! A new Fancy Git update has been released!"
+        read -p " Would you like to update it? [Y/n]: " option
+
+        if [ "$option" = "y" ]
+        then
+            echo ""
+            fg_update
+            return
+        fi
+
+        return
+    fi
+
+    fg_update
+}
+
 case $1 in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
-    "update") fg_update;;
+    "update") fg_update_checker;;
     "simple") fg_change_mode "simple";;
     "default") fg_change_mode "default";;
     "double-line") fg_change_mode "fancy-double-line";;
