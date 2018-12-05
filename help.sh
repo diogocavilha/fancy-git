@@ -39,6 +39,7 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
 
  gs                         Show git status.
  ga <file> [<other_file>]   Add files in order to commit.
+ gap <file>                 Add part of a file in order to commit.
  gaa                        Add all files in order to commit.
  gd                         Clear screen and git diff.
  gcm                        Start committing.
@@ -71,6 +72,7 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
  gsta <stash_id>            Apply stash by its numeric ID.
  gstd <stash_id>            Drop a specific stash by its numeric ID.
  gg \"message\"               Add all changes, then commit and push them.
+ gu <file> [<other_file>]   Reset HEAD.
 
  By: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
  Date: 02.28.2016
