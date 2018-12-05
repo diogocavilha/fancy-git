@@ -4,6 +4,8 @@
 
 - Add new light style.
 - Improve the space after the user symbol when in double line style.
+- Add command `gap`. (Please read the help --> `fancygit help | grep gap`).
+- Add command `gu`. (Please read the help --> `fancygit help | grep 'gu '`).
 
 ### v5.0.8
 
