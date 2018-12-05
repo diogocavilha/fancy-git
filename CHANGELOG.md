@@ -1,5 +1,10 @@
 # Changelog
 
+### v5.2.1
+
+- Add an update checker.
+- Fix minor bugs.
+
 ### v5.1.0
 
 - Add new light style.

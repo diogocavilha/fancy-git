@@ -37,7 +37,7 @@ fg_update() {
     current_dir=$(pwd)
     mode_file="$base_path/mode"
 
-    cd ~/.fancy-git/ && git pull origin update-checker
+    cd ~/.fancy-git/ && git pull origin master
 
     if [ ! -f "$mode_file" ]; then
         touch -f "$mode_file"
@@ -103,7 +103,7 @@ fg_update_checker() {
     current_dir=$(pwd)
 
     cd ~/.fancy-git && git fetch origin 2> /dev/null
-    updates=$(cd ~/.fancy-git && git diff origin/update-checker)
+    updates=$(cd ~/.fancy-git && git diff origin/master)
     option="n"
 
     if [ "$updates" != "" ]
