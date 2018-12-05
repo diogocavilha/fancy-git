@@ -1,8 +1,10 @@
 . ~/.fancy-git/aliases
 . ~/.fancy-git/fancygit-completion
+. ~/.fancy-git/commands.sh
 
 fancygit_prompt_builder() {
     . ~/.fancy-git/config
+    . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
 
     # Prompt style
     user_at_host="${black}${bg_light_gray}${bold}"

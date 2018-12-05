@@ -85,7 +85,6 @@ fg_update_checker() {
 
     if [ "$manual_update" = "yes" ]
     then
-        # echo "$current_date" > ~/.fancy-git/last_update_at
         fg_update
         return
     fi
@@ -100,7 +99,6 @@ fg_update_checker() {
     then
         return
     fi
-
 
     current_dir=$(pwd)
 
