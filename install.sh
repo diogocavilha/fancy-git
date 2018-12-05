@@ -17,6 +17,10 @@ then
 
     touch -f ~/.fancy-git/mode
     echo "default" > ~/.fancy-git/mode
+
+    current_date=$(date +%Y-%m-%d)
+    touch -f ~/.fancy-git/last_update_at
+    echo "$current_date" > ~/.fancy-git/last_update_at
 fi
 
 if [ "$fg_os" = "Darwin" ]

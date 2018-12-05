@@ -17,11 +17,21 @@ fg_update() {
     local current_dir
     local mode_file
     local base_path
+    local current_date
+
+    current_date=$(date +%Y-%m-%d)
+
+    if [ ! -f ~/.fancy-git/last_update_at ]
+    then
+        touch -f ~/.fancy-git/last_update_at
+    fi
+
+    echo "$current_date" > ~/.fancy-git/last_update_at
 
     base_path="/home/$USER/.fancy-git"
 
     if [ ! -d "$base_path" ]; then
-        styles_dir="/Users/$USER/.fancy-git"
+        base_path="/Users/$USER/.fancy-git"
     fi
 
     current_dir=$(pwd)
@@ -62,12 +72,26 @@ fg_update_checker() {
     local option
     local branch_name
     local manual_update
+    local last_update_at
 
     manual_update=${1:-yes} # yes, no
+    current_date=$(date +%Y-%m-%d)
+    last_update_at=$(cat ~/.fancy-git/last_update_at)
+
+    if [ ! -f ~/.fancy-git/last_update_at ]
+    then
+        touch -f ~/.fancy-git/last_update_at
+    fi
 
     if [ "$manual_update" = "yes" ]
     then
+        # echo "$current_date" > ~/.fancy-git/last_update_at
         fg_update
+        return
+    fi
+
+    if [ "$current_date" = "$last_update_at" ]
+    then
         return
     fi
 
@@ -76,6 +100,9 @@ fg_update_checker() {
     then
         return
     fi
+
+
+    current_dir=$(pwd)
 
     cd ~/.fancy-git && git fetch origin 2> /dev/null
     updates=$(cd ~/.fancy-git && git diff origin/update-checker)
@@ -93,6 +120,9 @@ fg_update_checker() {
         echo ""
         fg_update
     fi
+
+    echo "$current_date" > ~/.fancy-git/last_update_at
+    cd "$current_dir" || return
 }
 
 case $1 in

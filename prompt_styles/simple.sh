@@ -57,13 +57,7 @@ fg_branch_name() {
 
 fancygit_prompt_builder() {
     . ~/.fancy-git/config
-
     . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
-    # current_day=`date +%d`
-    # if [ `echo "$current_day % 2" | bc` -eq 1 ]
-    # then
-    #     fg_update_checker "no"
-    # fi
 
     local user
     local at
