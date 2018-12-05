@@ -14,7 +14,7 @@ fg_branch_status() {
 
     if [ "$git_number_untracked_files" -gt 0 ]
     then
-        info="${info}${blue}+${git_number_untracked_files}f${none} "
+        info="${info}${blue}?${none} "
     fi
 
     if [ "$git_number_changed_files" -gt 0 ]
