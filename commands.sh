@@ -15,8 +15,6 @@ fg_show_version() {
 
 fg_update() {
     local current_dir
-    local mode_file
-    local base_path
     local current_date
 
     current_date=$(date +%Y-%m-%d)
@@ -28,20 +26,13 @@ fg_update() {
 
     echo "$current_date" > ~/.fancy-git/last_update_at
 
-    base_path="/home/$USER/.fancy-git"
-
-    if [ ! -d "$base_path" ]; then
-        base_path="/Users/$USER/.fancy-git"
-    fi
-
     current_dir=$(pwd)
-    mode_file="$base_path/mode"
 
     cd ~/.fancy-git/ && git pull origin master
 
-    if [ ! -f "$mode_file" ]; then
-        touch -f "$mode_file"
-        echo "default" > "$mode_file"
+    if [ ! -f ~/.fancy-git/mode ]; then
+        touch -f ~/.fancy-git/mode
+        echo "default" > ~/.fancy-git/mode
     fi
 
     cd "$current_dir" || return
