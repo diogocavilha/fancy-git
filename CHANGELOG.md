@@ -2,7 +2,10 @@
 
 ### v5.2.2
 
+**All the changes here have been done on the simple style and simple-double-line style.**
+
 - Change the status that indicates changes.
+- Change the status that indicates unpushed commits.
 
 ### v5.2.1
 
