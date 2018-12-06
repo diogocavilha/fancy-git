@@ -2,10 +2,11 @@
 
 ### v5.2.2
 
-**All the changes here have been done on the simple style and simple-double-line style.**
+**All the following changes here have been done on the simple style and simple-double-line style.**
 
 - Change the status that indicates changes.
 - Change the status that indicates unpushed commits.
+- Add new status to indicate that there are stashed code.
 
 ### v5.2.1
 

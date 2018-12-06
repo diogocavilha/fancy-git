@@ -23,6 +23,11 @@ fg_branch_status() {
         info="${info}${light_green}+${none}${light_red}-${none} "
     fi
 
+    if [ "$git_stash" != "" ]
+    then
+        info="${info}~${none}"
+    fi
+
     if [ "$info" != "" ]; then
         info=$(echo "$info" | sed -e 's/[[:space:]]*$//')
         echo "$info"
