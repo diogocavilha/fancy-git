@@ -107,7 +107,7 @@ Well, here goes a little explanation:
 
 `o` = `origin`
 
-`b` = `<branch-name>`... Yes, it will get the branch you're working on.
+`b` = `<current-branch-name>`... Yes, it will get the branch you're working on.
 
 Basically, most of the Fancy Git aliases work this way.
 
