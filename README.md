@@ -82,22 +82,18 @@ In order to change to the **simple mode** you can type `fancygit simple`. And if
 
 ### Git suggested colors
 
-Color configuration to put on your `~/.gitconfig` file.
-
 ```bash
-[color]
-    ui = auto
-[color "diff"]
-    meta = cyan bold
-    old = magenta bold
-    new = green bold
-[color "status"]
-    added = green bold
-    changed = yellow
-    untracked = cyan
+git config --global color.ui true
+
+git config --global color.diff.meta "yellow bold"
+git config --global color.diff.old "red bold"
+git config --global color.diff.new "green bold"
+git config --global color.status.added "green bold"
+git config --global color.status.changed "yellow"
+git config --global color.status.untracked "cyan"
 ```
 
-I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors according to the current repo status.
+I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors, most of the time, according to the current repo status.
 
 ### Aliases
 

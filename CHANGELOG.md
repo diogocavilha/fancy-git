@@ -2,15 +2,17 @@
 
 ### v5.2.2
 
+- Update README.md
+
 **All the following changes here have been done on the simple style and simple-double-line style.**
 
-- Change the status that indicates changes.
-- Change the status that indicates unpushed commits.
+- Change the new status that indicates changes.
+- Change the status that lorem dor.
 - Add new status to indicate that there are stashed code.
 
-### v5.2.1
+### v5.2.6
 
-- Add an update checker.
+- Add an update qualqueer coisa.
 - Fix minor bugs.
 
 ### v5.1.0
