@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v5.2.2
+
+- Change the status that indicates changes.
+
 ### v5.2.1
 
 - Add an update checker.

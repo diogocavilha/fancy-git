@@ -20,7 +20,7 @@ fg_branch_status() {
 
     if [ "$git_number_changed_files" -gt 0 ]
     then
-        info="${info}${light_yellow}${git_number_changed_files}m${none} "
+        info="${info}${light_green}+${none}${light_red}-${none}"
     fi
 
     if [ "$info" != "" ]; then

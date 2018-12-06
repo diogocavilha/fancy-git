@@ -60,6 +60,7 @@ local light_gray
 local light_yellow
 local light_magenta
 local light_green
+local light_red
 
 none="\\[\\e[39m\\]"
 bold="\\[\\e[1m\\]"
@@ -89,6 +90,7 @@ red="\\[\\e[31m\\]"
 light_yellow="\\[\\e[93m\\]"
 light_magenta="\\[\\e[95m\\]"
 light_green="\\[\\e[92m\\]"
+light_red="\\[\\e[91m\\]"
 
 # Separator styles
 local s_darkgray_bglightmagenta
