@@ -41,7 +41,7 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
   +- = There are modified files.
   >  = There are added files waiting to be committed.
   ~  = There are stashes.
-  N^ = There are commits waiting to be pushed. Where N is the number of commits to be pushed.
+  N^ = There are N commits waiting to be pushed.
 
  ALIASES
 
