@@ -8,19 +8,20 @@ _fancygit() {
         -v \
         --version \
         update \
-        simple \
+        configure-fonts \
+        human \
         default \
         double-line \
+        simple \
         simple-double-line \
-        human dark \
+        dark \
         dark-double-line \
         light \
-        light-double-line \
-        configure-fonts
+        light-double-line
     '
 
     if [[ ${cur} == * ]] ; then
-        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
         return 0
     fi
 }
