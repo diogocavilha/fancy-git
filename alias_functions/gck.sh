@@ -1,11 +1,9 @@
 #!/bin/bash
 #
-# Author:   Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date:     03.16.2017
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   03.16.2017
 #
-# CHECKOUT FILES
-#
-# Checkout files and shows git status
+# git checkout --
 
 git checkout -- $* && \
 clear && \

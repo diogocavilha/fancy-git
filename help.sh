@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   11.18.2017
+#
+# It prints the help text.
 
 . ~/.fancy-git/version.sh
 

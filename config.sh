@@ -1,3 +1,10 @@
+#!/bin/bash
+#
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   06.06.2018
+#
+# Configuration file.
+
 # ASCII
 local separator
 local branch_icon

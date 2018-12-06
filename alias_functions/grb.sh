@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Author:   Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date:     05.24.2016
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   05.24.2016
 #
-# BRANCH RENAMING
+# It renames a branch locally.
 #
-# Rename branch locally
+# git branch -m <new_branch_name>
 
-new_branch_name=$1
+new_branch_name="$1"
 
 git branch -m $new_branch_name

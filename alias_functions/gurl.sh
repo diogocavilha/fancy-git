@@ -1,7 +1,10 @@
 #!/bin/bash
-
-gurl=$(git config --list | grep -oE 'https://.*|git@.*')
+#
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   03.04.2016
+#
+# git remote -v
 
 echo ""
-echo " $gurl"
+git remote -v
 echo ""

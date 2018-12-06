@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date: 11.16.2017
+# Date:   11.16.2017
 #
 # Fancygit installation script.
 
@@ -9,8 +9,7 @@ fg_os=$(uname)
 
 git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git
 
-if [ "$fg_os" = "Linux" ]
-then
+if [ "$fg_os" = "Linux" ]; then
     cp -f ~/.bashrc ~/.bashrc.backup
     echo "" >> ~/.bashrc
     echo ". ~/.fancy-git/prompt.sh" >> ~/.bashrc
@@ -23,8 +22,7 @@ then
     echo "$current_date" > ~/.fancy-git/last_update_at
 fi
 
-if [ "$fg_os" = "Darwin" ]
-then
+if [ "$fg_os" = "Darwin" ]; then
     cp -f ~/.bash_profile ~/.bash_profile.backup
     echo "" >> ~/.bash_profile
     echo ". ~/.fancy-git/prompt.sh" >> ~/.bash_profile

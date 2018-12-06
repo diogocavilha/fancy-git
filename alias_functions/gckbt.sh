@@ -1,11 +1,9 @@
 #!/bin/bash
 #
-# Author:   Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date:     07.05.2016
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   07.05.2016
 #
-# BRANCH CHACKOUT
-#
-# It forces the checkout of a branch
+# git checkout --track origin/<current_branch_name>
 
-branch_name=$1
+branch_name="$1"
 git checkout --track origin/$branch_name
