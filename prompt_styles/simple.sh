@@ -25,7 +25,12 @@ fg_branch_status() {
 
     if [ "$git_stash" != "" ]
     then
-        info="${info}~${none}"
+        info="${info}~${none} "
+    fi
+
+    if [ "$staged_files" != "" ]
+    then
+        info="${info}${light_green}>${none} "
     fi
 
     if [ "$info" != "" ]; then

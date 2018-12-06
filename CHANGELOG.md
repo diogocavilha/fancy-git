@@ -9,6 +9,7 @@
 - Change the new status that indicates changes.
 - Change the status that lorem dor.
 - Add new status to indicate that there are stashed code.
+- Add new status to indicate that there are changes to be commited.
 
 ### v5.2.6
 
