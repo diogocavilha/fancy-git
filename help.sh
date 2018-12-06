@@ -35,6 +35,14 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
     = There are stashes.
     = There are commits waiting to be pushed.
 
+ ICONS MEANING FOR SIMPLE STYLE
+
+  ?  = There are untracked files.
+  +- = There are modified files.
+  >  = There are added files waiting to be committed.
+  ~  = There are stashes.
+  N^ = There are commits waiting to be pushed. Where N is the number of commits to be pushed.
+
  ALIASES
 
  gs                         Show git status.
