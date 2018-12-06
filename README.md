@@ -93,9 +93,7 @@ There are a bit of styles you can choose from. Here you have a list of available
 
 ### Aliases
 
-Here we got a list of useful aliases you can use when working.
-
-They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
+Here we got a list of useful aliases you can use when working. They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
 
 For example, what if you could replace `git push origin <branch-name>` for `gpsob`? Much smaller command, isn't it?. That's is possible but what, for goodness sake, means `gpsob`?
 
