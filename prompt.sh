@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Author:   Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date:     06.11.2018
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   06.11.2018
 #
 # Changes de prompt by loading the style configured in ~/.fancygit/mode file.
 
