@@ -29,57 +29,6 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
 
 If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts` or even installing the ttf file placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
 
-### Overview
-
-As a picture is worth a thousand words...
-
-**Default mode**
-
-![001](https://github.com/diogocavilha/fancy-git/blob/master/images/default_001.png)
-![002](https://github.com/diogocavilha/fancy-git/blob/master/images/default_002.png)
-![003](https://github.com/diogocavilha/fancy-git/blob/master/images/default_003.png)
-![004](https://github.com/diogocavilha/fancy-git/blob/master/images/default_004.png)
-![005](https://github.com/diogocavilha/fancy-git/blob/master/images/default_005.png)
-![006](https://github.com/diogocavilha/fancy-git/blob/master/images/default_006.png)
-![007](https://github.com/diogocavilha/fancy-git/blob/master/images/default_007.png)
-
-> In case you are in doubt about what some icon means, you can type `fancygit -h` or `fancygit --help`.
-
-**Simple mode**
-
-If you're running it on a server and you don't want to be too "fancy", you can choose using the simple mode.
-
-> Once you're using the simple mode, it'll not show you lots of cool informations about the git repository. The only information it'll give you is the branch name and whether or not it has changes.
-
-In order to change to the **simple mode** you can type `fancygit simple`. And if you want to return to the **default mode** (colored), you can type `fancygit default`.
-
-![001](https://github.com/diogocavilha/fancy-git/blob/master/images/001.png)
-![002](https://github.com/diogocavilha/fancy-git/blob/master/images/002.png)
-![003](https://github.com/diogocavilha/fancy-git/blob/master/images/003.png)
-
-### Commands
-
-| Command                  | Description
-| ------------------------ | ---------------------------------------------------------
-| fancygit -h, --help      | Show this help.
-| fancygit -v, --version   | Show the fancygit version.
-| fancygit update          | Update fancygit code with the last release from github.
-| fancygit configure-fonts | Install font in order to render icons properly. (only for colored styles).
-
-### Styles
-
-| Command                     | Description
-| --------------------------- | ---------------------------------------------------------
-| fancygit simple             | Change prompt to the simple style.
-| fancygit simple-double-line | Change prompt to the simple style in double line.
-| fancygit default            | Change prompt to the default (colored) style. (This is the fallback style).
-| fancygit double-line        | Change prompt to the default (colored) style in double line.
-| fancygit human              | Change prompt to the human readable style.
-| fancygit dark               | Change prompt to the dark style.
-| fancygit dark-double-line   | Change prompt to the dark style in double line.
-| fancygit light              | Change prompt to the light style.
-| fancygit light-double-line  | Change prompt to the light style in double line.
-
 ### Git suggested colors
 
 ```bash
@@ -95,7 +44,72 @@ git config --global color.status.untracked "cyan"
 
 I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors, most of the time, according to the current repo status.
 
+### Overview
+
+As a picture is worth a thousand words...
+
+**Default style**
+
+![001](https://github.com/diogocavilha/fancy-git/blob/master/images/default_001.png)
+![002](https://github.com/diogocavilha/fancy-git/blob/master/images/default_002.png)
+![003](https://github.com/diogocavilha/fancy-git/blob/master/images/default_003.png)
+![004](https://github.com/diogocavilha/fancy-git/blob/master/images/default_004.png)
+![005](https://github.com/diogocavilha/fancy-git/blob/master/images/default_005.png)
+![006](https://github.com/diogocavilha/fancy-git/blob/master/images/default_006.png)
+![007](https://github.com/diogocavilha/fancy-git/blob/master/images/default_007.png)
+
+> In case you are in doubt about what some icon means, you can type `fancygit -h` or `fancygit --help`.
+
+If you don't want to be too "fancy" (as I don't), you can choose using the **simple style**.
+
+In order to change to the **simple style** you can type `fancygit simple`. And if you want to return to the **default style** (colored), you can type `fancygit default`.
+
+There are a bit of styles you can choose from. Here you have a list of available styles and their corresponding command.
+
+> In case you are in doubt about which styles are available, you can type `fancygit -h` or `fancygit --help`.
+
+### Styles
+
+| Command                     | Description
+| --------------------------- | ---------------------------------------------------------
+| fancygit simple             | `simple` style.
+| fancygit simple-double-line | The same as `simple` style but the cursor gets waiting on next line.
+| fancygit default            | Colored style. (This is the fallback style).
+| fancygit double-line        | The same as `default` style but the cursor gets waiting on next line.
+| fancygit human              | Make prompt more human readable.
+| fancygit dark               | Like `default` style but with darker colors.
+| fancygit dark-double-line   | The same as `dark` style but the cursor gets waiting on next line.
+| fancygit light              | The opposite of `dark` style.
+| fancygit light-double-line  | The same as `light` style but the cursor gets waiting on next line.
+
+### Commands
+
+| Command                  | Description
+| ------------------------ | ---------------------------------------------------------
+| fancygit -h, --help      | Show this help.
+| fancygit -v, --version   | Show the fancygit version.
+| fancygit update          | Update fancygit code with the latest release from github.
+| fancygit configure-fonts | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
+
 ### Aliases
+
+Here we got a list of useful aliases you can use when working.
+
+They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
+
+For example, what if you could replace `git push origin <branch-name>` for `gpsob`? Much smaller command, isn't it?. That's is possible but what, for goodness sake, means `gpsob`?
+
+Well, here goes a little explanation:
+
+`gps + o + b`
+
+`gps` = `git push`
+
+`o` = `origin`
+
+`b` = `<branch-name>`... Yes, it will get the branch you're working on.
+
+Basically, most of the Fancy Git aliases work this way.
 
 | Alias                    | Command                                                                                                                                                | Description
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------
