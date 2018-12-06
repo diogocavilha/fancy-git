@@ -1,5 +1,10 @@
 #!/bin/bash
+#
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   04.01.2016
+#
+# git push origin <current_branch_name>
 
-branch=$(git branch | grep -oP '(?<=\* ).*')
+branch_name=$(git branch | grep -oP '(?<=\* ).*')
 
-git push origin $branch
+git push origin $branch_name

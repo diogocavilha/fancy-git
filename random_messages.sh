@@ -1,9 +1,12 @@
 #!/bin/bash
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date: 11.27.2018
+# Date:   11.27.2018
+#
+# It prints a random funny message after pulling.
 
 _fancygit_after_pulling_random_message() {
+    local list_size
     local messages
     local option
 

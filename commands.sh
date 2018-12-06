@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   03.02.2016
+#
+# Commands manager.
 
 . ~/.fancy-git/version.sh
 
@@ -15,33 +20,23 @@ fg_show_version() {
 
 fg_update() {
     local current_dir
-    local mode_file
-    local base_path
     local current_date
 
     current_date=$(date +%Y-%m-%d)
 
-    if [ ! -f ~/.fancy-git/last_update_at ]
-    then
+    if [ ! -f ~/.fancy-git/last_update_at ]; then
         touch -f ~/.fancy-git/last_update_at
     fi
 
     echo "$current_date" > ~/.fancy-git/last_update_at
 
-    base_path="/home/$USER/.fancy-git"
-
-    if [ ! -d "$base_path" ]; then
-        base_path="/Users/$USER/.fancy-git"
-    fi
-
     current_dir=$(pwd)
-    mode_file="$base_path/mode"
 
     cd ~/.fancy-git/ && git pull origin master
 
-    if [ ! -f "$mode_file" ]; then
-        touch -f "$mode_file"
-        echo "default" > "$mode_file"
+    if [ ! -f ~/.fancy-git/mode ]; then
+        touch -f ~/.fancy-git/mode
+        echo "default" > ~/.fancy-git/mode
     fi
 
     cd "$current_dir" || return
@@ -78,25 +73,21 @@ fg_update_checker() {
     current_date=$(date +%Y-%m-%d)
     last_update_at=$(cat ~/.fancy-git/last_update_at)
 
-    if [ ! -f ~/.fancy-git/last_update_at ]
-    then
+    if [ ! -f ~/.fancy-git/last_update_at ]; then
         touch -f ~/.fancy-git/last_update_at
     fi
 
-    if [ "$manual_update" = "yes" ]
-    then
+    if [ "$manual_update" = "yes" ]; then
         fg_update
         return
     fi
 
-    if [ "$current_date" = "$last_update_at" ]
-    then
+    if [ "$current_date" = "$last_update_at" ]; then
         return
     fi
 
     branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
-    if [ "$branch_name" = "" ]
-    then
+    if [ "$branch_name" = "" ]; then
         return
     fi
 
@@ -106,15 +97,13 @@ fg_update_checker() {
     updates=$(cd ~/.fancy-git && git diff origin/master)
     option="n"
 
-    if [ "$updates" != "" ]
-    then
+    if [ "$updates" != "" ]; then
         echo ""
         echo " Hey! A new Fancy Git update has been released!"
         read -p " Would you like to update it? [Y/n]: " option
     fi
 
-    if [ "$option" = "y" ]
-    then
+    if [ "$option" = "y" ]; then
         echo ""
         fg_update
     fi
@@ -123,7 +112,7 @@ fg_update_checker() {
     cd "$current_dir" || return
 }
 
-case $1 in
+case "$1" in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
     "update") fg_update_checker;;

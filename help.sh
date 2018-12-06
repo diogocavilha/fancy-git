@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   11.18.2017
+#
+# It prints the help text.
 
 . ~/.fancy-git/version.sh
 
@@ -34,6 +39,14 @@ echo " Fancy Git v$FANCYGIT_VERSION (c) $fg_current_year by Diogo Alexsander Cav
     = There are added files waiting to be committed.
     = There are stashes.
     = There are commits waiting to be pushed.
+
+ ICONS MEANING FOR SIMPLE STYLE
+
+  ?  = There are untracked files.
+  +- = There are modified files.
+  >  = There are added files waiting to be committed.
+  ~  = There are stashes.
+  N^ = There are N commits waiting to be pushed.
 
  ALIASES
 

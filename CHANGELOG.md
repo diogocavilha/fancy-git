@@ -1,5 +1,10 @@
 # Fancy Git Changelog
 
+### v5.2.3
+
+- Improve base path definitions
+- Improve code style
+
 ### v5.2.2
 
 - Update README.md

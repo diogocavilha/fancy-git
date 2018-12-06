@@ -1,9 +1,14 @@
+#!/bin/bash
+#
+# Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
+# Date:   06.06.2018
+
 . ~/.fancy-git/aliases
 . ~/.fancy-git/fancygit-completion
 . ~/.fancy-git/commands.sh
 
 fancygit_prompt_builder() {
-    . ~/.fancy-git/config
+    . ~/.fancy-git/config.sh
     . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
 
     # Prompt style
