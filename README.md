@@ -61,7 +61,6 @@ As a picture is worth a thousand words...
 > In case you are in doubt about what some icon means, you can type `fancygit -h` or `fancygit --help`.
 
 If you don't want to be too "fancy" (as I don't), you can choose using the **simple style**.
-
 In order to change to the **simple style** you can type `fancygit simple`. And if you want to return to the **default style** (colored), you can type `fancygit default`.
 
 There are a bit of styles you can choose from. Here you have a list of available styles and their corresponding command.
@@ -94,7 +93,6 @@ There are a bit of styles you can choose from. Here you have a list of available
 ### Aliases
 
 Here we got a list of useful aliases you can use when working. They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
-
 For example, what if you could replace `git push origin <branch-name>` for `gpsob`? Much smaller command, isn't it?. That's is possible but what, for goodness sake, means `gpsob`?
 
 Well, here goes a little explanation:
