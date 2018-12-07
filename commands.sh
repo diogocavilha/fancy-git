@@ -14,7 +14,7 @@ fg_script_help() {
 fg_show_version() {
     local current_year
     current_year=$(date +%Y)
-    echo " Fancy Git v$FANCYGIT_VERSION (c) $current_year by Diogo Alexsander Cavilha <diogocavilha@gmail.com>."
+    echo " Fancy Git v$FANCYGIT_VERSION - $current_year by Diogo Alexsander Cavilha <diogocavilha@gmail.com>."
     echo ""
 }
 
