@@ -5,6 +5,7 @@
 - Improve base path definitions.
 - Improve code style.
 - Change the license to GPL v2.
+- Fix update checker default option.
 
 ### v5.2.2
 
