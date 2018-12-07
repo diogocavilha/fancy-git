@@ -97,13 +97,12 @@ fg_update_checker() {
     updates=$(cd ~/.fancy-git && git diff origin/master)
 
     if [ "$updates" != "" ]; then
-        option="y"
         echo ""
         echo " Hey! A new Fancy Git update has been released!"
-        read -p " Would you like to update it? [Y/n]: " option
+        read -r " Would you like to update it? [Y/n]: " option
     fi
 
-    if [ "$option" = "y" ]; then
+    if [[ "$option" = "" || "$option" = "y" ]]; then
         echo ""
         fg_update
     fi
