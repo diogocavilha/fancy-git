@@ -97,14 +97,13 @@ fg_update_checker() {
     updates=$(cd ~/.fancy-git && git diff origin/master)
 
     if [ "$updates" != "" ]; then
+        echo -e "\n Hey! A new Fancy Git update has been released!"
+        read -p " Would you like to update it? [Y/n]: " option
         echo ""
-        echo " Hey! A new Fancy Git update has been released!"
-        read -r " Would you like to update it? [Y/n]: " option
-    fi
 
-    if [[ "$option" = "" || "$option" = "y" ]]; then
-        echo ""
-        fg_update
+        case "$option" in
+            "y"|"Y"|"") fg_update;;
+        esac
     fi
 
     echo "$current_date" > ~/.fancy-git/last_update_at
