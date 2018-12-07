@@ -2,8 +2,9 @@
 
 ### v5.2.3
 
-- Improve base path definitions
-- Improve code style
+- Improve base path definitions.
+- Improve code style.
+- Change the license to GPL v2.
 
 ### v5.2.2
 
