@@ -10,55 +10,71 @@
 fg_branch_status() {
     . ~/.fancy-git/config.sh
 
-    local branch_icon
-    local branch_status
-    local icon
+    local info
+    info=""
 
-    branch_icon="*" # ⚫, *
-    unpushed_commits_icon="*" # ▲, *
-
-    branch_status=$(git status -s 2> /dev/null)
-    icon=${light_green}$branch_icon${none}
-
-    if [ "$branch_status" != "" ]; then
-        icon=${light_yellow}$branch_icon${none}
-    fi
-
-    if [ "$git_has_unpushed_commits" != "" ]
+    if [ "$git_has_unpushed_commits" ]
     then
-        icon=${light_yellow}${unpushed_commits_icon}${none}
+        info="${info}${light_green}${git_number_unpushed_commits}^${none} "
     fi
 
-    echo "$icon "
+    if [ "$git_number_untracked_files" -gt 0 ]
+    then
+        info="${info}${cyan}?${none} "
+    fi
+
+    if [ "$git_number_changed_files" -gt 0 ]
+    then
+        info="${info}${light_green}+${none}${light_red}-${none} "
+    fi
+
+    if [ "$git_stash" != "" ]
+    then
+        info="${info}~${none} "
+    fi
+
+    if [ "$staged_files" != "" ]
+    then
+        info="${info}${light_green}>${none} "
+    fi
+
+    if [ "$info" != "" ]; then
+        info=$(echo "$info" | sed -e 's/[[:space:]]*$//')
+        echo "[$info]"
+        return
+    fi
+
+    echo ""
 }
 
 fg_branch_name() {
-    local branch_name
-
-    branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+    local light_magenta="\\[\\e[95m\\]"
+    local branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 
     if [ "$branch_name" != "" ]; then
-        branch_name="($branch_name) $(fg_branch_status)"
+        branch_name="on ${light_magenta}$branch_name${none} $(fg_branch_status)"
     fi
 
-    echo " $branch_name"
+    echo "$branch_name"
 }
 
 fancygit_prompt_builder() {
-    . ~/.fancy-git/config.sh
     . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
 
-    local user
-    local at
-    local host
-    local where
+    # Colors
+    local light_green="\\[\\e[92m\\]"
+    local light_yellow="\\[\\e[93m\\]"
+    local none="\\[\\e[39m\\]"
+    local blue="\\[\\e[34m\\]"
+    local bold="\\[\\e[1m\\]"
+    local bold_none="\\[\\e[0m\\]"
 
-    user="${light_green}\u${none}"
-    at="${none} at ${none}"
-    host="${light_green}\h${none}"
-    where="${blue}\w${none}"
+    # Prompt
+    local user="${light_green}\u${none}"
+    local host="${light_yellow}\h${none}"
+    local where="${blue}\w${none}"
 
-    PS1="${bold}$user$at$host in $where\$$(fg_branch_name)${bold_none}"
+    PS1="${bold}${user} at ${host} in $where $(fg_branch_name)${bold_none}\n\$ "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"

@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v5.2.5
+
+- Improve the human style
+
 ### v5.2.4
 
 - Add command `fancygit --colors` to show the colors configuration.
