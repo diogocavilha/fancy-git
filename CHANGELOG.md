@@ -3,6 +3,7 @@
 ### v5.2.4
 
 - Add command `fancygit --colors` to show the colors configuration.
+- Add command `fancygit --colors-set` to apply colors configuration.
 
 ### v5.2.3
 
