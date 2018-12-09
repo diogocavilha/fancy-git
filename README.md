@@ -43,6 +43,7 @@ git config --global color.status.untracked "cyan"
 ```
 
 I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors, most of the time, according to the current repo status.
+You can run the command: `fancygit --colors` in order to see those suggested colors. If you want to apply that colors configuration, you can type `fancygit --colors-set`.
 
 ### Overview
 
@@ -89,6 +90,8 @@ There are a bit of styles you can choose from. Here you have a list of available
 | fancygit -v, --version   | Show the fancygit version.
 | fancygit update          | Update fancygit code with the latest release from github.
 | fancygit configure-fonts | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
+| fancygit --colors        | Show suggested colors config in an easy way to copy and paste to apply them.
+| fancygit --colors-set    | Apply the suggested colors configuration.
 
 ### Aliases
 

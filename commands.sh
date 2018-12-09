@@ -110,9 +110,34 @@ fg_update_checker() {
     cd "$current_dir" || return
 }
 
+fg_show_colors_config() {
+    echo "
+git config --global color.ui true
+
+git config --global color.diff.meta \"yellow bold\"
+git config --global color.diff.old \"red bold\"
+git config --global color.diff.new \"green bold\"
+git config --global color.status.added \"green bold\"
+git config --global color.status.changed \"yellow\"
+git config --global color.status.untracked \"cyan\"
+"
+}
+
+fg_colors_config_set() {
+    `git config --global color.ui true`
+    `git config --global color.diff.meta "yellow bold"`
+    `git config --global color.diff.old "red bold"`
+    `git config --global color.diff.new "green bold"`
+    `git config --global color.status.added "green bold"`
+    `git config --global color.status.changed "yellow"`
+    `git config --global color.status.untracked "cyan"`
+}
+
 case "$1" in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
+    "--colors") fg_show_colors_config;;
+    "--colors-set") fg_colors_config_set;;
     "update") fg_update_checker;;
     "simple") fg_change_mode "simple";;
     "default") fg_change_mode "default";;

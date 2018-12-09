@@ -17,7 +17,9 @@ _fancygit() {
         dark \
         dark-double-line \
         light \
-        light-double-line
+        light-double-line \
+        --colors \
+        --colors-set
     '
 
     if [[ ${cur} == * ]] ; then
