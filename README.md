@@ -45,6 +45,8 @@ git config --global color.status.untracked "cyan"
 I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors, most of the time, according to the current repo status.
 You can run the command: `fancygit --colors` in order to see those suggested colors. If you want to apply that colors configuration, you can type `fancygit --colors-set`.
 
+You can always run a `fancygit --help` to check out the possibilities ;)
+
 ### Overview
 
 As a picture is worth a thousand words...
