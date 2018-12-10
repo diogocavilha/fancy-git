@@ -144,6 +144,7 @@ case "$1" in
     "double-line") fg_change_mode "fancy-double-line";;
     "simple-double-line") fg_change_mode "simple-double-line";;
     "human") fg_change_mode "human";;
+    "human-dark") fg_change_mode "human-dark";;
     "dark") fg_change_mode "dark";;
     "dark-double-line") fg_change_mode "dark-double-line";;
     "light") fg_change_mode "light";;

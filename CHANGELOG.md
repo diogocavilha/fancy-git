@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v5.2.6
+
+- Add new human dark style. (Useful when using light scheme color on terminal).
+
 ### v5.2.5
 
 - Improve the human style

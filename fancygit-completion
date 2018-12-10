@@ -10,6 +10,7 @@ _fancygit() {
         update \
         configure-fonts \
         human \
+        human-dark \
         default \
         double-line \
         simple \
