@@ -62,17 +62,18 @@ fancygit_prompt_builder() {
     . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
 
     # Colors
-    local light_green="\\[\\e[92m\\]"
-    local light_yellow="\\[\\e[93m\\]"
-    local none="\\[\\e[39m\\]"
     local blue="\\[\\e[34m\\]"
     local bold="\\[\\e[1m\\]"
     local bold_none="\\[\\e[0m\\]"
+    local light_green="\\[\\e[92m\\]"
+    local light_yellow="\\[\\e[93m\\]"
+    local none="\\[\\e[39m\\]"
+    local orange="\\033[95;38;5;214m"
 
     # Prompt
-    local user="${light_green}\u${none}"
+    local user="${orange}\u${none}"
     local host="${light_yellow}\h${none}"
-    local where="${blue}\w${none}"
+    local where="${light_green}\w${none}"
 
     PS1="${bold}${user} at ${host} in $where $(fg_branch_name)${bold_none}\n\$ "
 }
