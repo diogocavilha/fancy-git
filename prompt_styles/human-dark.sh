@@ -78,7 +78,7 @@ fancygit_prompt_builder() {
     # Prompt
     local user="\u"
     local host="\h"
-    local where="\w"
+    local where="\W"
 
     PS1="${bold}${user} ${at} ${host} ${in} $where $(fg_branch_name)${bold_none}\n\$ "
 }

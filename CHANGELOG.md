@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v5.2.8
+
+- Change directory path to the current directory when in human style.
+
 ### v5.2.7
 
 - Change status icon for simple style.
