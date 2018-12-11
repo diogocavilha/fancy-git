@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v5.2.7
+
+- Change status icon for simple style.
+
 ### v5.2.6
 
 - Add new human dark style. (Useful when using light scheme color on terminal).

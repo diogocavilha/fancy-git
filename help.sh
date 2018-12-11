@@ -44,7 +44,7 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
 
   ?  = There are untracked files.
   +- = There are modified files.
-  >  = There are added files waiting to be committed.
+  ✔  = There are added files waiting to be committed.
   ~  = There are stashes.
   N^ = There are N commits waiting to be pushed.
 

@@ -35,7 +35,7 @@ fg_branch_status() {
 
     if [ "$staged_files" != "" ]
     then
-        info="${info}${light_green}>${none} "
+        info="${info}${light_green}✔${none} "
     fi
 
     if [ "$info" != "" ]; then
