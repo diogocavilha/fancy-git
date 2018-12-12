@@ -30,12 +30,12 @@ fg_branch_status() {
 
     if [ "$git_stash" != "" ]
     then
-        info="${info}~${none} "
+        info="${info}∿${none} "
     fi
 
     if [ "$staged_files" != "" ]
     then
-        info="${info}${light_green}✔${none} "
+        info="${info}${light_green}>${none} "
     fi
 
     if [ "$info" != "" ]; then
@@ -73,7 +73,7 @@ fancygit_prompt_builder() {
     # Prompt
     local user="${orange}\u${none}"
     local host="${light_yellow}\h${none}"
-    local where="${light_green}\W${none}"
+    local where="${light_green}\w${none}"
 
     PS1="${bold}${user} at ${host} in $where $(fg_branch_name)${bold_none}\n\$ "
 }

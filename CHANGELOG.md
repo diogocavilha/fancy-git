@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v5.2.9
+
+- Change stash icon from simple and human styles.
+
 ### v5.2.8
 
 - Change directory path to the current directory when in human style.
