@@ -2,7 +2,7 @@
 
 ### v5.3.0
 
-- Add a sign for remote branches only.
+- Add a sign for local branches only.
 
 ### v5.2.9
 
