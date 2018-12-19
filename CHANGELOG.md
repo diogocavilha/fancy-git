@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v5.3.0
+
+- Add a sign for remote branches only.
+
 ### v5.2.9
 
 - Change stash icon from simple and human styles.

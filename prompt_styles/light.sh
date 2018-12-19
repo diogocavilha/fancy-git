@@ -65,6 +65,12 @@ fancygit_prompt_builder() {
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
     prompt_path="${path}${bold}${black} \\w ${path_end}${s_lightgray}"
 
+    local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/origin/${branch_name}" | wc -l)
+
+    if [ "$branch_name" != "" ] && [ "$only_local_branch" -eq 0 ]; then
+        branch_name="${branch_name}*"
+    fi
+
     if [ "$branch_name" != "" ]
     then
         prompt_path="${path_git}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"

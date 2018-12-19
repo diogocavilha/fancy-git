@@ -10,8 +10,7 @@
 fg_branch_status() {
     . ~/.fancy-git/config.sh
 
-    local info
-    info=""
+    local info=""
 
     if [ "$git_has_unpushed_commits" ]
     then
@@ -50,12 +49,19 @@ fg_branch_status() {
 fg_branch_name() {
     local light_magenta="\\[\\e[95m\\]"
     local branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+    local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/origin/${branch_name}" | wc -l)
+    local light_green="\\[\\e[92m\\]"
+    local none="\\[\\e[39m\\]"
 
-    if [ "$branch_name" != "" ]; then
-        branch_name="on ${light_magenta}$branch_name${none} $(fg_branch_status)"
+    if [ "$branch_name" != "" ] && [ "$only_local_branch" -eq 0 ]; then
+        branch_name="${light_magenta}$branch_name${none}${light_green}*${none}"
     fi
 
-    echo "$branch_name"
+    if [ "$branch_name" != "" ]; then
+        branch_name="on ${light_magenta}$branch_name${none}"
+    fi
+
+    echo "$branch_name $(fg_branch_status)"
 }
 
 fancygit_prompt_builder() {

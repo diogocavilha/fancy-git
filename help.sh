@@ -48,6 +48,8 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
   ∿  = There are stashes.
   N^ = There are N commits waiting to be pushed.
 
+  If a branch name is followed by an asterisk (*), it means that the branch exists only locally.
+
  ALIASES
 
  gs                         Show git status.
