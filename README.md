@@ -10,7 +10,7 @@
 
 That's a prompt changer to show a few cool git informations about your repository on terminal.
 
-[You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
+:bookmark: [You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
 ### Installing (Linux and MAC OS)
 ```sh
@@ -70,7 +70,7 @@ There are a bit of styles you can choose from. Here you have a list of available
 
 > In case you are in doubt about which styles are available, you can type `fancygit -h` or `fancygit --help`.
 
-### Styles
+### Styles :art:
 
 | Command                     | Description
 | --------------------------- | ---------------------------------------------------------
@@ -150,6 +150,13 @@ Basically, most of the Fancy Git aliases work this way.
 | gg "\<message\>"           | git add --all && git commit -m "\<message\>" && git push [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gg.sh)           | Add all changes, then commit and push them.
 | gu \<file\> [<other_file>] | git reset HEAD \<file\>                                                                                                                                | Remove files from staging area.
 
-If you have any problem on setting up the fancy-git, contact me at [diogocavilha@gmail.com](mailto:diogocavilha@gmail.com) or simply create an issue. I'll be happy to help you.
+# Contributing :rocket:
+
+- Give a star to the project =D
+- Fork the project.
+- Create a branch in order to implement your changes. (`git checkout -b your-branch-name`).
+- Send a Pull Request.
+
+If you have any problem on setting up the fancy-git, contact me at [diogocavilha@gmail.com](mailto:diogocavilha@gmail.com) or simply create an issue [here](https://github.com/diogocavilha/fancy-git/issues). I'll be happy to help you.
 
 [![Donate_with_PayPal](https://github.com/diogocavilha/fancy-git/blob/master/images/buymeacoffee.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QFCN8W7PRX696&lc=BR&item_name=diogocavilha%2fFancyGit&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
