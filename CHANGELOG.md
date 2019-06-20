@@ -1,5 +1,11 @@
 # Fancy Git Changelog
 
+### v6.0.0
+
+- Add Python virtual environment support.
+- Add human-dark mode to the help text.
+- Fix light-double-line style.
+
 ### v5.3.0
 
 - Add a sign for local branches only.

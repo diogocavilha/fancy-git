@@ -79,7 +79,16 @@ fancygit_prompt_builder() {
         return
     fi
 
-    PS1="${prompt_user}${prompt_path}${prompt_symbol} "
+    local venv=""
+
+    if ! [ -z ${VIRTUAL_ENV} ]
+    then
+        prompt_user="${user_at_host} \\u@\\h ${user_at_host_end}"
+        venv="`basename \"$VIRTUAL_ENV\"`"
+        venv="${bg_dark_gray}${bold}${white}${venv} ${path_end}${s_darkgray_bgdarkgray01}"
+    fi
+
+    PS1="${venv}${prompt_user}${prompt_path}${prompt_symbol} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
