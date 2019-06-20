@@ -80,8 +80,13 @@ fancygit_prompt_builder() {
     local user="${orange}\u${none}"
     local host="${light_yellow}\h${none}"
     local where="${light_green}\w${none}"
+    local venv=""
 
-    PS1="${bold}${user} at ${host} in $where $(fg_branch_name)${bold_none}\n\$ "
+    if ! [ -z ${VIRTUAL_ENV} ]; then
+        venv="${light_yellow}`basename \"$VIRTUAL_ENV\"`${none} for "
+    fi
+
+    PS1="${bold}${venv}${user} at ${host} in $where $(fg_branch_name)${bold_none}\n\$ "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"

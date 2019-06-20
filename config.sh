@@ -129,6 +129,7 @@ local s_darkgray
 local s_lightgray_bgyellow
 
 s_lightmagenta_bgblue="${light_magenta}${bg_blue}${separator}${bg_none}${none}"
+s_lightmagenta_bgdarkgray="${light_magenta}${bg_dark_gray}${separator}${bg_none}${none}"
 s_lightmagenta_bgnone="${light_magenta}${bg_none}${separator}${bg_none}${none}"
 s_blue_bglightyellow="${blue}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
 s_blue_bglightgreen="${blue}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
