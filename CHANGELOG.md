@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v6.0.1
+
+- Fix Python virtual environment when in a git repository path.
+
 ### v6.0.0
 
 - Add Python virtual environment support.

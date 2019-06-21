@@ -21,6 +21,7 @@ fancygit_prompt_builder() {
     path_end="${none}${bold_none}"
     branch="${s_darkgray01_bgwhite}${bg_white}${black}${bold}"
     branch_end="${bg_none}${none}${bold_none}${s_white}"
+    local venv=""
 
     # Building prompt
     if [ "$branch_status" != "" ]
@@ -71,21 +72,19 @@ fancygit_prompt_builder() {
         branch_name="${branch_name}*"
     fi
 
-    if [ "$branch_name" != "" ]
-    then
-        prompt_path="${path_git}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"
-        prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
-        PS1="${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
-        return
-    fi
-
-    local venv=""
-
     if ! [ -z ${VIRTUAL_ENV} ]
     then
         prompt_user="${user_at_host} \\u@\\h ${user_at_host_end}"
         venv="`basename \"$VIRTUAL_ENV\"`"
         venv="${bg_dark_gray}${bold}${white}${venv} ${path_end}${s_darkgray_bgdarkgray01}"
+    fi
+
+    if [ "$branch_name" != "" ]
+    then
+        prompt_path="${path_git}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"
+        prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
+        PS1="${venv}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
+        return
     fi
 
     PS1="${venv}${prompt_user}${prompt_symbol}${prompt_path} "
