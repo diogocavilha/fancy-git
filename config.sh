@@ -12,6 +12,7 @@ local is_git_repo
 local has_untracked_files
 local has_changed_files
 local has_added_files
+local working_on_venv
 
 separator=""
 branch_icon=""
@@ -21,6 +22,7 @@ has_untracked_files=" "
 has_changed_files="  "
 has_added_files="  "
 has_unpushed_commits="  "
+working_on_venv="  "
 
 # Git info
 local branch_name

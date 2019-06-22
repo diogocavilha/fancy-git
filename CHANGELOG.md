@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v6.0.2
+
+- Add a ghost icon to indicate you're working on a Python virtual environment. (Only colored themes)
+
 ### v6.0.1
 
 - Fix Python virtual environment when in a git repository path.
