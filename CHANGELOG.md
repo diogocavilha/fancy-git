@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v6.0.3
+
+- Add the `pve` command to show the current Python virtual environment name.
+
 ### v6.0.2
 
 - Add a ghost icon to indicate you're working on a Python virtual environment. (Only colored themes)
