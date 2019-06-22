@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v6.0.5
+
+- Add new icon when branch exists only locally. (Only colored themes)
+
 ### v6.0.4
 
 - Fix installation command when git package is not installed yet.

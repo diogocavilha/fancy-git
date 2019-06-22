@@ -68,7 +68,7 @@ fancygit_prompt_builder() {
     local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/origin/${branch_name}" | wc -l)
 
     if [ "$branch_name" != "" ] && [ "$only_local_branch" -eq 0 ]; then
-        branch_name="${branch_name}*"
+        branch_icon="${is_only_local_branch}"
     fi
 
     if ! [ -z ${VIRTUAL_ENV} ]
