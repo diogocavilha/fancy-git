@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v6.0.4
+
+- Fix installation command when git package is not installed yet.
+
 ### v6.0.3
 
 - Add the `pve` command to show the current Python virtual environment name.
