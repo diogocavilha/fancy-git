@@ -7,6 +7,15 @@
 
 fg_os=$(uname)
 
+git_path=`whereis git | cut -d ":" -f 2`
+
+if [ "$git_path" = "" ]; then
+    echo ""
+    echo " ⚠ Please install git before running this command."
+    echo ""
+    exit 0
+fi
+
 git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git
 
 if [ "$fg_os" = "Linux" ]; then
