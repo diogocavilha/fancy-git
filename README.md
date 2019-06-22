@@ -149,10 +149,11 @@ Basically, most of the Fancy Git aliases work this way.
 | gstd                       | git stash drop \<stash_id\> [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gstd.sh)                                      | Drop specific stash.
 | gg "\<message\>"           | git add --all && git commit -m "\<message\>" && git push [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gg.sh)           | Add all changes, then commit and push them.
 | gu \<file\> [<other_file>] | git reset HEAD \<file\>                                                                                                                                | Remove files from staging area.
+| pve                       | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/pve.sh)                                                                  | Show the current Python virtual environment name.
 
 # Contributing :rocket:
 
-- Give a star to the project =D
+- Give this project a star =D
 - Fork the project.
 - Create a branch in order to implement your changes. (`git checkout -b your-branch-name`).
 - Send a Pull Request.

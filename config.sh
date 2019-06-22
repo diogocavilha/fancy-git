@@ -9,9 +9,11 @@
 local separator
 local branch_icon
 local is_git_repo
+local has_git_stash
 local has_untracked_files
 local has_changed_files
 local has_added_files
+local has_unpushed_commits
 local working_on_venv
 
 separator=""
