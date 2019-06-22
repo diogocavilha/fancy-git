@@ -64,7 +64,6 @@ fancygit_prompt_builder() {
 
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     prompt_symbol="\n${user_symbol}\$${user_symbol_end}"
-    prompt_path="${path}${bold}${white} \\w ${path_end}${s_blue}"
 
     local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/origin/${branch_name}" | wc -l)
 
@@ -74,20 +73,20 @@ fancygit_prompt_builder() {
 
     if ! [ -z ${VIRTUAL_ENV} ]
     then
-        prompt_user="${user_at_host} \\u@\\h ${user_at_host_end}"
-        venv="`basename \"$VIRTUAL_ENV\"`"
-        venv="${bg_light_magenta}${bold}${white}${venv} ${path_end}${s_lightmagenta_bgdarkgray}"
+        venv="$working_on_venv"
     fi
+
+    prompt_path="${path}${bold}${white}${venv} \\w ${path_end}${s_blue}"
 
     if [ "$branch_name" != "" ]
     then
-        prompt_path="${path_git}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"
+        prompt_path="${path_git}${venv}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
-        PS1="${venv}${prompt_user}${prompt_path}${prompt_branch}${prompt_symbol} "
+        PS1="${prompt_user}${prompt_path}${prompt_branch}${prompt_symbol} "
         return
     fi
 
-    PS1="${venv}${prompt_user}${prompt_path}${prompt_symbol} "
+    PS1="${prompt_user}${prompt_path}${prompt_symbol} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
