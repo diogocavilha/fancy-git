@@ -12,24 +12,24 @@ That's a prompt changer to show a few cool git informations about your repositor
 
 :bookmark: [You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
-### Installing (Linux and MAC OS)
+## Installing (Linux and MAC OS)
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
-### Uninstalling (Linux and MAC OS)
+## Uninstalling (Linux and MAC OS)
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
 ```
 
-### After installing
+## After installing
 
 1. Change your terminal font to "SourceCodePro+Powerline+Awesome+Regular". (It's necessary for rendering the icons properly)
 2. Restart your terminal.
 
 If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts` or even installing the ttf file placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
 
-### Git suggested colors
+## Git suggested colors
 
 ```bash
 git config --global color.ui true
@@ -47,7 +47,7 @@ You can run the command: `fancygit --colors` in order to see those suggested col
 
 You can always run a `fancygit --help` to check out the possibilities ;)
 
-### Overview
+## Overview
 
 As a picture is worth a thousand words...
 
@@ -66,7 +66,7 @@ As a picture is worth a thousand words...
 If you don't want to be too "fancy" (as I don't), you can choose using the **simple style**.
 In order to change to the **simple style** you can type `fancygit simple`. And if you want to return to the **default style** (colored), you can type `fancygit default`.
 
-### Working on a Python virtual environment?
+## Working on a Python virtual environment?
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
@@ -74,7 +74,7 @@ There are a bit of styles you can choose from. Here you have a list of available
 
 > In case you are in doubt about which styles are available, you can type `fancygit -h` or `fancygit --help`.
 
-### Styles :art:
+## Styles :art:
 
 `fancygit simple`
 ![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
@@ -106,7 +106,7 @@ There are a bit of styles you can choose from. Here you have a list of available
 `fancygit light-double-line`
 ![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
 
-### Commands
+## Commands
 
 | Command                  | Description
 | ------------------------ | ---------------------------------------------------------
@@ -117,7 +117,7 @@ There are a bit of styles you can choose from. Here you have a list of available
 | fancygit --colors        | Show suggested colors config in an easy way to copy and paste to apply them.
 | fancygit --colors-set    | Apply the suggested colors configuration.
 
-### Aliases
+## Aliases
 
 Here we got a list of useful aliases you can use when working. They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
 For example, what if you could replace `git push origin <branch-name>` for `gpsob`? Much smaller command, isn't it?. That's is possible but what, for goodness sake, means `gpsob`?
