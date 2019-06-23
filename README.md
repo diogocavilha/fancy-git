@@ -108,14 +108,24 @@ There are a bit of styles you can choose from. Here you have a list of available
 
 ## Commands
 
-| Command                  | Description
-| ------------------------ | ---------------------------------------------------------
-| fancygit -h, --help      | Show this help.
-| fancygit -v, --version   | Show the fancygit version.
-| fancygit update          | Update fancygit code with the latest release from github.
-| fancygit configure-fonts | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
-| fancygit --colors        | Show suggested colors config in an easy way to copy and paste to apply them.
-| fancygit --colors-set    | Apply the suggested colors configuration.
+| Command                     | Description
+| --------------------------- | ---------------------------------------------------------
+| fancygit -h, --help         | Show this help.
+| fancygit -v, --version      | Show the fancygit version.
+| fancygit update             | Update fancygit code with the latest release from github.
+| fancygit configure-fonts    | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
+| fancygit --colors           | Show suggested colors config in an easy way to copy and paste to apply them.
+| fancygit --colors-set       | Apply the suggested colors configuration.
+| fancygit simple             | Change prompt to the simple style.
+| fancygit simple-double-line | Change prompt to the simple style in double line.
+| fancygit default            | Change prompt to the default (colored) style. (This is the fallback style).
+| fancygit double-line        | Change prompt to the default (colored) style in double line.
+| fancygit human              | Change prompt to the human readable style.
+| fancygit human-dark         | Change prompt to the human readable style.
+| fancygit dark               | Change prompt to the dark style.
+| fancygit dark-double-line   | Change prompt to the dark style in double line.
+| fancygit light              | Change prompt to the light style.
+| fancygit light-double-line  | Change prompt to the light style in double line.
 
 ## Aliases
 
