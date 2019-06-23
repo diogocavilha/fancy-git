@@ -76,44 +76,34 @@ There are a bit of styles you can choose from. Here you have a list of available
 
 ### Styles :art:
 
-simple
-
+`fancygit simple`
 ![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
 
-simple-double-line
-
+`fancygit simple-double-line`
 ![Simple Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple-double-line.png)
 
-human
-
+`fancygit human`
 ![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
 
-human-dark
-
+`fancygit human-dark`
 ![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
 
-default
-
+`fancygit default`
 ![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
 
-double-line
-
+`fancygit double-line`
 ![Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/double-line.png)
 
-dark
-
+`fancygit dark`
 ![Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark.png)
 
-dark-double-line
-
+`fancygit dark-double-line`
 ![Dark Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-double-line.png)
 
-light
-
+`fancygit light`
 ![Light](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light.png)
 
-light-double-line
-
+`fancygit light-double-line`
 ![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
 
 ### Commands
