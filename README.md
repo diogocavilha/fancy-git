@@ -84,14 +84,6 @@ simple-double-line
 
 ![Simple Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple-double-line.png)
 
-default
-
-![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
-
-double-line
-
-![Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/double-line.png)
-
 human
 
 ![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
@@ -99,6 +91,14 @@ human
 human-dark
 
 ![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
+
+default
+
+![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
+
+double-line
+
+![Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/double-line.png)
 
 dark
 
