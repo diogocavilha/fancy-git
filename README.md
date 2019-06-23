@@ -76,17 +76,45 @@ There are a bit of styles you can choose from. Here you have a list of available
 
 ### Styles :art:
 
-| Command                     | Description
-| --------------------------- | ---------------------------------------------------------
-| fancygit simple             | `simple` style.
-| fancygit simple-double-line | The same as `simple` style but the cursor gets waiting on next line.
-| fancygit default            | Colored style. (This is the fallback style).
-| fancygit double-line        | The same as `default` style but the cursor gets waiting on next line.
-| fancygit human              | Make prompt more human readable.
-| fancygit dark               | Like `default` style but with darker colors.
-| fancygit dark-double-line   | The same as `dark` style but the cursor gets waiting on next line.
-| fancygit light              | The opposite of `dark` style.
-| fancygit light-double-line  | The same as `light` style but the cursor gets waiting on next line.
+simple
+
+![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
+
+simple-double-line
+
+![Simple Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple-double-line.png)
+
+default
+
+![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
+
+double-line
+
+![Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/double-line.png)
+
+human
+
+![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
+
+human-dark
+
+![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
+
+dark
+
+![Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark.png)
+
+dark-double-line
+
+![Dark Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-double-line.png)
+
+light
+
+![Light](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light.png)
+
+light-double-line
+
+![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
 
 ### Commands
 
