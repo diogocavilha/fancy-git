@@ -66,6 +66,10 @@ As a picture is worth a thousand words...
 If you don't want to be too "fancy" (as I don't), you can choose using the **simple style**.
 In order to change to the **simple style** you can type `fancygit simple`. And if you want to return to the **default style** (colored), you can type `fancygit default`.
 
+### Working on a Python virtual environment?
+
+![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
+
 There are a bit of styles you can choose from. Here you have a list of available styles and their corresponding command.
 
 > In case you are in doubt about which styles are available, you can type `fancygit -h` or `fancygit --help`.
