@@ -192,6 +192,13 @@ Basically, most of the Fancy Git aliases work this way.
 - Create a branch in order to implement your changes. (`git checkout -b your-branch-name`).
 - Send a Pull Request.
 
-If you have any problem on setting up the fancy-git, contact me at [diogocavilha@gmail.com](mailto:diogocavilha@gmail.com) or simply create an issue [here](https://github.com/diogocavilha/fancy-git/issues). I'll be happy to help you.
+## Troubleshooting :pick:
+
+Maybe you could face an [issue](https://bugs.kde.org/show_bug.cgi?id=272443) related to icons rendering when using `Konsole` on version `18.12.1`.
+An idea here is to update the `Konsole` to its latest version. So the problem might be solved ;)
+
+---
+
+*If you have any problem on setting up the fancy-git, contact me at [diogocavilha@gmail.com](mailto:diogocavilha@gmail.com) or simply create an issue [here](https://github.com/diogocavilha/fancy-git/issues). I'll be happy to help you.*
 
 [![Donate_with_PayPal](https://github.com/diogocavilha/fancy-git/blob/master/images/buymeacoffee.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QFCN8W7PRX696&lc=BR&item_name=diogocavilha%2fFancyGit&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
