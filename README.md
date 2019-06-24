@@ -67,7 +67,7 @@ As a picture is worth a thousand words...
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
-> You can type `fancygit -h` or `fancygit --help` for more informations.
+> You can type `fancygit -h` or `fancygit --help` for more information.
 
 ## Styles :art:
 
@@ -76,7 +76,7 @@ In order to change to the **simple style** you can type `fancygit simple`. And i
 
 There are a bit of styles you can choose from. Here you have a list of available styles and their corresponding command.
 
-> You can type `fancygit -h` or `fancygit --help` for more informations.
+> You can type `fancygit -h` or `fancygit --help` for more information.
 
 `fancygit simple`
 ![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
