@@ -42,8 +42,12 @@ git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
 
+### Command to apply it
+
+`fancygit --colors-set`
+
 I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors, most of the time, according to the current repo status.
-You can run the command: `fancygit --colors` in order to see those suggested colors. If you want to apply that colors configuration, you can type `fancygit --colors-set`.
+You can run the command: `fancygit --colors` in order to see those suggested colors.
 
 You can always run a `fancygit --help` to check out the possibilities ;)
 
@@ -61,7 +65,7 @@ As a picture is worth a thousand words...
 ![006](https://github.com/diogocavilha/fancy-git/blob/master/images/default_006.png)
 ![007](https://github.com/diogocavilha/fancy-git/blob/master/images/default_007.png)
 
-> In case you are in doubt about what some icon means, you can type `fancygit -h` or `fancygit --help`.
+> You can type `fancygit -h` or `fancygit --help` for more informations.
 
 ## Working on a Python virtual environment?
 
@@ -74,7 +78,7 @@ In order to change to the **simple style** you can type `fancygit simple`. And i
 
 There are a bit of styles you can choose from. Here you have a list of available styles and their corresponding command.
 
-> In case you are in doubt about which styles are available, you can type `fancygit -h` or `fancygit --help`.
+> You can type `fancygit -h` or `fancygit --help` for more informations.
 
 `fancygit simple`
 ![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
