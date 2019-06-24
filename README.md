@@ -70,11 +70,11 @@ In order to change to the **simple style** you can type `fancygit simple`. And i
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
+## Styles :art:
+
 There are a bit of styles you can choose from. Here you have a list of available styles and their corresponding command.
 
 > In case you are in doubt about which styles are available, you can type `fancygit -h` or `fancygit --help`.
-
-## Styles :art:
 
 `fancygit simple`
 ![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
