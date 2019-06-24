@@ -185,17 +185,17 @@ Basically, most of the Fancy Git aliases work this way.
 | gu \<file\> [<other_file>] | git reset HEAD \<file\>                                                                                                                                | Remove files from staging area.
 | pve                       | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/pve.sh)                                                                  | Show the current Python virtual environment name.
 
+## Troubleshooting :pick:
+
+Maybe you could face an [issue](https://bugs.kde.org/show_bug.cgi?id=272443) related to icons rendering when using `Konsole` on version `18.12.1`.
+An idea here is to update the `Konsole` to its latest version. So the problem might be solved ;)
+
 # Contributing :rocket:
 
 - Give this project a star =D
 - Fork the project.
 - Create a branch in order to implement your changes. (`git checkout -b your-branch-name`).
 - Send a Pull Request.
-
-## Troubleshooting :pick:
-
-Maybe you could face an [issue](https://bugs.kde.org/show_bug.cgi?id=272443) related to icons rendering when using `Konsole` on version `18.12.1`.
-An idea here is to update the `Konsole` to its latest version. So the problem might be solved ;)
 
 ---
 
