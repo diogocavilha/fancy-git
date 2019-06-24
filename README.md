@@ -55,8 +55,6 @@ You can always run a `fancygit --help` to check out the possibilities ;)
 
 As a picture is worth a thousand words...
 
-**Default style**
-
 ![001](https://github.com/diogocavilha/fancy-git/blob/master/images/default_001.png)
 ![002](https://github.com/diogocavilha/fancy-git/blob/master/images/default_002.png)
 ![003](https://github.com/diogocavilha/fancy-git/blob/master/images/default_003.png)
@@ -65,11 +63,11 @@ As a picture is worth a thousand words...
 ![006](https://github.com/diogocavilha/fancy-git/blob/master/images/default_006.png)
 ![007](https://github.com/diogocavilha/fancy-git/blob/master/images/default_007.png)
 
-> You can type `fancygit -h` or `fancygit --help` for more informations.
-
 ## Working on a Python virtual environment?
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
+
+> You can type `fancygit -h` or `fancygit --help` for more informations.
 
 ## Styles :art:
 
