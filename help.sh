@@ -91,6 +91,7 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
  gstd <stash_id>            Drop a specific stash by its numeric ID.
  gg \"message\"               Add all changes, then commit and push them.
  gu <file> [<other_file>]   Remove files from staging area.
+ pve                        Show the current Python virtual environment name.
 
  By: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
  Date: 02.28.2016
