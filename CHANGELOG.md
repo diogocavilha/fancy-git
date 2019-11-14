@@ -1,5 +1,9 @@
 # Fancy Git Changelog
 
+### v6.1.6
+
+- Improve the way fancygit looks for its configurations. From now, users can change the `app_config` file, which is located in "/home/$USER/.fancy-git".
+
 ### v6.0.5
 
 - Add new icon when branch exists only locally. (Only colored themes)

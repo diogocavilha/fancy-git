@@ -18,6 +18,31 @@ fg_show_version() {
     echo ""
 }
 
+_fg_create_app_config() {
+    if [ ! -f ~/.fancy-git/app_config ]; then
+        touch -f ~/.fancy-git/app_config
+        cat ~/.fancy-git/app_config_sample > ~/.fancy-git/app_config
+    fi
+}
+
+_fg_copy_style_from_mode_file_to_app_config() {
+    if [ -f ~/.fancy-git/mode -a -f ~/.fancy-git/app_config ]; then
+        local style=`cat ~/.fancy-git/mode`
+        sed -i "s#style:.*#style:${style}#" ~/.fancy-git/app_config
+    fi
+}
+
+_fg_safetly_remove_mode_file() {
+    local app_config_file_status
+
+    app_config_file_status=`grep -ioP 'fresh_file' < ~/.fancy-git/app_config`
+
+    if [ "$app_config_file_status" = "fresh_file"]; then
+        sed -i '/fresh_file/d' ~/.fancy-git/app_config
+        rm -f mode
+    fi
+}
+
 fg_update() {
     local current_dir
     local current_date
@@ -34,10 +59,9 @@ fg_update() {
 
     cd ~/.fancy-git/ && git pull origin master
 
-    if [ ! -f ~/.fancy-git/mode ]; then
-        touch -f ~/.fancy-git/mode
-        echo "default" > ~/.fancy-git/mode
-    fi
+    _fg_create_app_config
+    _fg_copy_style_from_mode_file_to_app_config
+    _fg_safetly_remove_mode_file
 
     cd "$current_dir" || return
     head -n 20 ~/.fancy-git/CHANGELOG.md
@@ -50,7 +74,7 @@ fg_command_not_found() {
 }
 
 fg_change_mode() {
-    echo "$1" > ~/.fancy-git/mode
+    sed -i "s#style:.*#style:${1}#" ~/.fancy-git/app_config
     echo ""
     echo " If you cannot see any changes yet, please restart the terminal session."
     echo ""
