@@ -62,6 +62,15 @@ fg_install_fonts() {
     fc-cache -fv
 }
 
+fg_modify_prompt(){
+    # local fullpath = false
+    # if 
+    # make the prompt read the end folder
+    endpath=${PWD##*/}
+    # echo $endpath
+
+}
+
 fg_update_checker() {
     local updates
     local option
@@ -138,6 +147,8 @@ case "$1" in
     "-v"|"--version") fg_show_version;;
     "--colors") fg_show_colors_config;;
     "--colors-set") fg_colors_config_set;;
+    # change prompt length appearence
+    "change-prompt") fg_modify_prompt;;
     "update") fg_update_checker;;
     "simple") fg_change_mode "simple";;
     "default") fg_change_mode "default";;
