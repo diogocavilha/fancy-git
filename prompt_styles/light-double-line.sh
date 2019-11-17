@@ -22,6 +22,7 @@ fancygit_prompt_builder() {
     branch="${s_lightgray_bgwhite}${bg_white}${black}${bold}"
     branch_end="${bg_none}${none}${bold_none}${s_white}"
     local venv=""
+    local path_sign=""
 
     # Building prompt
     if [ "$branch_status" != "" ]
@@ -76,11 +77,17 @@ fancygit_prompt_builder() {
         venv="$working_on_venv"
     fi
 
-    prompt_path="${path}${bold}${black}${venv} \\w ${path_end}${s_lightgray}"
+    path_sign="\\W"
+    if fg_show_full_path
+    then
+        path_sign="\\w"
+    fi
+
+    prompt_path="${path}${bold}${black}${venv} $path_sign ${path_end}${s_lightgray}"
 
     if [ "$branch_name" != "" ]
     then
-        prompt_path="${path_git}${venv}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} \\w ${path_end}"
+        prompt_path="${path_git}${venv}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} $path_sign ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
         PS1="${prompt_user}${prompt_path}${prompt_branch}${prompt_symbol} "
         return

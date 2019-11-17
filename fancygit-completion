@@ -20,7 +20,11 @@ _fancygit() {
         light \
         light-double-line \
         --colors \
-        --colors-set
+        --colors-set \
+        --full-path-enable \
+        --full-path-disable \
+        --config-list \
+        --config-reset
     '
 
     if [[ ${cur} == * ]] ; then

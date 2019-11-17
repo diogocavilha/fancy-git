@@ -82,6 +82,11 @@ fancygit_prompt_builder() {
     local where="${light_green}\w${none}"
     local venv=""
 
+    if ! fg_show_full_path
+    then
+        where="${light_green}\W${none}"
+    fi
+
     if ! [ -z ${VIRTUAL_ENV} ]; then
         venv="${light_yellow}`basename \"$VIRTUAL_ENV\"`${none} for "
     fi

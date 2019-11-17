@@ -2,7 +2,12 @@
 
 ### v6.1.6
 
-- Improve the way fancygit looks for its configurations. From now, users can change the `app_config` file, which is located in "/home/$USER/.fancy-git".
+- Improve the way fancygit looks for its configurations.
+- Add the `fancygit --config-list` command to show the current FancyGit configuration.
+- Add the `fancygit --config-reset` command to reset FancyGit configuration.
+- Add the `fancygit --full-path-enable` command for making FancyGit to show the full path of the working directory.
+- Add the `fancygit --full-path-disable` command for making FancyGit to show only working directory, not the full path.
+
 
 ### v6.0.5
 

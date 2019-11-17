@@ -14,10 +14,16 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
 
  COMMANDS
 
- fancygit -h, --help        Show this help.
- fancygit -v, --version     Show the fancygit version.
- fancygit update            Update fancygit code with the last release from github.
- fancygit configure-fonts   Install font in order to render icons properly. (only for colored styles).
+ fancygit -h, --help            Show this help.
+ fancygit -v, --version         Show the fancygit version.
+ fancygit update                Update fancygit code with the last release from github.
+ fancygit configure-fonts       Install font in order to render icons properly. (only for colored styles).
+ fancygit --colors              Show color scheme to use on git management process, like on \"git status\" command.
+ fancygit --colors-set          Apply the color scheme.
+ fancygit --full-path-disable   Fancygit will show only the the directory name you are working on. Not the entire path.
+ fancygit --full-path-enable    Fancygit will show the entire path.
+ fancygit --config-list         Show fancygit config.
+ fancygit --config-reset        Show fancygit config.
 
  STYLES
 
