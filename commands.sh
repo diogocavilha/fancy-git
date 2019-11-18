@@ -18,6 +18,31 @@ fg_show_version() {
     echo ""
 }
 
+_fg_create_app_config() {
+    if [ ! -f ~/.fancy-git/app_config ]; then
+        touch -f ~/.fancy-git/app_config
+        cat ~/.fancy-git/app_config_sample > ~/.fancy-git/app_config
+    fi
+}
+
+_fg_copy_style_from_mode_file_to_app_config() {
+    if [ -f ~/.fancy-git/mode -a -f ~/.fancy-git/app_config ]; then
+        local style=`cat ~/.fancy-git/mode`
+        sed -i "s#style:.*#style:${style}#" ~/.fancy-git/app_config
+    fi
+}
+
+_fg_safetly_remove_mode_file() {
+    local app_config_file_status
+
+    app_config_file_status=`grep -ioP 'fresh_file' < ~/.fancy-git/app_config`
+
+    if [ "$app_config_file_status" = "fresh_file"]; then
+        sed -i '/fresh_file/d' ~/.fancy-git/app_config
+        rm -f mode
+    fi
+}
+
 fg_update() {
     local current_dir
     local current_date
@@ -34,10 +59,9 @@ fg_update() {
 
     cd ~/.fancy-git/ && git pull origin master
 
-    if [ ! -f ~/.fancy-git/mode ]; then
-        touch -f ~/.fancy-git/mode
-        echo "default" > ~/.fancy-git/mode
-    fi
+    _fg_create_app_config
+    _fg_copy_style_from_mode_file_to_app_config
+    _fg_safetly_remove_mode_file
 
     cd "$current_dir" || return
     head -n 20 ~/.fancy-git/CHANGELOG.md
@@ -47,13 +71,6 @@ fg_command_not_found() {
     echo ""
     echo " $1: Command not found."
     fg_script_help
-}
-
-fg_change_mode() {
-    echo "$1" > ~/.fancy-git/mode
-    echo ""
-    echo " If you cannot see any changes yet, please restart the terminal session."
-    echo ""
 }
 
 fg_install_fonts() {
@@ -133,22 +150,52 @@ fg_colors_config_set() {
     `git config --global color.status.untracked "cyan"`
 }
 
+fg_update_app_config() {
+    sed -i "s/${1}:.*/${1}:${2}/" ~/.fancy-git/app_config
+}
+
+fg_show_app_config() {
+    cat ~/.fancy-git/app_config
+}
+
+fg_show_full_path() {
+    local show_full_path=""
+
+    show_full_path=$(grep -oP '(?<=show-full-path:).*' < ~/.fancy-git/app_config)
+
+    if [ "$show_full_path" = "false" ]; then
+        return 1
+    fi
+
+    return 0
+}
+
+fg_reset_app_config() {
+    rm -f ~/.fancy-git/app_config
+    _fg_create_app_config
+    sed -i '/fresh_file/d' ~/.fancy-git/app_config
+}
+
 case "$1" in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
     "--colors") fg_show_colors_config;;
     "--colors-set") fg_colors_config_set;;
+    "--full-path-enable") fg_update_app_config "show-full-path" "true";;
+    "--full-path-disable") fg_update_app_config "show-full-path" "false";;
+    "--config-list") fg_show_app_config;;
+    "--config-reset") fg_reset_app_config;;
     "update") fg_update_checker;;
-    "simple") fg_change_mode "simple";;
-    "default") fg_change_mode "default";;
-    "double-line") fg_change_mode "fancy-double-line";;
-    "simple-double-line") fg_change_mode "simple-double-line";;
-    "human") fg_change_mode "human";;
-    "human-dark") fg_change_mode "human-dark";;
-    "dark") fg_change_mode "dark";;
-    "dark-double-line") fg_change_mode "dark-double-line";;
-    "light") fg_change_mode "light";;
-    "light-double-line") fg_change_mode "light-double-line";;
+    "simple") fg_update_app_config "style" "simple";;
+    "default") fg_update_app_config "style" "default";;
+    "double-line") fg_update_app_config "style" "fancy-double-line";;
+    "simple-double-line") fg_update_app_config "style" "simple-double-line";;
+    "human") fg_update_app_config "style" "human";;
+    "human-dark") fg_update_app_config "style" "human-dark";;
+    "dark") fg_update_app_config "style" "dark";;
+    "dark-double-line") fg_update_app_config "style" "dark-double-line";;
+    "light") fg_update_app_config "style" "light";;
+    "light-double-line") fg_update_app_config "style" "light-double-line";;
     "configure-fonts") fg_install_fonts;;
     "") return;;
     *) fg_command_not_found "$1";;

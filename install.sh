@@ -23,8 +23,8 @@ if [ "$fg_os" = "Linux" ]; then
     echo "" >> ~/.bashrc
     echo ". ~/.fancy-git/prompt.sh" >> ~/.bashrc
 
-    touch -f ~/.fancy-git/mode
-    echo "default" > ~/.fancy-git/mode
+    touch -f ~/.fancy-git/app_config
+    cat ~/.fancy-git/app_config_sample > ~/.fancy-git/app_config
 
     current_date=$(date +%Y-%m-%d)
     touch -f ~/.fancy-git/last_update_at
@@ -36,8 +36,8 @@ if [ "$fg_os" = "Darwin" ]; then
     echo "" >> ~/.bash_profile
     echo ". ~/.fancy-git/prompt.sh" >> ~/.bash_profile
 
-    touch -f ~/.fancy-git/mode
-    echo "default" > ~/.fancy-git/mode
+    touch -f ~/.fancy-git/app_config
+    cat ~/.fancy-git/app_config_sample > ~/.fancy-git/app_config
 fi
 
 mkdir -p ~/.fonts

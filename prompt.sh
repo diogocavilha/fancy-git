@@ -8,7 +8,7 @@
 function fancygit_prompt_changer() {
     local style
 
-    style=$(cat ~/.fancy-git/mode)
+    style=$(grep -ioP '(?<=style:).*' < ~/.fancy-git/app_config)
 
     if [ -e ~/.fancy-git/prompt_styles/"$style.sh" ]; then
         . ~/.fancy-git/prompt_styles/"$style.sh"
