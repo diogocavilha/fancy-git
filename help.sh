@@ -27,16 +27,18 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
 
  STYLES
 
- fancygit simple               Change prompt to the simple style.
- fancygit simple-double-line   Change prompt to the simple style in double line.
- fancygit default              Change prompt to the default (colored) style. (This is the fallback style).
- fancygit double-line          Change prompt to the default (colored) style in double line.
- fancygit human                Change prompt to the human readable style.
- fancygit human-dark           Change prompt to the human readable style.
- fancygit dark                 Change prompt to the dark style.
- fancygit dark-double-line     Change prompt to the dark style in double line.
- fancygit light                Change prompt to the light style.
- fancygit light-double-line    Change prompt to the light style in double line.
+ fancygit simple                  Change prompt to the simple style.
+ fancygit simple-double-line      Change prompt to the simple style in double line.
+ fancygit default                 Change prompt to the default (colored) style. (This is the fallback style).
+ fancygit double-line             Change prompt to the default (colored) style in double line.
+ fancygit human                   Change prompt to the human readable style.
+ fancygit human-single-line       Change prompt to the human readable style on single line.
+ fancygit human-dark              Change prompt to the human readable style.
+ fancygit human-dark-single-line  Change prompt to the human readable style on single line.
+ fancygit dark                    Change prompt to the dark style.
+ fancygit dark-double-line        Change prompt to the dark style in double line.
+ fancygit light                   Change prompt to the light style.
+ fancygit light-double-line       Change prompt to the light style in double line.
 
  ICONS MEANING
 
