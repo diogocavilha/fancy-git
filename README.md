@@ -87,8 +87,14 @@ There are a bit of styles you can choose from. Here you have a list of available
 `fancygit human`
 ![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
 
+`fancygit human single line`
+![Human Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-single-line.png)
+
 `fancygit human-dark`
 ![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
+
+`fancygit human-dark-single-line`
+![Human Dark Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark-single-line.png)
 
 `fancygit default`
 ![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
@@ -187,8 +193,30 @@ Basically, most of the Fancy Git aliases work this way.
 
 ## Troubleshooting :pick:
 
-Maybe you could face an [issue](https://bugs.kde.org/show_bug.cgi?id=272443) related to icons rendering when using `Konsole` on version `18.12.1`.
+### Problems with Konsole Terminal
+
+**System:** Linux (with KDE) - [reported issue](https://bugs.kde.org/show_bug.cgi?id=272443).
+
+Maybe you could face an issue related to icons rendering when using `Konsole` on version `18.12.1`.
 An idea here is to update the `Konsole` to its latest version. So the problem might be solved ;)
+
+### Problems with `grep` command
+
+**System:** MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/47).
+
+As you can read there, the solution found is to `brew install grep` and adding `/usr/local/opt/grep/libexec/gnubin` to the PATH ahead of `/usr/bin`.
+
+### Problems with `sed` command
+
+**System:** MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/47).
+
+You can follow the steps as you did for `grep`, but this time, installing `gnu-sed` by running `brew install gnu-sed`.
+
+### Problems upgrading from v6.0.5 to a newest version
+
+If you've just upgraded it from v6.0.5 to a newest version, you might have seeing an error, because fancygit can't find its configuration file.
+
+You can fix that just by running `fancygit --config-reset`. It'll create a default configuration file and reset the fancygit state.
 
 # Contributing :rocket:
 
