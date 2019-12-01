@@ -206,6 +206,12 @@ As you can read there, the solution found is to `brew install grep` and adding `
 
 You can follow the steps as you did for `grep`, but this time, installing `gnu-sed` by running `brew install gnu-sed`.
 
+### Problems upgrading from v6.0.5 to a newest version
+
+If you've just upgraded it from v6.0.5 to a newest version, you might have seeing an error, because fancygit can't find its configuration file.
+
+You can fix that just by running `fancygit --config-reset`. It'll create a default configuration file and reset the fancygit state.
+
 # Contributing :rocket:
 
 - Give this project a star =D

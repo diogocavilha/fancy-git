@@ -1,10 +1,13 @@
 # Fancy Git Changelog
 
+> Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
+
 ### v6.2.7
 
 - Add `human-single-line` style.
 - Add `human-dark-single-line` style.
 - Fix some bugs with `grep` command when using MAC OS.
+- Change `gdb` alias to `ggdb` alias.
 
 ### v6.1.6
 
