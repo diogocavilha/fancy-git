@@ -87,8 +87,14 @@ There are a bit of styles you can choose from. Here you have a list of available
 `fancygit human`
 ![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
 
+`fancygit human single line`
+![Human Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-single-line.png)
+
 `fancygit human-dark`
 ![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
+
+`fancygit human-dark-single-line`
+![Human Dark Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark-single-line.png)
 
 `fancygit default`
 ![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
