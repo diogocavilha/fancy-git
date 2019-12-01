@@ -1,5 +1,10 @@
 # Fancy Git Changelog
 
+### v6.2.6
+
+- Add `human-single-line` style.
+- Add `human-dark-single-line` style.
+
 ### v6.1.6
 
 - Improve the way fancygit looks for its configurations.
