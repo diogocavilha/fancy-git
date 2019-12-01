@@ -187,8 +187,24 @@ Basically, most of the Fancy Git aliases work this way.
 
 ## Troubleshooting :pick:
 
-Maybe you could face an [issue](https://bugs.kde.org/show_bug.cgi?id=272443) related to icons rendering when using `Konsole` on version `18.12.1`.
+### Problems with Konsole Terminal
+
+**System:** Linux (with KDE) - [reported issue](https://bugs.kde.org/show_bug.cgi?id=272443).
+
+Maybe you could face an issue related to icons rendering when using `Konsole` on version `18.12.1`.
 An idea here is to update the `Konsole` to its latest version. So the problem might be solved ;)
+
+### Problems with `grep` command
+
+**System:** MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/47).
+
+As you can read there, the solution found is to `brew install grep` and adding `/usr/local/opt/grep/libexec/gnubin` to the PATH ahead of `/usr/bin`.
+
+### Problems with `sed` command
+
+**System:** MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/47).
+
+You can follow the steps as you did for `grep`, but this time, installing `gnu-sed` by running `brew install gnu-sed`.
 
 # Contributing :rocket:
 
