@@ -35,7 +35,7 @@ _fg_copy_style_from_mode_file_to_app_config() {
 _fg_safetly_remove_mode_file() {
     local app_config_file_status
 
-    app_config_file_status=`grep -ioP 'fresh_file' < ~/.fancy-git/app_config`
+    app_config_file_status=`grep -io 'fresh_file' < ~/.fancy-git/app_config`
 
     if [ "$app_config_file_status" = "fresh_file"]; then
         sed -i '/fresh_file/d' ~/.fancy-git/app_config
@@ -161,9 +161,9 @@ fg_show_app_config() {
 fg_show_full_path() {
     local show_full_path=""
 
-    show_full_path=$(grep -oP '(?<=show-full-path:).*' < ~/.fancy-git/app_config)
+    show_full_path=$(grep -o 'show-full-path:false' < ~/.fancy-git/app_config)
 
-    if [ "$show_full_path" = "false" ]; then
+    if [ "$show_full_path" = "show-full-path:false" ]; then
         return 1
     fi
 

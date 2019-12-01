@@ -1,9 +1,10 @@
 # Fancy Git Changelog
 
-### v6.2.6
+### v6.2.7
 
 - Add `human-single-line` style.
 - Add `human-dark-single-line` style.
+- Fix some bugs with `grep` command when using MAC OS.
 
 ### v6.1.6
 
