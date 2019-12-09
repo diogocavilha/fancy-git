@@ -124,6 +124,8 @@ There are a bit of styles you can choose from. Here you have a list of available
 | fancygit configure-fonts    | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
 | fancygit --colors           | Show suggested colors config in an easy way to copy and paste to apply them.
 | fancygit --colors-set       | Apply the suggested colors configuration.
+| fancygit --full-path-disable| Fancygit will show only the the directory name you are working on. Not the entire path.
+| fancygit --full-path-enable | Fancygit will show the entire path.
 | fancygit simple             | Change prompt to the simple style.
 | fancygit simple-double-line | Change prompt to the simple style in double line.
 | fancygit default            | Change prompt to the default (colored) style. (This is the fallback style).
