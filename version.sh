@@ -3,4 +3,4 @@
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
 # Date:   11.17.2017
 
-FANCYGIT_VERSION="6.1.6"
+FANCYGIT_VERSION="6.2.9"

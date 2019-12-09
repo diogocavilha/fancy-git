@@ -2,6 +2,17 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+
+### v6.2.9
+
+- Add styling to git stash listing  for clarity
+
+### v6.2.8
+
+- Add configuration file for centralized updates
+- Enable change of prompt style between short path and full path display.
+
+
 ### v6.2.7
 
 - Add `human-single-line` style.
