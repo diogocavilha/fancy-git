@@ -3,6 +3,10 @@
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
 
+### v6.2.10
+
+- Fix minor bug.
+
 ### v6.2.9
 
 - Add styling to git stash listing  for clarity
