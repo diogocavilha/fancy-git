@@ -37,7 +37,7 @@ _fg_safetly_remove_mode_file() {
 
     app_config_file_status=`grep -io 'fresh_file' < ~/.fancy-git/app_config`
 
-    if [ "$app_config_file_status" = "fresh_file"]; then
+    if [ "$app_config_file_status" = "fresh_file" ]; then
         sed -i '/fresh_file/d' ~/.fancy-git/app_config
         rm -f mode
     fi
