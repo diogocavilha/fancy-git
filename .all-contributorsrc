@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "pandel",
+      "name": "Holger Pandel",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12460002?v=4",
+      "profile": "https://github.com/pandel",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "fancy-git",
+  "projectOwner": "diogocavilha",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
