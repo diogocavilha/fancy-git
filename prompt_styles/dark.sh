@@ -66,7 +66,8 @@ fancygit_prompt_builder() {
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
 
-    local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/origin/${branch_name}" | wc -l)
+    local remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
+    local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/${remote_name}/${branch_name}" | wc -l)
 
     if [ "$branch_name" != "" ] && [ "$only_local_branch" -eq 0 ]; then
         branch_icon="${is_only_local_branch}"
