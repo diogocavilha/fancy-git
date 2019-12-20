@@ -37,14 +37,15 @@ local git_changed_files
 local git_has_unpushed_commits
 local git_number_unpushed_commits
 
+remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
 branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 branch_status=$(git status -s 2> /dev/null)
 staged_files=$(git diff --name-only --cached 2> /dev/null)
 git_stash=$(git stash list 2> /dev/null)
 git_untracked_files=$(git ls-files --others --exclude-standard 2> /dev/null)
 git_changed_files=$(git ls-files -m 2> /dev/null)
-git_has_unpushed_commits=$(git log origin/$branch_name..HEAD 2> /dev/null)
-git_number_unpushed_commits=$(git log --pretty=oneline origin/$branch_name..HEAD 2> /dev/null | wc -l)
+git_has_unpushed_commits=$(git log $remote_name/$branch_name..HEAD 2> /dev/null)
+git_number_unpushed_commits=$(git log --pretty=oneline $remote_name/$branch_name..HEAD 2> /dev/null | wc -l)
 git_number_untracked_files=$(git ls-files --others --exclude-standard 2> /dev/null | wc -w)
 git_number_changed_files=$(git ls-files -m 2> /dev/null | wc -l)
 
@@ -84,9 +85,13 @@ bg_dark_gray="\\[\\e[100m\\]"
 bg_dark_gray_01="\\[\\e[48;5;234m\\]"
 bg_dark_gray_02="\\[\\e[48;5;236m\\]"
 bg_dark_gray_03="\\[\\e[48;5;239m\\]"
+bg_dark_gray_04="\\[\\e[48;5;244m\\]"
+bg_dark_gray_05="\\[\\e[48;5;253m\\]"
 dark_gray_01="\\[\\e[38;5;234m\\]"
 dark_gray_02="\\[\\e[30;5;236m\\]"
 dark_gray_03="\\[\\e[30;5;239m\\]"
+dark_gray_04="\\[\\e[38;5;244m\\]"
+dark_gray_05="\\[\\e[38;5;253m\\]"
 bg_light_yellow="\\[\\e[103m\\]"
 bg_yellow="\\[\\e[43m\\]"
 bg_light_green="\\[\\e[102m\\]"
@@ -146,12 +151,17 @@ s_white="${white}${separator}${none}"
 s_blue="${blue}${separator}${none}"
 s_lightgray="${light_gray}${separator}${none}"
 s_darkgray="${dark_gray}${separator}${none}"
+s_darkgray04="${dark_gray_04}${separator}${none}"
+s_darkgray05="${dark_gray_05}${separator}${none}"
 s_dark_gray_bgnone="${dark_gray}${separator}${none}${bg_none}"
 s_darkgray_bglightmagenta="${dark_gray}${bg_light_magenta}${separator}${bg_none}${none}"
 s_darkgray_bgblue="${dark_gray}${bg_blue}${separator}${bg_blue}${none}"
 s_darkgray_bgdarkgray01="${dark_gray}${bg_dark_gray_01}${separator}${bg_none}${none}"
+s_darkgray_bgdarkgray05="${dark_gray}${bg_dark_gray_05}${separator}${bg_none}${none}"
 s_darkgray_bglightyellow="${dark_gray}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
 s_darkgray_bglightgreen="${dark_gray}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
+s_darkgray05_bglightyellow="${dark_gray_05}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
+s_darkgray05_bglightgreen="${dark_gray_05}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
 s_darkgray_bgwhite="${dark_gray}${bg_white}${separator}${bg_none}${none}${bg_none}"
 s_darkgray01_bglightyellow="${dark_gray_01}${bg_light_yellow}${separator}${bg_none}${none}${bg_none}"
 s_darkgray01_bglightgreen="${dark_gray_01}${bg_light_green}${separator}${bg_none}${none}${bg_none}"
@@ -162,3 +172,5 @@ s_lightgray_bglightgreen="${light_gray}${bg_light_green}${separator}${bg_none}${
 s_white_bglightgray="${white}${bg_light_gray}${separator}${bg_none}${none}${bg_none}"
 s_darkgray01="${dark_gray_01}${separator}${none}"
 s_darkgray01_bgdarkgray="${dark_gray_01}${bg_dark_gray}${separator}${bg_none}${none}"
+s_darkgray01_bgdarkgray05="${dark_gray_01}${bg_dark_gray_05}${separator}${bg_none}${none}"
+s_darkgray05_bgdarkgray04="${dark_gray_05}${bg_dark_gray_04}${separator}${bg_none}${none}"

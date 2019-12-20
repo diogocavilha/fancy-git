@@ -2,6 +2,10 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.2.11
+
+- Evaluate remote of current branch instead of using hardcoded origin in themes.
+- Add `dark-col-double-line` style.
 
 ### v6.2.10
 

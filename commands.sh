@@ -196,6 +196,7 @@ case "$1" in
     "human-dark-single-line") fg_update_app_config "style" "human-dark-single-line";;
     "dark") fg_update_app_config "style" "dark";;
     "dark-double-line") fg_update_app_config "style" "dark-double-line";;
+    "dark-col-double-line") fg_update_app_config "style" "dark-col-double-line";;
     "light") fg_update_app_config "style" "light";;
     "light-double-line") fg_update_app_config "style" "light-double-line";;
     "configure-fonts") fg_install_fonts;;

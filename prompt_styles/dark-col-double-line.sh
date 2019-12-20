@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date:   12.04.2018
+# Date:   12.02.2018
 
 . ~/.fancy-git/aliases
 . ~/.fancy-git/fancygit-completion
@@ -11,23 +11,35 @@ fancygit_prompt_builder() {
     . ~/.fancy-git/config.sh
     . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
 
+    local blue="\\033[95;38;5;45m"
+    local bold="\\[\\e[1m\\]"
+    local bold_none="\\[\\e[0m\\]"
+    local light_green="\\[\\e[92m\\]"
+    local light_yellow="\\[\\e[93m\\]"
+    local none="\\[\\e[39m\\]"
+    local dark_orange="\\033[95;38;5;166m"
+    local orange="\\033[95;38;5;214m"
+
     # Prompt style
-    user_at_host="${black}${bg_white}${bold}"
-    user_at_host_end="${bold_none}${bg_none}${s_white_bglightgray}"
-    user_symbol="${bg_light_gray}${bold}${black}"
-    user_symbol_end="${none}${bold_none}${bg_none}${s_lightgray}"
-    path="${bg_light_gray}${black}${bold}"
-    path_git="${bg_light_gray}${black}  ${is_git_repo} ${bold}"
+    user="${orange}${bg_dark_gray_01}${bold}"
+    at="${white}${bg_dark_gray_01}${bold}"
+    host="${light_yellow}${bg_dark_gray_01}${bold}"
+    user_at_host_end="${bold_none}${bg_none}${s_darkgray01_bgdarkgray}"
+    user_at_host_end_git="${bold_none}${bg_none}${s_darkgray01_bgdarkgray05}"
+    user_symbol="${bg_dark_gray}${bold}${white}"
+    user_symbol_end="${none}${bold_none}${bg_none}${s_darkgray}"
+    path="${bg_dark_gray}${white}${bold}"
+    path_git="${bg_dark_gray_05}${dark_orange}  ${is_git_repo} ${bold}"
     path_end="${none}${bold_none}"
-    branch="${s_lightgray_bgwhite}${bg_white}${black}${bold}"
-    branch_end="${bg_none}${none}${bold_none}${s_white}"
+    branch="${s_darkgray05_bgdarkgray04}${bg_dark_gray_04}${white}${bold}"
+    branch_end="${bg_none}${none}${bold_none}${s_darkgray04}"
     local venv=""
     local path_sign=""
 
     # Building prompt
     if [ "$branch_status" != "" ]
     then
-        branch="${s_lightgray_bglightyellow}${bg_light_yellow}${black}${bold}"
+        branch="${s_darkgray05_bglightyellow}${bg_light_yellow}${black}${bold}"
         branch_end="${bg_none}${bold_none}${s_lightyellow}"
     fi
 
@@ -38,7 +50,7 @@ fancygit_prompt_builder() {
 
     if [ "$staged_files" != "" ]
     then
-        branch="${s_lightgray_bglightgreen}${bg_light_green}${black}${bold}"
+        branch="${s_darkgray05_bglightgreen}${bg_light_green}${black}${bold}"
         branch_end="${bg_none}${bold_none}${s_green}"
     fi
 
@@ -63,7 +75,12 @@ fancygit_prompt_builder() {
         has_unpushed_commits=""
     fi
 
-    prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
+    if [ "$branch_name" != "" ]
+    then
+	prompt_user="${user}\\u${at}@${host}\\h ${user_at_host_end_git}"
+    else
+	prompt_user="${user}\\u${at}@${host}\\h ${user_at_host_end}"
+    fi
     prompt_symbol="\n${user_symbol}\$${user_symbol_end}"
 
     local remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
@@ -84,7 +101,7 @@ fancygit_prompt_builder() {
         path_sign="\\w"
     fi
 
-    prompt_path="${path}${bold}${black}${venv} $path_sign ${path_end}${s_lightgray}"
+    prompt_path="${path}${bold}${blue}${venv} $path_sign ${path_end}${s_darkgray}"
 
     if [ "$branch_name" != "" ]
     then
