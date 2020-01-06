@@ -201,6 +201,17 @@ Basically, most of the Fancy Git aliases work this way.
 | gu \<file\> [<other_file>] | git reset HEAD \<file\>                                                                                                                                | Remove files from staging area.
 | pve                       | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/pve.sh)                                                                  | Show the current Python virtual environment name.
 
+## Advanced tweaking - override values from config.sh
+
+If you like to tweak things more in-depth, like color values, special characters and such, you can create a new file `~/.fancy-git/config-override.sh`. This file is sourced after reading the standard configuration, so that you can override any variable found in the main `config.sh`.
+
+Example:
+You want to change the branch icon, because you are using a different console font and the icon is on a different character position inside the font. Simply create the override file and add a line like this (for sure, you will likely have changed the symbol):
+
+```sh
+branch_icon=""
+```
+
 ## Troubleshooting :pick:
 
 ### Problems with Konsole Terminal
