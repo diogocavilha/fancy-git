@@ -115,7 +115,7 @@ fg_update_checker() {
 
     if [ "$updates" != "" ]; then
         echo -e "\n Hey! A new Fancy Git update has been released!"
-        read -p " Would you like to update it? [Y/n]: " option
+        read -t 5 -p " Would you like to update it? [Y/n]: " option
         echo ""
 
         case "$option" in
