@@ -44,10 +44,10 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
  ICONS MEANING
 
     = The current directory is a git repository.
-    = There are untracked files.
+    = There are untracked files.
     = There are modified files.
     = There are added files waiting to be committed.
-    = There are stashes.
+    = There are stashes.
     = There are commits waiting to be pushed.
     = Current branch exists only locally.
     = You are working on a Python virtual environment.
