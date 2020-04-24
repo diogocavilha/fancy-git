@@ -214,6 +214,12 @@ branch_icon=""
 
 ## Troubleshooting :pick:
 
+### Double line problem and general weird behavior
+
+**System:** Linux | MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/63).
+
+If you have a few more changes in your `.bashrc` file, be aware that `. ~/.fancy-git/prompt.sh` must be the last line of it.
+
 ### Problems with Konsole Terminal
 
 **System:** Linux (with KDE) - [reported issue](https://bugs.kde.org/show_bug.cgi?id=272443).
