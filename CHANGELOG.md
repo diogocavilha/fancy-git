@@ -2,9 +2,14 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.2.13
+
+- Update README.md.
+- Add `dark-col-double-line` on fancygit completion.
+
 ### v6.2.12
 
-- Add possibility to override standard configuration via config-override.sh
+- Add possibility to override standard configuration via config-override.sh.
 
 ### v6.2.11
 
@@ -21,7 +26,7 @@
 
 ### v6.2.8
 
-- Add configuration file for centralized updates
+- Add configuration file for centralized updates.
 - Enable change of prompt style between short path and full path display.
 
 
@@ -43,7 +48,7 @@
 
 ### v6.0.5
 
-- Add new icon when branch exists only locally. (Only colored themes)
+- Add new icon when branch exists only locally. (Only colored themes).
 
 ### v6.0.4
 
@@ -52,7 +57,7 @@
 
 ### v6.0.2
 
-- Add a ghost icon to indicate you're working on a Python virtual environment. (Only colored themes)
+- Add a ghost icon to indicate you're working on a Python virtual environment. (Only colored themes).
 
 ### v6.0.1
 
@@ -86,7 +91,7 @@
 
 ### v5.2.5
 
-- Improve the human style
+- Improve the human style.
 
 ### v5.2.4
 
@@ -102,7 +107,7 @@
 
 ### v5.2.2
 
-- Update README.md
+- Update README.md.
 
 **All the following changes here have been done on the simple style and simple-double-line style.**
 
@@ -145,7 +150,7 @@
 ### v5.0.4
 
 - Improve `gplo` command.
-- Add funny string information after pulling, which is: "Start to pray." .
+- Add funny string information after pulling, which is: "Start to pray.".
 - Sort the changelog by version from the newer to the older.
 - Improve directory verification. It goes for `/Users` when `/home` does't exist.
 
