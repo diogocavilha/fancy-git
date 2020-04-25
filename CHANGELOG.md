@@ -2,6 +2,13 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.3.0
+
+- Update icon for stash.
+- Update icon for untracked files.
+- Update icon for staged files.
+- Change icon of merged branch.
+
 ### v6.2.13
 
 - Update README.md.

@@ -66,13 +66,6 @@ fancygit_prompt_builder() {
     prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
 
-    local remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
-    local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/${remote_name}/${branch_name}" | wc -l)
-
-    if [ "$branch_name" != "" ] && [ "$only_local_branch" -eq 0 ]; then
-        branch_icon="${is_only_local_branch}"
-    fi
-
     if ! [ -z ${VIRTUAL_ENV} ]
     then
         venv="$working_on_venv"
@@ -88,6 +81,7 @@ fancygit_prompt_builder() {
 
     if [ "$branch_name" != "" ]
     then
+        branch_icon=$(fg_get_branch_icon)
         prompt_path="${path_git}${venv}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} $path_sign ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
         PS1="${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "

@@ -176,6 +176,84 @@ fg_reset_app_config() {
     sed -i '/fresh_file/d' ~/.fancy-git/app_config
 }
 
+fg_is_only_local_branch() {
+    local only_local_branch=$(git branch -r 2> /dev/null | grep "${branch_name}" | wc -l)
+
+    if [ "$only_local_branch" == 0 ]; then
+        return 0
+    fi
+
+    return 1
+}
+
+fg_get_branch_icon() {
+    if fg_is_only_local_branch
+    then
+        echo "${is_only_local_branch}"
+        return
+    fi
+
+    if [ "$merged_branch" != "" ]; then
+        echo "${is_merged_branch}"
+        return
+    fi
+
+    echo "${branch_icon}"
+}
+
+fg_branch_status() {
+    . ~/.fancy-git/config.sh
+
+    local info=""
+
+    if [ "$git_has_unpushed_commits" ]
+    then
+        info="${info}${light_green}${git_number_unpushed_commits}^${none} "
+    fi
+
+    if [ "$git_number_untracked_files" -gt 0 ]
+    then
+        info="${info}${cyan}?${none} "
+    fi
+
+    if [ "$git_number_changed_files" -gt 0 ]
+    then
+        info="${info}${light_green}+${none}${light_red}-${none} "
+    fi
+
+    if [ "$git_stash" != "" ]
+    then
+        info="${info}∿${none} "
+    fi
+
+    if [ "$staged_files" != "" ]
+    then
+        info="${info}${light_green}✔${none} "
+    fi
+
+    if [ "$branch_name" != "" ] && fg_is_only_local_branch
+    then
+        info="${info}${light_green}*${none} "
+    fi
+
+    if [ "$merged_branch" != "" ]; then
+        info="${info}${light_green}<${none} "
+    fi
+
+    if [ "$info" != "" ]; then
+        info=$(echo "$info" | sed -e 's/[[:space:]]*$//')
+        if [ "$1" == 1 ]; then
+            echo " [$info]"
+            return
+        fi
+
+        echo " $info"
+        return
+    fi
+
+    echo ""
+}
+
 case "$1" in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
