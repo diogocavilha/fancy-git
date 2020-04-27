@@ -148,7 +148,7 @@ There are a bit of styles you can choose from. Here you have a list of available
 ## Aliases
 
 Here we got a list of useful aliases you can use when working. They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
-For example, what if you could replace `git push origin <branch-name>` for `gpsob`? Much smaller command, isn't it?. That's is possible but what, for goodness sake, means `gpsob`?
+For example, what if you could replace `git push origin <branch-name>` for `gpsob`? It's a much smaller command, isn't it?. Ok but what, for goodness sake, means `gpsob`?
 
 Well, here goes a little explanation:
 
@@ -158,11 +158,11 @@ Well, here goes a little explanation:
 
 `o` = `origin`
 
-`b` = `<current-branch-name>`... Yes, it will get the branch you're working on.
+`b` = `<current-branch-name>`... It will get the current branch name.
 
 Basically, most of the Fancy Git aliases work this way.
 
-| Alias                    | Command                                                                                                                                                | Description
+| Alias                      | Command                                                                                                                                                | Description
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------
 | gs                         | git status                                                                                                                                             | Show git status.
 | ga \<file\> [<other_file>] | Add files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/ga.sh)                                      | Add a file in order to commit.
