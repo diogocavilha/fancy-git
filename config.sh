@@ -19,7 +19,7 @@ local working_on_venv
 separator=""
 branch_icon=""
 is_git_repo=""
-has_git_stash="  "
+has_git_stash="  "
 has_untracked_files="  "
 is_only_local_branch=""
 is_merged_branch=""

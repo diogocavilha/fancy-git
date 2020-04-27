@@ -47,7 +47,7 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
     = There are untracked files.
     = There are modified files.
     = There are added files waiting to be committed.
-    = There are stashes.
+    = There are stashes.
     = There are commits waiting to be pushed.
     = Branch icon.
     = Current branch exists only locally.
