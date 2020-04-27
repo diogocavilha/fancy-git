@@ -8,6 +8,7 @@
 - Update icon for untracked files.
 - Update icon for staged files.
 - Change icon of merged branch.
+- Bug fix: Show icon about unpushed commits again.
 
 ### v6.2.13
 
