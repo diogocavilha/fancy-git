@@ -39,6 +39,7 @@ local git_has_unpushed_commits
 local git_number_unpushed_commits
 
 remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
+remote_name=${remote_name:-origin}
 branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 branch_status=$(git status -s 2> /dev/null)
 staged_files=$(git diff --name-only --cached 2> /dev/null)
