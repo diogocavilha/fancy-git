@@ -100,7 +100,7 @@ fancygit_prompt_builder() {
     if [ "$branch_name" != "" ]
     then
         branch_icon=$(fg_get_branch_icon)
-        prompt_path="${path_git}${venv}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} $path_sign ${path_end}"
+        prompt_path="${path_git}${venv}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files}${has_unpushed_commits} $path_sign ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
         PS1="${prompt_user}${prompt_path}${prompt_branch}${prompt_symbol} "
         return

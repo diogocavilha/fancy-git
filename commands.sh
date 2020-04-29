@@ -206,9 +206,9 @@ fg_branch_status() {
 
     local info=""
 
-    if [ "$git_has_unpushed_commits" ]
+    if [ "$git_stash" != "" ]
     then
-        info="${info}${light_green}${git_number_unpushed_commits}^${none} "
+        info="${info}∿${none} "
     fi
 
     if [ "$git_number_untracked_files" -gt 0 ]
@@ -221,14 +221,14 @@ fg_branch_status() {
         info="${info}${light_green}+${none}${light_red}-${none} "
     fi
 
-    if [ "$git_stash" != "" ]
-    then
-        info="${info}∿${none} "
-    fi
-
     if [ "$staged_files" != "" ]
     then
         info="${info}${light_green}✔${none} "
+    fi
+
+    if [ "$git_has_unpushed_commits" ]
+    then
+        info="${info}${light_green}^${git_number_unpushed_commits}${none} "
     fi
 
     if [ "$branch_name" != "" ] && fg_is_only_local_branch
