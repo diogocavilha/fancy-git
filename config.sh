@@ -24,7 +24,7 @@ has_untracked_files="  "
 is_only_local_branch=""
 is_merged_branch=""
 has_changed_files="  "
-has_added_files="  "
+has_added_files="  "
 has_unpushed_commits="  "
 working_on_venv="  "
 
