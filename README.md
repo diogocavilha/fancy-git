@@ -14,17 +14,17 @@ Fancygit is a tool that changes the terminal prompt in order to show you a few c
 
 :bookmark: [You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
-## Installing (Linux and MAC OS)
+# Installing (Linux and MAC OS)
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
-## Uninstalling (Linux and MAC OS)
+# Uninstalling (Linux and MAC OS)
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
 ```
 
-## After installing
+# After installing
 
 1. Change your terminal font to "SourceCodePro+Powerline+Awesome+Regular".  
    It's necessary only if you're using one of the fancy themes for rendering the icons properly.
@@ -34,7 +34,7 @@ If you can't find the font, it's still possible to install it manually by runnin
 
 Once the installation have succeeded, you can type `fancygit -h` to check Fancy Git help.
 
-## Git suggested colors
+# Git suggested colors
 
 ```bash
 git config --global color.ui true
@@ -69,7 +69,7 @@ As a picture is worth a thousand words...
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
-## Styles :art:
+# Styles :art:
 
 If you don't want to be too "fancy" (as I don't), you can choose using the **simple style**.
 In order to change to the **simple style** you can type `fancygit simple`. And if you want to return to the **default style** (colored), you can type `fancygit default`.  
@@ -114,7 +114,7 @@ fancygit light
 fancygit light-double-line  
 ![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
 
-## Commands
+# Commands
 
 | Command                      | Description
 | ---------------------------- | ---------------------------------------------------------
@@ -138,7 +138,7 @@ fancygit light-double-line
 | fancygit light               | Change prompt to the light style.
 | fancygit light-double-line   | Change prompt to the light style in double line.
 
-## Aliases
+# Aliases
 
 Here we got a list of useful aliases you can use when working. They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
 For example, what if you could replace `git push origin <branch-name>` for `gpsob`? It's a much smaller command, isn't it? Ok, but what's the meaning of `gpsob`?
@@ -191,7 +191,7 @@ Basically, most of the Fancy Git aliases work this way.
 | gu \<file\> [<other_file>] | git reset HEAD \<file\>                                                                                                                                | Remove files from staging area.
 | pve                       | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/pve.sh)                                                                  | Show the current Python virtual environment name.
 
-## Advanced tweaking - override values from config.sh
+# Advanced tweaking - override values from config.sh
 
 If you like to tweak things more in-depth, like color values, special characters and such, you can create a new file `~/.fancy-git/config-override.sh`. This file is sourced after reading the standard configuration, so that you can override any variable found in the main `config.sh`.
 
@@ -202,7 +202,7 @@ You want to change the branch icon, because you are using a different console fo
 branch_icon=""
 ```
 
-## Troubleshooting :pick:
+# Troubleshooting :pick:
 
 - **Double line problem and general weird behavior**  
 **System:** Linux | MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/63).  
