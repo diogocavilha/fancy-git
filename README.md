@@ -14,12 +14,14 @@ Fancygit is a tool that changes the terminal prompt in order to show you a few c
 
 :bookmark: [You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
-# Installing (Linux and MAC OS)
+# Installing  
+> Linux and MAC OS
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
-# Uninstalling (Linux and MAC OS)
+# Uninstalling  
+> Linux and MAC OS
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
 ```
@@ -53,7 +55,7 @@ You can run the command: `fancygit --colors` in order to see those suggested col
 
 > Type `fancygit -h` for more information.
 
-## Overview
+# Overview
 
 As a picture is worth a thousand words...
 
@@ -65,7 +67,7 @@ As a picture is worth a thousand words...
 ![006](https://github.com/diogocavilha/fancy-git/blob/master/images/default_006.png)
 ![007](https://github.com/diogocavilha/fancy-git/blob/master/images/default_007.png)
 
-#### Working on a Python virtual environment?
+**Working on a Python virtual environment?**
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
