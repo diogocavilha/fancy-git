@@ -10,18 +10,18 @@
 
 ![logo](https://github.com/diogocavilha/fancy-git/blob/master/images/logo.png)
 
-Fancygit is a tool that changes the terminal prompt in order to show you a few cool git informations when you're working on a git repo. It'll always keep you informed about the current branch status.
+Fancygit is a tool which works for Linux and MAC OS, that changes the terminal prompt in order to show you a few cool git informations when you're working on a git repo. It'll always keep you informed about the current branch status.
 
 :bookmark: [You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
 # Installing  
-> Linux and MAC OS
+
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
 # Uninstalling  
-> Linux and MAC OS
+
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
 ```
@@ -29,12 +29,12 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
 # After installing
 
 1. Change your terminal font to "SourceCodePro+Powerline+Awesome+Regular".  
-   It's necessary only if you're using one of the fancy themes for rendering the icons properly.
+   It's necessary only if you're using one of the fancy styles for rendering the icons properly.
 2. Restart your terminal.
 
 If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts` or even installing the ttf file which is placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
 
-Once the installation have succeeded, you can type `fancygit -h` to check Fancy Git help.
+Once the installation have succeeded, you can type `fancygit -h` to check fancygit help.
 
 # Git suggested colors
 
@@ -47,11 +47,10 @@ git config --global color.status.added "green bold"
 git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
-
+Run `fancygit --colors` to see those suggested colors.  
 Run `fancygit --colors-set` to apply it.
 
-I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors, most of the time, according to the current repo status.  
-You can run the command: `fancygit --colors` in order to see those suggested colors.
+I suggest you to use this scheme color because fancygit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.  
 
 > Type `fancygit -h` for more information.
 
@@ -73,47 +72,49 @@ As a picture is worth a thousand words...
 
 # Styles :art:
 
-If you don't want to be too "fancy" (as I don't), you can choose using the **simple style**.
-In order to change to the **simple style** you can type `fancygit simple`. And if you want to return to the **default style** (colored), you can type `fancygit default`.  
-There are a bit of styles you can choose from. Here you have a list of available styles and their corresponding command.
+If you don't want to be too "fancy", you can choose using the **simple style** by running `fancygit simple`.  
+If you want to return to the **default style** (colored), you can type `fancygit default`.  
+There are a few more styles you can choose from.
 
-fancygit simple  
+Here you have a list of available styles and their corresponding command to apply.
+
+`fancygit simple`
 ![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
 
-fancygit simple-double-line  
+`fancygit simple-double-line`
 ![Simple Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple-double-line.png)
 
-fancygit human  
+`fancygit human`
 ![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
 
-fancygit human single line  
+`fancygit human single line`
 ![Human Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-single-line.png)
 
-fancygit human-dark  
+`fancygit human-dark`
 ![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
 
-fancygit human-dark-single-line  
+`fancygit human-dark-single-line`
 ![Human Dark Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark-single-line.png)
 
-fancygit default  
+`fancygit default`
 ![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
 
-fancygit double-line  
+`fancygit double-line`
 ![Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/double-line.png)
 
-fancygit dark  
+`fancygit dark`
 ![Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark.png)
 
-fancygit dark-double-line  
+`fancygit dark-double-line`
 ![Dark Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-double-line.png)
 
-fancygit dark-col-double-line  
+`fancygit dark-col-double-line`
 ![Dark Col Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-col-double-line.png)
 
-fancygit light  
+`fancygit light`
 ![Light](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light.png)
 
-fancygit light-double-line  
+`fancygit light-double-line`
 ![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
 
 # Commands
@@ -152,7 +153,7 @@ Well, here goes a little explanation:
 `o` = `origin`  
 `b` = `<current-branch-name>`... It will get the current branch name.
 
-Basically, most of the Fancy Git aliases work this way.
+Basically, most of the fancygit aliases work this way.
 
 | Alias                      | Command                                                                                                                                                | Description
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------
