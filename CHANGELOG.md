@@ -2,6 +2,15 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.3.0
+
+- Update icon for stash.
+- Update icon for untracked files.
+- Update icon for staged files.
+- Change icon of merged branch.
+- Fix bug about unpushed commits icon. Now it appears again.
+- Organize the colored style icon sequence in a logical way of workflow.
+
 ### v6.2.13
 
 - Update README.md.

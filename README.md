@@ -1,42 +1,45 @@
-[![Bash Shell](https://badges.frapsoft.com/bash/v1/bash.png?v=103)](https://github.com/diogocavilha/fancy-git)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://github.com/diogocavilha/fancy-git/blob/master/LICENSE)
+
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://github.com/diogocavilha/fancy-git/blob/master/LICENSE)
 [![GitHub forks](https://img.shields.io/github/forks/diogocavilha/fancy-git.svg)](https://gitHub.com/diogocavilha/fancy-git/)
 [![GitHub stars](https://img.shields.io/github/stars/diogocavilha/fancy-git.svg)](https://GitHub.com/diogocavilha/fancy-git/stargazers/)
-[![GitHub contributors](https://img.shields.io/github/contributors/diogocavilha/fancy-git.svg)](https://gitHub.com/diogocavilha/fancy-git/graphs/contributors/)
 
 ![logo](https://github.com/diogocavilha/fancy-git/blob/master/images/logo.png)
 
-That's a prompt changer to show a few cool git informations about your repository on terminal.
+Fancygit is a tool which works for Linux and MAC OS, that changes the terminal prompt in order to show you a few cool git informations when you're working on a git repo. It'll always keep you informed about the current branch status.
 
 :bookmark: [You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
-## Installing (Linux and MAC OS)
+# Installing  
+
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
-## Uninstalling (Linux and MAC OS)
+# Uninstalling  
+
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
 ```
 
-## After installing
+# After installing
 
-1. Change your terminal font to "SourceCodePro+Powerline+Awesome+Regular". (It's necessary for rendering the icons properly)
+1. Change your terminal font to "SourceCodePro+Powerline+Awesome+Regular".  
+   It's necessary only if you're using one of the fancy styles for rendering the icons properly.
 2. Restart your terminal.
 
-If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts` or even installing the ttf file placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
+If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts` or even installing the ttf file which is placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
 
-## Git suggested colors
+Once the installation have succeeded, you can type `fancygit -h` to check fancygit help.
+
+# Git suggested colors
 
 ```bash
 git config --global color.ui true
-
 git config --global color.diff.meta "yellow bold"
 git config --global color.diff.old "red bold"
 git config --global color.diff.new "green bold"
@@ -44,17 +47,14 @@ git config --global color.status.added "green bold"
 git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
+Run `fancygit --colors` to see those suggested colors.  
+Run `fancygit --colors-set` to apply it.
 
-### Command to apply it
+I suggest you to use this scheme color because fancygit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.  
 
-`fancygit --colors-set`
+> Type `fancygit -h` for more information.
 
-I suggest you to use this scheme color because fancygit will paint the background branch or showing icon colors, most of the time, according to the current repo status.
-You can run the command: `fancygit --colors` in order to see those suggested colors.
-
-You can always run a `fancygit --help` to check out the possibilities ;)
-
-## Overview
+# Overview
 
 As a picture is worth a thousand words...
 
@@ -66,20 +66,17 @@ As a picture is worth a thousand words...
 ![006](https://github.com/diogocavilha/fancy-git/blob/master/images/default_006.png)
 ![007](https://github.com/diogocavilha/fancy-git/blob/master/images/default_007.png)
 
-## Working on a Python virtual environment?
+**Working on a Python virtual environment?**
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
-> You can type `fancygit -h` or `fancygit --help` for more information.
+# Styles :art:
 
-## Styles :art:
+If you don't want to be too "fancy", you can choose using the **simple style** by running `fancygit simple`.  
+If you want to return to the **default style** (colored), you can type `fancygit default`.  
+There are a few more styles you can choose from.
 
-If you don't want to be too "fancy" (as I don't), you can choose using the **simple style**.
-In order to change to the **simple style** you can type `fancygit simple`. And if you want to return to the **default style** (colored), you can type `fancygit default`.
-
-There are a bit of styles you can choose from. Here you have a list of available styles and their corresponding command.
-
-> You can type `fancygit -h` or `fancygit --help` for more information.
+Here you have a list of available styles and their corresponding command to apply.
 
 `fancygit simple`
 ![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
@@ -112,7 +109,6 @@ There are a bit of styles you can choose from. Here you have a list of available
 ![Dark Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-double-line.png)
 
 `fancygit dark-col-double-line`
-
 ![Dark Col Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-col-double-line.png)
 
 `fancygit light`
@@ -121,7 +117,7 @@ There are a bit of styles you can choose from. Here you have a list of available
 `fancygit light-double-line`
 ![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
 
-## Commands
+# Commands
 
 | Command                      | Description
 | ---------------------------- | ---------------------------------------------------------
@@ -145,24 +141,21 @@ There are a bit of styles you can choose from. Here you have a list of available
 | fancygit light               | Change prompt to the light style.
 | fancygit light-double-line   | Change prompt to the light style in double line.
 
-## Aliases
+# Aliases
 
 Here we got a list of useful aliases you can use when working. They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
-For example, what if you could replace `git push origin <branch-name>` for `gpsob`? Much smaller command, isn't it?. That's is possible but what, for goodness sake, means `gpsob`?
+For example, what if you could replace `git push origin <branch-name>` for `gpsob`? It's a much smaller command, isn't it? Ok, but what's the meaning of `gpsob`?
 
 Well, here goes a little explanation:
 
-`gps + o + b`
+`gps + o + b`  
+`gps` = `git push`  
+`o` = `origin`  
+`b` = `<current-branch-name>`... It will get the current branch name.
 
-`gps` = `git push`
+Basically, most of the fancygit aliases work this way.
 
-`o` = `origin`
-
-`b` = `<current-branch-name>`... Yes, it will get the branch you're working on.
-
-Basically, most of the Fancy Git aliases work this way.
-
-| Alias                    | Command                                                                                                                                                | Description
+| Alias                      | Command                                                                                                                                                | Description
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------
 | gs                         | git status                                                                                                                                             | Show git status.
 | ga \<file\> [<other_file>] | Add files in order to commit. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/ga.sh)                                      | Add a file in order to commit.
@@ -201,7 +194,7 @@ Basically, most of the Fancy Git aliases work this way.
 | gu \<file\> [<other_file>] | git reset HEAD \<file\>                                                                                                                                | Remove files from staging area.
 | pve                       | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/pve.sh)                                                                  | Show the current Python virtual environment name.
 
-## Advanced tweaking - override values from config.sh
+# Advanced tweaking - override values from config.sh
 
 If you like to tweak things more in-depth, like color values, special characters and such, you can create a new file `~/.fancy-git/config-override.sh`. This file is sourced after reading the standard configuration, so that you can override any variable found in the main `config.sh`.
 
@@ -212,45 +205,38 @@ You want to change the branch icon, because you are using a different console fo
 branch_icon=""
 ```
 
-## Troubleshooting :pick:
+# Troubleshooting :pick:
 
-### Double line problem and general weird behavior
-
-**System:** Linux | MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/63).
-
+- **Double line problem and general weird behavior**  
+**System:** Linux | MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/63).  
 If you have a few more changes in your `.bashrc` file, be aware that `. ~/.fancy-git/prompt.sh` must be the last line of it.
 
-### Problems with Konsole Terminal
-
-**System:** Linux (with KDE) - [reported issue](https://bugs.kde.org/show_bug.cgi?id=272443).
-
-Maybe you could face an issue related to icons rendering when using `Konsole` on version `18.12.1`.
+- **Problems with Konsole Terminal**  
+**System:** Linux (with KDE) - [reported issue](https://bugs.kde.org/show_bug.cgi?id=272443).  
+Maybe you could face an issue related to icons rendering when using `Konsole` on version `18.12.1`.  
 An idea here is to update the `Konsole` to its latest version. So the problem might be solved ;)
 
-### Problems with `grep` command
-
-**System:** MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/47).
-
+- **Problems with `grep` command**  
+**System:** MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/47).  
 As you can read there, the solution found is to `brew install grep` and adding `/usr/local/opt/grep/libexec/gnubin` to the PATH ahead of `/usr/bin`.
 
-### Problems with `sed` command
-
-**System:** MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/47).
-
+- **Problems with `sed` command**  
+**System:** MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/47).  
 You can follow the steps as you did for `grep`, but this time, installing `gnu-sed` by running `brew install gnu-sed`.
 
-### Problems upgrading from v6.0.5 to a newest version
-
-If you've just upgraded it from v6.0.5 to a newest version, you might have seeing an error, because fancygit can't find its configuration file.
-
+- **Problems upgrading from v6.0.5 to a newest version**  
+If you've just upgraded it from v6.0.5 to a newest version, you might have seeing an error, because fancygit can't find its configuration file.  
 You can fix that just by running `fancygit --config-reset`. It'll create a default configuration file and reset the fancygit state.
 
 # Contributing :rocket:
 
 - Give this project a star =D
 - Fork the project.
-- Create a branch in order to implement your changes. (`git checkout -b your-branch-name`).
-- Send a Pull Request.
+- Create a branch. (`git checkout -b your-branch-name` or `gcb your-branch-name`).
+- Make your changes on the branch you've just created.
+- Commit it.
+- Push it.
+- Send your Pull Request.
 
 # Contributors ✨
 
@@ -274,6 +260,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 ---
 
-*If you have any problem on setting up the fancy-git, contact me at [diogocavilha@gmail.com](mailto:diogocavilha@gmail.com) or simply create an issue [here](https://github.com/diogocavilha/fancy-git/issues). I'll be happy to help you.*
+*If you have any problem on setting up the fancy-git, contact me at [diogocavilha@gmail.com](mailto:diogocavilha@gmail.com) or simply create an issue [here](https://github.com/diogocavilha/fancy-git/issues).  
+I'll be happy to help you.*
 
 [![Donate_with_PayPal](https://github.com/diogocavilha/fancy-git/blob/master/images/buymeacoffee.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QFCN8W7PRX696&lc=BR&item_name=diogocavilha%2fFancyGit&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)

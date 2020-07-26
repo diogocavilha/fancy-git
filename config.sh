@@ -17,13 +17,14 @@ local has_unpushed_commits
 local working_on_venv
 
 separator=""
-branch_icon=""
+branch_icon=""
 is_git_repo=""
-has_git_stash=" "
-has_untracked_files=" "
+has_git_stash="  "
+has_untracked_files="  "
 is_only_local_branch=""
+is_merged_branch=""
 has_changed_files="  "
-has_added_files="  "
+has_added_files="  "
 has_unpushed_commits="  "
 working_on_venv="  "
 
@@ -38,7 +39,8 @@ local git_has_unpushed_commits
 local git_number_unpushed_commits
 
 remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
-branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+remote_name=${remote_name:-origin}
+branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 branch_status=$(git status -s 2> /dev/null)
 staged_files=$(git diff --name-only --cached 2> /dev/null)
 git_stash=$(git stash list 2> /dev/null)
@@ -48,6 +50,11 @@ git_has_unpushed_commits=$(git log $remote_name/$branch_name..HEAD 2> /dev/null)
 git_number_unpushed_commits=$(git log --pretty=oneline $remote_name/$branch_name..HEAD 2> /dev/null | wc -l)
 git_number_untracked_files=$(git ls-files --others --exclude-standard 2> /dev/null | wc -w)
 git_number_changed_files=$(git ls-files -m 2> /dev/null | wc -l)
+merged_branch=""
+
+if [ "$branch_name" != "master" ]; then
+    merged_branch=$(git branch -r --merged master 2> /dev/null | grep ${branch_name} 2> /dev/null)
+fi
 
 # Colors
 local none
