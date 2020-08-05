@@ -254,6 +254,15 @@ fg_branch_status() {
     echo ""
 }
 
+fg_return() {
+    local fg_os
+    fg_os=$(uname)
+
+    if [ "$fg_os" = "Linux" ]; then
+        return
+    fi
+}
+
 case "$1" in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
@@ -278,6 +287,6 @@ case "$1" in
     "light") fg_update_app_config "style" "light";;
     "light-double-line") fg_update_app_config "style" "light-double-line";;
     "configure-fonts") fg_install_fonts;;
-    "") return;;
+    "") fg_return;;
     *) fg_command_not_found "$1";;
 esac

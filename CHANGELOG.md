@@ -5,6 +5,7 @@
 ### v6.3.x
 
 - Add one more question to "gd" command.
+- Fix a minor bug when using MacOS. 
 
 ### v6.3.0
 
