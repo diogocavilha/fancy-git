@@ -2,6 +2,10 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.3.x
+
+- Add one more question to "gd" command.
+
 ### v6.3.0
 
 - Update icon for stash.

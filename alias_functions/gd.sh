@@ -19,6 +19,15 @@ read -p " Add this file to commit? [y/N]: " r
 
 if [ "$r" = "y" ]; then
     git add "$1"
+    clear
+    git status
+    return
+fi
+
+read -p " Rollback this file changes? [y/N]: " r
+
+if [ "$r" = "y" ]; then
+    git checkout "$1"
 fi
 
 clear
