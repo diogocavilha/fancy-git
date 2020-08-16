@@ -6,6 +6,10 @@
 
 - Add one more question to "gd" command.
 - Fix a minor bug when using MacOS. 
+- Add the `fancygit --enable-show-user-at-machine` command for making FancyGit to show the the (user@machine) prompt info.
+- Add the `fancygit --disable-show-user-at-machine` command for making FancyGit not to show the the (user@machine) prompt info.
+- Change the `fancygit --full-path-disable` command to `fancygit --disable-full-path` in orer to keep it organized.
+- Change the `fancygit --full-path-enable` command to `fancygit --enable-full-path` in orer to keep it organized.
 
 ### v6.3.0
 

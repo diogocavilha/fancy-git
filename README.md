@@ -119,27 +119,29 @@ Here you have a list of available styles and their corresponding command to appl
 
 # Commands
 
-| Command                      | Description
-| ---------------------------- | ---------------------------------------------------------
-| fancygit -h, --help          | Show this help.
-| fancygit -v, --version       | Show the fancygit version.
-| fancygit update              | Update fancygit code with the latest release from github.
-| fancygit configure-fonts     | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
-| fancygit --colors            | Show suggested colors config in an easy way to copy and paste to apply them.
-| fancygit --colors-set        | Apply the suggested colors configuration.
-| fancygit --full-path-disable | Fancygit will show only the the directory name you are working on. Not the entire path.
-| fancygit --full-path-enable  | Fancygit will show the entire path.
-| fancygit simple              | Change prompt to the simple style.
-| fancygit simple-double-line  | Change prompt to the simple style in double line.
-| fancygit default             | Change prompt to the default (colored) style. (This is the fallback style).
-| fancygit double-line         | Change prompt to the default (colored) style in double line.
-| fancygit human               | Change prompt to the human readable style.
-| fancygit human-dark          | Change prompt to the human readable style.
-| fancygit dark                | Change prompt to the dark style.
-| fancygit dark-double-line    | Change prompt to the dark style in double line.
-| fancygit dark-col-double-line| Change prompt to the dark (colored) style in double line.
-| fancygit light               | Change prompt to the light style.
-| fancygit light-double-line   | Change prompt to the light style in double line.
+| Command                                    | Description
+| ------------------------------------------ | ---------------------------------------------------------
+| fancygit -h, --help                        | Show this help.
+| fancygit -v, --version                     | Show the fancygit version.
+| fancygit update                            | Update fancygit code with the latest release from github.
+| fancygit configure-fonts                   | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
+| fancygit --colors                          | Show suggested colors config in an easy way to copy and paste to apply them.
+| fancygit --colors-set                      | Apply the suggested colors configuration.
+| fancygit --disable-full-path               | Fancygit will show only the the directory name you are working on. Not the entire path.
+| fancygit --enable-full-path                | Fancygit will show the entire path.
+| fancygit --disable-show-user-at-machine    | Fancygit will hide (user@machine) info.
+| fancygit --enable-show-user-at-machine     | Fancygit will show (user@machine) info, as usual.
+| fancygit simple                            | Change prompt to the simple style.
+| fancygit simple-double-line                | Change prompt to the simple style in double line.
+| fancygit default                           | Change prompt to the default (colored) style. (This is the fallback style).
+| fancygit double-line                       | Change prompt to the default (colored) style in double line.
+| fancygit human                             | Change prompt to the human readable style.
+| fancygit human-dark                        | Change prompt to the human readable style.
+| fancygit dark                              | Change prompt to the dark style.
+| fancygit dark-double-line                  | Change prompt to the dark style in double line.
+| fancygit dark-col-double-line              | Change prompt to the dark (colored) style in double line.
+| fancygit light                             | Change prompt to the light style.
+| fancygit light-double-line                 | Change prompt to the light style in double line.
 
 # Aliases
 

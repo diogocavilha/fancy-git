@@ -159,11 +159,23 @@ fg_show_app_config() {
 }
 
 fg_show_full_path() {
-    local show_full_path=""
+    local config_content=""
 
-    show_full_path=$(grep -o 'show-full-path:false' < ~/.fancy-git/app_config)
+    config_content=$(grep -o 'show-full-path:false' < ~/.fancy-git/app_config)
 
-    if [ "$show_full_path" = "show-full-path:false" ]; then
+    if [ "$config_content" = "show-full-path:false" ]; then
+        return 1
+    fi
+
+    return 0
+}
+
+fg_show_user_at_machine() {
+    local config_content=""
+
+    config_content=$(grep -o 'show-user-at-machine:false' < ~/.fancy-git/app_config)
+
+    if [ "$config_content" = "show-user-at-machine:false" ]; then
         return 1
     fi
 
@@ -268,8 +280,10 @@ case "$1" in
     "-v"|"--version") fg_show_version;;
     "--colors") fg_show_colors_config;;
     "--colors-set") fg_colors_config_set;;
-    "--full-path-enable") fg_update_app_config "show-full-path" "true";;
-    "--full-path-disable") fg_update_app_config "show-full-path" "false";;
+    "--enable-full-path") fg_update_app_config "show-full-path" "true";;
+    "--disable-full-path") fg_update_app_config "show-full-path" "false";;
+    "--enable-show-user-at-machine") fg_update_app_config "show-user-at-machine" "true";;
+    "--disable-show-user-at-machine") fg_update_app_config "show-user-at-machine" "false";;
     "--config-list") fg_show_app_config;;
     "--config-reset") fg_reset_app_config;;
     "update") fg_update_checker;;

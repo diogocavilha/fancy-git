@@ -23,6 +23,7 @@ fancygit_prompt_builder() {
     branch_end="${bg_none}${none}${bold_none}${s_white}"
     local venv=""
     local path_sign=""
+    local prompt_user=""
 
     # Building prompt
     if [ "$branch_status" != "" ]
@@ -63,7 +64,11 @@ fancygit_prompt_builder() {
         has_unpushed_commits=""
     fi
 
-    prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
+    if fg_show_user_at_machine
+    then
+        prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
+    fi
+
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
 
     if ! [ -z ${VIRTUAL_ENV} ]
