@@ -24,6 +24,7 @@ if [ "$r" = "y" ]; then
     return
 fi
 
+echo ""
 read -p " Rollback this file changes? [y/N]: " r
 
 if [ "$r" = "y" ]; then
