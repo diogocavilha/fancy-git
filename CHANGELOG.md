@@ -10,6 +10,9 @@
 - Add the `fancygit --disable-show-user-at-machine` command for making FancyGit not to show the the (user@machine) prompt info.
 - Change the `fancygit --full-path-disable` command to `fancygit --disable-full-path` in orer to keep it organized.
 - Change the `fancygit --full-path-enable` command to `fancygit --enable-full-path` in orer to keep it organized.
+- Add a new font called "Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf" in order to keep compatibility.
+- Update virtualenv status icon.
+- Change stash status icon.
 
 ### v6.3.0
 

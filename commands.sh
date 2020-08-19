@@ -74,8 +74,9 @@ fg_command_not_found() {
 }
 
 fg_install_fonts() {
-    mkdir ~/.fonts
+    mkdir -p ~/.fonts
     cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
+    cp -i ~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf ~/.fonts
     fc-cache -fv
 }
 
