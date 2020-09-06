@@ -152,7 +152,18 @@ fg_colors_config_set() {
 }
 
 fg_update_app_config() {
+    fg_create_config_if_not_exists "${1}:"
     sed -i "s/${1}:.*/${1}:${2}/" ~/.fancy-git/app_config
+}
+
+fg_create_config_if_not_exists() {
+    local config_content=""
+
+    config_content=$(grep -o "${1}" < ~/.fancy-git/app_config)
+
+    if [ "$config_content" = "" ]; then
+        echo "${1}false" >> ~/.fancy-git/app_config
+    fi
 }
 
 fg_show_app_config() {
