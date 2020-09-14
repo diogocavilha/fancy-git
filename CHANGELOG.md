@@ -2,7 +2,7 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
-### v6.3.x
+### v6.3.1
 
 - Add one more question to "gd" command.
 - Fix a minor bug when using MacOS. 
