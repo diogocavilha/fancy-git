@@ -24,8 +24,10 @@ _fancygit() {
         light-double-line \
         --colors \
         --colors-set \
-        --full-path-enable \
-        --full-path-disable \
+        --enable-full-path \
+        --disable-full-path \
+        --enable-show-user-at-machine \
+        --disable-show-user-at-machine \
         --config-list \
         --config-reset
     '

@@ -24,8 +24,8 @@ fancygit_prompt_builder() {
     user="${orange}${bg_dark_gray_01}${bold}"
     at="${white}${bg_dark_gray_01}${bold}"
     host="${light_yellow}${bg_dark_gray_01}${bold}"
-    user_at_host_end="${bold_none}${bg_none}${s_darkgray01_bgdarkgray}"
-    user_at_host_end_git="${bold_none}${bg_none}${s_darkgray01_bgdarkgray05}"
+    user_at_host_end="${bold_none}${bg_none}"
+    user_at_host_end_git="${bold_none}${bg_none}"
     user_symbol="${bg_dark_gray}${bold}${white}"
     user_symbol_end="${none}${bold_none}${bg_none}${s_darkgray}"
     path="${bg_dark_gray}${white}${bold}"
@@ -35,6 +35,7 @@ fancygit_prompt_builder() {
     branch_end="${bg_none}${none}${bold_none}${s_darkgray04}"
     local venv=""
     local path_sign=""
+    local user_at_host=""
 
     # Building prompt
     if [ "$branch_status" != "" ]
@@ -75,11 +76,18 @@ fancygit_prompt_builder() {
         has_unpushed_commits=""
     fi
 
+    if fg_show_user_at_machine
+    then
+        user_at_host="${user}\\u${at}@${host}\\h "
+        user_at_host_end="${bold_none}${bg_none}${s_darkgray01_bgdarkgray}"
+        user_at_host_end_git="${bold_none}${bg_none}${s_darkgray01_bgdarkgray05}"
+    fi
+
     if [ "$branch_name" != "" ]
     then
-	   prompt_user="${user}\\u${at}@${host}\\h ${user_at_host_end_git}"
+	   prompt_user="${user_at_host}${user_at_host_end_git}"
     else
-	   prompt_user="${user}\\u${at}@${host}\\h ${user_at_host_end}"
+	   prompt_user="${user_at_host}${user_at_host_end}"
     fi
 
     prompt_symbol="\n${user_symbol}\$${user_symbol_end}"

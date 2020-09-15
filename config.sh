@@ -18,15 +18,15 @@ local working_on_venv
 
 separator=""
 branch_icon=""
-is_git_repo=""
-has_git_stash="  "
+is_git_repo=""
+has_git_stash=" "
 has_untracked_files="  "
 is_only_local_branch=""
 is_merged_branch=""
 has_changed_files="  "
 has_added_files="  "
 has_unpushed_commits="  "
-working_on_venv="  "
+working_on_venv=" "
 
 # Git info
 local branch_name

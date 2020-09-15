@@ -42,4 +42,5 @@ fi
 
 mkdir -p ~/.fonts
 cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
+cp -i ~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf ~/.fonts
 fc-cache -fv

@@ -32,6 +32,7 @@ fancygit_prompt_builder() {
     local host="${light_green}\h${none}"
     local where="${blue}\w${none}"
     local venv=""
+    local user_at_host=""
 
     if ! fg_show_full_path
     then
@@ -42,7 +43,12 @@ fancygit_prompt_builder() {
         venv="(`basename \"$VIRTUAL_ENV\"`) "
     fi
 
-    PS1="${bold}${venv}$user$at$host:$where$(fg_branch_name)${bold_none}\n\$ "
+    if fg_show_user_at_machine
+    then
+        user_at_host="$user$at$host:"
+    fi
+
+    PS1="${bold}${venv}${user_at_host}$where$(fg_branch_name)${bold_none}\n\$ "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"

@@ -12,8 +12,6 @@ fancygit_prompt_builder() {
     . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
 
     # Prompt style
-    user_at_host="${white}${bg_dark_gray}${bold}"
-    user_at_host_end="${bold_none}${bg_none}${s_darkgray_bgblue}"
     path="${bg_blue}${white}${bold}"
     path_git="${bg_blue}${white}  ${is_git_repo} ${bold}"
     path_end="${none}${bold_none}"
@@ -23,6 +21,7 @@ fancygit_prompt_builder() {
     branch_end="${bg_none}${none}${bold_none}${s_white}"
     local venv=""
     local path_sign=""
+    local prompt_user=""
 
     # Building prompt
     if [ "$branch_status" != "" ]
@@ -63,7 +62,13 @@ fancygit_prompt_builder() {
         has_unpushed_commits=""
     fi
 
-    prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
+    if fg_show_user_at_machine
+    then
+        user_at_host="${white}${bg_dark_gray}${bold}"
+        user_at_host_end="${bold_none}${bg_none}${s_darkgray_bgblue}"
+        prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
+    fi
+
     prompt_symbol="\n${user_symbol}\$${user_symbol_end}"
 
     if ! [ -z ${VIRTUAL_ENV} ]

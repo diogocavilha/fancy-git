@@ -74,8 +74,9 @@ fg_command_not_found() {
 }
 
 fg_install_fonts() {
-    mkdir ~/.fonts
+    mkdir -p ~/.fonts
     cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
+    cp -i ~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf ~/.fonts
     fc-cache -fv
 }
 
@@ -151,7 +152,18 @@ fg_colors_config_set() {
 }
 
 fg_update_app_config() {
+    fg_create_config_if_not_exists "${1}:"
     sed -i "s/${1}:.*/${1}:${2}/" ~/.fancy-git/app_config
+}
+
+fg_create_config_if_not_exists() {
+    local config_content=""
+
+    config_content=$(grep -o "${1}" < ~/.fancy-git/app_config)
+
+    if [ "$config_content" = "" ]; then
+        echo "${1}false" >> ~/.fancy-git/app_config
+    fi
 }
 
 fg_show_app_config() {
@@ -159,11 +171,23 @@ fg_show_app_config() {
 }
 
 fg_show_full_path() {
-    local show_full_path=""
+    local config_content=""
 
-    show_full_path=$(grep -o 'show-full-path:false' < ~/.fancy-git/app_config)
+    config_content=$(grep -o 'show-full-path:false' < ~/.fancy-git/app_config)
 
-    if [ "$show_full_path" = "show-full-path:false" ]; then
+    if [ "$config_content" = "show-full-path:false" ]; then
+        return 1
+    fi
+
+    return 0
+}
+
+fg_show_user_at_machine() {
+    local config_content=""
+
+    config_content=$(grep -o 'show-user-at-machine:false' < ~/.fancy-git/app_config)
+
+    if [ "$config_content" = "show-user-at-machine:false" ]; then
         return 1
     fi
 
@@ -254,13 +278,24 @@ fg_branch_status() {
     echo ""
 }
 
+fg_return() {
+    local fg_os
+    fg_os=$(uname)
+
+    if [ "$fg_os" = "Linux" ]; then
+        return
+    fi
+}
+
 case "$1" in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
     "--colors") fg_show_colors_config;;
     "--colors-set") fg_colors_config_set;;
-    "--full-path-enable") fg_update_app_config "show-full-path" "true";;
-    "--full-path-disable") fg_update_app_config "show-full-path" "false";;
+    "--enable-full-path") fg_update_app_config "show-full-path" "true";;
+    "--disable-full-path") fg_update_app_config "show-full-path" "false";;
+    "--enable-show-user-at-machine") fg_update_app_config "show-user-at-machine" "true";;
+    "--disable-show-user-at-machine") fg_update_app_config "show-user-at-machine" "false";;
     "--config-list") fg_show_app_config;;
     "--config-reset") fg_reset_app_config;;
     "update") fg_update_checker;;
@@ -278,6 +313,6 @@ case "$1" in
     "light") fg_update_app_config "style" "light";;
     "light-double-line") fg_update_app_config "style" "light-double-line";;
     "configure-fonts") fg_install_fonts;;
-    "") return;;
+    "") fg_return;;
     *) fg_command_not_found "$1";;
 esac
