@@ -9,7 +9,9 @@
 
 fancygit_prompt_builder() {
     . ~/.fancy-git/config.sh
-    . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
+    . ~/.fancy-git/update_checker.sh
+
+    fancygit_update_checker
 
     # Prompt style
     user_symbol="${bg_light_gray}${bold}${black}"

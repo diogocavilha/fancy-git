@@ -25,7 +25,9 @@ fg_branch_name() {
 
 fancygit_prompt_builder() {
     . ~/.fancy-git/config.sh
-    . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
+    . ~/.fancy-git/update_checker.sh
+    
+    fancygit_update_checker
 
     local user
     local at

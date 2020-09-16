@@ -8,8 +8,10 @@
 . ~/.fancy-git/commands.sh
 
 fancygit_prompt_builder() {
-    . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
+    . ~/.fancy-git/update_checker.sh
 
+    fancygit_update_checker
+    
     local branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 
     # Colors
