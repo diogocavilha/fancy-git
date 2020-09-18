@@ -6,10 +6,10 @@
 
 - Add one more question to "gd" command.
 - Fix a minor bug when using MacOS. 
-- Add the `fancygit --enable-show-user-at-machine` command for making FancyGit to show the the (user@machine) prompt info.
-- Add the `fancygit --disable-show-user-at-machine` command for making FancyGit not to show the the (user@machine) prompt info.
-- Change the `fancygit --full-path-disable` command to `fancygit --disable-full-path` in orer to keep it organized.
-- Change the `fancygit --full-path-enable` command to `fancygit --enable-full-path` in orer to keep it organized.
+- Add the `fancygit --enable-show-user-at-machine` command for making FancyGit to show the (user@machine) prompt info.
+- Add the `fancygit --disable-show-user-at-machine` command for making FancyGit not to show the (user@machine) prompt info.
+- Change the `fancygit --full-path-disable` command to `fancygit --disable-full-path` in order to keep it organized.
+- Change the `fancygit --full-path-enable` command to `fancygit --enable-full-path` in order to keep it organized.
 - Add a new font called "Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf" in order to keep compatibility.
 - Update virtualenv status icon.
 - Change stash status icon.
@@ -201,7 +201,7 @@
 
 ### v4.0.5
 
-- Add `gg` alias to do all the tipical sequence until push.
+- Add `gg` alias to do all the typical sequence until push.
 
 ### v4.0.4
 
