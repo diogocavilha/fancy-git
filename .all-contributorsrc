@@ -58,6 +58,15 @@
       "contributions": [
         "userTesting"
       ]
+    },
+    {
+      "login": "bsides",
+      "name": "Rafael Pereira",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/87631?v=4",
+      "profile": "http://rafaelp.com.br",
+      "contributions": [
+        "userTesting"
+      ]
     }
   ],
   "contributorsPerLine": 7,
