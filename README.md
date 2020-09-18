@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -253,6 +253,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://marvinkweyu.github.io"><img src="https://avatars3.githubusercontent.com/u/34123914?v=4" width="100px;" alt=""/><br /><sub><b>Marvin Kweyu</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=MarvinKweyu" title="Code">💻</a></td>
     <td align="center"><a href="http://foundjem.com"><img src="https://avatars2.githubusercontent.com/u/5758553?v=4" width="100px;" alt=""/><br /><sub><b>Foundjem</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=foundjem" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ohrafaelmartins"><img src="https://avatars3.githubusercontent.com/u/15790926?v=4" width="100px;" alt=""/><br /><sub><b>Rafael Martins</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=ohrafaelmartins" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/otaavioo"><img src="https://avatars2.githubusercontent.com/u/5620565?v=4" width="100px;" alt=""/><br /><sub><b>Otávio Augusto</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=otaavioo" title="Documentation">📖</a></td>
   </tr>
 </table>
 
