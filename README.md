@@ -254,6 +254,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://foundjem.com"><img src="https://avatars2.githubusercontent.com/u/5758553?v=4" width="100px;" alt=""/><br /><sub><b>Foundjem</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=foundjem" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ohrafaelmartins"><img src="https://avatars3.githubusercontent.com/u/15790926?v=4" width="100px;" alt=""/><br /><sub><b>Rafael Martins</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=ohrafaelmartins" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/otaavioo"><img src="https://avatars2.githubusercontent.com/u/5620565?v=4" width="100px;" alt=""/><br /><sub><b>Otávio Augusto</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=otaavioo" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://holisticsecurity.io"><img src="https://avatars2.githubusercontent.com/u/1067672?v=4" width="100px;" alt=""/><br /><sub><b>Roger Carhuatocto</b></sub></a><br /><a href="#userTesting-chilcano" title="User Testing">📓</a></td>
     <td align="center"><a href="http://rafaelp.com.br"><img src="https://avatars3.githubusercontent.com/u/87631?v=4" width="100px;" alt=""/><br /><sub><b>Rafael Pereira</b></sub></a><br /><a href="#userTesting-bsides" title="User Testing">📓</a></td>
   </tr>
 </table>
