@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -256,6 +256,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/otaavioo"><img src="https://avatars2.githubusercontent.com/u/5620565?v=4" width="100px;" alt=""/><br /><sub><b>Otávio Augusto</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=otaavioo" title="Documentation">📖</a></td>
     <td align="center"><a href="https://holisticsecurity.io"><img src="https://avatars2.githubusercontent.com/u/1067672?v=4" width="100px;" alt=""/><br /><sub><b>Roger Carhuatocto</b></sub></a><br /><a href="#userTesting-chilcano" title="User Testing">📓</a></td>
     <td align="center"><a href="http://rafaelp.com.br"><img src="https://avatars3.githubusercontent.com/u/87631?v=4" width="100px;" alt=""/><br /><sub><b>Rafael Pereira</b></sub></a><br /><a href="#userTesting-bsides" title="User Testing">📓</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/jthalliley"><img src="https://avatars2.githubusercontent.com/u/11047539?v=4" width="100px;" alt=""/><br /><sub><b>Tom Halliley</b></sub></a><br /><a href="#financial-jthalliley" title="Financial">💵</a></td>
   </tr>
 </table>
 
