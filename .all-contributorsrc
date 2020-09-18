@@ -49,6 +49,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "chilcano",
+      "name": "Roger Carhuatocto",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1067672?v=4",
+      "profile": "https://holisticsecurity.io",
+      "contributions": [
+        "userTesting"
+      ]
     }
   ],
   "contributorsPerLine": 7,
