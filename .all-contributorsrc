@@ -67,6 +67,15 @@
       "contributions": [
         "userTesting"
       ]
+    },
+    {
+      "login": "jthalliley",
+      "name": "Tom Halliley",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11047539?v=4",
+      "profile": "https://github.com/jthalliley",
+      "contributions": [
+        "financial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
