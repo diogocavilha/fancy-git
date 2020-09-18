@@ -40,6 +40,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "otaavioo",
+      "name": "Otávio Augusto",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5620565?v=4",
+      "profile": "https://github.com/otaavioo",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
