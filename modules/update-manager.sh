@@ -63,7 +63,6 @@ __fancygit_update_checker() {
 
     git fetch -t 2> /dev/null  
     new_version=$(git tag | tail -1)
-    new_version="v8.8.8"
 
     current_version_filter_number=$(echo "$current_version" | sed 's/[vV\.]//g')
     new_version_filter_number=$(echo "$new_version" | sed 's/[vV\.]//g')
