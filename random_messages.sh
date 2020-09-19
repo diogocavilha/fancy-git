@@ -19,7 +19,7 @@ _fancygit_after_pulling_random_message() {
     )
 
     list_size=${#messages[@]}
-    option=$((RANDOM % $list_size))
+    option=$((RANDOM % list_size))
 
     echo ""
     echo "=> ${messages[$option]}"

@@ -5,7 +5,7 @@
 #
 # Commands manager.
 
-. ~/.fancy-git/update_checker.sh
+. ~/.fancy-git/modules/update-manager.sh
 . ~/.fancy-git/version.sh
 
 fg_script_help() {

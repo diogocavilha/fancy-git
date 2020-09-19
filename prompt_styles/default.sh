@@ -9,9 +9,9 @@
 
 fancygit_prompt_builder() {
     . ~/.fancy-git/config.sh
-    . ~/.fancy-git/update_checker.sh
-
-    fancygit_update_checker
+    . ~/.fancy-git/modules/update-manager.sh
+    
+    check_for_update
 
     # Prompt style
     user_at_host="${white}${bg_dark_gray}${bold}"

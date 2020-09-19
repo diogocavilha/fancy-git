@@ -8,9 +8,9 @@
 . ~/.fancy-git/commands.sh
 
 fancygit_prompt_builder() {
-    . ~/.fancy-git/update_checker.sh
+    . ~/.fancy-git/modules/update-manager.sh
 
-    fancygit_update_checker
+    check_for_update
 
     local branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 

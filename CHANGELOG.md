@@ -2,6 +2,10 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.4.1
+
+- Improve the update manager. Now it checks for updates asynchronously.
+
 ### v6.3.1
 
 - Add one more question to "gd" command.
