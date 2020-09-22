@@ -2,6 +2,10 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.4.3
+
+- Fix uninstall routine.
+
 ### v6.4.2
 
 - Fix minor bug.
