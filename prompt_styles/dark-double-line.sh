@@ -75,7 +75,7 @@ fancygit_prompt_builder() {
 
     prompt_symbol="\n${user_symbol}\$${user_symbol_end}"
 
-    if ! [ -z ${VIRTUAL_ENV} ]
+    if ! [ -z ${VIRTUAL_ENV} ] || ([ ${CONDA_DEFAULT_ENV} != "base" ] && ! [ -z ${CONDA_DEFAULT_ENV} ])
     then
         venv="$working_on_venv"
     fi

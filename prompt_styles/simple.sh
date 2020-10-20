@@ -50,6 +50,10 @@ fancygit_prompt_builder() {
         venv="(`basename \"$VIRTUAL_ENV\"`) "
     fi
 
+    if ([ ${CONDA_DEFAULT_ENV} != "base" ] && ! [ -z ${CONDA_DEFAULT_ENV} ]); then
+        venv="(`basename \"$CONDA_DEFAULT_ENV\"`) "
+    fi
+
     if fg_show_user_at_machine
     then
         user_at_host="$user$at$host:"
