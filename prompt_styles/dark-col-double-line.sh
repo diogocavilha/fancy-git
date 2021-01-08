@@ -9,7 +9,9 @@
 
 fancygit_prompt_builder() {
     . ~/.fancy-git/config.sh
-    . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
+    . ~/.fancy-git/modules/update-manager.sh
+
+    check_for_update
 
     local blue="\\033[95;38;5;45m"
     local bold="\\[\\e[1m\\]"
@@ -24,8 +26,8 @@ fancygit_prompt_builder() {
     user="${orange}${bg_dark_gray_01}${bold}"
     at="${white}${bg_dark_gray_01}${bold}"
     host="${light_yellow}${bg_dark_gray_01}${bold}"
-    user_at_host_end="${bold_none}${bg_none}${s_darkgray01_bgdarkgray}"
-    user_at_host_end_git="${bold_none}${bg_none}${s_darkgray01_bgdarkgray05}"
+    user_at_host_end="${bold_none}${bg_none}"
+    user_at_host_end_git="${bold_none}${bg_none}"
     user_symbol="${bg_dark_gray}${bold}${white}"
     user_symbol_end="${none}${bold_none}${bg_none}${s_darkgray}"
     path="${bg_dark_gray}${white}${bold}"
@@ -35,6 +37,7 @@ fancygit_prompt_builder() {
     branch_end="${bg_none}${none}${bold_none}${s_darkgray04}"
     local venv=""
     local path_sign=""
+    local user_at_host=""
 
     # Building prompt
     if [ "$branch_status" != "" ]
@@ -75,20 +78,21 @@ fancygit_prompt_builder() {
         has_unpushed_commits=""
     fi
 
+    if fg_show_user_at_machine
+    then
+        user_at_host="${user}\\u${at}@${host}\\h "
+        user_at_host_end="${bold_none}${bg_none}${s_darkgray01_bgdarkgray}"
+        user_at_host_end_git="${bold_none}${bg_none}${s_darkgray01_bgdarkgray05}"
+    fi
+
     if [ "$branch_name" != "" ]
     then
-	prompt_user="${user}\\u${at}@${host}\\h ${user_at_host_end_git}"
+	   prompt_user="${user_at_host}${user_at_host_end_git}"
     else
-	prompt_user="${user}\\u${at}@${host}\\h ${user_at_host_end}"
+	   prompt_user="${user_at_host}${user_at_host_end}"
     fi
+
     prompt_symbol="\n${user_symbol}\$${user_symbol_end}"
-
-    local remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
-    local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/${remote_name}/${branch_name}" | wc -l)
-
-    if [ "$branch_name" != "" ] && [ "$only_local_branch" -eq 0 ]; then
-        branch_icon="${is_only_local_branch}"
-    fi
 
     if ! [ -z ${VIRTUAL_ENV} ]
     then
@@ -105,7 +109,8 @@ fancygit_prompt_builder() {
 
     if [ "$branch_name" != "" ]
     then
-        prompt_path="${path_git}${venv}${has_unpushed_commits}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files} $path_sign ${path_end}"
+        branch_icon=$(fg_get_branch_icon)
+        prompt_path="${path_git}${venv}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files}${has_unpushed_commits} $path_sign ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
         PS1="${prompt_user}${prompt_path}${prompt_branch}${prompt_symbol} "
         return

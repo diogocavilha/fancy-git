@@ -40,6 +40,51 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "otaavioo",
+      "name": "Otávio Augusto",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5620565?v=4",
+      "profile": "https://github.com/otaavioo",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "chilcano",
+      "name": "Roger Carhuatocto",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1067672?v=4",
+      "profile": "https://holisticsecurity.io",
+      "contributions": [
+        "userTesting"
+      ]
+    },
+    {
+      "login": "bsides",
+      "name": "Rafael Pereira",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/87631?v=4",
+      "profile": "http://rafaelp.com.br",
+      "contributions": [
+        "userTesting"
+      ]
+    },
+    {
+      "login": "jthalliley",
+      "name": "Tom Halliley",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11047539?v=4",
+      "profile": "https://github.com/jthalliley",
+      "contributions": [
+        "financial"
+      ]
+    },
+    {
+      "login": "svenfinke",
+      "name": "Sven Finke",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/564499?v=4",
+      "profile": "http://svenfinke.com",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

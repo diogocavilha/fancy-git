@@ -2,9 +2,47 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.4.3
+
+- Fix uninstall routine.
+
+### v6.4.2
+
+- Fix minor bug.
+
+### v6.4.1
+
+- Improve the update manager. Now it checks for updates asynchronously.
+
+### v6.3.1
+
+- Add one more question to "gd" command.
+- Fix a minor bug when using MacOS. 
+- Add the `fancygit --enable-show-user-at-machine` command for making FancyGit to show the (user@machine) prompt info.
+- Add the `fancygit --disable-show-user-at-machine` command for making FancyGit not to show the (user@machine) prompt info.
+- Change the `fancygit --full-path-disable` command to `fancygit --disable-full-path` in order to keep it organized.
+- Change the `fancygit --full-path-enable` command to `fancygit --enable-full-path` in order to keep it organized.
+- Add a new font called "Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf" in order to keep compatibility.
+- Update virtualenv status icon.
+- Change stash status icon.
+
+### v6.3.0
+
+- Update icon for stash.
+- Update icon for untracked files.
+- Update icon for staged files.
+- Change icon of merged branch.
+- Fix bug about unpushed commits icon. Now it appears again.
+- Organize the colored style icon sequence in a logical way of workflow.
+
+### v6.2.13
+
+- Update README.md.
+- Add `dark-col-double-line` on fancygit completion.
+
 ### v6.2.12
 
-- Add possibility to override standard configuration via config-override.sh
+- Add possibility to override standard configuration via config-override.sh.
 
 ### v6.2.11
 
@@ -21,7 +59,7 @@
 
 ### v6.2.8
 
-- Add configuration file for centralized updates
+- Add configuration file for centralized updates.
 - Enable change of prompt style between short path and full path display.
 
 
@@ -43,7 +81,7 @@
 
 ### v6.0.5
 
-- Add new icon when branch exists only locally. (Only colored themes)
+- Add new icon when branch exists only locally. (Only colored themes).
 
 ### v6.0.4
 
@@ -52,7 +90,7 @@
 
 ### v6.0.2
 
-- Add a ghost icon to indicate you're working on a Python virtual environment. (Only colored themes)
+- Add a ghost icon to indicate you're working on a Python virtual environment. (Only colored themes).
 
 ### v6.0.1
 
@@ -86,7 +124,7 @@
 
 ### v5.2.5
 
-- Improve the human style
+- Improve the human style.
 
 ### v5.2.4
 
@@ -102,7 +140,7 @@
 
 ### v5.2.2
 
-- Update README.md
+- Update README.md.
 
 **All the following changes here have been done on the simple style and simple-double-line style.**
 
@@ -145,7 +183,7 @@
 ### v5.0.4
 
 - Improve `gplo` command.
-- Add funny string information after pulling, which is: "Start to pray." .
+- Add funny string information after pulling, which is: "Start to pray.".
 - Sort the changelog by version from the newer to the older.
 - Improve directory verification. It goes for `/Users` when `/home` does't exist.
 
@@ -175,7 +213,7 @@
 
 ### v4.0.5
 
-- Add `gg` alias to do all the tipical sequence until push.
+- Add `gg` alias to do all the typical sequence until push.
 
 ### v4.0.4
 

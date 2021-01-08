@@ -7,59 +7,12 @@
 . ~/.fancy-git/fancygit-completion
 . ~/.fancy-git/commands.sh
 
-fg_branch_status() {
-    . ~/.fancy-git/config.sh
-
-    local info=""
-
-    if [ "$git_has_unpushed_commits" ]
-    then
-        info="${info}${light_green}${git_number_unpushed_commits}^${none} "
-    fi
-
-    if [ "$git_number_untracked_files" -gt 0 ]
-    then
-        info="${info}${cyan}?${none} "
-    fi
-
-    if [ "$git_number_changed_files" -gt 0 ]
-    then
-        info="${info}${light_green}+${none}${light_red}-${none} "
-    fi
-
-    if [ "$git_stash" != "" ]
-    then
-        info="${info}∿{none} "
-    fi
-
-    if [ "$staged_files" != "" ]
-    then
-        info="${info}${light_green}✔${none} "
-    fi
-
-    if [ "$info" != "" ]; then
-        info=$(echo "$info" | sed -e 's/[[:space:]]*$//')
-        echo "$info"
-        return
-    fi
-
-    echo ""
-}
-
 fg_branch_name() {
     local branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-    local remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
-    local only_local_branch=$(git branch -a 2> /dev/null | egrep "remotes/${remote_name}/${branch_name}" | wc -l)
     local branch_status=$(fg_branch_status)
-    local light_green="\\[\\e[92m\\]"
-    local none="\\[\\e[39m\\]"
-
-    if [ "$branch_name" != "" ] && [ "$only_local_branch" -eq 0 ]; then
-        branch_name="$branch_name${light_green}*${none}"
-    fi
 
     if [ "$branch_status" != "" ]; then
-        branch_name="$branch_name | $branch_status"
+        branch_name="$branch_name |$branch_status"
     fi
 
     if [ "$branch_name" != "" ]; then
@@ -72,13 +25,16 @@ fg_branch_name() {
 
 fancygit_prompt_builder() {
     . ~/.fancy-git/config.sh
-    . ~/.fancy-git/update_checker.sh && _fancygit_update_checker
+    . ~/.fancy-git/modules/update-manager.sh
+    
+    check_for_update
 
     local user
     local at
     local host
     local where
     local venv=""
+    local user_at_host=""
 
     user="${light_green}\u${none}"
     at="${none}@${none}"
@@ -94,7 +50,12 @@ fancygit_prompt_builder() {
         venv="(`basename \"$VIRTUAL_ENV\"`) "
     fi
 
-    PS1="${bold}${venv}$user$at$host:$where\$$(fg_branch_name)${bold_none} "
+    if fg_show_user_at_machine
+    then
+        user_at_host="$user$at$host:"
+    fi
+
+    PS1="${bold}${venv}${user_at_host}$where\$$(fg_branch_name)${bold_none} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
