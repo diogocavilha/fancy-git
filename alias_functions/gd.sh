@@ -5,11 +5,22 @@
 #
 # git diff
 
+fg_return() {
+    local fg_os
+    fg_os=$(uname)
+
+    if [ "$fg_os" = "Linux" ]; then
+        return
+    else
+        exit
+    fi
+}
+
 clear
 
 if [ "$1" = "" ]; then
     git diff
-    return
+    fg_return
 fi
 
 git diff "$1"
@@ -21,7 +32,7 @@ if [ "$r" = "y" ]; then
     git add "$1"
     clear
     git status
-    return
+    fd_return
 fi
 
 read -p " Rollback this file changes? [y/N]: " r
