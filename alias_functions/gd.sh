@@ -32,7 +32,7 @@ if [ "$r" = "y" ]; then
     git add "$1"
     clear
     git status
-    fd_return
+    fg_return
 fi
 
 read -p " Rollback this file changes? [y/N]: " r
