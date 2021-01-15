@@ -272,7 +272,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 *If you have any problem on setting up the fancy-git, contact me at [diogocavilha@gmail.com](mailto:diogocavilha@gmail.com) or simply create an issue [here](https://github.com/diogocavilha/fancy-git/issues).  
 I'll be happy to help you.*
 
-### Do you like FancyGit so much that you would donate for it? Make a developer happier! :penguin:
+### Do you like FancyGit so much that you would donate for it? So make a developer happier! :penguin:
 
 [![Donate_with_PayPal](https://github.com/diogocavilha/fancy-git/blob/master/images/buymeacoffee.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QFCN8W7PRX696&lc=BR&item_name=diogocavilha%2fFancyGit&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
 
