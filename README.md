@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -249,22 +249,24 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/pandel"><img src="https://avatars2.githubusercontent.com/u/12460002?v=4" width="100px;" alt=""/><br /><sub><b>Holger Pandel</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=pandel" title="Code">💻</a></td>
-    <td align="center"><a href="http://marvinkweyu.github.io"><img src="https://avatars3.githubusercontent.com/u/34123914?v=4" width="100px;" alt=""/><br /><sub><b>Marvin Kweyu</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=MarvinKweyu" title="Code">💻</a></td>
-    <td align="center"><a href="http://foundjem.com"><img src="https://avatars2.githubusercontent.com/u/5758553?v=4" width="100px;" alt=""/><br /><sub><b>Foundjem</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=foundjem" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/ohrafaelmartins"><img src="https://avatars3.githubusercontent.com/u/15790926?v=4" width="100px;" alt=""/><br /><sub><b>Rafael Martins</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=ohrafaelmartins" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/otaavioo"><img src="https://avatars2.githubusercontent.com/u/5620565?v=4" width="100px;" alt=""/><br /><sub><b>Otávio Augusto</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=otaavioo" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://holisticsecurity.io"><img src="https://avatars2.githubusercontent.com/u/1067672?v=4" width="100px;" alt=""/><br /><sub><b>Roger Carhuatocto</b></sub></a><br /><a href="#userTesting-chilcano" title="User Testing">📓</a></td>
-    <td align="center"><a href="http://rafaelp.com.br"><img src="https://avatars3.githubusercontent.com/u/87631?v=4" width="100px;" alt=""/><br /><sub><b>Rafael Pereira</b></sub></a><br /><a href="#userTesting-bsides" title="User Testing">📓</a></td>
+    <td align="center"><a href="https://github.com/pandel"><img src="https://avatars2.githubusercontent.com/u/12460002?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Holger Pandel</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=pandel" title="Code">💻</a></td>
+    <td align="center"><a href="http://marvinkweyu.github.io"><img src="https://avatars3.githubusercontent.com/u/34123914?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marvin Kweyu</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=MarvinKweyu" title="Code">💻</a></td>
+    <td align="center"><a href="http://foundjem.com"><img src="https://avatars2.githubusercontent.com/u/5758553?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Foundjem</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=foundjem" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ohrafaelmartins"><img src="https://avatars3.githubusercontent.com/u/15790926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rafael Martins</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=ohrafaelmartins" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/otaavioo"><img src="https://avatars2.githubusercontent.com/u/5620565?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Otávio Augusto</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=otaavioo" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://holisticsecurity.io"><img src="https://avatars2.githubusercontent.com/u/1067672?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Roger Carhuatocto</b></sub></a><br /><a href="#userTesting-chilcano" title="User Testing">📓</a></td>
+    <td align="center"><a href="http://rafaelp.com.br"><img src="https://avatars3.githubusercontent.com/u/87631?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rafael Pereira</b></sub></a><br /><a href="#userTesting-bsides" title="User Testing">📓</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/jthalliley"><img src="https://avatars2.githubusercontent.com/u/11047539?v=4" width="100px;" alt=""/><br /><sub><b>Tom Halliley</b></sub></a><br /><a href="#financial-jthalliley" title="Financial">💵</a></td>
-    <td align="center"><a href="http://svenfinke.com"><img src="https://avatars1.githubusercontent.com/u/564499?v=4" width="100px;" alt=""/><br /><sub><b>Sven Finke</b></sub></a><br /><a href="#ideas-svenfinke" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/jthalliley"><img src="https://avatars2.githubusercontent.com/u/11047539?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tom Halliley</b></sub></a><br /><a href="#financial-jthalliley" title="Financial">💵</a></td>
+    <td align="center"><a href="http://svenfinke.com"><img src="https://avatars1.githubusercontent.com/u/564499?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sven Finke</b></sub></a><br /><a href="#ideas-svenfinke" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/ibury08"><img src="https://avatars3.githubusercontent.com/u/24845508?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ibury08</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=ibury08" title="Code">💻</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ---
