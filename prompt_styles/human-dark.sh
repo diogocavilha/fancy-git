@@ -42,6 +42,10 @@ fancygit_prompt_builder() {
         venv="`basename \"$VIRTUAL_ENV\"` ${venvfor} "
     fi
 
+    if ([ ${CONDA_DEFAULT_ENV} != "base" ] && ! [ -z ${CONDA_DEFAULT_ENV} ]); then
+        venv="`basename \"$CONDA_DEFAULT_ENV\"` ${venvfor} "
+    fi
+
     if [ "$branch_name" != "" ]; then
         branch_name="${on} ${orange}$branch_name${none}"
     fi
