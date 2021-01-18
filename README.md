@@ -278,6 +278,10 @@ I'll be happy to help you.*
 
 [![Donate_with_PayPal](https://github.com/diogocavilha/fancy-git/blob/master/images/buymeacoffee.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QFCN8W7PRX696&lc=BR&item_name=diogocavilha%2fFancyGit&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
 
-**Buy me a coffee with Bitcoin:** 1AYm311YYXQJLKbm2UG6NDZKBuGVQ316aD
+**Buy me a coffee with Bitcoin:** 
 
-**Buy me a coffee with PIX:** diogocavilha@gmail.com
+`1AYm311YYXQJLKbm2UG6NDZKBuGVQ316aD`
+
+**Buy me a coffee with PIX:**
+
+`diogocavilha@gmail.com`
