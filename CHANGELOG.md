@@ -2,6 +2,11 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.4.4
+
+- Fix Mac OS `gd` command.
+- Add Conda virtual env variable to prompts.
+
 ### v6.4.3
 
 - Fix uninstall routine.
