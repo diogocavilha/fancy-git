@@ -2,6 +2,10 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.4.6
+
+- Fix `gd` command.
+
 ### v6.4.5
 
 - Fix minor bug.
