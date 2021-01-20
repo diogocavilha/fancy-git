@@ -5,15 +5,9 @@
 #
 # git diff
 
+# It's more like a return command. This is a Mac OS issue.
 fg_return() {
-    local fg_os
-    fg_os=$(uname)
-
-    if [ "$fg_os" = "Linux" ]; then
-        return
-    else
-        exit
-    fi
+    exit
 }
 
 clear
