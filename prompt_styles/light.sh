@@ -23,9 +23,12 @@ fancygit_prompt_builder() {
     path_end="${none}${bold_none}"
     branch="${s_lightgray_bgwhite}${bg_white}${black}${bold}"
     branch_end="${bg_none}${none}${bold_none}${s_white}"
+    time="${black}${bg_light_gray}${bold}"
+    time_end="${bold_none}${bg_none}"
     local venv=""
     local path_sign=""
     local prompt_user=""
+    local prompt_time=""
 
     # Building prompt
     if [ "$branch_status" != "" ]
@@ -66,6 +69,12 @@ fancygit_prompt_builder() {
         has_unpushed_commits=""
     fi
 
+    if fg_show_time
+    then
+      formatted_time=$(date +"${time_format}")
+      prompt_time="${time}[${formatted_time}] ${time_end}"
+    fi
+
     if fg_show_user_at_machine
     then
         prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
@@ -91,11 +100,11 @@ fancygit_prompt_builder() {
         branch_icon=$(fg_get_branch_icon)
         prompt_path="${path_git}${venv}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files}${has_unpushed_commits} $path_sign ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
-        PS1="${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
+        PS1="$prompt_time${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
         return
     fi
 
-    PS1="${prompt_user}${prompt_symbol}${prompt_path} "
+    PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"

@@ -35,6 +35,7 @@ fancygit_prompt_builder() {
     local where
     local venv=""
     local user_at_host=""
+    local prompt_time=""
 
     user="${light_green}\u${none}"
     at="${none}@${none}"
@@ -54,12 +55,18 @@ fancygit_prompt_builder() {
         venv="(`basename \"$CONDA_DEFAULT_ENV\"`) "
     fi
 
+    if fg_show_time
+    then
+      formatted_time=$(date +"${time_format}")
+      prompt_time="${light_green}[${formatted_time}] "
+    fi
+
     if fg_show_user_at_machine
     then
         user_at_host="$user$at$host:"
     fi
 
-    PS1="${bold}${venv}${user_at_host}$where\$$(fg_branch_name)${bold_none} "
+    PS1="${bold}${venv}${prompt_time}${user_at_host}$where\$$(fg_branch_name)${bold_none} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
