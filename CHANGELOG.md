@@ -2,6 +2,10 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.4.7
+
+- Add prompt time feature.
+
 ### v6.4.6
 
 - Fix `gd` command.
