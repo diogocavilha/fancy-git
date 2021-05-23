@@ -86,6 +86,18 @@ fg_show_full_path() {
     return 0
 }
 
+fg_show_time() {
+    local config_content=""
+
+    config_content=$(grep -o 'show-time:false' < ~/.fancy-git/app_config)
+
+    if [ "$config_content" = "show-time:false" ]; then
+        return 1
+    fi
+
+    return 0
+}
+
 fg_show_user_at_machine() {
     local config_content=""
 
@@ -200,6 +212,8 @@ case "$1" in
     "--disable-full-path") fg_update_app_config "show-full-path" "false";;
     "--enable-show-user-at-machine") fg_update_app_config "show-user-at-machine" "true";;
     "--disable-show-user-at-machine") fg_update_app_config "show-user-at-machine" "false";;
+    "--enable-show-time") fg_update_app_config "show-time" "true";;
+    "--disable-show-time") fg_update_app_config "show-time" "false";;
     "--config-list") fg_show_app_config;;
     "--config-reset") fg_reset_app_config;;
     "update") fancygit_update;;

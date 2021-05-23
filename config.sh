@@ -182,6 +182,10 @@ s_darkgray01_bgdarkgray="${dark_gray_01}${bg_dark_gray}${separator}${bg_none}${n
 s_darkgray01_bgdarkgray05="${dark_gray_01}${bg_dark_gray_05}${separator}${bg_none}${none}"
 s_darkgray05_bgdarkgray04="${dark_gray_05}${bg_dark_gray_04}${separator}${bg_none}${none}"
 
+# Time
+
+time_format="%H:%M:%S"
+
 # include config-override.inc
 if [ -e ~/.fancy-git/config-override.sh ]; then
     . ~/.fancy-git/config-override.sh

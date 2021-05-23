@@ -22,6 +22,8 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
  fancygit --colors-set          Apply the color scheme.
  fancygit --full-path-disable   Fancygit will show only the the directory name you are working on. Not the entire path.
  fancygit --full-path-enable    Fancygit will show the entire path.
+ fancygit --enable-show-time    Fancygit will show current time
+ fancygit --disable-show-time   Fancygit will not show current time
  fancygit --config-list         Show fancygit config.
  fancygit --config-reset        Show fancygit config.
 

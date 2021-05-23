@@ -1,4 +1,5 @@
 style:default
 show-full-path:true
 show-user-at-machine:true
+show-time:true
 fresh_file
