@@ -230,6 +230,11 @@ You can follow the steps as you did for `grep`, but this time, installing `gnu-s
 If you've just upgraded it from v6.0.5 to a newest version, you might have seeing an error, because fancygit can't find its configuration file.  
 You can fix that just by running `fancygit --config-reset`. It'll create a default configuration file and reset the fancygit state.
 
+- **Icons rendering**  
+**System:** Windows (WSL) - [reported issue](https://github.com/diogocavilha/fancy-git/issues/70).  
+If you use Windows terminal, under WSL system, Fancy Git will not render icons and symbols properly.  
+In this case, you can use [this font](https://github.com/microsoft/cascadia-code). This might solve the problem.
+
 # Contributing :rocket:
 
 - Give this project a star =D
