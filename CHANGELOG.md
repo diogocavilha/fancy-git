@@ -2,6 +2,10 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.4.8
+
+- Fix help text.
+
 ### v6.4.7
 
 - Add prompt time feature.
