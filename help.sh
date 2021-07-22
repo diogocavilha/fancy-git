@@ -20,8 +20,8 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
  fancygit configure-fonts       Install font in order to render icons properly. (only for colored styles).
  fancygit --colors              Show color scheme to use on git management process, like on \"git status\" command.
  fancygit --colors-set          Apply the color scheme.
- fancygit --full-path-disable   Fancygit will show only the the directory name you are working on. Not the entire path.
- fancygit --full-path-enable    Fancygit will show the entire path.
+ fancygit --enable-full-path    Fancygit will show the entire path.
+ fancygit --disable-full-path   Fancygit will show only the the directory name you are working on. Not the entire path.
  fancygit --enable-show-time    Fancygit will show current time
  fancygit --disable-show-time   Fancygit will not show current time
  fancygit --config-list         Show fancygit config.
