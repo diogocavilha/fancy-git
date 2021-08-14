@@ -2,6 +2,11 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.5.0
+
+- Internals: Create a config-manager module.
+- Change `fancygit --config-reset` command to `fancygit --reset`.
+
 ### v6.4.8
 
 - Fix help text.
@@ -38,7 +43,7 @@
 ### v6.3.1
 
 - Add one more question to "gd" command.
-- Fix a minor bug when using MacOS. 
+- Fix a minor bug when using MacOS.
 - Add the `fancygit --enable-show-user-at-machine` command for making FancyGit to show the (user@machine) prompt info.
 - Add the `fancygit --disable-show-user-at-machine` command for making FancyGit not to show the (user@machine) prompt info.
 - Change the `fancygit --full-path-disable` command to `fancygit --disable-full-path` in order to keep it organized.

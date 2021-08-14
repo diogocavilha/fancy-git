@@ -2,4 +2,5 @@ style:default
 show-full-path:true
 show-user-at-machine:true
 show-time:true
+separator:triangle
 fresh_file

@@ -31,7 +31,8 @@ _fancygit() {
         --enable-show-time \
         --disable-show-time \
         --config-list \
-        --config-reset
+        --config-reset \
+        --reset
     '
 
     if [[ ${cur} == * ]] ; then
