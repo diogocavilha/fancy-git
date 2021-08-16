@@ -57,39 +57,30 @@ fg_colors_config_set() {
 }
 
 fg_show_full_path() {
-    local config_value=""
-
-    config_value=$(fancygit_config_get "show-full-path")
-
-    if [ "$config_value" = "false" ]; then
-        return 1
+    if fancygit_config_is "show-full-path" "true"
+    then
+        return 0
     fi
 
-    return 0
+    return 1
 }
 
 fg_show_time() {
-    local config_value=""
-
-    config_value=$(fancygit_config_get "show-time")
-
-    if [ "$config_value" = "false" ]; then
-        return 1
+    if fancygit_config_is "show-time" "true"
+    then
+        return 0
     fi
 
-    return 0
+    return 1
 }
 
 fg_show_user_at_machine() {
-    local config_value=""
-
-    config_value=$(fancygit_config_get "show-user-at-machine")
-
-    if [ "$config_value" = "false" ]; then
-        return 1
+    if fancygit_config_is "show-user-at-machine" "true"
+    then
+        return 0
     fi
 
-    return 0
+    return 1
 }
 
 fg_is_only_local_branch() {

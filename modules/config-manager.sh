@@ -26,6 +26,23 @@ fancygit_config_get() {
     echo "$config_value"
 }
 
+fancygit_config_is() {
+    local config_key
+    local config_value_expected
+    local config_value_current
+
+    config_key="${1}"
+    config_value_expected="${2}"
+
+    config_value_current=$(fancygit_config_get "${config_key}")
+
+    if [ "$config_value_current" = "$config_value_expected" ]; then
+        return 0
+    fi
+
+    return 1
+}
+
 fancygit_config_save() {
     __fancygit_create_config_if_not_exists "${1}" "${2}"
     sed -i "s/${1}:.*/${1}:${2}/" "$FANCYGIT_CONFIG_FILE"
