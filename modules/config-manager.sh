@@ -19,9 +19,17 @@ fancygit_config_reset() {
 fancygit_config_get() {
     local config_key
     local config_value
+    local default
 
-    config_key=${1}
+    config_key="${1}"
+    default="${2}"
+
     config_value=$(grep -oP "(?<=${config_key}:).*" < "$FANCYGIT_CONFIG_FILE")
+
+    if [ "$config_value" = "" ]; then
+        echo "$default"
+        return 0
+    fi
 
     echo "$config_value"
 }
