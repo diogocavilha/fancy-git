@@ -32,6 +32,13 @@ _fancygit() {
         --disable-show-time \
         --config-list \
         --config-reset \
+        --separator-default \
+        --separator-blocs \
+        --separator-blocs-tiny \
+        --separator-fire \
+        --separator-lego \
+        --separator-curve \
+        --separator-paint \
         --reset
     '
 

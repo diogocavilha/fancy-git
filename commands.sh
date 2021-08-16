@@ -210,6 +210,13 @@ case "$1" in
     "light") fancygit_config_save "style" "light";;
     "light-double-line") fancygit_config_save "style" "light-double-line";;
     "configure-fonts") fg_install_fonts;;
+    "--separator-default") fancygit_config_save "separator" "triangle";;
+    "--separator-blocs") fancygit_config_save "separator" "blocs";;
+    "--separator-blocs-tiny") fancygit_config_save "separator" "blocs-tiny";;
+    "--separator-fire") fancygit_config_save "separator" "fire";;
+    "--separator-lego") fancygit_config_save "separator" "lego";;
+    "--separator-curve") fancygit_config_save "separator" "curve";;
+    "--separator-paint") fancygit_config_save "separator" "paint";;
     "") fg_return;;
     *) fg_command_not_found "$1";;
 esac
