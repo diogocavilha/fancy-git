@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date:   06.06.2018
+# Date:   06.08.2018
 
 . ~/.fancy-git/aliases
 . ~/.fancy-git/fancygit-completion
@@ -14,11 +14,13 @@ fancygit_prompt_builder() {
     check_for_update
 
     # Prompt style
+    user_at_host="${white}${bg_dark_gray}${bold}"
+    user_at_host_end="${bold_none}${bg_none}${s_darkgray_bglightmagenta}"
     path="${bg_blue}${white}${bold}"
     path_git="${bg_blue}${white}  ${is_git_repo} ${bold}"
     path_end="${none}${bold_none}"
-    user_symbol="${bg_dark_gray}${bold}${white}"
-    user_symbol_end="${none}${bold_none}${bg_none}${s_dark_gray_bgnone}"
+    user_symbol="${bg_light_magenta}${bold}${white}"
+    user_symbol_end="${none}${bold_none}${bg_none}${s_lightmagenta_bgblue}"
     branch="${s_blue_bgwhite}${bg_white}${black}${bold}"
     branch_end="${bg_none}${none}${bold_none}${s_white}"
     time="${white}${bg_dark_gray}${bold}"
@@ -27,6 +29,7 @@ fancygit_prompt_builder() {
     local path_sign=""
     local prompt_user=""
     local prompt_time=""
+    local fancygit_PS2=$(fancygit_config_get "ps2")
 
     # Building prompt
     if [ "$branch_status" != "" ]
@@ -75,12 +78,10 @@ fancygit_prompt_builder() {
 
     if fg_show_user_at_machine
     then
-        user_at_host="${white}${bg_dark_gray}${bold}"
-        user_at_host_end="${bold_none}${bg_none}${s_darkgray_bgblue}"
         prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     fi
 
-    prompt_symbol="\n${user_symbol}\$${user_symbol_end}"
+    prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
 
     if ! [ -z ${VIRTUAL_ENV} ] || ([ "$CONDA_DEFAULT_ENV" != "base" ] && ! [ -z ${CONDA_DEFAULT_ENV} ])
     then
@@ -100,11 +101,11 @@ fancygit_prompt_builder() {
         branch_icon=$(fg_get_branch_icon)
         prompt_path="${path_git}${venv}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files}${has_unpushed_commits} $path_sign ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
-        PS1="${prompt_time}${prompt_user}${prompt_path}${prompt_branch}${prompt_symbol} "
+        PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}\n$fancygit_PS2 "
         return
     fi
 
-    PS1="${prompt_time}${prompt_user}${prompt_path}${prompt_symbol} "
+    PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}\n$fancygit_PS2 "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"

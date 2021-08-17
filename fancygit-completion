@@ -7,8 +7,8 @@ _fancygit() {
         --help \
         -v \
         --version \
-        update \
-        configure-fonts \
+        --update \
+        --fonts-install \
         human \
         human-single-line \
         human-dark \
@@ -23,15 +23,23 @@ _fancygit() {
         light \
         light-double-line \
         --colors \
-        --colors-set \
+        --colors-apply \
         --enable-full-path \
         --disable-full-path \
         --enable-show-user-at-machine \
         --disable-show-user-at-machine \
-        --enable-show-time \
-        --disable-show-time \
+        --enable-time \
+        --disable-time \
         --config-list \
-        --config-reset
+        --config-reset \
+        --separator-default \
+        --separator-blocs \
+        --separator-blocs-tiny \
+        --separator-fire \
+        --separator-lego \
+        --separator-curve \
+        --separator-paint \
+        --reset
     '
 
     if [[ ${cur} == * ]] ; then

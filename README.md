@@ -32,7 +32,7 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
    It's necessary only if you're using one of the fancy styles for rendering the icons properly.
 2. Restart your terminal.
 
-If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts` or even installing the ttf file which is placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
+If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf`.
 
 Once the installation have succeeded, you can type `fancygit -h` to check fancygit help.
 
@@ -48,7 +48,7 @@ git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
 Run `fancygit --colors` to see those suggested colors.  
-Run `fancygit --colors-set` to apply it.
+Run `fancygit --colors-apply` to apply it.
 
 I suggest you to use this scheme color because fancygit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.  
 
@@ -117,16 +117,24 @@ Here you have a list of available styles and their corresponding command to appl
 `fancygit light-double-line`
 ![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
 
+# Separators styles
+
+You can type `fancygit --separator<TAB>` so you can see all the available separator styles for you to use.
+
+![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/separators.png)
+
+> Note that if you have been using Fancygit for a long time, probably your terminal font is set up to `SourceCodePro+Powerline+Awesome+Regular.ttf`. So, I highly recommend you to set up the terminal font to `Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf` which comes with Fancygit new versions. This way, new releases must work as expected. To install the new font you can run `fancygit --fonts-install`. After that, just change your terminal font config to `Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf`.
+
 # Commands
 
 | Command                                    | Description
 | ------------------------------------------ | ---------------------------------------------------------
 | fancygit -h, --help                        | Show this help.
 | fancygit -v, --version                     | Show the fancygit version.
-| fancygit update                            | Update fancygit code with the latest release from github.
-| fancygit configure-fonts                   | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
+| fancygit --update                          | Update fancygit code with the latest release from github.
+| fancygit --fonts-install                   | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
 | fancygit --colors                          | Show suggested colors config in an easy way to copy and paste to apply them.
-| fancygit --colors-set                      | Apply the suggested colors configuration.
+| fancygit --colors-apply                      | Apply the suggested colors configuration.
 | fancygit --disable-full-path               | Fancygit will show only the the directory name you are working on. Not the entire path.
 | fancygit --enable-full-path                | Fancygit will show the entire path.
 | fancygit --disable-show-user-at-machine    | Fancygit will hide (user@machine) info.

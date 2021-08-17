@@ -5,6 +5,7 @@
 #
 # Commands manager.
 
+. ~/.fancy-git/modules/config-manager.sh
 . ~/.fancy-git/modules/update-manager.sh
 . ~/.fancy-git/version.sh
 
@@ -25,14 +26,14 @@ fg_command_not_found() {
     fg_script_help
 }
 
-fg_install_fonts() {
+fancygit_install_fonts() {
     mkdir -p ~/.fonts
     cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
     cp -i ~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf ~/.fonts
     fc-cache -fv
 }
 
-fg_show_colors_config() {
+fancygit_show_suggested_colors() {
     echo "
 git config --global color.ui true
 
@@ -45,7 +46,7 @@ git config --global color.status.untracked \"cyan\"
 "
 }
 
-fg_colors_config_set() {
+fancygit_suggested_colors_apply() {
     `git config --global color.ui true`
     `git config --global color.diff.meta "yellow bold"`
     `git config --global color.diff.old "red bold"`
@@ -55,65 +56,31 @@ fg_colors_config_set() {
     `git config --global color.status.untracked "cyan"`
 }
 
-fg_update_app_config() {
-    fg_create_config_if_not_exists "${1}:"
-    sed -i "s/${1}:.*/${1}:${2}/" ~/.fancy-git/app_config
-}
-
-fg_create_config_if_not_exists() {
-    local config_content=""
-
-    config_content=$(grep -o "${1}" < ~/.fancy-git/app_config)
-
-    if [ "$config_content" = "" ]; then
-        echo "${1}false" >> ~/.fancy-git/app_config
-    fi
-}
-
-fg_show_app_config() {
-    cat ~/.fancy-git/app_config
-}
-
 fg_show_full_path() {
-    local config_content=""
-
-    config_content=$(grep -o 'show-full-path:false' < ~/.fancy-git/app_config)
-
-    if [ "$config_content" = "show-full-path:false" ]; then
-        return 1
+    if fancygit_config_is "show-full-path" "true"
+    then
+        return 0
     fi
 
-    return 0
+    return 1
 }
 
 fg_show_time() {
-    local config_content=""
-
-    config_content=$(grep -o 'show-time:false' < ~/.fancy-git/app_config)
-
-    if [ "$config_content" = "show-time:false" ]; then
-        return 1
+    if fancygit_config_is "show-time" "true"
+    then
+        return 0
     fi
 
-    return 0
+    return 1
 }
 
 fg_show_user_at_machine() {
-    local config_content=""
-
-    config_content=$(grep -o 'show-user-at-machine:false' < ~/.fancy-git/app_config)
-
-    if [ "$config_content" = "show-user-at-machine:false" ]; then
-        return 1
+    if fancygit_config_is "show-user-at-machine" "true"
+    then
+        return 0
     fi
 
-    return 0
-}
-
-fg_reset_app_config() {
-    rm -f ~/.fancy-git/app_config
-    _fg_create_app_config
-    sed -i '/fresh_file/d' ~/.fancy-git/app_config
+    return 1
 }
 
 fg_is_only_local_branch() {
@@ -203,34 +170,58 @@ fg_return() {
     fi
 }
 
+fancygit_command_deprecation_warning() {
+    local new_command
+
+    new_command="${1}"
+
+    echo ""
+    echo "> Woops! This command has been changed!"
+    echo "> Plase type \"fancygit ${new_command}\" instead ;)"
+    echo ""
+}
+
 case "$1" in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
-    "--colors") fg_show_colors_config;;
-    "--colors-set") fg_colors_config_set;;
-    "--enable-full-path") fg_update_app_config "show-full-path" "true";;
-    "--disable-full-path") fg_update_app_config "show-full-path" "false";;
-    "--enable-show-user-at-machine") fg_update_app_config "show-user-at-machine" "true";;
-    "--disable-show-user-at-machine") fg_update_app_config "show-user-at-machine" "false";;
-    "--enable-show-time") fg_update_app_config "show-time" "true";;
-    "--disable-show-time") fg_update_app_config "show-time" "false";;
-    "--config-list") fg_show_app_config;;
-    "--config-reset") fg_reset_app_config;;
-    "update") fancygit_update;;
-    "simple") fg_update_app_config "style" "simple";;
-    "default") fg_update_app_config "style" "default";;
-    "double-line") fg_update_app_config "style" "fancy-double-line";;
-    "simple-double-line") fg_update_app_config "style" "simple-double-line";;
-    "human") fg_update_app_config "style" "human";;
-    "human-single-line") fg_update_app_config "style" "human-single-line";;
-    "human-dark") fg_update_app_config "style" "human-dark";;
-    "human-dark-single-line") fg_update_app_config "style" "human-dark-single-line";;
-    "dark") fg_update_app_config "style" "dark";;
-    "dark-double-line") fg_update_app_config "style" "dark-double-line";;
-    "dark-col-double-line") fg_update_app_config "style" "dark-col-double-line";;
-    "light") fg_update_app_config "style" "light";;
-    "light-double-line") fg_update_app_config "style" "light-double-line";;
-    "configure-fonts") fg_install_fonts;;
+    "--colors") fancygit_show_suggested_colors;;
+    "--colors-apply") fancygit_suggested_colors_apply;;
+    "--enable-full-path") fancygit_config_save "show-full-path" "true";;
+    "--disable-full-path") fancygit_config_save "show-full-path" "false";;
+    "--enable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "true";;
+    "--disable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "false";;
+    "--enable-time") fancygit_config_save "show-time" "true";;
+    "--disable-time") fancygit_config_save "show-time" "false";;
+    "--config-list") fancygit_config_show;;
+    "--reset") fancygit_config_reset;;
+    "--update") fancygit_update;;
+    "simple") fancygit_config_save "style" "simple";;
+    "default") fancygit_config_save "style" "default";;
+    "double-line") fancygit_config_save "style" "fancy-double-line";;
+    "simple-double-line") fancygit_config_save "style" "simple-double-line";;
+    "human") fancygit_config_save "style" "human";;
+    "human-single-line") fancygit_config_save "style" "human-single-line";;
+    "human-dark") fancygit_config_save "style" "human-dark";;
+    "human-dark-single-line") fancygit_config_save "style" "human-dark-single-line";;
+    "dark") fancygit_config_save "style" "dark";;
+    "dark-double-line") fancygit_config_save "style" "dark-double-line";;
+    "dark-col-double-line") fancygit_config_save "style" "dark-col-double-line";;
+    "light") fancygit_config_save "style" "light";;
+    "light-double-line") fancygit_config_save "style" "light-double-line";;
+    "--fonts-install") fancygit_install_fonts;;
+    "--separator-default") fancygit_config_save "separator" "";;
+    "--separator-blocs") fancygit_config_save "separator" "";;
+    "--separator-blocs-tiny") fancygit_config_save "separator" "";;
+    "--separator-fire") fancygit_config_save "separator" "";;
+    "--separator-lego") fancygit_config_save "separator" "";;
+    "--separator-curve") fancygit_config_save "separator" "";;
+    "--separator-paint") fancygit_config_save "separator" "";;
+    "--config-reset") fancygit_command_deprecation_warning "fancygit --reset";;
+    "--colors-set") fancygit_command_deprecation_warning "--colors-apply";;
+    "--enable-show-time") fancygit_command_deprecation_warning "--enable-time";;
+    "--disable-show-time") fancygit_command_deprecation_warning "--disable-time";;
+    "update") fancygit_command_deprecation_warning "fancygit --update";;
+    "configure-fonts") fancygit_command_deprecation_warning "--fonts-install";;
     "") fg_return;;
     *) fg_command_not_found "$1";;
 esac
