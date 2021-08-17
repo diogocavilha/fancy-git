@@ -78,44 +78,44 @@ There are a few more styles you can choose from.
 
 Here you have a list of available styles and their corresponding command to apply.
 
-`fancygit simple`
-![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
-
-`fancygit simple-double-line`
-![Simple Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple-double-line.png)
-
-`fancygit human`
-![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
-
-`fancygit human single line`
-![Human Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-single-line.png)
-
-`fancygit human-dark`
-![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
-
-`fancygit human-dark-single-line`
-![Human Dark Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark-single-line.png)
-
-`fancygit default`
+**fancygit default**  
 ![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
 
-`fancygit double-line`
+**fancygit double-line**  
 ![Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/double-line.png)
 
-`fancygit dark`
+**fancygit dark**  
 ![Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark.png)
 
-`fancygit dark-double-line`
+**fancygit dark-double-line**  
 ![Dark Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-double-line.png)
 
-`fancygit dark-col-double-line`
+**fancygit dark-col-double-line**  
 ![Dark Col Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-col-double-line.png)
 
-`fancygit light`
+**fancygit light**  
 ![Light](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light.png)
 
-`fancygit light-double-line`
+**fancygit light-double-line**  
 ![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
+
+**fancygit simple**  
+![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
+
+**fancygit simple-double-line**  
+![Simple Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple-double-line.png)
+
+**fancygit human**  
+![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
+
+**fancygit human-single-line**  
+![Human Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-single-line.png)
+
+**fancygit human-dark**  
+![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
+
+**fancygit human-dark-single-line**  
+![Human Dark Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark-single-line.png)
 
 # Separators styles
 
