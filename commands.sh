@@ -190,8 +190,8 @@ case "$1" in
     "--disable-full-path") fancygit_config_save "show-full-path" "false";;
     "--enable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "true";;
     "--disable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "false";;
-    "--enable-show-time") fancygit_config_save "show-time" "true";;
-    "--disable-show-time") fancygit_config_save "show-time" "false";;
+    "--enable-time") fancygit_config_save "show-time" "true";;
+    "--disable-time") fancygit_config_save "show-time" "false";;
     "--config-list") fancygit_config_show;;
     "--reset") fancygit_config_reset;;
     "--update") fancygit_update;;
@@ -218,6 +218,8 @@ case "$1" in
     "--separator-paint") fancygit_config_save "separator" "";;
     "--config-reset") fancygit_command_deprecation_warning "fancygit --reset";;
     "--colors-set") fancygit_command_deprecation_warning "--colors-apply";;
+    "--enable-show-time") fancygit_command_deprecation_warning "--enable-time";;
+    "--disable-show-time") fancygit_command_deprecation_warning "--disable-time";;
     "update") fancygit_command_deprecation_warning "fancygit --update";;
     "configure-fonts") fancygit_command_deprecation_warning "--fonts-install";;
     "") fg_return;;

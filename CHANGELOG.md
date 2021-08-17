@@ -9,6 +9,8 @@
 - Change `fancygit update` command to `fancygit --update`.
 - Change `fancygit --colors-set` command to `fancygit --colors-apply`.
 - Change `fancygit configure-fonts` command to `fancygit --fonts-install`.
+- Change `fancygit --enable-show-time` command to `fancygit --enable-time`.
+- Change `fancygit --disable-show-time` command to `fancygit --disable-time`.
 - Change all fancy double-line themes. Now they show de user symbol at the same line.
 
 ### v6.4.8

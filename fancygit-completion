@@ -28,8 +28,8 @@ _fancygit() {
         --disable-full-path \
         --enable-show-user-at-machine \
         --disable-show-user-at-machine \
-        --enable-show-time \
-        --disable-show-time \
+        --enable-time \
+        --disable-time \
         --config-list \
         --config-reset \
         --separator-default \
