@@ -32,7 +32,7 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
    It's necessary only if you're using one of the fancy styles for rendering the icons properly.
 2. Restart your terminal.
 
-If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
+If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf`.
 
 Once the installation have succeeded, you can type `fancygit -h` to check fancygit help.
 
