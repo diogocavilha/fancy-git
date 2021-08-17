@@ -4,4 +4,5 @@ show-user-at-machine:true
 show-time:true
 time-format:%H:%M:%S
 separator:
+ps2:➜
 fresh_file
