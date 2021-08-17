@@ -14,18 +14,25 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
 
  COMMANDS
 
- fancygit -h, --help            Show this help.
- fancygit -v, --version         Show the fancygit version.
- fancygit --update              Update fancygit code with the last release from github.
- fancygit --fonts-install       Install font in order to render icons properly. (only for colored styles).
- fancygit --colors              Show color scheme to use on git management process, like on \"git status\" command.
- fancygit --colors-apply        Apply the color scheme.
- fancygit --enable-full-path    Fancygit will show the entire path.
- fancygit --disable-full-path   Fancygit will show only the the directory name you are working on. Not the entire path.
- fancygit --enable-time         Fancygit will show current time
- fancygit --disable-time        Fancygit will not show current time
- fancygit --config-list         Show fancygit config.
- fancygit --config-reset        Reset the configuration as if you have just installed fancygit.
+ fancygit -h, --help                Show this help.
+ fancygit -v, --version             Show the fancygit version.
+ fancygit --update                  Update fancygit code with the last release from github.
+ fancygit --fonts-install           Install font in order to render icons properly. (only for colored styles).
+ fancygit --colors                  Show color scheme to use on git management process, like on \"git status\" command.
+ fancygit --colors-apply            Apply the color scheme.
+ fancygit --enable-full-path        Fancygit will show the entire path.
+ fancygit --disable-full-path       Fancygit will show only the the directory name you are working on. Not the entire path.
+ fancygit --enable-time             Fancygit will show current time
+ fancygit --disable-time            Fancygit will not show current time
+ fancygit --config-list             Show fancygit config.
+ fancygit --config-reset            Reset the configuration as if you have just installed fancygit.
+ fancygit --separator-default       Change the separator to default style.
+ fancygit --separator-blocs         Change the separator to blocs style.
+ fancygit --separator-blocs-tiny    Change the separator to blocs-tiny style.
+ fancygit --separator-curve         Change the separator to curve style.
+ fancygit --separator-fire          Change the separator to fire style.
+ fancygit --separator-lego          Change the separator to lego style.
+ fancygit --separator-paint         Change the separator to paint style.
 
  STYLES
 

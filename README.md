@@ -28,7 +28,7 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
 
 # After installing
 
-1. Change your terminal font to "SourceCodePro+Powerline+Awesome+Regular".  
+1. Change your terminal font to "Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf".
    It's necessary only if you're using one of the fancy styles for rendering the icons properly.
 2. Restart your terminal.
 
@@ -47,10 +47,10 @@ git config --global color.status.added "green bold"
 git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
-Run `fancygit --colors` to see those suggested colors.  
+Run `fancygit --colors` to see those suggested colors.
 Run `fancygit --colors-apply` to apply it.
 
-I suggest you to use this scheme color because fancygit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.  
+I suggest you to use this scheme color because fancygit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.
 
 > Type `fancygit -h` for more information.
 
@@ -72,8 +72,8 @@ As a picture is worth a thousand words...
 
 # Styles :art:
 
-If you don't want to be too "fancy", you can choose using the **simple style** by running `fancygit simple`.  
-If you want to return to the **default style** (colored), you can type `fancygit default`.  
+If you don't want to be too "fancy", you can choose using the **simple style** by running `fancygit simple`.
+If you want to return to the **default style** (colored), you can type `fancygit default`.
 There are a few more styles you can choose from.
 
 Here you have a list of available styles and their corresponding command to apply.
@@ -134,11 +134,20 @@ You can type `fancygit --separator<TAB>` so you can see all the available separa
 | fancygit --update                          | Update fancygit code with the latest release from github.
 | fancygit --fonts-install                   | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
 | fancygit --colors                          | Show suggested colors config in an easy way to copy and paste to apply them.
-| fancygit --colors-apply                      | Apply the suggested colors configuration.
+| fancygit --colors-apply                    | Apply the suggested colors configuration.
 | fancygit --disable-full-path               | Fancygit will show only the the directory name you are working on. Not the entire path.
 | fancygit --enable-full-path                | Fancygit will show the entire path.
 | fancygit --disable-show-user-at-machine    | Fancygit will hide (user@machine) info.
 | fancygit --enable-show-user-at-machine     | Fancygit will show (user@machine) info, as usual.
+| fancygit --enable-time                     | Fancygit will show current time.
+| fancygit --disable-time                    | Fancygit will not show current time.
+| fancygit --separator-default               | Change the separator to default style.
+| fancygit --separator-blocs                 | Change the separator to blocs style.
+| fancygit --separator-blocs-tiny            | Change the separator to blocs-tiny style.
+| fancygit --separator-curve                 | Change the separator to curve style.
+| fancygit --separator-fire                  | Change the separator to fire style.
+| fancygit --separator-lego                  | Change the separator to lego style.
+| fancygit --separator-paint                 | Change the separator to paint style.
 | fancygit simple                            | Change prompt to the simple style.
 | fancygit simple-double-line                | Change prompt to the simple style in double line.
 | fancygit default                           | Change prompt to the default (colored) style. (This is the fallback style).
