@@ -32,7 +32,7 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
    It's necessary only if you're using one of the fancy styles for rendering the icons properly.
 2. Restart your terminal.
 
-If you can't find the font, it's still possible to install it manually by running `fancygit configure-fonts` or even installing the ttf file which is placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
+If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf`.
 
 Once the installation have succeeded, you can type `fancygit -h` to check fancygit help.
 
@@ -48,7 +48,7 @@ git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
 Run `fancygit --colors` to see those suggested colors.  
-Run `fancygit --colors-set` to apply it.
+Run `fancygit --colors-apply` to apply it.
 
 I suggest you to use this scheme color because fancygit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.  
 
@@ -123,10 +123,10 @@ Here you have a list of available styles and their corresponding command to appl
 | ------------------------------------------ | ---------------------------------------------------------
 | fancygit -h, --help                        | Show this help.
 | fancygit -v, --version                     | Show the fancygit version.
-| fancygit update                            | Update fancygit code with the latest release from github.
-| fancygit configure-fonts                   | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
+| fancygit --update                          | Update fancygit code with the latest release from github.
+| fancygit --fonts-install                   | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
 | fancygit --colors                          | Show suggested colors config in an easy way to copy and paste to apply them.
-| fancygit --colors-set                      | Apply the suggested colors configuration.
+| fancygit --colors-apply                      | Apply the suggested colors configuration.
 | fancygit --disable-full-path               | Fancygit will show only the the directory name you are working on. Not the entire path.
 | fancygit --enable-full-path                | Fancygit will show the entire path.
 | fancygit --disable-show-user-at-machine    | Fancygit will hide (user@machine) info.

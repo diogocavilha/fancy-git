@@ -6,6 +6,9 @@
 
 - Internals: Create a config-manager module.
 - Change `fancygit --config-reset` command to `fancygit --reset`.
+- Change `fancygit update` command to `fancygit --update`.
+- Change `fancygit --colors-set` command to `fancygit --colors-apply`.
+- Change `fancygit configure-fonts` command to `fancygit --fonts-install`.
 
 ### v6.4.8
 

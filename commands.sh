@@ -26,14 +26,14 @@ fg_command_not_found() {
     fg_script_help
 }
 
-fg_install_fonts() {
+fancygit_install_fonts() {
     mkdir -p ~/.fonts
     cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
     cp -i ~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf ~/.fonts
     fc-cache -fv
 }
 
-fg_show_colors_config() {
+fancygit_show_suggested_colors() {
     echo "
 git config --global color.ui true
 
@@ -46,7 +46,7 @@ git config --global color.status.untracked \"cyan\"
 "
 }
 
-fg_colors_config_set() {
+fancygit_suggested_colors_apply() {
     `git config --global color.ui true`
     `git config --global color.diff.meta "yellow bold"`
     `git config --global color.diff.old "red bold"`
@@ -173,19 +173,19 @@ fg_return() {
 fancygit_command_deprecation_warning() {
     local new_command
 
-    new_command=${1}
+    new_command="${1}"
 
     echo ""
-    echo "> This command has been changed!"
-    echo "> Plase type \"${new_command}\""
+    echo "> Woops! This command has been changed!"
+    echo "> Plase type \"fancygit ${new_command}\" instead ;)"
     echo ""
 }
 
 case "$1" in
     "-h"|"--help") fg_script_help;;
     "-v"|"--version") fg_show_version;;
-    "--colors") fg_show_colors_config;;
-    "--colors-set") fg_colors_config_set;;
+    "--colors") fancygit_show_suggested_colors;;
+    "--colors-apply") fancygit_suggested_colors_apply;;
     "--enable-full-path") fancygit_config_save "show-full-path" "true";;
     "--disable-full-path") fancygit_config_save "show-full-path" "false";;
     "--enable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "true";;
@@ -193,9 +193,8 @@ case "$1" in
     "--enable-show-time") fancygit_config_save "show-time" "true";;
     "--disable-show-time") fancygit_config_save "show-time" "false";;
     "--config-list") fancygit_config_show;;
-    "--config-reset") fancygit_command_deprecation_warning "fancygit --reset";;
     "--reset") fancygit_config_reset;;
-    "update") fancygit_update;;
+    "--update") fancygit_update;;
     "simple") fancygit_config_save "style" "simple";;
     "default") fancygit_config_save "style" "default";;
     "double-line") fancygit_config_save "style" "fancy-double-line";;
@@ -209,14 +208,18 @@ case "$1" in
     "dark-col-double-line") fancygit_config_save "style" "dark-col-double-line";;
     "light") fancygit_config_save "style" "light";;
     "light-double-line") fancygit_config_save "style" "light-double-line";;
-    "configure-fonts") fg_install_fonts;;
-    "--separator-default") fancygit_config_save "separator" "triangle";;
-    "--separator-blocs") fancygit_config_save "separator" "blocs";;
-    "--separator-blocs-tiny") fancygit_config_save "separator" "blocs-tiny";;
-    "--separator-fire") fancygit_config_save "separator" "fire";;
-    "--separator-lego") fancygit_config_save "separator" "lego";;
-    "--separator-curve") fancygit_config_save "separator" "curve";;
-    "--separator-paint") fancygit_config_save "separator" "paint";;
+    "--fonts-install") fancygit_install_fonts;;
+    "--separator-default") fancygit_config_save "separator" "";;
+    "--separator-blocs") fancygit_config_save "separator" "";;
+    "--separator-blocs-tiny") fancygit_config_save "separator" "";;
+    "--separator-fire") fancygit_config_save "separator" "";;
+    "--separator-lego") fancygit_config_save "separator" "";;
+    "--separator-curve") fancygit_config_save "separator" "";;
+    "--separator-paint") fancygit_config_save "separator" "";;
+    "--config-reset") fancygit_command_deprecation_warning "fancygit --reset";;
+    "--colors-set") fancygit_command_deprecation_warning "--colors-apply";;
+    "update") fancygit_command_deprecation_warning "fancygit --update";;
+    "configure-fonts") fancygit_command_deprecation_warning "--fonts-install";;
     "") fg_return;;
     *) fg_command_not_found "$1";;
 esac

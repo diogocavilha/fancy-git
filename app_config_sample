@@ -3,5 +3,5 @@ show-full-path:true
 show-user-at-machine:true
 show-time:true
 time-format:%H:%M:%S
-separator:triangle
+separator:
 fresh_file

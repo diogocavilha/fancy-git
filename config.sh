@@ -8,38 +8,7 @@
 . ~/.fancy-git/modules/config-manager.sh
 
 # ASCII
-separator=""
-
-if fancygit_config_is "separator" "blocs"
-then
-    separator=""
-fi
-
-if fancygit_config_is "separator" "blocs-tiny"
-then
-    separator=""
-fi
-
-if fancygit_config_is "separator" "fire"
-then
-    separator=""
-fi
-
-if fancygit_config_is "separator" "lego"
-then
-    separator=""
-fi
-
-if fancygit_config_is "separator" "curve"
-then
-    separator=""
-fi
-
-if fancygit_config_is "separator" "paint"
-then
-    separator=""
-fi
-
+separator=$(fancygit_config_get "separator" "")
 branch_icon=""
 is_git_repo=""
 has_git_stash=" "
