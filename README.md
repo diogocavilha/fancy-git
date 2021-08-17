@@ -12,7 +12,7 @@
 
 Fancygit is a tool which works for Linux and MAC OS, that changes the terminal prompt in order to show you a few cool git informations when you're working on a git repo. It'll always keep you informed about the current branch status.
 
-:bookmark: [You can check out the changelog here](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
+:rocket: [Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md) | :monocle_face: [Changelog](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
 # Installing  
 
@@ -259,13 +259,7 @@ In this case, you can use [this font](https://github.com/microsoft/cascadia-code
 
 # Contributing :rocket:
 
-- Give this project a star =D
-- Fork the project.
-- Create a branch. (`git checkout -b your-branch-name` or `gcb your-branch-name`).
-- Make your changes on the branch you've just created.
-- Commit it.
-- Push it.
-- Send your Pull Request.
+[Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md)
 
 # Contributors ✨
 
