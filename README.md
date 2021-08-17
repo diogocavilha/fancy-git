@@ -28,7 +28,7 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
 
 # After installing
 
-1. Change your terminal font to "Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf".
+1. Change your terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
    It's necessary only if you're using one of the fancy styles for rendering the icons properly.
 2. Restart your terminal.
 
@@ -121,9 +121,14 @@ Here you have a list of available styles and their corresponding command to appl
 
 You can type `fancygit --separator<TAB>` so you can see all the available separator styles for you to use.
 
-![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/separators.png)
+**Important** :rotating_light:
 
-> Note that if you have been using Fancygit for a long time, probably your terminal font is set up to `SourceCodePro+Powerline+Awesome+Regular.ttf`. So, I highly recommend you to set up the terminal font to `Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf` which comes with Fancygit new versions. This way, new releases must work as expected. To install the new font you can run `fancygit --fonts-install`. After that, just change your terminal font config to `Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf`.
+Note that if you have been using Fancygit for a long time, probably your terminal font is set up to **SourceCodePro+Powerline+Awesome+Regular.ttf**.  
+So, I highly recommend you to set up the terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf** which comes with Fancygit new versions. This way, symbols will be rendered correctly and new Fancygit releases must work as expected.  
+To install the new font you can run `fancygit --fonts-install`.  
+After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
+
+![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/separators.png)
 
 # Commands
 

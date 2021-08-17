@@ -2,6 +2,10 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.5.1
+
+- Internals: Improve the way fancy styles read the configurations.
+
 ### v6.5.0
 
 - Internals: Create a config-manager module.
