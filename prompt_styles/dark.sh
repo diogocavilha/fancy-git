@@ -68,13 +68,13 @@ fancygit_prompt_builder() {
         has_unpushed_commits=""
     fi
 
-    if fg_show_time
+    if fancygit_config_is "show-time" "true"
     then
       formatted_time=$(date +"${time_format}")
       prompt_time="${time}[${formatted_time}] ${time_end}"
     fi
 
-    if fg_show_user_at_machine
+    if fancygit_config_is "show-user-at-machine" "true"
     then
         prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
     fi
@@ -87,7 +87,7 @@ fancygit_prompt_builder() {
     fi
 
     path_sign="\\W"
-    if fg_show_full_path
+    if fancygit_config_is "show-full-path" "true"
     then
         path_sign="\\w"
     fi

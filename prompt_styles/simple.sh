@@ -42,7 +42,7 @@ fancygit_prompt_builder() {
     host="${light_green}\h${none}"
     where="${blue}\w${none}"
 
-    if ! fg_show_full_path
+    if ! fancygit_config_is "show-full-path" "true"
     then
         where="${blue}\W${none}"
     fi
@@ -55,13 +55,13 @@ fancygit_prompt_builder() {
         venv="(`basename \"$CONDA_DEFAULT_ENV\"`) "
     fi
 
-    if fg_show_time
+    if fancygit_config_is "show-time" "true"
     then
       formatted_time=$(date +"${time_format}")
       prompt_time="${light_green}[${formatted_time}] "
     fi
 
-    if fg_show_user_at_machine
+    if fancygit_config_is "show-user-at-machine" "true"
     then
         user_at_host="$user$at$host:"
     fi

@@ -56,33 +56,6 @@ fancygit_suggested_colors_apply() {
     `git config --global color.status.untracked "cyan"`
 }
 
-fg_show_full_path() {
-    if fancygit_config_is "show-full-path" "true"
-    then
-        return 0
-    fi
-
-    return 1
-}
-
-fg_show_time() {
-    if fancygit_config_is "show-time" "true"
-    then
-        return 0
-    fi
-
-    return 1
-}
-
-fg_show_user_at_machine() {
-    if fancygit_config_is "show-user-at-machine" "true"
-    then
-        return 0
-    fi
-
-    return 1
-}
-
 fg_is_only_local_branch() {
     local only_local_branch=$(git branch -r 2> /dev/null | grep "${branch_name}" | wc -l)
 
