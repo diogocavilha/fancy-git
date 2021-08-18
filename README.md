@@ -136,11 +136,11 @@ After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-
 | ------------------------------------------ | ---------------------------------------------------------
 | fancygit -h, --help                        | Show this help.
 | fancygit -v, --version                     | Show the fancygit version.
-| fancygit --update                          | Update fancygit code with the latest release from github.
-| fancygit --fonts-install                   | Install font in order to render icons properly. This font is good if you are using some of these styles: `default`, `double-line`, `dark`, `dark-double-line`, `light`, `light-double-line`.
-| fancygit --colors                          | Show suggested colors config in an easy way to copy and paste to apply them.
-| fancygit --colors-apply                    | Apply the suggested colors configuration.
-| fancygit --disable-full-path               | Fancygit will show only the the directory name you are working on. Not the entire path.
+| fancygit --update                          | Update fancygit code with the latest release from GitHub.
+| fancygit --fonts-install                   | Install font in order to render icons properly.
+| fancygit --colors                          | Show suggested colors config.
+| fancygit --colors-apply                    | Apply the suggested colors config.
+| fancygit --disable-full-path               | Fancygit will show only the the working directory name.
 | fancygit --enable-full-path                | Fancygit will show the entire path.
 | fancygit --disable-show-user-at-machine    | Fancygit will hide (user@machine) info.
 | fancygit --enable-show-user-at-machine     | Fancygit will show (user@machine) info, as usual.
@@ -155,7 +155,7 @@ After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-
 | fancygit --separator-paint                 | Change the separator to paint style.
 | fancygit simple                            | Change prompt to the simple style.
 | fancygit simple-double-line                | Change prompt to the simple style in double line.
-| fancygit default                           | Change prompt to the default (colored) style. (This is the fallback style).
+| fancygit default                           | Change prompt to the default (colored) style.
 | fancygit double-line                       | Change prompt to the default (colored) style in double line.
 | fancygit human                             | Change prompt to the human readable style.
 | fancygit human-dark                        | Change prompt to the human readable style.
