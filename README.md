@@ -10,33 +10,32 @@
 
 ![logo](https://github.com/diogocavilha/fancy-git/blob/master/images/logo.png)
 
-Fancygit is a tool which works for Linux and MAC OS, that changes the terminal prompt in order to show you a few cool git informations when you're working on a git repo. It'll always keep you informed about the current branch status.
+FancyGit is a tool which works for Linux and MAC OS, that changes the terminal prompt in order to show you a few cool git informations when you're working on a git repo. It'll always keep you informed about the current branch status.
 
 :rocket: [Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md) | :monocle_face: [Changelog](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md)
 
-# Installing  
+# :cupid: Installing  
 
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
-# Uninstalling  
+# :broken_heart: Uninstalling  
 
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
 ```
 
-# After installing
+# :heavy_check_mark: After installing
 
 1. Change your terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
-   It's necessary only if you're using one of the fancy styles for rendering the icons properly.
+   It's necessary only if you're using one of the fancy styles for rendering the icons properly.  
+   If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf`.
 2. Restart your terminal.
 
-If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf`.
+Run `fancygit -h` to check FancyGit help.
 
-Once the installation have succeeded, you can type `fancygit -h` to check fancygit help.
-
-# Git suggested colors
+# :nail_care: Git suggested colors
 
 ```bash
 git config --global color.ui true
@@ -47,14 +46,14 @@ git config --global color.status.added "green bold"
 git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
-Run `fancygit --colors` to see those suggested colors.
+Run `fancygit --colors` to see those suggested colors.  
 Run `fancygit --colors-apply` to apply it.
 
-I suggest you to use this scheme color because fancygit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.
+I suggest you to use this scheme color because FancyGit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.
 
-> Type `fancygit -h` for more information.
+Type `fancygit -h` for more information.
 
-# Overview
+# :eyes: Overview
 
 As a picture is worth a thousand words...
 
@@ -70,7 +69,7 @@ As a picture is worth a thousand words...
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
-# Styles :art:
+# :art: Styles
 
 If you don't want to be too "fancy", you can choose using the **simple style** by running `fancygit simple`.
 If you want to return to the **default style** (colored), you can type `fancygit default`.
@@ -117,35 +116,35 @@ Here you have a list of available styles and their corresponding command to appl
 **fancygit human-dark-single-line**  
 ![Human Dark Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark-single-line.png)
 
-# Separators styles
+# :link: Separators styles
 
 You can type `fancygit --separator<TAB>` so you can see all the available separator styles for you to use.
 
-**Important** :rotating_light:
+**:bangbang: Important :bangbang:**
 
-Note that if you have been using Fancygit for a long time, probably your terminal font is set up to **SourceCodePro+Powerline+Awesome+Regular.ttf**.  
-So, I highly recommend you to set up the terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf** which comes with Fancygit new versions. This way, symbols will be rendered correctly and new Fancygit releases must work as expected.  
-To install the new font you can run `fancygit --fonts-install`.  
+It's highly recommended to set up the terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf** which comes with FancyGit.  
+This way, symbols will be rendered correctly and new FancyGit releases must work as expected.  
+In order to install the font you can run `fancygit --fonts-install`.  
 After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
 
 ![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/separators.png)
 
-# Commands
+# :toolbox: Commands
 
 | Command                                    | Description
 | ------------------------------------------ | ---------------------------------------------------------
 | fancygit -h, --help                        | Show this help.
-| fancygit -v, --version                     | Show the fancygit version.
-| fancygit --update                          | Update fancygit code with the latest release from GitHub.
+| fancygit -v, --version                     | Show the FancyGit version.
+| fancygit --update                          | Update FancyGit code with the latest release from GitHub.
 | fancygit --fonts-install                   | Install font in order to render icons properly.
 | fancygit --colors                          | Show suggested colors config.
 | fancygit --colors-apply                    | Apply the suggested colors config.
-| fancygit --disable-full-path               | Fancygit will show only the the working directory name.
-| fancygit --enable-full-path                | Fancygit will show the entire path.
-| fancygit --disable-show-user-at-machine    | Fancygit will hide (user@machine) info.
-| fancygit --enable-show-user-at-machine     | Fancygit will show (user@machine) info, as usual.
-| fancygit --enable-time                     | Fancygit will show current time.
-| fancygit --disable-time                    | Fancygit will not show current time.
+| fancygit --disable-full-path               | FancyGit will show only the the working directory name.
+| fancygit --enable-full-path                | FancyGit will show the entire path.
+| fancygit --disable-show-user-at-machine    | FancyGit will hide (user@machine) info.
+| fancygit --enable-show-user-at-machine     | FancyGit will show (user@machine) info, as usual.
+| fancygit --enable-time                     | FancyGit will show current time.
+| fancygit --disable-time                    | FancyGit will not show current time.
 | fancygit --separator-default               | Change the separator to default style.
 | fancygit --separator-blocs                 | Change the separator to blocs style.
 | fancygit --separator-blocs-tiny            | Change the separator to blocs-tiny style.
@@ -165,19 +164,7 @@ After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-
 | fancygit light                             | Change prompt to the light style.
 | fancygit light-double-line                 | Change prompt to the light style in double line.
 
-# Aliases
-
-Here we got a list of useful aliases you can use when working. They seem to be not that interesting, but believe me, after getting used to them, your productivity will increase considerably when working with git repos.
-For example, what if you could replace `git push origin <branch-name>` for `gpsob`? It's a much smaller command, isn't it? Ok, but what's the meaning of `gpsob`?
-
-Well, here goes a little explanation:
-
-`gps + o + b`  
-`gps` = `git push`  
-`o` = `origin`  
-`b` = `<current-branch-name>`... It will get the current branch name.
-
-Basically, most of the fancygit aliases work this way.
+# :toolbox: Aliases
 
 | Alias                      | Command                                                                                                                                                | Description
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------
@@ -198,7 +185,7 @@ Basically, most of the fancygit aliases work this way.
 | gckb \<branch-name\>       | git checkout \<branch-name\>                                                                                                                           | Switch to a branch.
 | gckbt \<branch-name\>      | Switch to a branch with --track option. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/gckbt.sh)                         | Switch to a branch with --track option.
 | gcb \<branch-name\>        | git checkout -b \<branch-name\>                                                                                                                        | Create and switch to the new branch.
-| gdb \<branch-name\>        | git branch -D \<branch-name\>                                                                                                                          | Delete a local branch.
+| ggdb \<branch-name\>        | git branch -D \<branch-name\>                                                                                                                          | Delete a local branch.
 | gdbr \<branch-name\>       | git push origin --delete \<branch-name\>                                                                                                               | Delete a remote branch.
 | grb \<new-branch-name\>    | Rename a local branch. [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grb.sh)                                            | Rename current branch (local).
 | grba \<new-branch-name\>   | Rename a branch (local and remote). [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/grba.sh)                              | Rename current branch (local and remote).
@@ -218,18 +205,18 @@ Basically, most of the fancygit aliases work this way.
 | gu \<file\> [<other_file>] | git reset HEAD \<file\>                                                                                                                                | Remove files from staging area.
 | pve                       | [file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/pve.sh)                                                                  | Show the current Python virtual environment name.
 
-# Advanced tweaking - override values from config.sh
+# :gear: Advanced tweaking - override values from config.sh
 
 If you like to tweak things more in-depth, like color values, special characters and such, you can create a new file `~/.fancy-git/config-override.sh`. This file is sourced after reading the standard configuration, so that you can override any variable found in the main `config.sh`.
 
-Example:
+Example:  
 You want to change the branch icon, because you are using a different console font and the icon is on a different character position inside the font. Simply create the override file and add a line like this (for sure, you will likely have changed the symbol):
 
 ```sh
 branch_icon=""
 ```
 
-# Troubleshooting :pick:
+# :pick: Troubleshooting
 
 - **Double line problem and general weird behavior**  
 **System:** Linux | MAC OS - [reported issue](https://github.com/diogocavilha/fancy-git/issues/63).  
@@ -249,15 +236,15 @@ As you can read there, the solution found is to `brew install grep` and adding `
 You can follow the steps as you did for `grep`, but this time, installing `gnu-sed` by running `brew install gnu-sed`.
 
 - **Problems upgrading from v6.0.5 to a newest version**  
-If you've just upgraded it from v6.0.5 to a newest version, you might have seeing an error, because fancygit can't find its configuration file.  
-You can fix that just by running `fancygit --config-reset`. It'll create a default configuration file and reset the fancygit state.
+If you've just upgraded it from v6.0.5 to a newest version, you might have seeing an error, because FancyGit can't find its configuration file.  
+You can fix that just by running `fancygit --config-reset`. It'll create a default configuration file and reset the FancyGit state.
 
 - **Icons rendering**  
 **System:** Windows (WSL) - [reported issue](https://github.com/diogocavilha/fancy-git/issues/70).  
 If you use Windows terminal, under WSL system, Fancy Git will not render icons and symbols properly.  
 In this case, you can use [this font](https://github.com/microsoft/cascadia-code). This might solve the problem.
 
-# Contributing :rocket:
+# :rocket: Contributing
 
 [Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md)
 
@@ -293,10 +280,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 ---
 
-*If you have any problem on setting up the fancy-git, contact me at [diogocavilha@gmail.com](mailto:diogocavilha@gmail.com) or simply create an issue [here](https://github.com/diogocavilha/fancy-git/issues).  
-I'll be happy to help you.*
-
-# Buy me a coffee! :coffee:
+# :coffee: Buy me a coffee!
 
 [![Donate_with_PayPal](https://github.com/diogocavilha/fancy-git/blob/master/images/buymeacoffee.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QFCN8W7PRX696&lc=BR&item_name=diogocavilha%2fFancyGit&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
 
