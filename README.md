@@ -246,7 +246,7 @@ In this case, you can use [this font](https://github.com/microsoft/cascadia-code
 
 # :rocket: Contributing
 
-[Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md)
+[Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md#rocket-contributing-to-fancygit)
 
 # Contributors ✨
 
