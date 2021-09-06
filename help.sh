@@ -48,7 +48,7 @@ echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavil
  fancygit human-dark-single-line  Change prompt to the human readable style on single line.
  fancygit dark                    Change prompt to the dark style.
  fancygit dark-double-line        Change prompt to the dark style in double line.
- fancygit dark-col-double-line    Change prompt to the dark (colored) style in double line.
+ fancygit dark-col                Change prompt to the dark (colored) style in double line.
  fancygit light                   Change prompt to the light style.
  fancygit light-double-line       Change prompt to the light style in double line.
 

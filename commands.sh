@@ -172,17 +172,14 @@ case "$1" in
     "--update") fancygit_update;;
     "simple") fancygit_config_save "style" "simple";;
     "default") fancygit_config_save "style" "default";;
-    "double-line") fancygit_config_save "style" "fancy-double-line";;
     "simple-double-line") fancygit_config_save "style" "simple-double-line";;
     "human") fancygit_config_save "style" "human";;
     "human-single-line") fancygit_config_save "style" "human-single-line";;
     "human-dark") fancygit_config_save "style" "human-dark";;
     "human-dark-single-line") fancygit_config_save "style" "human-dark-single-line";;
     "dark") fancygit_config_save "style" "dark";;
-    "dark-double-line") fancygit_config_save "style" "dark-double-line";;
-    "dark-col-double-line") fancygit_config_save "style" "dark-col-double-line";;
+    "dark-col") fancygit_config_save "style" "dark-col";;
     "light") fancygit_config_save "style" "light";;
-    "light-double-line") fancygit_config_save "style" "light-double-line";;
     "dracula") fancygit_config_save "style" "dracula";;
     "--fonts-install") fancygit_install_fonts;;
     "--separator-default") fancygit_config_save "separator" "";;
@@ -192,12 +189,18 @@ case "$1" in
     "--separator-lego") fancygit_config_save "separator" "";;
     "--separator-curve") fancygit_config_save "separator" "";;
     "--separator-paint") fancygit_config_save "separator" "";;
-    "--config-reset") fancygit_command_deprecation_warning "fancygit --reset";;
+    
+    # Deprecated commands
+    "--config-reset") fancygit_command_deprecation_warning "--reset";;
     "--colors-set") fancygit_command_deprecation_warning "--colors-apply";;
     "--enable-show-time") fancygit_command_deprecation_warning "--enable-time";;
     "--disable-show-time") fancygit_command_deprecation_warning "--disable-time";;
-    "update") fancygit_command_deprecation_warning "fancygit --update";;
+    "update") fancygit_command_deprecation_warning "--update";;
     "configure-fonts") fancygit_command_deprecation_warning "--fonts-install";;
+    "dark-col-double-line") fancygit_command_deprecation_warning "dark-col";;
+    "double-line") fancygit_command_deprecation_warning "--enable-double-line";;
+    "dark-double-line") fancygit_command_deprecation_warning "--enable-double-line";;
+    "light-double-line") fancygit_command_deprecation_warning "--enable-double-line";;
     "") fg_return;;
     *) fg_command_not_found "$1";;
 esac

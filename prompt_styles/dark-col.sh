@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date:   12.04.2018
+# Date:   12.02.2018
 
 . ~/.fancy-git/aliases
 . ~/.fancy-git/fancygit-completion
@@ -10,21 +10,21 @@
 fancygit_prompt_builder() {
     . ~/.fancy-git/config.sh
     . ~/.fancy-git/modules/update-manager.sh
-    
+
     check_for_update
 
     # Skin color config.
     # This is the only config that must be changed by user.
-    local time_background="7"
-    local time_foreground="0"
-    local user_symbol_background="15"
-    local user_symbol_foreground="0"
-    local workdir_background="7"
-    local workdir_foreground="0"
-    local user_at_host_background="7"
-    local user_foreground="0"
-    local host_foreground="0"
-    local at_foreground="0"
+    local time_background="233"
+    local time_foreground="226"
+    local user_symbol_background="238"
+    local user_symbol_foreground="231"
+    local workdir_background="15"
+    local workdir_foreground="202"
+    local user_at_host_background="233"
+    local user_foreground="208"
+    local host_foreground="11"
+    local at_foreground="231"
     local branch_background="231"
     local branch_foreround="0"
     local branch_staged_files_background="10"

@@ -162,7 +162,7 @@ After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-
 | fancygit human-dark                        | Change prompt to the human readable style.
 | fancygit dark                              | Change prompt to the dark style.
 | fancygit dark-double-line                  | Change prompt to the dark style in double line.
-| fancygit dark-col-double-line              | Change prompt to the dark (colored) style in double line.
+| fancygit dark-col                          | Change prompt to the dark (colored) style in double line.
 | fancygit light                             | Change prompt to the light style.
 | fancygit light-double-line                 | Change prompt to the light style in double line.
 

@@ -10,31 +10,91 @@
 fancygit_prompt_builder() {
     . ~/.fancy-git/config.sh
     . ~/.fancy-git/modules/update-manager.sh
-    
+
     check_for_update
 
+    # Skin color config.
+    # This is the only config that must be changed by user.
+    local time_background="59"
+    local time_foreground="231"
+    local user_symbol_background="139"
+    local user_symbol_foreground="231"
+    local workdir_background="25"
+    local workdir_foreground="231"
+    local user_at_host_background="59"
+    local user_foreground="231"
+    local host_foreground="231"
+    local at_foreground="231"
+    local branch_background="231"
+    local branch_foreround="0"
+    local branch_staged_files_background="10"
+    local branch_staged_files_foreground="0"
+    local branch_changed_files_background="11"
+    local branch_changed_files_foreground="0"
+
+    # Create color tags to change prompt style.
+    local time_color_bg_tag="\\[\\e[48;5;${time_background}m\\]"
+    local time_color_tag="\\[\\e[38;5;${time_foreground}m\\]"
+    local user_color_font_tag="\\[\\e[38;5;${user_foreground}m\\]"
+    local host_color_font_tag="\\[\\e[38;5;${host_foreground}m\\]"
+    local at_color_font_tag="\\[\\e[38;5;${at_foreground}m\\]"
+    local user_symbol_color_tag="\\[\\e[38;5;${user_symbol_background}m\\]"
+    local user_symbol_color_bg_tag="\\[\\e[48;5;${user_symbol_background}m\\]"
+    local user_symbol_color_font_tag="\\[\\e[38;5;${user_symbol_foreground}m\\]"
+    local workdir_color_tag="\\[\\e[38;5;${workdir_background}m\\]"
+    local workdir_color_bg_tag="\\[\\e[48;5;${workdir_background}m\\]"
+    local workdir_color_font_tag="\\[\\e[38;5;${workdir_foreground}m\\]"
+    local user_at_host_color_tag="\\[\\e[38;5;${user_at_host_background}m\\]"
+    local user_at_host_color_bg_tag="\\[\\e[48;5;${user_at_host_background}m\\]"
+    local branch_color_staged_files_tag="\\[\\e[38;5;${branch_staged_files_background}m\\]"
+    local branch_color_staged_files_bg_tag="\\[\\e[48;5;${branch_staged_files_background}m\\]"
+    local branch_color_staged_files_font_tag="\\[\\e[38;5;${branch_staged_files_foreground}m\\]"
+    local branch_color_changed_files_tag="\\[\\e[38;5;${branch_changed_files_background}m\\]"
+    local branch_color_changed_files_bg_tag="\\[\\e[48;5;${branch_changed_files_background}m\\]"
+    local branch_color_changed_files_font_tag="\\[\\e[38;5;${branch_changed_files_foreground}m\\]"
+    local branch_color_tag="\\[\\e[38;5;${branch_background}m\\]"
+    local branch_color_bg_tag="\\[\\e[48;5;${branch_background}m\\]"
+    local branch_color_font_tag="\\[\\e[38;5;${branch_foreround}m\\]"
+    local none="\\[\\e[39m\\]"
+    local bold="\\[\\e[1m\\]"
+    local bold_none="\\[\\e[0m\\]"
+    local bg_none="\\[\\e[49m\\]"
+
     # Prompt style
-    user_at_host="${white}${bg_dark_gray}${bold}"
-    user_at_host_end="${bold_none}${bg_none}${s_darkgray_bglightmagenta}"
-    path="${bg_blue}${white}${bold}"
-    path_git="${bg_blue}${white}  ${is_git_repo} ${bold}"
-    path_end="${none}${bold_none}"
-    user_symbol="${bg_light_magenta}${bold}${white}"
-    user_symbol_end="${none}${bold_none}${bg_none}${s_lightmagenta_bgblue}"
-    branch="${s_blue_bgwhite}${bg_white}${black}${bold}"
-    branch_end="${bg_none}${none}${bold_none}${s_white}"
-    time="${white}${bg_dark_gray}${bold}"
-    time_end="${bold_none}${bg_none}"
+    local user="${bold}${user_color_font_tag}"
+    local host="${bold}${host_color_font_tag}"
+    local at="${bold}${at_color_font_tag}"
+    local user_at_host="${bold}${user_at_host_color_bg_tag}"
+    local user_at_host_end="${bold_none}${bg_none}${user_at_host_color_tag}${user_symbol_color_bg_tag}${separator}"
+    local user_symbol="${user_symbol_color_bg_tag}${bold}${user_symbol_color_font_tag}"
+    local user_symbol_end="${none}${bold_none}${bg_none}${user_symbol_color_tag}${workdir_color_bg_tag}${separator}"
+    local path="${workdir_color_bg_tag}${workdir_color_font_tag}${bold}"
+    local path_git="${workdir_color_bg_tag}${workdir_color_font_tag}  ${is_git_repo} ${bold}"
+    local path_end="${none}${bold_none}"
+    local branch="${workdir_color_tag}${branch_color_bg_tag}${separator}${branch_color_font_tag}${bold}"
+    local branch_end="${branch_color_tag}${bg_none}${separator}${bold_none}${none}"
+    local time="${time_color_bg_tag}${time_color_tag}${bold}"
+    local time_end="${bold_none}${bg_none}"
+
     local venv=""
     local path_sign=""
     local prompt_user=""
     local prompt_time=""
+    local fancygit_PS2=""
+    local double_line_config=""
+
+    fancygit_PS2=$(fancygit_config_get "ps2")
+
+    if fancygit_config_is "double-line" "true"
+    then
+        double_line_config="\n${fancygit_PS2}"
+    fi
 
     # Building prompt
     if [ "$branch_status" != "" ]
     then
-        branch="${s_blue_bglightyellow}${bg_light_yellow}${black}${bold}"
-        branch_end="${bg_none}${bold_none}${s_lightyellow}"
+        branch="${workdir_color_tag}${branch_color_changed_files_bg_tag}${separator}${branch_color_changed_files_font_tag}${bold}"
+        branch_end="${bg_none}${bold_none}${branch_color_changed_files_tag}${separator}${none}"
     fi
 
     if [ "$staged_files" = "" ]
@@ -44,8 +104,8 @@ fancygit_prompt_builder() {
 
     if [ "$staged_files" != "" ]
     then
-        branch="${s_blue_bglightgreen}${bg_light_green}${black}${bold}"
-        branch_end="${bg_none}${bold_none}${s_green}"
+        branch="${workdir_color_tag}${branch_color_staged_files_bg_tag}${separator}${branch_color_staged_files_font_tag}${bold}"
+        branch_end="${bg_none}${bold_none}${branch_color_staged_files_tag}${separator}${none}"
     fi
 
     if [ "$git_stash" = "" ]
@@ -77,7 +137,7 @@ fancygit_prompt_builder() {
 
     if fancygit_config_is "show-user-at-machine" "true"
     then
-        prompt_user="${user_at_host}\\u@\\h ${user_at_host_end}"
+        prompt_user="${user_at_host}${user}\\u${none}${at}@${none}${host}\\h${none} ${user_at_host_end}"
     fi
 
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
@@ -93,18 +153,18 @@ fancygit_prompt_builder() {
         path_sign="\\w"
     fi
 
-    prompt_path="${path}${bold}${white}${venv} $path_sign ${path_end}${s_blue}"
+    prompt_path="${path}${bold}${venv} $path_sign ${path_end}${workdir_color_tag}${separator}${none}"
 
     if [ "$branch_name" != "" ]
     then
         branch_icon=$(fg_get_branch_icon)
         prompt_path="${path_git}${venv}${has_git_stash}${has_untracked_files}${has_changed_files}${has_added_files}${has_unpushed_commits} $path_sign ${path_end}"
         prompt_branch="${branch} ${branch_icon} ${branch_name} ${branch_end}"
-        PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch} "
+        PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${double_line_config} "
         return
     fi
 
-    PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path} "
+    PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${double_line_config} "
 }
 
 PROMPT_COMMAND="fancygit_prompt_builder"
