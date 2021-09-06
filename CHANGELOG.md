@@ -2,6 +2,12 @@
 
 > Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
 
+### v6.6.0
+
+- Create a new theme called "dracula".
+- Improve fancy themes structure.
+- Add `fancygit --enable-double-line` and `fancygit --disable-double-line` command. It changes the prompt style instantly.
+
 ### v6.5.1
 
 - Internals: Improve the way fancy styles read the configurations.

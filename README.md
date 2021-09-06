@@ -139,12 +139,14 @@ After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-
 | fancygit --fonts-install                   | Install font in order to render icons properly.
 | fancygit --colors                          | Show suggested colors config.
 | fancygit --colors-apply                    | Apply the suggested colors config.
-| fancygit --disable-full-path               | FancyGit will show only the the working directory name.
-| fancygit --enable-full-path                | FancyGit will show the entire path.
-| fancygit --disable-show-user-at-machine    | FancyGit will hide (user@machine) info.
-| fancygit --enable-show-user-at-machine     | FancyGit will show (user@machine) info, as usual.
-| fancygit --enable-time                     | FancyGit will show current time.
-| fancygit --disable-time                    | FancyGit will not show current time.
+| fancygit --disable-full-path               | Show only the the working directory name.
+| fancygit --enable-full-path                | Show the entire path.
+| fancygit --disable-show-user-at-machine    | Hide (user@machine) info.
+| fancygit --enable-show-user-at-machine     | Show (user@machine) info, as usual.
+| fancygit --enable-time                     | Show current time.
+| fancygit --disable-time                    | Hide current time.
+| fancygit --enable-double-line              | Show a double line prompt.
+| fancygit --disable-double-line             | Show a single line prompt.
 | fancygit --separator-default               | Change the separator to default style.
 | fancygit --separator-blocs                 | Change the separator to blocs style.
 | fancygit --separator-blocs-tiny            | Change the separator to blocs-tiny style.

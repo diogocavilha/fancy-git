@@ -22,6 +22,7 @@ _fancygit() {
         dark-col-double-line \
         light \
         light-double-line \
+        dracula \
         --colors \
         --colors-apply \
         --enable-full-path \
@@ -30,6 +31,8 @@ _fancygit() {
         --disable-show-user-at-machine \
         --enable-time \
         --disable-time \
+        --enable-double-line \
+        --disable-double-line \
         --config-list \
         --config-reset \
         --separator-default \

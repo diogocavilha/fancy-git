@@ -165,6 +165,8 @@ case "$1" in
     "--disable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "false";;
     "--enable-time") fancygit_config_save "show-time" "true";;
     "--disable-time") fancygit_config_save "show-time" "false";;
+    "--enable-double-line") fancygit_config_save "double-line" "true";;
+    "--disable-double-line") fancygit_config_save "double-line" "false";;
     "--config-list") fancygit_config_show;;
     "--reset") fancygit_config_reset;;
     "--update") fancygit_update;;
@@ -181,6 +183,7 @@ case "$1" in
     "dark-col-double-line") fancygit_config_save "style" "dark-col-double-line";;
     "light") fancygit_config_save "style" "light";;
     "light-double-line") fancygit_config_save "style" "light-double-line";;
+    "dracula") fancygit_config_save "style" "dracula";;
     "--fonts-install") fancygit_install_fonts;;
     "--separator-default") fancygit_config_save "separator" "";;
     "--separator-blocs") fancygit_config_save "separator" "";;

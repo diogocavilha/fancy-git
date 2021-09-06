@@ -5,4 +5,5 @@ show-time:true
 time-format:%H:%M:%S
 separator:
 ps2:➜
+double-line:false
 fresh_file
