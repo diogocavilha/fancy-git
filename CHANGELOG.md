@@ -1,6 +1,6 @@
 # Fancy Git Changelog
 
-> Any trouble, please visit: https://github.com/diogocavilha/fancy-git#troubleshooting-pick
+> Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
 ### v6.6.0
 
