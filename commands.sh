@@ -66,21 +66,6 @@ fg_is_only_local_branch() {
     return 1
 }
 
-fg_get_branch_icon() {
-    if fg_is_only_local_branch
-    then
-        echo "${is_only_local_branch}"
-        return
-    fi
-
-    if [ "$merged_branch" != "" ]; then
-        echo "${is_merged_branch}"
-        return
-    fi
-
-    echo "${branch_icon}"
-}
-
 fg_branch_status() {
     . ~/.fancy-git/config.sh
 
@@ -174,9 +159,6 @@ case "$1" in
     "default") fancygit_config_save "style" "default";;
     "simple-double-line") fancygit_config_save "style" "simple-double-line";;
     "human") fancygit_config_save "style" "human";;
-    "human-single-line") fancygit_config_save "style" "human-single-line";;
-    "human-dark") fancygit_config_save "style" "human-dark";;
-    "human-dark-single-line") fancygit_config_save "style" "human-dark-single-line";;
     "dark") fancygit_config_save "style" "dark";;
     "dark-col") fancygit_config_save "style" "dark-col";;
     "light") fancygit_config_save "style" "light";;
@@ -201,6 +183,9 @@ case "$1" in
     "double-line") fancygit_command_deprecation_warning "--enable-double-line";;
     "dark-double-line") fancygit_command_deprecation_warning "--enable-double-line";;
     "light-double-line") fancygit_command_deprecation_warning "--enable-double-line";;
+    "human-single-line") fancygit_command_deprecation_warning "human";;
+    "human-dark") fancygit_command_deprecation_warning "human";;
+    "human-dark-single-line") fancygit_command_deprecation_warning "human";;
     "") fg_return;;
     *) fg_command_not_found "$1";;
 esac

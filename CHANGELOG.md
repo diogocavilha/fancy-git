@@ -2,11 +2,12 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
-### v6.6.0
+### v7.0.0
 
+- Improve fancy themes structure by creating a color scheme config.
 - Create a new theme called "dracula".
-- Improve fancy themes structure.
 - Add `fancygit --enable-double-line` and `fancygit --disable-double-line` command. It changes the prompt style instantly.
+- Improve code that checks if branch is already merged.
 
 ### v6.5.1
 
