@@ -8,6 +8,7 @@
 - Create a new theme called "dracula".
 - Add `fancygit --enable-double-line` and `fancygit --disable-double-line` command. It changes the prompt style instantly.
 - Improve code that checks if branch is already merged.
+- Change config-manager module to settings-manager.
 
 ### v6.5.1
 

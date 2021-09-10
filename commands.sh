@@ -5,7 +5,6 @@
 #
 # Commands manager.
 
-. ~/.fancy-git/modules/config-manager.sh
 . ~/.fancy-git/modules/update-manager.sh
 . ~/.fancy-git/version.sh
 

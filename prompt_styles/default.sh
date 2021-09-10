@@ -6,6 +6,7 @@
 . ~/.fancy-git/aliases
 . ~/.fancy-git/fancygit-completion
 . ~/.fancy-git/commands.sh
+. ~/.fancy-git/modules/settings-manager.sh
 
 # ----------------------------------------------------------------------------------------------------------------------
 # The main function to change the prompt.
@@ -407,7 +408,7 @@ __is_merged_branch() {
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Performs a git status and return the output.
+# Get git status.
 # ----------------------------------------------------------------------------------------------------------------------
 __get_git_status() {
     git status -s 2> /dev/null
@@ -421,34 +422,36 @@ __get_git_staged_files() {
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Performs a git branch and return the output.
+# Get current branch name.
 # ----------------------------------------------------------------------------------------------------------------------
 __get_git_branch() {
     git rev-parse --abbrev-ref HEAD 2> /dev/null
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Performs a git stash and return the output.
+# Get a list of stashes.
 # ----------------------------------------------------------------------------------------------------------------------
 __get_git_stash() {
     git stash list 2> /dev/null
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Performs a git ls-files and return the output.
+# Get untracked files.
 # ----------------------------------------------------------------------------------------------------------------------
-# git_untracked_files=$(git ls-files --others --exclude-standard 2> /dev/null)
 __get_git_untracked_files() {
     git ls-files --others --exclude-standard 2> /dev/null
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Performs a git ls-files to check changed files and return the output.
+# Get a list of changed files.
 # ----------------------------------------------------------------------------------------------------------------------
 __get_git_changed_files() {
     git ls-files -m 2> /dev/null
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Get remote branch name.
+# ----------------------------------------------------------------------------------------------------------------------
 __get_git_remote_name() {
     remote_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
     remote_name=${remote_name:-origin}
