@@ -30,12 +30,9 @@ fancygit_config_reset() {
 # param string $2 Setting default value.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_config_get() {
-    local param_setting_name
-    local param_setting_default_value
+    local param_setting_name="$1"
+    local param_setting_default_value="$2"
     local current_setting_value
-
-    param_setting_name="$1"
-    param_setting_default_value="$2"
 
     __fancygit_create_config_if_not_exists "$param_setting_name" "$param_setting_default_value"
 
@@ -56,12 +53,9 @@ fancygit_config_get() {
 # param string $2 Setting value to be checked.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_config_is() {
-    local param_setting_name
-    local param_expected_setting_value
+    local param_setting_name="$1"
+    local param_expected_setting_value="$2"
     local current_setting_value
-
-    param_setting_name="$1"
-    param_expected_setting_value="$2"
 
     current_setting_value=$(fancygit_config_get "$param_setting_name" "$param_expected_setting_value")
 
@@ -91,12 +85,9 @@ fancygit_config_save() {
 # param string $2 Setting value.
 # ----------------------------------------------------------------------------------------------------------------------
 __fancygit_create_config_if_not_exists() {
-    local param_setting_name
-    local param_setting_value
+    local param_setting_name="$1"
+    local param_setting_value="$2"
     local setting_entry
-
-    param_setting_name="$1"
-    param_setting_value="$2"
 
     # It doesn't create a setting entry with an empty value.
     if [ "" = "$param_setting_value" ]
@@ -104,7 +95,6 @@ __fancygit_create_config_if_not_exists() {
         return
     fi
 
-    setting_entry=""
     setting_entry=$(grep -o "$param_setting_name" < "$FANCYGIT_CONFIG_FILE")
 
     if [ "$setting_entry" = "" ]; then
