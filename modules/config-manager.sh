@@ -24,6 +24,8 @@ fancygit_config_get() {
     config_key="${1}"
     default="${2}"
 
+    __fancygit_create_config_if_not_exists "$config_key" "$default"
+
     config_value=$(grep -oP "(?<=${config_key}:).*" < "$FANCYGIT_CONFIG_FILE")
 
     if [ "$config_value" = "" ]; then
@@ -56,12 +58,31 @@ fancygit_config_save() {
     sed -i "s/${1}:.*/${1}:${2}/" "$FANCYGIT_CONFIG_FILE"
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Creates a configuration entry in case it does not exist.
+#
+# param string $1 Configuration key.
+# param string $2 Configuration value.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_create_config_if_not_exists() {
-    local config_record=""
+    local config_record
+    local config_key
+    local config_value
 
-    config_record=$(grep -o "${1}" < "$FANCYGIT_CONFIG_FILE")
+    config_key="$1"
+    config_value="$2"
+
+    # It doesn't create a config entry with an empty value.
+    if [ "" = "$config_value" ]
+    then
+        return
+    fi
+
+    config_record=""
+    config_record=$(grep -o "${config_key}" < "$FANCYGIT_CONFIG_FILE")
 
     if [ "$config_record" = "" ]; then
-        echo "${1}:${2}" >> "$FANCYGIT_CONFIG_FILE"
+        echo -e "\n$config_key:$config_value" >> "$FANCYGIT_CONFIG_FILE"
+        sed -i '/^$/d' "$FANCYGIT_CONFIG_FILE"
     fi
 }
