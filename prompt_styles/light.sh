@@ -92,7 +92,7 @@ fancygit_prompt_builder() {
     # Read some config settings.
     if fancygit_config_is "double-line" "true"
     then
-        double_line_config="\n$(fancygit_config_get "ps2" ">")"
+        double_line_config="\n$(fancygit_config_get "ps2" "➜")"
     fi
 
     if fancygit_config_is "show-time" "true"

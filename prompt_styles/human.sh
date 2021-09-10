@@ -90,7 +90,7 @@ fancygit_prompt_builder() {
     # Check some config preferences.
     if fancygit_config_is "double-line" "true"
     then
-        fancygit_PS2=$(fancygit_config_get "ps2")
+        fancygit_PS2=$(fancygit_config_get "ps2" "➜")
         is_double_line="\n${fancygit_PS2}"
     fi
 

@@ -95,7 +95,7 @@ fancygit_prompt_builder() {
     # Read some config settings.
     if fancygit_config_is "double-line" "true"
     then
-        double_line_config="\n$(fancygit_config_get "ps2" ">")"
+        double_line_config="\n$(fancygit_config_get "ps2" "➜")"
     fi
 
     if fancygit_config_is "show-time" "true"
@@ -377,7 +377,7 @@ __is_merged_branch() {
 
     merged_branch=""
     branch=$(__get_git_branch)
-    
+
     # We don't need to check if branch is merged when it is one of: master, develop, main.
     # Since we assume they could be already the "main branch".
     # It might cause some trouble when we have a develop branch which is not the main one.
@@ -385,12 +385,12 @@ __is_merged_branch() {
         "master"|"develop"|"main") return 1;;
     esac
 
-    merged_branch=$(git branch -r --merged master 2> /dev/null | grep "${branch}" 2> /dev/null)  
+    merged_branch=$(git branch -r --merged master 2> /dev/null | grep "${branch}" 2> /dev/null)
     if [ "" != "${merged_branch}" ]
     then
         return 0
     fi
-    
+
     merged_branch=$(git branch -r --merged develop 2> /dev/null | grep "${branch}" 2> /dev/null)
     if [ "" != "${merged_branch}" ]
     then
