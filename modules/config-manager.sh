@@ -38,15 +38,15 @@ fancygit_config_get() {
 
 fancygit_config_is() {
     local config_key
-    local config_value_expected
-    local config_value_current
+    local expected_config_value
+    local current_config_value
 
     config_key="${1}"
-    config_value_expected="${2}"
+    expected_config_value="${2}"
 
-    config_value_current=$(fancygit_config_get "${config_key}")
+    current_config_value=$(fancygit_config_get "${config_key}" "${expected_config_value}")
 
-    if [ "$config_value_current" = "$config_value_expected" ]; then
+    if [ "$current_config_value" = "$expected_config_value" ]; then
         return 0
     fi
 
