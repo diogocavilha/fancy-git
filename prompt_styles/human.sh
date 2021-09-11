@@ -7,14 +7,13 @@
 # The main function to change the prompt.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_prompt_builder() {
-    . ~/.fancy-git/modules/update-manager.sh
-
     check_for_update
 
     # !! IMPORTANT !!
     # If you're just interested on creating a new color scheme, check $HOME/.fancy-git/color_schemes.
     # It'll be handled in order to create the proper color on PS1 prompt.
     local color_scheme_name
+
     color_scheme_name=$(fancygit_config_get "style" "default")
     . "$HOME/.fancy-git/color_schemes/$color_scheme_name"
 
