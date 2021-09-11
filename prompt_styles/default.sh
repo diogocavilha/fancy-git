@@ -131,23 +131,6 @@ fancygit_prompt_builder() {
     PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${double_line_config} "
 }
 
-# ----------------------------------------------------------------------------------------------------------------------
-# Return the icon that indicates we're working in a virtual environment.
-# ----------------------------------------------------------------------------------------------------------------------
-__fancygit_get_venv_icon() {
-    local icon_venv
-
-    icon_venv=" "
-
-    if ! [ -z $VIRTUAL_ENV ] || ([ "$CONDA_DEFAULT_ENV" != "base" ] && ! [ -z $CONDA_DEFAULT_ENV ])
-    then
-        echo "$icon_venv"
-        return
-    fi
-
-    echo ""
-}
-
 # Here's where the magic happens!
 # It calls our main function (fancygit_prompt_builder) in order to mount a beautiful PS1 prompt =D
 PROMPT_COMMAND="fancygit_prompt_builder"

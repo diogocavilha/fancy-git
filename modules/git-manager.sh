@@ -56,7 +56,7 @@ fancygit_git_get_branch_icon() {
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Checks if the current branch is has been merged already.
-# 
+#
 # return int 0 Branch has been merged.
 # return int 1 Branch has not been merged.
 # ----------------------------------------------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ fancygit_git_get_changed_files() {
 # ----------------------------------------------------------------------------------------------------------------------
 __fancygit_git_get_remote_branch() {
     local branch_name
-    
+
     branch_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
     branch_name=${branch_name:-origin}
     echo "$branch_name"
@@ -153,7 +153,7 @@ __fancygit_git_get_remote_branch() {
 fancygit_git_get_unpushed_commits() {
     local branch_name
     local remote_name
-    
+
     branch_name=$(fancygit_git_get_branch)
     remote_name=$(__fancygit_git_get_remote_branch)
     git log --pretty=oneline "${remote_name}"/"${branch_name}"..HEAD 2> /dev/null
@@ -291,6 +291,23 @@ __fancygit_get_poor_notification_area() {
         # Trim notification_area content
         notification_area=$(echo "$notification_area" | sed -e 's/[[:space:]]*$//' | sed -e 's/^[[:space:]]*//')
         echo " [ $notification_area ] "
+        return
+    fi
+
+    echo ""
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Return the icon that indicates we're working in a virtual environment.
+# ----------------------------------------------------------------------------------------------------------------------
+__fancygit_get_venv_icon() {
+    local icon_venv
+
+    icon_venv=" "
+
+    if ! [ -z $VIRTUAL_ENV ] || ([ "$CONDA_DEFAULT_ENV" != "base" ] && ! [ -z $CONDA_DEFAULT_ENV ])
+    then
+        echo "$icon_venv"
         return
     fi
 
