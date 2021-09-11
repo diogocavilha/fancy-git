@@ -147,6 +147,8 @@ After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-
 | fancygit --disable-time                    | Hide current time.
 | fancygit --enable-double-line              | Show a double line prompt.
 | fancygit --disable-double-line             | Show a single line prompt.
+| fancygit --enable-rich-notification        | Show notification area with icons.
+| fancygit --disable-rich-notification       | Show notification area with simple symbols.
 | fancygit --separator-default               | Change the separator to default style.
 | fancygit --separator-blocs                 | Change the separator to blocs style.
 | fancygit --separator-blocs-tiny            | Change the separator to blocs-tiny style.

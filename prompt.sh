@@ -5,17 +5,23 @@
 #
 # Changes de prompt by loading the style configured in ~/.fancygit/app_config file.
 
+. $HOME/.fancy-git/aliases
+. $HOME/.fancy-git/fancygit-completion
+. $HOME/.fancy-git/commands.sh
+. $HOME/.fancy-git/modules/settings-manager.sh
+. $HOME/.fancy-git/modules/git-manager.sh
+
 function fancygit_prompt_changer() {
     local style
 
     style=$(grep -ioP '(?<=style:).*' < ~/.fancy-git/app_config)
 
-    if [ -e ~/.fancy-git/prompt_styles/"$style.sh" ]; then
-        . ~/.fancy-git/prompt_styles/"$style.sh"
-        return
-    fi
+    case "$style" in
+        "default"|"dark"|"dark-col"|"light"|"dracula")
+            . ~/.fancy-git/prompt_styles/default.sh && return;;
+    esac
 
-    . ~/.fancy-git/prompt_styles/default.sh
+    . ~/.fancy-git/prompt_styles/"${style}.sh"
 }
 
 fancygit_prompt_changer

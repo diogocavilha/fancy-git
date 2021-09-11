@@ -5,36 +5,38 @@
 #
 # It prints the help text.
 
-. ~/.fancy-git/version.sh
+. $HOME/.fancy-git/version.sh
 
-fg_current_year=$(date +%Y)
+fancygit_current_year=$(date +%Y)
 
-echo " Fancy Git v$FANCYGIT_VERSION - $fg_current_year by Diogo Alexsander Cavilha <diogocavilha@gmail.com>.
+echo " Fancy Git v$FANCYGIT_VERSION - $fancygit_current_year by Diogo Alexsander Cavilha <diogocavilha@gmail.com>.
  Prompt changer to show a few cool git informations about your repository on terminal.
 
  COMMANDS
 
- fancygit -h, --help                Show this help.
- fancygit -v, --version             Show the fancygit version.
- fancygit --update                  Update fancygit code with the last release from github.
- fancygit --fonts-install           Install font in order to render icons properly. (only for colored styles).
- fancygit --colors                  Show color scheme to use on git management process, like on \"git status\" command.
- fancygit --colors-apply            Apply the color scheme.
- fancygit --enable-full-path        Show the entire path.
- fancygit --disable-full-path       Show only the the directory name you are working on. Not the entire path.
- fancygit --enable-time             Show current time.
- fancygit --disable-time            Hide current time.
- fancygit --enable-double-line      Show a double line prompt.
- fancygit --disable-double-line     Show a single line prompt.
- fancygit --config-list             Show fancygit config.
- fancygit --config-reset            Reset the configuration as if you have just installed fancygit.
- fancygit --separator-default       Change the separator to default style.
- fancygit --separator-blocs         Change the separator to blocs style.
- fancygit --separator-blocs-tiny    Change the separator to blocs-tiny style.
- fancygit --separator-curve         Change the separator to curve style.
- fancygit --separator-fire          Change the separator to fire style.
- fancygit --separator-lego          Change the separator to lego style.
- fancygit --separator-paint         Change the separator to paint style.
+ fancygit -h, --help                    Show this help.
+ fancygit -v, --version                 Show the fancygit version.
+ fancygit --update                      Update fancygit code with the last release from github.
+ fancygit --fonts-install               Install font in order to render icons properly. (only for colored styles).
+ fancygit --colors                      Show color scheme to use on git management process, like on \"git status\" command.
+ fancygit --colors-apply                Apply the color scheme.
+ fancygit --enable-full-path            Show the entire path.
+ fancygit --disable-full-path           Show only the the directory name you are working on. Not the entire path.
+ fancygit --enable-time                 Show current time.
+ fancygit --disable-time                Hide current time.
+ fancygit --enable-double-line          Show a double line prompt.
+ fancygit --disable-double-line         Show a single line prompt.
+ fancygit --enable-rich-notification    Show notification area with icons.
+ fancygit --disable-rich-notification   Show notification area with simple symbols.
+ fancygit --config-list                 Show fancygit config.
+ fancygit --config-reset                Reset the configuration as if you have just installed fancygit.
+ fancygit --separator-default           Change the separator to default style.
+ fancygit --separator-blocs             Change the separator to blocs style.
+ fancygit --separator-blocs-tiny        Change the separator to blocs-tiny style.
+ fancygit --separator-curve             Change the separator to curve style.
+ fancygit --separator-fire              Change the separator to fire style.
+ fancygit --separator-lego              Change the separator to lego style.
+ fancygit --separator-paint             Change the separator to paint style.
 
  STYLES
 

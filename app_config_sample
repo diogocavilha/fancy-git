@@ -6,4 +6,5 @@ time-format:%H:%M:%S
 separator:
 ps2:➜
 double-line:false
+show-rich-notification:true
 fresh_file

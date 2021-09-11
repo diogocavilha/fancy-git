@@ -27,6 +27,8 @@ _fancygit() {
         --disable-time \
         --enable-double-line \
         --disable-double-line \
+        --enable-rich-notification \
+        --disable-rich-notification \
         --config-list \
         --config-reset \
         --separator-default \

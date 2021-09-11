@@ -5,6 +5,7 @@
 #
 # Commands manager.
 
+. ~/.fancy-git/modules/settings-manager.sh
 . ~/.fancy-git/modules/update-manager.sh
 . ~/.fancy-git/version.sh
 
@@ -151,6 +152,8 @@ case "$1" in
     "--disable-time") fancygit_config_save "show-time" "false";;
     "--enable-double-line") fancygit_config_save "double-line" "true";;
     "--disable-double-line") fancygit_config_save "double-line" "false";;
+    "--enable-rich-notification") fancygit_config_save "show-rich-notification" "true";;
+    "--disable-rich-notification") fancygit_config_save "show-rich-notification" "false";;
     "--config-list") fancygit_config_show;;
     "--reset") fancygit_config_reset;;
     "--update") fancygit_update;;

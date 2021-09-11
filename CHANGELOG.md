@@ -4,9 +4,13 @@
 
 ### v7.0.0
 
+- !! ATENTION !!
+  Too many things have been changed at this version. Chances are that you'll need to reinstall FancyGit. But I promise you
+  that it'll worth. This is because the FancyGit core has been improved so we may have cooler features from here.
 - Improve fancy themes structure by creating a color scheme config.
 - Create a new theme called "dracula".
 - Add `fancygit --enable-double-line` and `fancygit --disable-double-line` command. It changes the prompt style instantly.
+- Add `fancygit --enable-rich-notification` and `fancygit --disable-rich-notification` command. It changes the notification area switching between icons and simple symbols.
 - Improve code that checks if branch is already merged.
 - Change config-manager module to settings-manager.
 
