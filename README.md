@@ -28,9 +28,14 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
 
 # :heavy_check_mark: After installing
 
-1. Change your terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
-   It's necessary only if you're using one of the fancy styles for rendering the icons properly.  
-   If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf`.
+1. Change your terminal font to one of these fonts:  
+   - **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
+   - **DejaVu-Sans-Mono-Nerd-Font-Complete.ttf**.
+   - **DejaVu-Sans-Mono-Nerd-Font-Complete-Mono.ttf**.
+   - **JetBrains-Mono-Regular-Nerd-Font-Complete-Mono.ttf**.
+   - **JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf**.  
+   It's necessary for rendering icons/symbols properly.  
+   If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/`.
 2. Restart your terminal.
 
 Run `fancygit -h` to check FancyGit help.
