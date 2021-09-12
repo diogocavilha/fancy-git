@@ -14,19 +14,17 @@
 . "$HOME/.fancy-git/version.sh"
 
 # ----------------------------------------------------------------------------------------------------------------------
-# The main FanyGit function. It changes the prompt.
+# The main FanyGit function. It changes the prompt according to the switched theme.
 # ----------------------------------------------------------------------------------------------------------------------
-function fancygit_prompt_changer() {
-    local style
-
-    style=$(fancygit_config_get "style" "default")
-
-    case "$style" in
-        "default"|"dark"|"dark-col"|"light"|"dracula")
-            . ~/.fancy-git/prompt_styles/default.sh && return;;
+function fancygit_theme_handler() {
+    case "$(fancygit_config_get "theme" "default")" in
+        "default")
+            . "$HOME/.fancy-git/themes/default.sh";;
+        "human")
+            . "$HOME/.fancy-git/themes/human.sh";;
+        "simple")
+            . "$HOME/.fancy-git/themes/simple.sh";;
     esac
-
-    . ~/.fancy-git/prompt_styles/"${style}.sh"
 }
 
-fancygit_prompt_changer
+fancygit_theme_handler

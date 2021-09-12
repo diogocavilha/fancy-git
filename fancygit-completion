@@ -37,6 +37,16 @@ _fancygit() {
         --separator-lego \
         --separator-curve \
         --separator-paint \
+        --theme-default \
+        --theme-human \
+        --theme-simple \
+        --color-scheme-simple \
+        --color-scheme-human \
+        --color-scheme-default \
+        --color-scheme-dracula \
+        --color-scheme-dark \
+        --color-scheme-dark-col \
+        --color-scheme-light \
         --reset
     '
 

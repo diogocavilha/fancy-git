@@ -10,12 +10,26 @@ fancygit_prompt_builder() {
     check_for_update
 
     # !! IMPORTANT !!
-    # If you're just interested on creating a new color scheme, check $HOME/.fancy-git/color_schemes.
-    # It'll be handled in order to create the proper color on PS1 prompt.
-    local color_scheme_name
+    # If you're just interested on creating a new color scheme, please have a look at $HOME/.fancy-git/color_schemes.
+    # Everything you need to do is creating a new file to the color scheme you wish to create.
+    # After creating your new color scheme file, be sure to add its name to the $supported_color_schemes array, so it'll
+    # be accepted by the theme.
+    local supported_color_schemes
+    local current_color_scheme
 
-    color_scheme_name=$(fancygit_config_get "style" "default")
-    . "$HOME/.fancy-git/color_schemes/$color_scheme_name"
+    # New color scheme names must be added here.
+    supported_color_schemes=(
+        "simple"
+    )
+
+    # Any color scheme other than $supported_color_schemes will be ignored.
+    # It will be set to the default color scheme again.
+    current_color_scheme=$(fancygit_config_get "color_scheme" "default")
+    if [[ ! " ${supported_color_schemes[*]} " =~ ${current_color_scheme} ]]
+    then
+        fancygit_config_save "color_scheme" "simple"
+        current_color_scheme="simple"
+    fi
 
     # !! WARNING !!
     # From here you better now what you're doing. Have fun =D
