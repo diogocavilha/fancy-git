@@ -16,8 +16,8 @@ _fancygit() {
         dark-col \
         dracula \
         light \
-        --colors \
-        --colors-apply \
+        --suggested-global-git-config \
+        --suggested-global-git-config-apply \
         --enable-full-path \
         --disable-full-path \
         --enable-show-user-at-machine \

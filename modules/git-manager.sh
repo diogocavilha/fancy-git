@@ -332,3 +332,32 @@ fancygit_get_venv_name() {
 
     echo ""
 }
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Show suggested global git config.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_git_show_suggested_git_config() {
+    echo "
+git config --global color.ui true
+
+git config --global color.diff.meta \"yellow bold\"
+git config --global color.diff.old \"red bold\"
+git config --global color.diff.new \"green bold\"
+git config --global color.status.added \"green bold\"
+git config --global color.status.changed \"yellow\"
+git config --global color.status.untracked \"cyan\"
+"
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Apply the suggested global git config.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_git_suggested_git_config_apply() {
+    `git config --global color.ui true`
+    `git config --global color.diff.meta "yellow bold"`
+    `git config --global color.diff.old "red bold"`
+    `git config --global color.diff.new "green bold"`
+    `git config --global color.status.added "green bold"`
+    `git config --global color.status.changed "yellow"`
+    `git config --global color.status.untracked "cyan"`
+}

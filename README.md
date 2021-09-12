@@ -40,7 +40,7 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
 
 Run `fancygit -h` to check FancyGit help.
 
-# :nail_care: Git suggested colors
+# :nail_care: Git suggested config
 
 ```bash
 git config --global color.ui true
@@ -51,10 +51,10 @@ git config --global color.status.added "green bold"
 git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
-Run `fancygit --colors` to see those suggested colors.  
-Run `fancygit --colors-apply` to apply it.
+Run `fancygit --suggested-global-git-config` to see that suggested config.  
+Run `fancygit --suggested-global-git-config-apply` to apply it.
 
-I suggest you to use this scheme color because FancyGit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.
+I suggest you to use this config because FancyGit will paint the background branch, most of the time, according to the current repo status, since you're using some theme which allows that.
 
 Type `fancygit -h` for more information.
 

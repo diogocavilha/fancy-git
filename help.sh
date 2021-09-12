@@ -10,53 +10,53 @@ echo " Fancy Git v$FANCYGIT_VERSION - $(date +%Y) by Diogo Alexsander Cavilha <d
 
  CORE COMMANDS
 
- fancygit -h, --help                    Show this help.
- fancygit -v, --version                 Show the FancyGit version.
- fancygit --update                      Update FancyGit code with the last release from Github.
- fancygit --fonts-install               Install font in order to render icons/symbols properly.
- fancygit --colors                      Show color scheme to use on git management process, like on \"git status\" command.
- fancygit --colors-apply                Apply the color scheme.
- fancygit --config-list                 Show FancyGit config.
- fancygit --config-reset                Reset the configuration as if you have just installed FancyGit.
+ fancygit -h, --help                            Show this help.
+ fancygit -v, --version                         Show the FancyGit version.
+ fancygit --update                              Update FancyGit code with the last release from Github.
+ fancygit --fonts-install                       Install font in order to render icons/symbols properly.
+ fancygit --suggested-global-git-config         Show the suggested global git config.
+ fancygit --suggested-global-git-config-apply   Apply the suggested global git config.
+ fancygit --config-list                         Show FancyGit config.
+ fancygit --config-reset                        Reset the configuration as if you have just installed FancyGit.
 
  FEATURE COMMANDS
 
- fancygit --enable-full-path            Show the entire path.
- fancygit --disable-full-path           Show only the the directory name you are working on. Not the entire path.
- fancygit --enable-time                 Show current time.
- fancygit --disable-time                Hide current time.
- fancygit --enable-double-line          Show a double line prompt.
- fancygit --disable-double-line         Show a single line prompt.
- fancygit --enable-rich-notification    Show notification area with icons.
- fancygit --disable-rich-notification   Show notification area with simple symbols.
+ fancygit --enable-full-path                    Show the entire path.
+ fancygit --disable-full-path                   Show only the the directory name you are working on. Not the entire path.
+ fancygit --enable-time                         Show current time.
+ fancygit --disable-time                        Hide current time.
+ fancygit --enable-double-line                  Show a double line prompt.
+ fancygit --disable-double-line                 Show a single line prompt.
+ fancygit --enable-rich-notification            Show notification area with icons.
+ fancygit --disable-rich-notification           Show notification area with simple symbols.
 
  SEPARATOR STYLE COMMANDS
 
- fancygit --separator-default           Change the separator (if it's present on current theme) to default style.
- fancygit --separator-blocs             Change the separator (if it's present on current theme) to blocs style.
- fancygit --separator-blocs-tiny        Change the separator (if it's present on current theme) to blocs-tiny style.
- fancygit --separator-curve             Change the separator (if it's present on current theme) to curve style.
- fancygit --separator-fire              Change the separator (if it's present on current theme) to fire style.
- fancygit --separator-lego              Change the separator (if it's present on current theme) to lego style.
- fancygit --separator-paint             Change the separator (if it's present on current theme) to paint style.
+ fancygit --separator-default                   Change the separator (if it's present on current theme) to default style.
+ fancygit --separator-blocs                     Change the separator (if it's present on current theme) to blocs style.
+ fancygit --separator-blocs-tiny                Change the separator (if it's present on current theme) to blocs-tiny style.
+ fancygit --separator-curve                     Change the separator (if it's present on current theme) to curve style.
+ fancygit --separator-fire                      Change the separator (if it's present on current theme) to fire style.
+ fancygit --separator-lego                      Change the separator (if it's present on current theme) to lego style.
+ fancygit --separator-paint                     Change the separator (if it's present on current theme) to paint style.
 
  THEME COMMANDS
 
- fancygit --theme-default               Change prompt to the default theme.
- fancygit --theme-human                 Change prompt to the human theme readable theme.
- fancygit --theme-simple                Change prompt to the simple theme.
+ fancygit --theme-default                       Change prompt to the default theme.
+ fancygit --theme-human                         Change prompt to the human theme readable theme.
+ fancygit --theme-simple                        Change prompt to the simple theme.
 
  COLOR SCHEME COMMANDS
 
- fancygit --color-scheme-simple         Available for theme-simple.
- fancygit --color-scheme-human          Available for theme-human.
- fancygit --color-scheme-default        Available for theme-default.
- fancygit --color-scheme-dracula        Available for theme-default.
- fancygit --color-scheme-dark           Available for theme-default.
- fancygit --color-scheme-dark-col       Available for theme-default.
- fancygit --color-scheme-light          Available for theme-default.
+ fancygit --color-scheme-simple                 Available for theme-simple.
+ fancygit --color-scheme-human                  Available for theme-human.
+ fancygit --color-scheme-default                Available for theme-default.
+ fancygit --color-scheme-dracula                Available for theme-default.
+ fancygit --color-scheme-dark                   Available for theme-default.
+ fancygit --color-scheme-dark-col               Available for theme-default.
+ fancygit --color-scheme-light                  Available for theme-default.
 
- ICONS MEANING
+ ICONS MEANING (rich notification area enabled)
 
     = The current directory is a git repository.
     = There are untracked files.
@@ -69,7 +69,7 @@ echo " Fancy Git v$FANCYGIT_VERSION - $(date +%Y) by Diogo Alexsander Cavilha <d
     = Current branch has been merged into master branch.
     = You are working on a Python virtual environment.
 
- ICONS MEANING FOR SIMPLE STYLE
+ ICONS MEANING (rich notification area disabled)
 
   ?  = There are untracked files.
   +- = There are modified files.

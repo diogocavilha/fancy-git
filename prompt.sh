@@ -5,13 +5,13 @@
 #
 # Changes de prompt by loading the style configured in ~/.fancygit/app_config file.
 
-. "$HOME/.fancy-git/aliases"
 . "$HOME/.fancy-git/fancygit-completion"
-. "$HOME/.fancy-git/commands.sh"
+. "$HOME/.fancy-git/aliases"
+. "$HOME/.fancy-git/version.sh"
 . "$HOME/.fancy-git/modules/settings-manager.sh"
 . "$HOME/.fancy-git/modules/git-manager.sh"
 . "$HOME/.fancy-git/modules/update-manager.sh"
-. "$HOME/.fancy-git/version.sh"
+. "$HOME/.fancy-git/commands-handler.sh"
 
 # ----------------------------------------------------------------------------------------------------------------------
 # The main FanyGit function. It changes the prompt according to the switched theme.
