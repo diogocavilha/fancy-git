@@ -9,14 +9,13 @@ _fancygit() {
         --version \
         --update \
         --fonts-install \
+        simple \
         human \
         default \
-        simple \
-        simple-double-line \
         dark \
-        light \
-        dracula \
         dark-col \
+        dracula \
+        light \
         --colors \
         --colors-apply \
         --enable-full-path \

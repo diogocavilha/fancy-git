@@ -11,6 +11,7 @@
 . "$HOME/.fancy-git/modules/settings-manager.sh"
 . "$HOME/.fancy-git/modules/git-manager.sh"
 . "$HOME/.fancy-git/modules/update-manager.sh"
+. "$HOME/.fancy-git/version.sh"
 
 # ----------------------------------------------------------------------------------------------------------------------
 # The main FanyGit function. It changes the prompt.
