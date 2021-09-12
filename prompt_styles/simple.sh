@@ -3,62 +3,52 @@
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
 # Date:   06.06.2018
 
-. ~/.fancy-git/aliases
-. ~/.fancy-git/fancygit-completion
-. ~/.fancy-git/commands.sh
-
-fg_branch_name() {
-    local branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-    local branch_status=$(fg_branch_status)
-
-    if [ "$branch_status" != "" ]; then
-        branch_name="$branch_name |$branch_status"
-    fi
-
-    if [ "$branch_name" != "" ]; then
-        echo " ($branch_name)"
-        return
-    fi
-
-    echo ""
-}
-
+# ----------------------------------------------------------------------------------------------------------------------
+# The main function to change the prompt.
+# ----------------------------------------------------------------------------------------------------------------------
 fancygit_prompt_builder() {
-    . ~/.fancy-git/config.sh
-    . ~/.fancy-git/modules/update-manager.sh
-    
     check_for_update
 
-    local user
-    local at
-    local host
-    local where
-    local venv=""
-    local user_at_host=""
+    # !! IMPORTANT !!
+    # If you're just interested on creating a new color scheme, check $HOME/.fancy-git/color_schemes.
+    # It'll be handled in order to create the proper color on PS1 prompt.
+    local color_scheme_name
+
+    color_scheme_name=$(fancygit_config_get "style" "default")
+    . "$HOME/.fancy-git/color_schemes/$color_scheme_name"
+
+    # !! WARNING !!
+    # From here you better now what you're doing. Have fun =D
+
+    # Create color tags to change prompt style.
+    local user_color_font_tag="\\[\\e[38;5;${fancygit_color_scheme_user_foreground}m\\]"
+    local host_color_font_tag="\\[\\e[38;5;${fancygit_color_scheme_host_foreground}m\\]"
+    local at_color_font_tag="\\[\\e[38;5;${fancygit_color_scheme_at_foreground}m\\]"
+    local workdir_color_font_tag="\\[\\e[38;5;${fancygit_color_scheme_workdir_foreground}m\\]"
+    local color_reset="\\[\\e[39m\\]"
+
+    # Prompt style.
+    local user="${user_color_font_tag}\u${color_reset}"
+    local host="${host_color_font_tag}\h${color_reset}"
+    local at="${at_color_font_tag}@${color_reset}"
+    local path="${workdir_color_font_tag}"
+    local venv_name=""
     local prompt_time=""
+    local branch_area=""
+    local is_double_line=""
+    local where=""
 
-    user="${light_green}\u${none}"
-    at="${none}@${none}"
-    host="${light_green}\h${none}"
-    where="${blue}\w${none}"
-
-    if ! fancygit_config_is "show-full-path" "true"
+    # Check some config preferences.
+    if fancygit_config_is "double-line" "true"
     then
-        where="${blue}\W${none}"
-    fi
-
-    if ! [ -z ${VIRTUAL_ENV} ]; then
-        venv="(`basename \"$VIRTUAL_ENV\"`) "
-    fi
-
-    if ([ "$CONDA_DEFAULT_ENV" != "base" ] && ! [ -z ${CONDA_DEFAULT_ENV} ]); then
-        venv="(`basename \"$CONDA_DEFAULT_ENV\"`) "
+        fancygit_PS2=$(fancygit_config_get "ps2" "➜")
+        is_double_line="\n${fancygit_PS2}"
     fi
 
     if fancygit_config_is "show-time" "true"
     then
-      formatted_time=$(date +"${time_format}")
-      prompt_time="${light_green}[${formatted_time}] "
+        time_format=$(fancygit_config_get "time-format" "%H:%M:%S")
+        prompt_time="[$(date +"$time_format")] "
     fi
 
     if fancygit_config_is "show-user-at-machine" "true"
@@ -66,7 +56,43 @@ fancygit_prompt_builder() {
         user_at_host="$user$at$host:"
     fi
 
-    PS1="${bold}${venv}${prompt_time}${user_at_host}$where\$$(fg_branch_name)${bold_none} "
+    path_sign="\\W"
+    if fancygit_config_is "show-full-path" "true"
+    then
+        path_sign="\\w"
+    fi
+
+    venv_name=$(fancygit_get_venv_name)
+    branch_area=$(__fancygit_theme_get_branch_area)
+    where="${path}${path_sign}${color_reset}"
+    PS1="${venv_name}${prompt_time}${user_at_host}$where\$${branch_area}${is_double_line} "
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Create the branch area, containing the branch name and status icons.
+# ----------------------------------------------------------------------------------------------------------------------
+__fancygit_theme_get_branch_area() {
+    local branch_name
+    local branch_status
+
+    branch_name=$(fancygit_git_get_branch)
+    branch_status=$(__fancygit_get_notification_area "false")
+    branch_status=$(echo "$branch_status" | sed -e 's/[[:space:]]*$//')
+
+    if [ "$branch_status" != "" ]
+    then
+        branch_name="${branch_name}${branch_status}"
+    fi
+
+    if [ "$branch_name" != "" ]
+    then
+        echo " ($branch_name)"
+        return
+    fi
+
+    echo ""
+}
+
+# Here's where the magic happens!
+# It calls our main function (fancygit_prompt_builder) in order to mount a beautiful PS1 prompt =D
 PROMPT_COMMAND="fancygit_prompt_builder"

@@ -1,0 +1,19 @@
+# Blank variables are not used. They are assigned to blank because when we switch
+# between themes all colors must be replaced.
+
+fancygit_color_scheme_time_background=""
+fancygit_color_scheme_time_foreground="231"
+fancygit_color_scheme_user_symbol_background=""
+fancygit_color_scheme_user_symbol_foreground="231"
+fancygit_color_scheme_workdir_background=""
+fancygit_color_scheme_workdir_foreground="10"
+fancygit_color_scheme_user_at_host_background=""
+fancygit_color_scheme_user_foreground="208"
+fancygit_color_scheme_host_foreground="220"
+fancygit_color_scheme_at_foreground="231"
+fancygit_color_scheme_branch_background=""
+fancygit_color_scheme_branch_foreround="13"
+fancygit_color_scheme_branch_staged_files_background=""
+fancygit_color_scheme_branch_staged_files_foreground="13"
+fancygit_color_scheme_branch_changed_files_background=""
+fancygit_color_scheme_branch_changed_files_foreground="13"
