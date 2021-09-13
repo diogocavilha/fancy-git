@@ -93,7 +93,7 @@ fancygit_update() {
     echo "$(tput bold; tput setaf 2) FancyGit successfully updated ;D$(tput sgr0)"
     echo ""
 
-    head ~/.fancy-git/CHANGELOG.md | grep -zo '>.*[#]' | sed 's/###//g' | sed 's/^>/ >/' | sed 's/^-/ -/'
+    sed '/####/q' $HOME/.fancy-git/CHANGELOG.md | grep -oz '>.*' | sed 's/>/ >/' | sed 's/^## / /' | sed 's/^-/ -/' | sed 's/*/ */' | sed '/^#### v.*/d'
 }
 
 __fancygit_is_git_repo() {
