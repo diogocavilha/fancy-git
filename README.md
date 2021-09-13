@@ -85,25 +85,25 @@ Here you have a list of available styles and their corresponding command to appl
 > Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf
 
 **fancygit --theme-default** && **fancygit --color-scheme-default**  
-![Theme default](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-default.png)
+![Theme default](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-default.png)
 
 **fancygit --color-scheme-dracula**  
-![Color scheme dracula](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-dracula.png)
+![Color scheme dracula](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-dracula.png)
 
 **fancygit --color-scheme-dark**  
-![Color scheme dark](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-dark.png)
+![Color scheme dark](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-dark.png)
 
 **fancygit --color-scheme-dark-col**  
-![Color scheme dark-col](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-dark-col.png)
+![Color scheme dark-col](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-dark-col.png)
 
 **fancygit --color-scheme-light**  
-![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-light.png)
+![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-light.png)
 
 **fancygit --theme-human**  
-![Theme human](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-human.png)
+![Theme human](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-human.png)
 
 **fancygit --theme-simple**  
-![Theme simple](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-simple.png)
+![Theme simple](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-simple.png)
 
 # :link: Separators styles
 
