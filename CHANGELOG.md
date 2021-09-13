@@ -5,9 +5,8 @@
 ## v7.0.0
 
 **ATENTION**  
-
-Too many things have been changed on this version. Chances are that you'll need to reinstall FancyGit. But I promise you
-that it'll worth. This is because the FancyGit core has been improved so we may have cooler features from here.  
+ Too many things have been changed on this version. Chances are that you'll need to reinstall FancyGit. But I promise you
+ that it'll worth. This is because the FancyGit core has been improved so we may have cooler features from here.
 
 - Improve fancy themes structure by creating a color scheme config.
 - Create a new color scheme called "dracula".
