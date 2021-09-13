@@ -82,44 +82,28 @@ There are a few more styles you can choose from.
 
 Here you have a list of available styles and their corresponding command to apply.
 
-**fancygit default**  
-![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
+> Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf
 
-**fancygit double-line**  
-![Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/double-line.png)
+**fancygit --theme-default** && **fancygit --color-scheme-default**  
+![Theme default](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-default.png)
 
-**fancygit dark**  
-![Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark.png)
+**fancygit --color-scheme-dracula**  
+![Color scheme dracula](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-dracula.png)
 
-**fancygit dark-double-line**  
-![Dark Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-double-line.png)
+**fancygit --color-scheme-dark**  
+![Color scheme dark](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-dark.png)
 
-**fancygit dark-col-double-line**  
-![Dark Col Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-col-double-line.png)
+**fancygit --color-scheme-dark-col**  
+![Color scheme dark-col](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-dark-col.png)
 
-**fancygit light**  
-![Light](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light.png)
+**fancygit --color-scheme-light**  
+![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-light.png)
 
-**fancygit light-double-line**  
-![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
+**fancygit --theme-human**  
+![Theme human](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-human.png)
 
-**fancygit simple**  
-![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
-
-**fancygit simple-double-line**  
-![Simple Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple-double-line.png)
-
-**fancygit human**  
-![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
-
-**fancygit human-single-line**  
-![Human Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-single-line.png)
-
-**fancygit human-dark**  
-![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
-
-**fancygit human-dark-single-line**  
-![Human Dark Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark-single-line.png)
+**fancygit --theme-simple**  
+![Theme simple](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-simple.png)
 
 # :link: Separators styles
 
@@ -130,7 +114,15 @@ You can type `fancygit --separator<TAB>` so you can see all the available separa
 It's highly recommended to set up the terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf** which comes with FancyGit.  
 This way, symbols will be rendered correctly and new FancyGit releases must work as expected.  
 In order to install the font you can run `fancygit --fonts-install`.  
-After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
+After that, just change your terminal font config to one of:
+
+- Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf.  
+- DejaVu-Sans-Mono-Nerd-Font-Complete.ttf.  
+- DejaVu-Sans-Mono-Nerd-Font-Complete-Mono.ttf.  
+- JetBrains-Mono-Regular-Nerd-Font-Complete-Mono.ttf.  
+- JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf.  
+
+> Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf  
 
 ![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/separators.png)
 
