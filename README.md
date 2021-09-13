@@ -74,13 +74,13 @@ As a picture is worth a thousand words...
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
-# :art: Styles
+# :art: Themes and color schemes
 
-If you don't want to be too "fancy", you can choose using the **simple style** by running `fancygit simple`.
-If you want to return to the **default style** (colored), you can type `fancygit default`.
-There are a few more styles you can choose from.
+If you don't want to be too "fancy", you can choose using the **simple theme** by running `fancygit --theme-simple`.
+If you want to return to the **default theme**, just type `fancygit --theme-default`.
+There are a few more themes and color schemes you can choose from.
 
-Here you have a list of available styles and their corresponding command to apply.
+Here you have a list of available themes and their corresponding color schemes.
 
 > Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf
 
