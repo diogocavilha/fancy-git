@@ -1,5 +1,5 @@
 # Blank variables are not used. They are assigned to blank because when we switch
-# between themes all colors must be replaced.
+# between themes all colors must be reset.
 
 fancygit_color_scheme_time_background=""
 fancygit_color_scheme_time_foreground="231"

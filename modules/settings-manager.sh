@@ -2,6 +2,8 @@
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
 # Date:   08.14.2021
+#
+# Settings manager - It handles the app configuration file.
 
 FANCYGIT_CONFIG_FILE="$HOME/.fancy-git/app_config"
 FANCYGIT_CONFIG_SAMPLE_FILE="$HOME/.fancy-git/app_config_sample"

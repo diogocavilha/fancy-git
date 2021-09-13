@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
-# Date:   03.02.2016
+# Date:   09.12.2021
 #
-# Core commands manager.
+# App manager - Core commands manager.
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Show the help text.
@@ -70,5 +70,10 @@ fancygit_app_command_deprecation_warning() {
     echo ""
     echo "> Woops! This command has been changed!"
     echo "> Plase type \"fancygit ${param_new_command}\" instead ;)"
+    echo ""
+    echo "> Please, check FancyGit help in order to check possible commands."
+    echo "> Type \"fancygit -h\"".
+    echo ""
+    echo "> You could also check last changes by typing \"fancygit --changelog-show\"."
     echo ""
 }

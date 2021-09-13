@@ -2,6 +2,8 @@
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
 # Date:   09.10.2021
+#
+# Git manager - Git functions provider. It encapsulates common git expression commands.
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Checks if the given branch name is local only.
