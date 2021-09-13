@@ -124,7 +124,7 @@ After that, just change your terminal font config to one of:
 
 > Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf  
 
-![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/separators.png)
+![Separators](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/separators.png)
 
 # :toolbox: Commands
 
