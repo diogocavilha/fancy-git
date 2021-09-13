@@ -84,7 +84,7 @@ Here you have a list of available styles and their corresponding command to appl
 
 > Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf
 
-**fancygit --theme-default** && **fancygit --color-scheme-default**  
+**fancygit --theme-default** (default color scheme: --color-scheme-default)  
 ![Theme default](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-default.png)
 
 **fancygit --color-scheme-dracula**  
@@ -99,10 +99,10 @@ Here you have a list of available styles and their corresponding command to appl
 **fancygit --color-scheme-light**  
 ![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-light.png)
 
-**fancygit --theme-human**  
+**fancygit --theme-human** (default color scheme: --color-scheme-human)  
 ![Theme human](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-human.png)
 
-**fancygit --theme-simple**  
+**fancygit --theme-simple** (default color scheme: --color-scheme-simple)  
 ![Theme simple](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-simple.png)
 
 # :link: Separators styles
