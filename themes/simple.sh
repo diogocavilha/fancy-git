@@ -31,6 +31,9 @@ fancygit_prompt_builder() {
         current_color_scheme="simple"
     fi
 
+    # Load the color scheme.
+    . "$HOME/.fancy-git/color_schemes/$current_color_scheme"
+
     # !! WARNING !!
     # From here you better now what you're doing. Have fun =D
 

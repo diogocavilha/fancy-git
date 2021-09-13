@@ -48,8 +48,6 @@ fancygit_prompt_builder() {
     local branch_color_changed_files_font_tag="\\[\\e[38;5;${fancygit_color_scheme_branch_changed_files_foreground}m\\]"
     local branch_color_font_tag="\\[\\e[38;5;${fancygit_color_scheme_branch_foreround}m\\]"
     local color_reset="\\[\\e[39m\\]"
-    local bold="\\[\\e[1m\\]"
-    local bold_reset="\\[\\e[0m\\]"
     local background_reset="\\[\\e[49m\\]"
 
     # Prompt style.
@@ -81,7 +79,7 @@ fancygit_prompt_builder() {
 
     if [ "$branch_status" != "" ]
     then
-        branch="${branch_color_changed_files_font_tag}${bold}"
+        branch="${branch_color_changed_files_font_tag}"
         branch_end="${background_reset}${color_reset}"
     fi
 
@@ -126,12 +124,12 @@ fancygit_prompt_builder() {
     then
         prompt_path="${path_git}${path_sign}${path_end}"
         prompt_branch="${branch}${branch_name}${branch_end}"
-        PS1="${bold}${prompt_time}${prompt_user}${prompt_path} on ${prompt_branch}$(__fancygit_get_notification_area "$is_rich_notification")"
-        PS1="${PS1}${prompt_symbol}${is_double_line}${bold_reset} "
+        PS1="${prompt_time}${prompt_user}${prompt_path} on ${prompt_branch}$(__fancygit_get_notification_area "$is_rich_notification")"
+        PS1="${PS1}${prompt_symbol}${is_double_line} "
         return
     fi
 
-    PS1="${bold}${prompt_time}${prompt_user}${prompt_path} ${prompt_symbol}${is_double_line}${bold_reset} "
+    PS1="${prompt_time}${prompt_user}${prompt_path} ${prompt_symbol}${is_double_line} "
 }
 
 # Here's where the magic happens!
