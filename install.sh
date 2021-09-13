@@ -5,14 +5,16 @@
 #
 # Fancygit installation script.
 
+errcho() { >&2 echo $@; }
+
 fg_os=$(uname)
 
 git_path=`whereis git | cut -d ":" -f 2`
 
 if [ "$git_path" = "" ]; then
-    echo ""
-    echo " ⚠ Please install git before running this command."
-    echo ""
+    errcho ""
+    errcho " ⚠ Please install git before running this command."
+    errcho ""
     exit 0
 fi
 
