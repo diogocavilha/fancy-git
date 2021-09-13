@@ -22,7 +22,7 @@ case "$1" in
     "--fonts-install") fancygit_app_command_install_fonts;;
     "--changelog-show") fancygit_changelog_show;;
 
-    # Features.
+    # Feature switchers.
     "--enable-full-path") fancygit_config_save "show-full-path" "true";;
     "--disable-full-path") fancygit_config_save "show-full-path" "false";;
     "--enable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "true";;
@@ -33,13 +33,6 @@ case "$1" in
     "--disable-double-line") fancygit_config_save "double-line" "false";;
     "--enable-rich-notification") fancygit_config_save "show-rich-notification" "true";;
     "--disable-rich-notification") fancygit_config_save "show-rich-notification" "false";;
-    "simple") fancygit_config_save "style" "simple";;
-    "default") fancygit_config_save "style" "default";;
-    "human") fancygit_config_save "style" "human";;
-    "dark") fancygit_config_save "style" "dark";;
-    "dark-col") fancygit_config_save "style" "dark-col";;
-    "light") fancygit_config_save "style" "light";;
-    "dracula") fancygit_config_save "style" "dracula";;
 
     # Separator styles.
     "--separator-default") fancygit_config_save "separator" "";;
@@ -66,19 +59,27 @@ case "$1" in
 
     # Deprecated commands.
     "--config-reset") fancygit_app_command_deprecation_warning "--reset";;
-    "--colors-set") fancygit_app_command_deprecation_warning "--colors-apply";;
+    "--colors") fancygit_app_command_deprecation_warning "--suggested-global-git-config";;
+    "--colors-set") fancygit_app_command_deprecation_warning "--suggested-global-git-config-apply";;
+    "--colors-apply") fancygit_app_command_deprecation_warning "--suggested-global-git-config-apply";;
     "--enable-show-time") fancygit_app_command_deprecation_warning "--enable-time";;
     "--disable-show-time") fancygit_app_command_deprecation_warning "--disable-time";;
     "update") fancygit_app_command_deprecation_warning "--update";;
     "configure-fonts") fancygit_app_command_deprecation_warning "--fonts-install";;
-    "dark-col-double-line") fancygit_app_command_deprecation_warning "dark-col";;
+    "dark-col-double-line") fancygit_app_command_deprecation_warning "--color-scheme-dark-col";;
     "double-line") fancygit_app_command_deprecation_warning "--enable-double-line";;
     "dark-double-line") fancygit_app_command_deprecation_warning "--enable-double-line";;
     "light-double-line") fancygit_app_command_deprecation_warning "--enable-double-line";;
-    "human-single-line") fancygit_app_command_deprecation_warning "human";;
-    "human-dark") fancygit_app_command_deprecation_warning "human";;
-    "human-dark-single-line") fancygit_app_command_deprecation_warning "human";;
+    "human-single-line") fancygit_app_command_deprecation_warning "--disable-double-line";;
+    "human-dark") fancygit_app_command_deprecation_warning "--theme-human";;
+    "human-dark-single-line") fancygit_app_command_deprecation_warning "--disable-double-line";;
     "simple-double-line") fancygit_app_command_deprecation_warning "--enable-double-line";;
+    "simple") fancygit_app_command_deprecation_warning "--theme-simple";;
+    "default") fancygit_app_command_deprecation_warning "--theme-default";;
+    "human") fancygit_app_command_deprecation_warning "--theme-human";;
+    "dark") fancygit_app_command_deprecation_warning "--color-scheme-dark";;
+    "dark-col") fancygit_app_command_deprecation_warning "--color-scheme-dark-col";;
+    "light") fancygit_app_command_deprecation_warning "--color-scheme-light";;
     "") fancygit_app_command_return;;
     *) fancygit_app_command_not_found "$1";;
 esac
