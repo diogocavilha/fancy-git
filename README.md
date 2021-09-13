@@ -122,7 +122,7 @@ After that, just change your terminal font config to one of:
 - JetBrains-Mono-Regular-Nerd-Font-Complete-Mono.ttf.  
 - JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf.  
 
-> Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf  
+> Screenshot font: Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf  
 
 ![Separators](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/separators.png)
 
