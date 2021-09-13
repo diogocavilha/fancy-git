@@ -9,6 +9,7 @@ _fancygit() {
         --version \
         --update \
         --fonts-install \
+        --changelog-show \
         simple \
         human \
         default \

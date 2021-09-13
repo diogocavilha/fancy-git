@@ -144,6 +144,7 @@ After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-
 | fancygit --fonts-install                   | Install font in order to render icons properly.
 | fancygit --colors                          | Show suggested colors config.
 | fancygit --colors-apply                    | Apply the suggested colors config.
+| fancygit --changelog-show                  | Show changelog for the last version.
 | fancygit --disable-full-path               | Show only the the working directory name.
 | fancygit --enable-full-path                | Show the entire path.
 | fancygit --disable-show-user-at-machine    | Hide (user@machine) info.

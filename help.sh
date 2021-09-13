@@ -18,6 +18,7 @@ echo " Fancy Git v$FANCYGIT_VERSION - $(date +%Y) by Diogo Alexsander Cavilha <d
  fancygit --suggested-global-git-config-apply   Apply the suggested global git config.
  fancygit --config-list                         Show FancyGit config.
  fancygit --config-reset                        Reset the configuration as if you have just installed FancyGit.
+ fancygit --changelog-show                      Show changelog for the last version.
 
  FEATURE COMMANDS
 

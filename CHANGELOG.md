@@ -19,6 +19,7 @@ that it'll worth. This is because the FancyGit core has been improved so we may 
 - Add font "JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf".
 - Change `fancygit --colors` to `fancygit --suggested-global-git-config`.
 - Change `fancygit --colors-apply` to `fancygit --suggested-global-git-config-apply`.
+- Add `fancygit --changelog-show` command to show changelog for the last version.
 - Add `fancygit --enable-double-line` command to enable the double line prompt.
 - Add `fancygit --disable-double-line` command to disable the double line prompt
 - Add `fancygit --enable-rich-notification` command to show icons on notification area.

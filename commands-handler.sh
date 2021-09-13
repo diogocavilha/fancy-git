@@ -20,6 +20,7 @@ case "$1" in
     "--reset") fancygit_config_reset;;
     "--update") fancygit_update;;
     "--fonts-install") fancygit_app_command_install_fonts;;
+    "--changelog-show") fancygit_changelog_show;;
 
     # Features.
     "--enable-full-path") fancygit_config_save "show-full-path" "true";;

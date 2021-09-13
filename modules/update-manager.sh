@@ -3,6 +3,8 @@
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
 # Date:   12.05.2018
 
+FANCYGIT_CHANGELOG_FILE="$HOME/.fancy-git/CHANGELOG.md"
+
 check_for_update() {
     if __fancygit_must_check_for_update
     then
@@ -93,7 +95,7 @@ fancygit_update() {
     echo "$(tput bold; tput setaf 2) FancyGit successfully updated ;D$(tput sgr0)"
     echo ""
 
-    sed '/####/q' $HOME/.fancy-git/CHANGELOG.md | grep -oz '>.*' | sed 's/>/ >/' | sed 's/^## / /' | sed 's/^-/ -/' | sed 's/*/ */' | sed '/^#### v.*/d'
+    fancygit_changelog_show
 }
 
 __fancygit_is_git_repo() {
@@ -161,4 +163,17 @@ __fancygit_reset_update_checker() {
     echo "$current_date" > ~/.fancy-git/last_update_at
 
     rm ~/.fancy-git/tmpversions 2> /dev/null
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Show changelog content for the last version.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_changelog_show() {
+    sed '/####/q' "$FANCYGIT_CHANGELOG_FILE" \
+        | grep -oz '>.*' \
+        | sed 's/>/ >/' \
+        | sed 's/^## / /' \
+        | sed 's/^-/ -/' \
+        | sed 's/*/ */' \
+        | sed '/^#### v.*/d'
 }
