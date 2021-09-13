@@ -12,24 +12,19 @@ fancygit_prompt_builder() {
     # !! IMPORTANT !!
     # If you're just interested on creating a new color scheme, please have a look at $HOME/.fancy-git/color_schemes.
     # Everything you need to do is creating a new file to the color scheme you wish to create.
-    # After creating your new color scheme file, be sure to add its name to the $supported_color_schemes array, so it'll
-    # be accepted by the theme.
+    # After creating the new color scheme file, be sure to register its name to the $supported_color_schemes list, so
+    # it'll be accepted by the theme.
     local supported_color_schemes
     local current_color_scheme
 
-    # New color scheme names must be added here.
+    # All color schemes for this theme must be registered here.
     supported_color_schemes=(
         "human"
     )
 
-    # Any color scheme other than $supported_color_schemes will be ignored.
-    # It will be set to the default color scheme again.
-    current_color_scheme=$(fancygit_config_get "color_scheme" "default")
-    if [[ ! " ${supported_color_schemes[*]} " =~ ${current_color_scheme} ]]
-    then
-        fancygit_config_save "color_scheme" "human"
-        current_color_scheme="human"
-    fi
+    # If the current color scheme is not one of $supported_color_schemes, it'll be ignored and will be set to the
+    # default color scheme again.
+    current_color_scheme=$(fancygit_get_color_scheme "${supported_color_schemes[*]}" "human")
 
     # Load the color scheme.
     . "$HOME/.fancy-git/color_schemes/$current_color_scheme"

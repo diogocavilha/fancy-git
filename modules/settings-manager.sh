@@ -104,3 +104,28 @@ __fancygit_create_config_if_not_exists() {
         sed -i '/^$/d' "$FANCYGIT_CONFIG_FILE"
     fi
 }
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Return a valid color scheme according to the current theme.
+#
+# param string $1 List of color schemes that are supported by the theme.
+# param string $2 Fallback color scheme in case the current one is not valid.
+#
+# return string The color scheme name.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_get_color_scheme() {
+    local param_supported_color_schemes="$1"
+    local param_fallback_color_scheme="$2"
+    local current_color_scheme
+
+    current_color_scheme=$(fancygit_config_get "color_scheme" "$param_fallback_color_scheme")
+
+    if [[ ! " ${param_supported_color_schemes[*]} " =~ ${current_color_scheme} ]]
+    then
+        fancygit_config_save "color_scheme" "$param_fallback_color_scheme"
+        echo "$param_fallback_color_scheme"
+        return
+    fi
+
+    echo "$current_color_scheme"
+}
