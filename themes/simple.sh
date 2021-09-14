@@ -89,13 +89,13 @@ __fancygit_theme_get_branch_area() {
     branch_status=$(fancygit_get_notification_area "$is_rich_notification")
     branch_status=$(echo "$branch_status" | sed -e 's/[[:space:]]*$//')
 
-    if [ "true" = "$is_rich_notification" ]
-    then
-        branch_status=" [ $(echo "$branch_status" | sed -e 's/^[[:space:]]*//') ]"
-    fi
-
     if [ "$branch_status" != "" ]
     then
+        if [ "true" = "$is_rich_notification" ]
+        then
+            branch_status=" [ $(echo "$branch_status" | sed -e 's/^[[:space:]]*//') ]"
+        fi
+
         branch_name="${branch_name}${branch_status}"
     fi
 
