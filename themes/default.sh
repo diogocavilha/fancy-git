@@ -91,25 +91,25 @@ fancygit_prompt_builder() {
     local is_rich_notification
 
     # Read some config settings.
-    is_rich_notification=$(fancygit_config_get "show-rich-notification" "true")
-    if fancygit_config_is "double-line" "true"
+    is_rich_notification=$(fancygit_config_get "show_rich_notification" "true")
+    if fancygit_config_is "double_line" "true"
     then
         double_line_config="\n$(fancygit_config_get "ps2" "➜")"
     fi
 
-    if fancygit_config_is "show-time" "true"
+    if fancygit_config_is "show_time" "true"
     then
-        time_format=$(fancygit_config_get "time-format" "%H:%M:%S")
+        time_format=$(fancygit_config_get "time_format" "%H:%M:%S")
         prompt_time="${time}[$(date +"${time_format}")] ${time_end}"
     fi
 
-    if fancygit_config_is "show-user-at-machine" "true"
+    if fancygit_config_is "show_user_at_machine" "true"
     then
         prompt_user="${user_at_host}${user}\\u${none}${at}@${none}${host}\\h${none} ${user_at_host_end}"
     fi
 
     path_sign="\\W"
-    if fancygit_config_is "show-full-path" "true"
+    if fancygit_config_is "show_full_path" "true"
     then
         path_sign="\\w"
     fi

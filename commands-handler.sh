@@ -23,16 +23,16 @@ case "$1" in
     "--changelog-show") fancygit_changelog_show;;
 
     # Feature switchers.
-    "--enable-full-path") fancygit_config_save "show-full-path" "true";;
-    "--disable-full-path") fancygit_config_save "show-full-path" "false";;
-    "--enable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "true";;
-    "--disable-show-user-at-machine") fancygit_config_save "show-user-at-machine" "false";;
-    "--enable-time") fancygit_config_save "show-time" "true";;
-    "--disable-time") fancygit_config_save "show-time" "false";;
-    "--enable-double-line") fancygit_config_save "double-line" "true";;
-    "--disable-double-line") fancygit_config_save "double-line" "false";;
-    "--enable-rich-notification") fancygit_config_save "show-rich-notification" "true";;
-    "--disable-rich-notification") fancygit_config_save "show-rich-notification" "false";;
+    "--enable-full-path") fancygit_config_save "show_full_path" "true";;
+    "--disable-full-path") fancygit_config_save "show_full_path" "false";;
+    "--enable-show-user-at-machine") fancygit_config_save "show_user_at_machine" "true";;
+    "--disable-show-user-at-machine") fancygit_config_save "show_user_at_machine" "false";;
+    "--enable-time") fancygit_config_save "show_time" "true";;
+    "--disable-time") fancygit_config_save "show_time" "false";;
+    "--enable-double-line") fancygit_config_save "double_line" "true";;
+    "--disable-double-line") fancygit_config_save "double_line" "false";;
+    "--enable-rich-notification") fancygit_config_save "show_rich_notification" "true";;
+    "--disable-rich-notification") fancygit_config_save "show_rich_notification" "false";;
 
     # Separator styles.
     "--separator-default") fancygit_config_save "separator" "";;

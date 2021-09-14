@@ -51,25 +51,25 @@ fancygit_prompt_builder() {
     local where=""
 
     # Check some config preferences.
-    if fancygit_config_is "double-line" "true"
+    if fancygit_config_is "double_line" "true"
     then
         fancygit_PS2=$(fancygit_config_get "ps2" "➜")
         is_double_line="\n${fancygit_PS2}"
     fi
 
-    if fancygit_config_is "show-time" "true"
+    if fancygit_config_is "show_time" "true"
     then
-        time_format=$(fancygit_config_get "time-format" "%H:%M:%S")
+        time_format=$(fancygit_config_get "time_format" "%H:%M:%S")
         prompt_time="[$(date +"$time_format")] "
     fi
 
-    if fancygit_config_is "show-user-at-machine" "true"
+    if fancygit_config_is "show_user_at_machine" "true"
     then
         user_at_host="$user$at$host:"
     fi
 
     path_sign="\\W"
-    if fancygit_config_is "show-full-path" "true"
+    if fancygit_config_is "show_full_path" "true"
     then
         path_sign="\\w"
     fi
