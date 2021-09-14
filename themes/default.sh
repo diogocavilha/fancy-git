@@ -30,6 +30,14 @@ fancygit_prompt_builder() {
     # default color scheme again.
     current_color_scheme=$(fancygit_get_color_scheme "${supported_color_schemes[*]}" "default")
 
+    if [ $? -eq 1 ]
+    then
+        echo ""
+        echo " > Color scheme not supported by this theme."
+        echo " > Getting back to --color-scheme-default."
+        echo ""
+    fi
+
     # Load the color scheme.
     . "$HOME/.fancy-git/color_schemes/$current_color_scheme"
 
