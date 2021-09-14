@@ -46,11 +46,11 @@ __fancygit_update_notification() {
     echo ""
 
     case "$option" in
-        "y"|"Y"|"") 
+        "y"|"Y"|"")
             fancygit_update
             return;;
     esac
-    
+
     __fancygit_reset_update_checker
 }
 
@@ -74,7 +74,7 @@ __fancygit_update_checker() {
     cd ~/.fancy-git
     current_version=$(git tag | tail -1)
 
-    git fetch -t 2> /dev/null  
+    git fetch -t 2> /dev/null
     new_version=$(git tag | tail -1)
 
     current_version_filter_number=$(echo "$current_version" | sed 's/[vV\.]//g')
@@ -123,7 +123,7 @@ __fancygit_is_git_repo() {
     local branch_name
 
     branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-    
+
     if [ "$branch_name" = "" ]
     then
         return 1
@@ -141,7 +141,7 @@ __fancygit_is_git_repo() {
 # ----------------------------------------------------------------------------------------------------------------------
 __fancygit_must_check_for_update() {
     local current_date
-    local last_update_at  
+    local last_update_at
 
     last_update_at=$(cat ~/.fancy-git/last_update_at 2> /dev/null)
     current_date=$(date +%Y-%m-%d)
@@ -202,7 +202,7 @@ __fancygit_reset_update_checker() {
     local current_date
 
     current_date=$(date +%Y-%m-%d)
-    
+
     echo "$current_date" > ~/.fancy-git/last_update_at
 
     rm ~/.fancy-git/tmpversions 2> /dev/null

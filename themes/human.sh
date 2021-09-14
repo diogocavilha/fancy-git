@@ -59,18 +59,32 @@ fancygit_prompt_builder() {
     local branch_end="${background_reset}${color_reset}"
     local time="${time_color_tag}"
     local time_end="${background_reset}"
-    local venv=""
-    local path_sign=""
-    local prompt_user=""
-    local prompt_time=""
-    local fancygit_PS2=""
-    local is_double_line=""
-    local branch_status=""
+    local prompt_user_at_host=""
+    local branch_status
+    local staged_files
     local is_rich_notification
+    local prompt_time
+    local path_sign
+    local is_double_line
+    local venv_name
+    local prompt_symbol
+    local prompt_path
 
     # Get git repo info.
     branch_status=$(fancygit_git_get_status)
     staged_files=$(fancygit_git_get_staged_files)
+
+    # Get some config preferences.
+    is_rich_notification=$(fancygit_config_get "show_rich_notification" "true")
+
+    # Get theme config.
+    prompt_time="${time}$(fancygit_theme_get_time)${time_end}"
+    path_sign=$(fancygit_theme_get_path_sign)
+    is_double_line=$(fancygit_theme_get_double_line)
+    venv_name=$(fancygit_theme_get_venv_name)
+
+    prompt_symbol="${user_symbol}\$${user_symbol_end}"
+    prompt_path="${path}${path_sign}${path_end}${color_reset}"
 
     if [ "$branch_status" != "" ]
     then
@@ -84,34 +98,15 @@ fancygit_prompt_builder() {
         branch_end="${background_reset}${color_reset}"
     fi
 
-    # Check some config preferences.
-    is_rich_notification=$(fancygit_config_get "show_rich_notification" "true")
-    if fancygit_config_is "double_line" "true"
+    if [ "" != "$venv_name" ]
     then
-        fancygit_PS2=$(fancygit_config_get "ps2" "➜")
-        is_double_line="\n${fancygit_PS2}"
-    fi
-
-    if fancygit_config_is "show_time" "true"
-    then
-        time_format=$(fancygit_config_get "time_format" "%H:%M:%S")
-        prompt_time="${time}[$(date +"$time_format")] ${time_end}"
+        venv_name=" as env(${user}${venv_name}${color_reset})"
     fi
 
     if fancygit_config_is "show_user_at_machine" "true"
     then
-        prompt_user="${user}\\u${color_reset}${at} at ${color_reset}${host}\\h${color_reset}${user_at_host_end} in "
+        prompt_user_at_host="${user}\\u${color_reset}${at} at ${color_reset}${host}\\h${color_reset}${user_at_host_end} in "
     fi
-
-    path_sign="\\W"
-    if fancygit_config_is "show_full_path" "true"
-    then
-        path_sign="\\w"
-    fi
-
-    prompt_symbol="${user_symbol}\$${user_symbol_end}"
-    venv=$(__fancygit_get_venv_icon)
-    prompt_path="${path}${venv}${path_sign}${path_end}${color_reset}"
 
     # If we have a branch name, it means we are in a git repo, so we need to make some changes on PS1.
     branch_name=$(fancygit_git_get_branch)
@@ -119,12 +114,12 @@ fancygit_prompt_builder() {
     then
         prompt_path="${path_git}${path_sign}${path_end}"
         prompt_branch="${branch}${branch_name}${branch_end}"
-        PS1="${prompt_time}${prompt_user}${prompt_path} on ${prompt_branch}$(__fancygit_get_notification_area "$is_rich_notification")"
+        PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} on ${prompt_branch}$(fancygit_get_notification_area "$is_rich_notification")"
         PS1="${PS1}${prompt_symbol}${is_double_line} "
         return
     fi
 
-    PS1="${prompt_time}${prompt_user}${prompt_path} ${prompt_symbol}${is_double_line} "
+    PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} ${prompt_symbol}${is_double_line} "
 }
 
 # Here's where the magic happens!

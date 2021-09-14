@@ -44,39 +44,26 @@ fancygit_prompt_builder() {
     local host="${host_color_font_tag}\h${color_reset}"
     local at="${at_color_font_tag}@${color_reset}"
     local path="${workdir_color_font_tag}"
-    local venv_name=""
-    local prompt_time=""
-    local branch_area=""
-    local is_double_line=""
-    local where=""
+    local prompt_time
+    local path_sign
+    local is_double_line
+    local venv_name
+    local branch_area
+    local where
 
-    # Check some config preferences.
-    if fancygit_config_is "double_line" "true"
-    then
-        fancygit_PS2=$(fancygit_config_get "ps2" "➜")
-        is_double_line="\n${fancygit_PS2}"
-    fi
-
-    if fancygit_config_is "show_time" "true"
-    then
-        time_format=$(fancygit_config_get "time_format" "%H:%M:%S")
-        prompt_time="[$(date +"$time_format")] "
-    fi
+    # Get theme config.
+    prompt_time="$(fancygit_theme_get_time)"
+    path_sign=$(fancygit_theme_get_path_sign)
+    is_double_line=$(fancygit_theme_get_double_line)
+    venv_name=$(fancygit_theme_get_venv_name)
+    branch_area=$(__fancygit_theme_get_branch_area)
+    where="${path}${path_sign}${color_reset}"
 
     if fancygit_config_is "show_user_at_machine" "true"
     then
         user_at_host="$user$at$host:"
     fi
 
-    path_sign="\\W"
-    if fancygit_config_is "show_full_path" "true"
-    then
-        path_sign="\\w"
-    fi
-
-    venv_name=$(fancygit_get_venv_name)
-    branch_area=$(__fancygit_theme_get_branch_area)
-    where="${path}${path_sign}${color_reset}"
     PS1="${venv_name}${prompt_time}${user_at_host}$where\$${branch_area}${is_double_line} "
 }
 
@@ -84,12 +71,20 @@ fancygit_prompt_builder() {
 # Create the branch area, containing the branch name and status icons.
 # ----------------------------------------------------------------------------------------------------------------------
 __fancygit_theme_get_branch_area() {
+    local is_rich_notification
     local branch_name
     local branch_status
 
+    is_rich_notification=$(fancygit_config_get "show_rich_notification" "false")
+
     branch_name=$(fancygit_git_get_branch)
-    branch_status=$(__fancygit_get_notification_area "false")
+    branch_status=$(fancygit_get_notification_area "$is_rich_notification")
     branch_status=$(echo "$branch_status" | sed -e 's/[[:space:]]*$//')
+
+    if [ "true" = "$is_rich_notification" ]
+    then
+        branch_status=" [ $(echo "$branch_status" | sed -e 's/^[[:space:]]*//') ]"
+    fi
 
     if [ "$branch_status" != "" ]
     then

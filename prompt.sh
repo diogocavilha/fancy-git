@@ -12,6 +12,7 @@
 . "$HOME/.fancy-git/modules/git-manager.sh"
 . "$HOME/.fancy-git/modules/update-manager.sh"
 . "$HOME/.fancy-git/commands-handler.sh"
+. "$HOME/.fancy-git/theme-functions.sh"
 
 # ----------------------------------------------------------------------------------------------------------------------
 # The main FanyGit function. It changes the prompt according to the switched theme.
