@@ -8,16 +8,20 @@
 FANCYGIT_RUNNING_OS=$(uname)
 FANCYGIT_GIT_PATH=$(whereis git | cut -d ":" -f 2)
 
-if [ "$FANCYGIT_GIT_PATH" = "" ]; then
-    echo ""
-    echo " ⚠ Please install git before running this command."
-    echo ""
+errcho() {
+    >&2 echo $@;
+}
+
+if [ "" = "$FANCYGIT_GIT_PATH" ]; then
+    errcho ""
+    errcho " ⚠ Please install git before running this command."
+    errcho ""
     exit 0
 fi
 
 git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git
 
-if [ "$FANCYGIT_RUNNING_OS" = "Linux" ]; then
+if [ "Linux" = "$FANCYGIT_RUNNING_OS" ]; then
     cp -f ~/.bashrc ~/.bashrc.backup
     echo "" >> ~/.bashrc
     echo ". ~/.fancy-git/prompt.sh" >> ~/.bashrc
@@ -30,7 +34,7 @@ if [ "$FANCYGIT_RUNNING_OS" = "Linux" ]; then
     echo "$current_date" > ~/.fancy-git/last_update_at
 fi
 
-if [ "$FANCYGIT_RUNNING_OS" = "Darwin" ]; then
+if [ "Darwin" = "$FANCYGIT_RUNNING_OS" ]; then
     cp -f ~/.bash_profile ~/.bash_profile.backup
     echo "" >> ~/.bash_profile
     echo ". ~/.fancy-git/prompt.sh" >> ~/.bash_profile
