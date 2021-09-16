@@ -181,7 +181,7 @@ fancygit_theme_get_venv_name() {
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Return the path sign.
-# 
+#
 # return string Path sign.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_theme_get_path_sign() {
@@ -196,7 +196,7 @@ fancygit_theme_get_path_sign() {
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Return the prompt time.
-# 
+#
 # return string Formated time.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_theme_get_time() {
@@ -219,4 +219,47 @@ fancygit_theme_get_double_line() {
     fi
 
     echo ""
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Change color scheme.
+# Show a warning in case the requested color scheme is not supported by current theme.
+#
+# param string $1 Theme name.
+# param string $2 Corresponding color scheme.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_theme_color_scheme_set() {
+    local param_theme="$1"
+    local param_color_scheme="$2"
+    local current_theme
+
+    local current_theme=$(fancygit_config_get "theme" "default")
+
+    if [ "$current_theme" != "$param_theme" ]
+    then
+        printf "\n > Color scheme (--color-scheme-${param_color_scheme}) is not supported by current theme (--theme-${current_theme}).\n\n"
+        return
+    fi
+
+    fancygit_config_save "color_scheme" "$param_color_scheme"
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Change theme.
+# Show a message asking the user to reload the terminal.
+#
+# param string $1 Theme name.
+# param string $2 Default theme color scheme.
+# param string $3 (true|false) Show rich notification.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_theme_set() {
+    local param_theme="$1"
+    local param_default_color_scheme="$2"
+    local param_show_rich_notification="$3"
+
+    fancygit_config_save "theme" "$param_theme"
+    fancygit_config_save "color_scheme" "$param_default_color_scheme"
+    fancygit_config_save "show_rich_notification" "$param_show_rich_notification"
+
+    printf "\n > Please reload the bash config file or close and open the terminal again.\n\n"
 }

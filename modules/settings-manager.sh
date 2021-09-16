@@ -106,13 +106,14 @@ __fancygit_create_config_if_not_exists() {
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
+# Deprecated
+#
 # Return a valid color scheme according to the current theme.
 #
 # param string $1 List of color schemes that are supported by the theme.
 # param string $2 Fallback color scheme in case the current one is not valid.
 #
 # return string The color scheme name.
-# return int 1 The selected color scheme is not supported by current theme.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_get_color_scheme() {
     local param_supported_color_schemes="$1"
@@ -126,9 +127,6 @@ fancygit_get_color_scheme() {
         # Color scheme is not supported by theme. Set it back to $param_fallback_color_scheme.
         fancygit_config_save "color_scheme" "$param_fallback_color_scheme"
         echo "$param_fallback_color_scheme"
-
-        # Return an integer to show a warning.
-        return 1
     fi
 
     echo "$current_color_scheme"

@@ -6,36 +6,17 @@
 # ----------------------------------------------------------------------------------------------------------------------
 # The main function to change the prompt.
 # ----------------------------------------------------------------------------------------------------------------------
-fancygit_prompt_builder() {
+fancygit_theme_builder() {
     check_for_update
 
     # !! IMPORTANT !!
     # If you're just interested on creating a new color scheme, please have a look at $HOME/.fancy-git/color_schemes.
     # Everything you need to do is creating a new file to the color scheme you wish to create.
-    # After creating the new color scheme file, be sure to register its name to the $supported_color_schemes list, so
-    # it'll be accepted by the theme.
-    local supported_color_schemes
-    local current_color_scheme
-
-    # All color schemes for this theme must be registered here.
-    supported_color_schemes=(
-        "human"
-    )
-
-    # If the current color scheme is not one of $supported_color_schemes, it'll be ignored and will be set to the
-    # default color scheme again.
-    current_color_scheme=$(fancygit_get_color_scheme "${supported_color_schemes[*]}" "human")
-
-    if [ $? -eq 1 ]
-    then
-        echo ""
-        echo " > Color scheme not supported by this theme."
-        echo " > Getting back to --color-scheme-human."
-        echo ""
-    fi
+    local color_scheme
+    color_scheme=$(fancygit_config_get "color_scheme" "human")
 
     # Load the color scheme.
-    . "$HOME/.fancy-git/color_schemes/$current_color_scheme"
+    . "${HOME}/.fancy-git/color_schemes/${color_scheme}"
 
     # !! WARNING !!
     # From here you better now what you're doing. Have fun =D
@@ -131,5 +112,5 @@ fancygit_prompt_builder() {
 }
 
 # Here's where the magic happens!
-# It calls our main function (fancygit_prompt_builder) in order to mount a beautiful PS1 prompt =D
-PROMPT_COMMAND="fancygit_prompt_builder"
+# It calls our main function (fancygit_theme_builder) in order to mount a beautiful PS1 prompt =D
+PROMPT_COMMAND="fancygit_theme_builder"

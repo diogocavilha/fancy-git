@@ -9,6 +9,7 @@
 . ~/.fancy-git/modules/git-manager.sh
 . ~/.fancy-git/modules/update-manager.sh
 . ~/.fancy-git/modules/app-manager.sh
+. ~/.fancy-git/theme-functions.sh
 
 case "$1" in
     # Core commands.
@@ -44,18 +45,18 @@ case "$1" in
     "--separator-paint") fancygit_config_save "separator" "";;
 
     #  Themes.
-    "--theme-default") fancygit_config_save "theme" "default";;
-    "--theme-human") fancygit_config_save "theme" "human";;
-    "--theme-simple") fancygit_config_save "theme" "simple";;
+    "--theme-default") fancygit_theme_set "default" "default" "true";;
+    "--theme-human") fancygit_theme_set "human" "human" "false";;
+    "--theme-simple") fancygit_theme_set "simple" "simple" "false";;
 
     # Color schemes.
-    "--color-scheme-simple") fancygit_config_save "color_scheme" "simple";;
-    "--color-scheme-human") fancygit_config_save "color_scheme" "human";;
-    "--color-scheme-default") fancygit_config_save "color_scheme" "default";;
-    "--color-scheme-dracula") fancygit_config_save "color_scheme" "dracula";;
-    "--color-scheme-dark") fancygit_config_save "color_scheme" "dark";;
-    "--color-scheme-dark-col") fancygit_config_save "color_scheme" "dark-col";;
-    "--color-scheme-light") fancygit_config_save "color_scheme" "light";;
+    "--color-scheme-simple") fancygit_theme_color_scheme_set "simple" "simple";;
+    "--color-scheme-human") fancygit_theme_color_scheme_set "human" "human";;
+    "--color-scheme-default") fancygit_theme_color_scheme_set "default" "default";;
+    "--color-scheme-dracula") fancygit_theme_color_scheme_set "default" "dracula";;
+    "--color-scheme-dark") fancygit_theme_color_scheme_set "default" "dark";;
+    "--color-scheme-dark-col") fancygit_theme_color_scheme_set "default" "dark-col";;
+    "--color-scheme-light") fancygit_theme_color_scheme_set "default" "light";;
 
     # Deprecated commands.
     "--config-reset") fancygit_app_command_deprecation_warning "--reset";;
