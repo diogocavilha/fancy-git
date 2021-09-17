@@ -13,7 +13,7 @@ fancygit_theme_builder() {
     # If you're just interested on creating a new color scheme, please have a look at $HOME/.fancy-git/color_schemes.
     # Everything you need to do is creating a new file to the color scheme you wish to create.
     local color_scheme
-    color_scheme=$(fancygit_config_get "color_scheme" "default")
+    color_scheme=$(fancygit_config_get "color_scheme" "default_default")
 
     # Load the color scheme.
     . "${HOME}/.fancy-git/color_schemes/${color_scheme}"

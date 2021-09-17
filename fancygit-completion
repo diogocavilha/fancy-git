@@ -12,6 +12,9 @@ _fancygit() {
         --changelog-show \
         --suggested-global-git-config \
         --suggested-global-git-config-apply \
+        --show-color-schemes \
+        --show-color-schemes-all \
+        --show-themes \
         --enable-full-path \
         --disable-full-path \
         --enable-show-user-at-machine \

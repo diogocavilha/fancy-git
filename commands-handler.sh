@@ -22,6 +22,9 @@ case "$1" in
     "--update") fancygit_update;;
     "--fonts-install") fancygit_app_command_install_fonts;;
     "--changelog-show") fancygit_changelog_show;;
+    "--show-color-schemes") fancygit_show_color_schemes;;
+    "--show-color-schemes-all") fancygit_show_color_schemes "true";;
+    "--show-themes") fancygit_show_themes;;
 
     # Feature switchers.
     "--enable-full-path") fancygit_config_save "show_full_path" "true";;
@@ -45,18 +48,18 @@ case "$1" in
     "--separator-paint") fancygit_config_save "separator" "";;
 
     #  Themes.
-    "--theme-default") fancygit_theme_set "default" "default" "true";;
-    "--theme-human") fancygit_theme_set "human" "human" "false";;
-    "--theme-simple") fancygit_theme_set "simple" "simple" "false";;
+    "--theme-default") fancygit_theme_set "default" "true";;
+    "--theme-human") fancygit_theme_set "human" "false";;
+    "--theme-simple") fancygit_theme_set "simple" "false";;
 
     # Color schemes.
-    "--color-scheme-simple") fancygit_theme_color_scheme_set "simple" "simple";;
-    "--color-scheme-human") fancygit_theme_color_scheme_set "human" "human";;
-    "--color-scheme-default") fancygit_theme_color_scheme_set "default" "default";;
-    "--color-scheme-dracula") fancygit_theme_color_scheme_set "default" "dracula";;
-    "--color-scheme-dark") fancygit_theme_color_scheme_set "default" "dark";;
-    "--color-scheme-dark-col") fancygit_theme_color_scheme_set "default" "dark-col";;
-    "--color-scheme-light") fancygit_theme_color_scheme_set "default" "light";;
+    "--color-scheme-simple") fancygit_theme_color_scheme_set "simple_simple";;
+    "--color-scheme-human") fancygit_theme_color_scheme_set "human_human";;
+    "--color-scheme-default") fancygit_theme_color_scheme_set "default_default";;
+    "--color-scheme-dracula") fancygit_theme_color_scheme_set "default_dracula";;
+    "--color-scheme-dark") fancygit_theme_color_scheme_set "default_dark";;
+    "--color-scheme-dark-col") fancygit_theme_color_scheme_set "default_dark-col";;
+    "--color-scheme-light") fancygit_theme_color_scheme_set "default_light";;
 
     # Deprecated commands.
     "--config-reset") fancygit_app_command_deprecation_warning "--reset";;

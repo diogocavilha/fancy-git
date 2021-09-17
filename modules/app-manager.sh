@@ -77,3 +77,49 @@ fancygit_app_command_deprecation_warning() {
     echo "> You could also check last changes by typing \"fancygit --changelog-show\"."
     echo ""
 }
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Show a list of available color schemes.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_show_color_schemes() {
+    local param_show_all="$1"
+    local current_theme
+    local color_schemes_path="${HOME}/.fancy-git/color_schemes"
+
+    if [ "true" = "$param_show_all" ]
+    then
+        tput bold
+        tput setaf 2
+        printf "\nAll available color schemes:\n\n"
+        tput sgr0
+
+        printf "%s\n" $(ls ${color_schemes_path}/* | sed "s,${color_schemes_path}/.*_,--color-scheme-,")
+        echo ""
+        return
+    fi
+
+    current_theme=$(fancygit_config_get "theme" "default")
+
+    tput bold
+    tput setaf 2
+    printf "\nAvailable color schemes for current theme (--theme-${current_theme}):\n\n"
+    tput sgr0
+
+    printf "%s\n" $(ls ${color_schemes_path}/${current_theme}_* | sed "s,${color_schemes_path}/${current_theme}_,--color-scheme-,")
+    echo ""
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Show a list of available themes.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_show_themes() {
+    local themes_path="${HOME}/.fancy-git/themes"
+
+    tput bold
+    tput setaf 2
+    printf "\nAll available themes:\n\n"
+    tput sgr0
+
+    printf "%s\n" $(ls ${themes_path}/* | sed "s,${themes_path}/*,--theme-," | sed 's/.sh//')
+    echo ""
+}

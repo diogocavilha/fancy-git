@@ -139,6 +139,9 @@ After that, just change your terminal font config to one of:
 | fancygit --config-list                       | Show FancyGit config.
 | fancygit --reset                             | Reset the configuration as if you have just installed FancyGit.
 | fancygit --changelog-show                    | Show changelog for the last version.
+| fancygit --show-themes                       | Show all available themes.
+| fancygit --show-color-schemes                | Show available color schemes for current theme.
+| fancygit --show-color-schemes-all            | Show all available color schemes.
 | fancygit --enable-full-path                  | Show the entire path.
 | fancygit --disable-full-path                 | Show only the the working directory name.
 | fancygit --enable-show-user-at-machine       | Show (user@machine) info, as usual.

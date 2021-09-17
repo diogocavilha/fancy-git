@@ -212,6 +212,9 @@ fancygit_theme_get_time() {
     echo ""
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Return double line configuration for PS1.
+# ----------------------------------------------------------------------------------------------------------------------
 fancygit_theme_get_double_line() {
     if fancygit_config_is "double_line" "true"
     then
@@ -229,19 +232,23 @@ fancygit_theme_get_double_line() {
 # param string $2 Corresponding color scheme.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_theme_color_scheme_set() {
-    local param_theme="$1"
-    local param_color_scheme="$2"
+    local param_color_scheme_name="$1"
+    local correspondent_color_scheme_theme
+    local color_scheme
     local current_theme
 
-    local current_theme=$(fancygit_config_get "theme" "default")
+    correspondent_color_scheme_theme=$(echo "$param_color_scheme_name" | cut -d "_" -f 1)
+    color_scheme=$(echo "$param_color_scheme_name" | cut -d "_" -f 2)
+    current_theme=$(fancygit_config_get "theme" "default")
 
-    if [ "$current_theme" != "$param_theme" ]
+    # If trying to set a color scheme that's not supported by current theme, show a warning message.
+    if [ "$current_theme" != "$correspondent_color_scheme_theme" ]
     then
-        printf "\n > Color scheme (--color-scheme-${param_color_scheme}) is not supported by current theme (--theme-${current_theme}).\n\n"
+        printf "\n> Color scheme (--color-scheme-${color_scheme}) is not supported by current theme (--theme-${current_theme}).\n\n"
         return
     fi
 
-    fancygit_config_save "color_scheme" "$param_color_scheme"
+    fancygit_config_save "color_scheme" "$param_color_scheme_name"
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -253,13 +260,27 @@ fancygit_theme_color_scheme_set() {
 # param string $3 (true|false) Show rich notification.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_theme_set() {
-    local param_theme="$1"
-    local param_default_color_scheme="$2"
-    local param_show_rich_notification="$3"
+    local param_theme_name="$1"
+    local param_show_rich_notification="$2"
+    local current_theme
 
-    fancygit_config_save "theme" "$param_theme"
-    fancygit_config_save "color_scheme" "$param_default_color_scheme"
+    current_theme=$(fancygit_config_get "theme" "default")
+
+    if [ "$param_theme_name" = "$current_theme" ]
+    then
+        tput bold
+        tput setaf 3
+        printf "\n> You're already using --theme-${param_theme_name}\n\n"
+        tput sgr0
+        return
+    fi
+
+    fancygit_config_save "theme" "$param_theme_name"
+    fancygit_config_save "color_scheme" "${param_theme_name}_${param_theme_name}"
     fancygit_config_save "show_rich_notification" "$param_show_rich_notification"
 
-    printf "\n > Please reload the bash config file or close and open the terminal again.\n\n"
+    tput bold
+    tput setaf 3
+    printf "\n> Please reload the bash config file or close and open the terminal again.\n\n"
+    tput sgr0
 }
