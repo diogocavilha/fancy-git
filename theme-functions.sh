@@ -244,7 +244,11 @@ fancygit_theme_color_scheme_set() {
     # If trying to set a color scheme that's not supported by current theme, show a warning message.
     if [ "$current_theme" != "$correspondent_color_scheme_theme" ]
     then
-        printf "\n> Color scheme (--color-scheme-${color_scheme}) is not supported by current theme (--theme-${current_theme}).\n\n"
+        tput bold
+        tput setaf 3
+        printf "\n> Color scheme (--color-scheme-${color_scheme}) is not supported by current theme (--theme-${current_theme}).\n"
+        printf "> Type \"fancygit --show-color-schemes\" to check available color schemes for current theme.\n\n"
+        tput sgr0
         return
     fi
 
