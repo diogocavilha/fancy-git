@@ -1,5 +1,5 @@
 theme:default
-color_scheme:default
+color_scheme:default_default
 show_time:true
 show_user_at_machine:true
 show_full_path:true
