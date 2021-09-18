@@ -23,6 +23,9 @@
 - Add `fancygit --disable-double-line` command to disable the double line prompt
 - Add `fancygit --enable-rich-notification` command to show icons on notification area.
 - Add `fancygit --disable-rich-notification` command to show simple symbols on notification area.
+- Add `fancygit --show-themes` command to show all available themes.
+- Add `fancygit --show-color-schemes` command to show a list of available color schemes to current theme.
+- Add `fancygit --show-color-schemes-all` command to show all available color schemes.
 - Add `fancygit --theme-default` command to switch to the default theme.
 - Add `fancygit --theme-human` command to switch to the human theme.
 - Add `fancygit --theme-simple` command to switch to the simple theme.

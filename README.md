@@ -14,13 +14,13 @@ FancyGit is a tool which works for Linux and MAC OS, that changes the terminal p
 
 :rocket: [Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md) | :monocle_face: [Changelog](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md) | :hammer: [Troubleshooting](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
-# :cupid: Installing  
+# :cupid: Installing
 
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
-# :broken_heart: Uninstalling  
+# :broken_heart: Uninstalling
 
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
@@ -125,6 +125,32 @@ After that, just change your terminal font config to one of:
 > Screenshot font: Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf  
 
 ![Separators](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/separators.png)
+
+# :link: Feature switchers
+
+Feature switchers work on every theme.
+You can enable or disable them by typing `fancygit --enable-\<feature-name\>` or `fancygit --disable-\<feature-name\>`.
+Here you can see a list of feature switchers present on FancyGit so far.
+
+### Double line
+
+TODO
+
+### Full path
+
+TODO
+
+### Rich notification
+
+TODO
+
+### Show user at machine
+
+TODO
+
+### Time
+
+TODO
 
 # :toolbox: Commands
 
