@@ -43,6 +43,7 @@ _fancygit() {
         --color-scheme-dark \
         --color-scheme-dark-col \
         --color-scheme-light \
+        --color-scheme-superman \
         --reset
     '
 

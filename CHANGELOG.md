@@ -11,7 +11,8 @@
  that it'll worth. This is because the FancyGit core has been improved so we may have cooler features from here.
 
 - Improve fancy themes structure by creating a color scheme config.
-- Create a new color scheme called "dracula".
+- Add "dracula" color scheme for default theme.
+- Add "superman" color scheme for default theme.
 - Improve code that checks if branch is already merged.
 - Change config-manager module to settings-manager.
 - Add font "DejaVu-Sans-Mono-Nerd-Font-Complete.ttf".
