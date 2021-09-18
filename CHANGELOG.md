@@ -4,7 +4,9 @@
 
 ## v7.0.0
 
-**ATENTION**  
+**!! ATENTION !!**
+**THIS VERSION INTRODUCES LOTS OF BREAKING CHANGES!**
+
  Too many things have been changed on this version. Chances are that you'll need to reinstall FancyGit. But I promise you
  that it'll worth. This is because the FancyGit core has been improved so we may have cooler features from here.
 
