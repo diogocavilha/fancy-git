@@ -44,8 +44,9 @@ COLOR SCHEME COMMANDS:
    fancygit --color-scheme-human                  Available for theme-human.
    fancygit --color-scheme-default                Available for theme-default.
    fancygit --color-scheme-dracula                Available for theme-default.
-   fancygit --color-scheme-dark                   Available for theme-default.
-   fancygit --color-scheme-dark-col               Available for theme-default.
+   fancygit --color-scheme-batman                 Available for theme-default.
+   fancygit --color-scheme-robin                  Available for theme-default.
+   fancygit --color-scheme-superman               Available for theme-default.
    fancygit --color-scheme-light                  Available for theme-default.
 
 SEPARATOR STYLE COMMANDS:

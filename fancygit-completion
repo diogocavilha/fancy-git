@@ -40,8 +40,8 @@ _fancygit() {
         --color-scheme-human \
         --color-scheme-default \
         --color-scheme-dracula \
-        --color-scheme-dark \
-        --color-scheme-dark-col \
+        --color-scheme-batman \
+        --color-scheme-robin \
         --color-scheme-light \
         --color-scheme-superman \
         --reset

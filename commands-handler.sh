@@ -57,8 +57,8 @@ case "$1" in
     "--color-scheme-human") fancygit_theme_color_scheme_set "human_human";;
     "--color-scheme-default") fancygit_theme_color_scheme_set "default_default";;
     "--color-scheme-dracula") fancygit_theme_color_scheme_set "default_dracula";;
-    "--color-scheme-dark") fancygit_theme_color_scheme_set "default_dark";;
-    "--color-scheme-dark-col") fancygit_theme_color_scheme_set "default_dark-col";;
+    "--color-scheme-batman") fancygit_theme_color_scheme_set "default_batman";;
+    "--color-scheme-robin") fancygit_theme_color_scheme_set "default_robin";;
     "--color-scheme-light") fancygit_theme_color_scheme_set "default_light";;
     "--color-scheme-superman") fancygit_theme_color_scheme_set "default_superman";;
 

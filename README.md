@@ -80,6 +80,8 @@ If you don't want to be too "fancy", you can choose using the **simple theme** b
 If you want to return to the **default theme**, just type `fancygit --theme-default`.
 There are a few more themes and color schemes you can choose from.
 
+Type `fancygit -h` to see all available themes and color schemes on **"THEME COMMANDS"** and **"COLOR SCHEME COMMANDS"** sections.
+
 Here you have a list of available themes and their corresponding color schemes.
 
 > Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf
@@ -90,11 +92,14 @@ Here you have a list of available themes and their corresponding color schemes.
 **fancygit --color-scheme-dracula**  
 ![Color scheme dracula](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-dracula.png)
 
-**fancygit --color-scheme-dark**  
-![Color scheme dark](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-dark.png)
+**fancygit --color-scheme-batman**  
+![Color scheme batman](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-batman.png)
 
-**fancygit --color-scheme-dark-col**  
-![Color scheme dark-col](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-dark-col.png)
+**fancygit --color-scheme-robin**  
+![Color scheme robin](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-robin.png)
+
+**fancygit --color-scheme-superman**  
+![Color scheme superman](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-superman.png)
 
 **fancygit --color-scheme-light**  
 ![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-light.png)
@@ -165,16 +170,8 @@ Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER
 | fancygit --separator-lego                    | Change the separator to lego style.
 | fancygit --separator-curve                   | Change the separator to curve style.
 | fancygit --separator-paint                   | Change the separator to paint style.
-| fancygit --theme-default                     | Change prompt to the default theme.
-| fancygit --theme-human                       | Change prompt to the human readable style.
-| fancygit --theme-simple                      | Change prompt to the simple theme.
-| fancygit --color-scheme-simple               | Change to simple color scheme. Available for theme-simple.
-| fancygit --color-scheme-human                | Change to human color scheme. Available for theme-human.
-| fancygit --color-scheme-default              | Change to default color scheme. Available for theme-default.
-| fancygit --color-scheme-dracula              | Change to dracula color scheme. Available for theme-default.
-| fancygit --color-scheme-dark                 | Change to dark color scheme. Available for theme-default.
-| fancygit --color-scheme-dark-col             | Change to dark-col color scheme. Available for theme-default.
-| fancygit --color-scheme-light                | Change to light color scheme. Available for theme-default.
+| fancygit --theme-\<name\>                    | Change prompt to the selected theme.
+| fancygit --color-scheme-\<name\>             | Change to the selected color scheme.
 
 # :toolbox: Aliases
 
