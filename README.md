@@ -126,31 +126,11 @@ After that, just change your terminal font config to one of:
 
 ![Separators](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/separators.png)
 
-# :link: Feature switchers
+# :dizzy: Feature switchers
 
-Feature switchers work on every theme.
-You can enable or disable them by typing `fancygit --enable-\<feature-name\>` or `fancygit --disable-\<feature-name\>`.
-Here you can see a list of feature switchers present on FancyGit so far.
-
-### Double line
-
-TODO
-
-### Full path
-
-TODO
-
-### Rich notification
-
-TODO
-
-### Show user at machine
-
-TODO
-
-### Time
-
-TODO
+Feature switchers are special commands to enable/disable features and they work on every theme.  
+You can enable or disable them by typing `fancygit --enable-<feature-name>` or `fancygit --disable-<feature-name>`.  
+Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER COMMANDS"** section.
 
 # :toolbox: Commands
 
