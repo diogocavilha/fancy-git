@@ -116,16 +116,16 @@ You can type `fancygit --separator<TAB>` so you can see all the available separa
 
 **:bangbang: Important :bangbang:**
 
-It's highly recommended to set up the terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf** which comes with FancyGit.  
-This way, symbols will be rendered correctly and new FancyGit releases must work as expected.  
-In order to install the font you can run `fancygit --fonts-install`.  
-After that, just change your terminal font config to one of:
+It's highly recommended to set up the terminal font to one of:
 
 - Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf.  
 - DejaVu-Sans-Mono-Nerd-Font-Complete.ttf.  
 - DejaVu-Sans-Mono-Nerd-Font-Complete-Mono.ttf.  
 - JetBrains-Mono-Regular-Nerd-Font-Complete-Mono.ttf.  
-- JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf.  
+- JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf.
+
+This way, symbols will be rendered correctly and new FancyGit releases must work as expected.  
+In order to install the fonts you can run `fancygit --fonts-install`.
 
 > Screenshot font: Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf  
 
