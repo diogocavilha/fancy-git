@@ -1,29 +1,29 @@
 # TIME
-fancygit_color_scheme_time_background="7"
-fancygit_color_scheme_time_foreground="0"
+FANCYGIT_COLOR_SCHEME_TIME_BACKGROUND="7"
+FANCYGIT_COLOR_SCHEME_TIME_FOREGROUND="0"
 
 # USER SYMBOL
-fancygit_color_scheme_user_symbol_background="15"
-fancygit_color_scheme_user_symbol_foreground="0"
+FANCYGIT_COLOR_SCHEME_USER_SYMBOL_BACKGROUND="15"
+FANCYGIT_COLOR_SCHEME_USER_SYMBOL_FOREGROUND="0"
 
 # PATH
-fancygit_color_scheme_workdir_background="7"
-fancygit_color_scheme_workdir_foreground="0"
+FANCYGIT_COLOR_SCHEME_WORKDIR_BACKGROUND="7"
+FANCYGIT_COLOR_SCHEME_WORKDIR_FOREGROUND="0"
 
 # USER AT HOST
-fancygit_color_scheme_user_at_host_background="7"
-fancygit_color_scheme_user_foreground="0"
-fancygit_color_scheme_at_foreground="0"
-fancygit_color_scheme_host_foreground="0"
+FANCYGIT_COLOR_SCHEME_USER_AT_HOST_BACKGROUND="7"
+FANCYGIT_COLOR_SCHEME_USER_FOREGROUND="0"
+FANCYGIT_COLOR_SCHEME_AT_FOREGROUND="0"
+FANCYGIT_COLOR_SCHEME_HOST_FOREGROUND="0"
 
 # BRANCH
-fancygit_color_scheme_branch_background="231"
-fancygit_color_scheme_branch_foreround="0"
+FANCYGIT_COLOR_SCHEME_BRANCH_BACKGROUND="231"
+FANCYGIT_COLOR_SCHEME_BRANCH_FOREROUND="0"
 
 # BRANCH WITH STAGED FILES
-fancygit_color_scheme_branch_staged_files_background="10"
-fancygit_color_scheme_branch_staged_files_foreground="0"
+FANCYGIT_COLOR_SCHEME_BRANCH_STAGED_FILES_BACKGROUND="10"
+FANCYGIT_COLOR_SCHEME_BRANCH_STAGED_FILES_FOREGROUND="0"
 
 # BRANCH WITH CHANGED FILES
-fancygit_color_scheme_branch_changed_files_background="11"
-fancygit_color_scheme_branch_changed_files_foreground="0"
+FANCYGIT_COLOR_SCHEME_BRANCH_CHANGED_FILES_BACKGROUND="11"
+FANCYGIT_COLOR_SCHEME_BRANCH_CHANGED_FILES_FOREGROUND="0"
