@@ -1,5 +1,5 @@
 # Use color values in the range [0-255] for 256 bit colors.
-# Themes will treat the color values properly.
+# Themes will handle the color values properly.
 # You can check how that works here: https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 # TIME
