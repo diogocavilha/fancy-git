@@ -26,11 +26,11 @@ fancygit_get_notification_area() {
 # Creates a rich notification area, which means it will have the same icons as fancy themes.
 # ----------------------------------------------------------------------------------------------------------------------
 __fancygit_get_rich_notification_area() {
-    local icon_git_stash=" "
-    local icon_untracked_files="  "
-    local icon_changed_files="  "
-    local icon_added_files="  "
-    local icon_unpushed_commits="  "
+    local icon_git_stash="${FANCYGIT_ICON_HAS_STASHES:- }"
+    local icon_untracked_files="${FANCYGIT_ICON_HAS_UNTRACKED_FILES:-  }"
+    local icon_changed_files="${FANCYGIT_ICON_HAS_CHANGED_FILES:-  }"
+    local icon_added_files="${FANCYGIT_ICON_HAS_ADDED_FILES:-  }"
+    local icon_unpushed_commits="${FANCYGIT_ICON_HAS_UNPUSHED_COMMITS:-  }"
     local number_unpushed_commits=0
     local venv=""
 

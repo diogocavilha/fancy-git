@@ -37,9 +37,9 @@ fancygit_git_is_only_local_branch() {
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_git_get_branch_icon() {
     local param_branch_name="$1"
-    local icon_local_branch=""
-    local icon_local_remote_branch=""
-    local icon_merged_branch=""
+    local icon_local_branch="${FANCYGIT_ICON_LOCAL_BRANCH:-}"
+    local icon_local_remote_branch="${FANCYGIT_ICON_LOCAL_REMOTE_BRANCH:-}"
+    local icon_merged_branch="${FANCYGIT_ICON_MERGED_BRANCH:-}"
 
     if fancygit_git_is_only_local_branch "$param_branch_name"
     then

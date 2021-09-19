@@ -214,15 +214,45 @@ Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER
 | gu \<file\> ...            | Remove files from staging area. (`git reset HEAD <file>`)
 | pve                        | Show the current Python virtual environment name. ([file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/pve.sh))
 
-# :gear: Advanced tweaking - override values from config.sh
+# :gear: Advanced tweaking - override some default config values
 
-If you like to tweak things more in-depth, like color values, special characters and such, you can create a new file `~/.fancy-git/config-override.sh`. This file is sourced after reading the standard configuration, so that you can override any variable found in the main `config.sh`.
+If you like to tweak things more in-depth, like special characters and such, you can create environment variables. These variables override any value found in FancyGit default configuration.
 
 Example:  
-You want to change the branch icon, because you are using a different console font and the icon is on a different character position inside the font. Simply create the override file and add a line like this (for sure, you will likely have changed the symbol):
+You want to change the branch icon, because you are using a different console font and the icon is on a different character position inside the font. Simply create the correspondent environment variable.  
+For sure, you will likely have changed the symbol:
 
 ```sh
-branch_icon=""
+# Branch icon.
+FANCYGIT_ICON_LOCAL_REMOTE_BRANCH=""
+```
+
+Here you can see a list of available environment variables FancyGit will search and replace:
+
+```sh
+# Only local branch icon.
+FANCYGIT_ICON_LOCAL_BRANCH
+
+# Branch icon.
+FANCYGIT_ICON_LOCAL_REMOTE_BRANCH
+
+# Merged branch icon.
+FANCYGIT_ICON_MERGED_BRANCH
+
+# Staged files.
+FANCYGIT_ICON_HAS_STASHES
+
+# Untracked files.
+FANCYGIT_ICON_HAS_UNTRACKED_FILES
+
+# Changed files.
+FANCYGIT_ICON_HAS_CHANGED_FILES
+
+# Added files.
+FANCYGIT_ICON_HAS_ADDED_FILES
+
+# Unpushed commits.
+FANCYGIT_ICON_HAS_UNPUSHED_COMMITS
 ```
 
 # :pick: Troubleshooting
