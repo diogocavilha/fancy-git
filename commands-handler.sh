@@ -71,7 +71,7 @@ case "$1" in
     "--disable-show-time") fancygit_app_command_deprecation_warning "--disable-time";;
     "update") fancygit_app_command_deprecation_warning "--update";;
     "configure-fonts") fancygit_app_command_deprecation_warning "--fonts-install";;
-    "dark-col-double-line") fancygit_app_command_deprecation_warning "--color-scheme-dark-col";;
+    "dark-col-double-line") fancygit_app_command_deprecation_warning "--color-scheme-robin";;
     "double-line") fancygit_app_command_deprecation_warning "--enable-double-line";;
     "dark-double-line") fancygit_app_command_deprecation_warning "--enable-double-line";;
     "light-double-line") fancygit_app_command_deprecation_warning "--enable-double-line";;
@@ -82,8 +82,8 @@ case "$1" in
     "simple") fancygit_app_command_deprecation_warning "--theme-simple";;
     "default") fancygit_app_command_deprecation_warning "--theme-default";;
     "human") fancygit_app_command_deprecation_warning "--theme-human";;
-    "dark") fancygit_app_command_deprecation_warning "--color-scheme-dark";;
-    "dark-col") fancygit_app_command_deprecation_warning "--color-scheme-dark-col";;
+    "dark") fancygit_app_command_deprecation_warning "--color-scheme-batman";;
+    "dark-col") fancygit_app_command_deprecation_warning "--color-scheme-robin";;
     "light") fancygit_app_command_deprecation_warning "--color-scheme-light";;
     "") fancygit_app_command_return;;
     *) fancygit_app_command_not_found "$1";;
