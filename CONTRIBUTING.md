@@ -1,13 +1,12 @@
 # :rocket: Contributing to FancyGit
 
 Your contribution is always welcome! Don't be shy. :blush:  
-Fancy it has been born to make developers life easier when it comes to git repos. Receiving contributions and new ideas from other passionate developers is extremelly exciting.  
-It never mind if you are a junior or a senior developer, all contributions are valuable. 
+FancyGit has been born to make developers life easier when it comes to git repos. Receiving contributions and new ideas from other passionate developers is extremelly exciting.
 
 ## :pushpin: Issues
 
 Feel free to submit issues and enhancement requests.  
-Please use [GitHub Issues](https://github.com/diogocavilha/fancy-git/issues) to report FancyGit specific bugs and errors, or even to start a discussion about an idea of a new feature or behavior.
+Please use [GitHub Issues](https://github.com/diogocavilha/fancy-git/issues) to report bugs or even to start a discussion about an idea of a new feature or behavior.
 
 ## :technologist: Contributing
 
@@ -20,4 +19,3 @@ Please follow these steps:
 5. **Commit** changes to the branch you've just created.
 6. **Push** your work back up to your fork.
 7. Submit a **Pull request** and take a coffee (or even better, you could take a coffee before it).
-

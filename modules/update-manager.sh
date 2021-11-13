@@ -2,7 +2,14 @@
 #
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
 # Date:   12.05.2018
+#
+# Update manager - Check new releases and notify users about them.
 
+FANCYGIT_CHANGELOG_FILE="$HOME/.fancy-git/CHANGELOG.md"
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Update checker trigger.
+# ----------------------------------------------------------------------------------------------------------------------
 check_for_update() {
     if __fancygit_must_check_for_update
     then
@@ -11,6 +18,9 @@ check_for_update() {
     fi
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Notify that FancyGit needs to be updated and wait for confirmation.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_update_notification() {
     local option
     local current_version
@@ -36,14 +46,17 @@ __fancygit_update_notification() {
     echo ""
 
     case "$option" in
-        "y"|"Y"|"") 
+        "y"|"Y"|"")
             fancygit_update
             return;;
     esac
-    
+
     __fancygit_reset_update_checker
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Check if FancyGit needs to be updated by comparing current local version and current remote version.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_update_checker() {
     if ! __fancygit_is_git_repo || ! __fancygit_must_check_for_update
     then
@@ -61,7 +74,7 @@ __fancygit_update_checker() {
     cd ~/.fancy-git
     current_version=$(git tag | tail -1)
 
-    git fetch -t 2> /dev/null  
+    git fetch -t 2> /dev/null
     new_version=$(git tag | tail -1)
 
     current_version_filter_number=$(echo "$current_version" | sed 's/[vV\.]//g')
@@ -76,6 +89,10 @@ __fancygit_update_checker() {
     __fancygit_reset_update_checker
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Update the FancyGit. It performs a git pull.
+# After updating, it show the changelog for the last release.
+# ----------------------------------------------------------------------------------------------------------------------
 fancygit_update() {
     local current_dir
 
@@ -93,14 +110,20 @@ fancygit_update() {
     echo "$(tput bold; tput setaf 2) FancyGit successfully updated ;D$(tput sgr0)"
     echo ""
 
-    head ~/.fancy-git/CHANGELOG.md | grep -zo '>.*[#]' | sed 's/###//g' | sed 's/^>/ >/' | sed 's/^-/ -/'
+    fancygit_changelog_show
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Check if current dir is a git repo.
+#
+# return int 0 It is a git repo.
+# return int 1 It is not a git repo.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_is_git_repo() {
     local branch_name
 
     branch_name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-    
+
     if [ "$branch_name" = "" ]
     then
         return 1
@@ -109,9 +132,16 @@ __fancygit_is_git_repo() {
     return 0
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Update checker handler.
+# If it has already checked for updates today, then it may wait for the next day to check again.
+#
+# return int 0 It must check for updates.
+# return int 1 It must not check for updates.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_must_check_for_update() {
     local current_date
-    local last_update_at  
+    local last_update_at
 
     last_update_at=$(cat ~/.fancy-git/last_update_at 2> /dev/null)
     current_date=$(date +%Y-%m-%d)
@@ -124,6 +154,9 @@ __fancygit_must_check_for_update() {
     return 0
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Create the app configuration file.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_create_app_config() {
     if [ ! -f ~/.fancy-git/app_config ]
     then
@@ -132,6 +165,10 @@ __fancygit_create_app_config() {
     fi
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# DEPRECATED
+# Auxiliar function to help on version compatibility.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_copy_style_from_mode_file_to_app_config() {
     if [ -f ~/.fancy-git/mode -a -f ~/.fancy-git/app_config ]
     then
@@ -141,6 +178,10 @@ __fancygit_copy_style_from_mode_file_to_app_config() {
     fi
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# DEPRECATED
+# Auxiliar function to help on version compatibility.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_safetly_remove_mode_file() {
     local app_config_file_status
 
@@ -153,12 +194,29 @@ __fancygit_safetly_remove_mode_file() {
     fi
 }
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Mark update checker as executed today.
+# It controls if it has been called already.
+# ----------------------------------------------------------------------------------------------------------------------
 __fancygit_reset_update_checker() {
     local current_date
 
     current_date=$(date +%Y-%m-%d)
-    
+
     echo "$current_date" > ~/.fancy-git/last_update_at
 
     rm ~/.fancy-git/tmpversions 2> /dev/null
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Show changelog content for the last version.
+# ----------------------------------------------------------------------------------------------------------------------
+fancygit_changelog_show() {
+    sed '/####/q' "$FANCYGIT_CHANGELOG_FILE" \
+        | grep -oz '>.*' \
+        | sed 's/>/ >/' \
+        | sed 's/^## / /' \
+        | sed 's/^-/ -/' \
+        | sed 's/*/ */' \
+        | sed '/^#### v.*/d'
 }

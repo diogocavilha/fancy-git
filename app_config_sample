@@ -1,8 +1,11 @@
-style:default
-show-full-path:true
-show-user-at-machine:true
-show-time:true
-time-format:%H:%M:%S
+theme:default
+color_scheme:default_default
+show_time:true
+show_user_at_machine:true
+show_full_path:true
+show_rich_notification:true
+double_line:false
+time_format:%H:%M:%S
 separator:
 ps2:➜
 fresh_file

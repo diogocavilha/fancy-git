@@ -9,29 +9,23 @@ _fancygit() {
         --version \
         --update \
         --fonts-install \
-        human \
-        human-single-line \
-        human-dark \
-        human-dark-single-line \
-        default \
-        double-line \
-        simple \
-        simple-double-line \
-        dark \
-        dark-double-line \
-        dark-col-double-line \
-        light \
-        light-double-line \
-        --colors \
-        --colors-apply \
+        --changelog-show \
+        --suggested-global-git-config \
+        --suggested-global-git-config-apply \
+        --show-color-schemes \
+        --show-color-schemes-all \
+        --show-themes \
         --enable-full-path \
         --disable-full-path \
         --enable-show-user-at-machine \
         --disable-show-user-at-machine \
         --enable-time \
         --disable-time \
+        --enable-double-line \
+        --disable-double-line \
+        --enable-rich-notification \
+        --disable-rich-notification \
         --config-list \
-        --config-reset \
         --separator-default \
         --separator-blocs \
         --separator-blocs-tiny \
@@ -39,6 +33,17 @@ _fancygit() {
         --separator-lego \
         --separator-curve \
         --separator-paint \
+        --theme-default \
+        --theme-human \
+        --theme-simple \
+        --color-scheme-simple \
+        --color-scheme-human \
+        --color-scheme-default \
+        --color-scheme-dracula \
+        --color-scheme-batman \
+        --color-scheme-robin \
+        --color-scheme-light \
+        --color-scheme-superman \
         --reset
     '
 

@@ -14,13 +14,13 @@ FancyGit is a tool which works for Linux and MAC OS, that changes the terminal p
 
 :rocket: [Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md) | :monocle_face: [Changelog](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md) | :hammer: [Troubleshooting](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
-# :cupid: Installing  
+# :cupid: Installing
 
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/install.sh | sh
 ```
 
-# :broken_heart: Uninstalling  
+# :broken_heart: Uninstalling
 
 ```sh
 curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninstall.sh | sh
@@ -28,14 +28,19 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
 
 # :heavy_check_mark: After installing
 
-1. Change your terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
-   It's necessary only if you're using one of the fancy styles for rendering the icons properly.  
-   If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf`.
+1. Change your terminal font to one of these fonts:  
+   - **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
+   - **DejaVu-Sans-Mono-Nerd-Font-Complete.ttf**.
+   - **DejaVu-Sans-Mono-Nerd-Font-Complete-Mono.ttf**.
+   - **JetBrains-Mono-Regular-Nerd-Font-Complete-Mono.ttf**.
+   - **JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf**.  
+   It's necessary for rendering icons/symbols properly.  
+   If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/`.
 2. Restart your terminal.
 
 Run `fancygit -h` to check FancyGit help.
 
-# :nail_care: Git suggested colors
+# :nail_care: Git suggested config
 
 ```bash
 git config --global color.ui true
@@ -46,10 +51,10 @@ git config --global color.status.added "green bold"
 git config --global color.status.changed "yellow"
 git config --global color.status.untracked "cyan"
 ```
-Run `fancygit --colors` to see those suggested colors.  
-Run `fancygit --colors-apply` to apply it.
+Run `fancygit --suggested-global-git-config` to see that suggested config.  
+Run `fancygit --suggested-global-git-config-apply` to apply it.
 
-I suggest you to use this scheme color because FancyGit will paint the background branch, most of the time, according to the current repo status, since you're using some of the colored style.
+I suggest you to use this config because FancyGit will paint the background branch, most of the time, according to the current repo status, since you're using some theme which allows that.
 
 Type `fancygit -h` for more information.
 
@@ -69,52 +74,41 @@ As a picture is worth a thousand words...
 
 ![python_venv](https://github.com/diogocavilha/fancy-git/blob/master/images/python_venv.png)
 
-# :art: Styles
+# :art: Themes and color schemes
 
-If you don't want to be too "fancy", you can choose using the **simple style** by running `fancygit simple`.
-If you want to return to the **default style** (colored), you can type `fancygit default`.
-There are a few more styles you can choose from.
+If you don't want to be too "fancy", you can choose using the **simple theme** by running `fancygit --theme-simple`.
+If you want to return to the **default theme**, just type `fancygit --theme-default`.
+There are a few more themes and color schemes you can choose from.
 
-Here you have a list of available styles and their corresponding command to apply.
+Type `fancygit -h` to see all available themes and color schemes on **"THEME COMMANDS"** and **"COLOR SCHEME COMMANDS"** sections.
 
-**fancygit default**  
-![Default](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/default.png)
+Here you have a list of available themes and their corresponding color schemes.
 
-**fancygit double-line**  
-![Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/double-line.png)
+> Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf
 
-**fancygit dark**  
-![Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark.png)
+**fancygit --theme-default** (default color scheme: --color-scheme-default)  
+![Theme default](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-default.png)
 
-**fancygit dark-double-line**  
-![Dark Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-double-line.png)
+**fancygit --color-scheme-dracula**  
+![Color scheme dracula](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-dracula.png)
 
-**fancygit dark-col-double-line**  
-![Dark Col Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/dark-col-double-line.png)
+**fancygit --color-scheme-batman**  
+![Color scheme batman](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-batman.png)
 
-**fancygit light**  
-![Light](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light.png)
+**fancygit --color-scheme-robin**  
+![Color scheme robin](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-robin.png)
 
-**fancygit light-double-line**  
-![Light Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/light-double-line.png)
+**fancygit --color-scheme-superman**  
+![Color scheme superman](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-superman.png)
 
-**fancygit simple**  
-![Simple](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple.png)
+**fancygit --color-scheme-light**  
+![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-light.png)
 
-**fancygit simple-double-line**  
-![Simple Double Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/simple-double-line.png)
+**fancygit --theme-human** (default color scheme: --color-scheme-human)  
+![Theme human](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-human.png)
 
-**fancygit human**  
-![Human](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human.png)
-
-**fancygit human-single-line**  
-![Human Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-single-line.png)
-
-**fancygit human-dark**  
-![Human Dark](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark.png)
-
-**fancygit human-dark-single-line**  
-![Human Dark Single Line](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/human-dark-single-line.png)
+**fancygit --theme-simple** (default color scheme: --color-scheme-simple)  
+![Theme simple](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-simple.png)
 
 # :link: Separators styles
 
@@ -122,47 +116,62 @@ You can type `fancygit --separator<TAB>` so you can see all the available separa
 
 **:bangbang: Important :bangbang:**
 
-It's highly recommended to set up the terminal font to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf** which comes with FancyGit.  
-This way, symbols will be rendered correctly and new FancyGit releases must work as expected.  
-In order to install the font you can run `fancygit --fonts-install`.  
-After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf**.
+It's highly recommended to set up the terminal font to one of:
 
-![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/styles/separators.png)
+- Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf.  
+- DejaVu-Sans-Mono-Nerd-Font-Complete.ttf.  
+- DejaVu-Sans-Mono-Nerd-Font-Complete-Mono.ttf.  
+- JetBrains-Mono-Regular-Nerd-Font-Complete-Mono.ttf.  
+- JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf.
+
+This way, symbols will be rendered correctly and new FancyGit releases must work as expected.  
+In order to install the fonts you can run `fancygit --fonts-install`.
+
+> Screenshot font: Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf  
+
+![Separators](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/separators.png)
+
+# :dizzy: Feature switchers
+
+Feature switchers are special commands to enable/disable features and they work on every theme.  
+You can enable or disable them by typing `fancygit --enable-<feature-name>` or `fancygit --disable-<feature-name>`.  
+Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER COMMANDS"** section.
 
 # :toolbox: Commands
 
-| Command                                    | Description
-| ------------------------------------------ | ---------------------------------------------------------
-| fancygit -h, --help                        | Show this help.
-| fancygit -v, --version                     | Show the FancyGit version.
-| fancygit --update                          | Update FancyGit code with the latest release from GitHub.
-| fancygit --fonts-install                   | Install font in order to render icons properly.
-| fancygit --colors                          | Show suggested colors config.
-| fancygit --colors-apply                    | Apply the suggested colors config.
-| fancygit --disable-full-path               | FancyGit will show only the the working directory name.
-| fancygit --enable-full-path                | FancyGit will show the entire path.
-| fancygit --disable-show-user-at-machine    | FancyGit will hide (user@machine) info.
-| fancygit --enable-show-user-at-machine     | FancyGit will show (user@machine) info, as usual.
-| fancygit --enable-time                     | FancyGit will show current time.
-| fancygit --disable-time                    | FancyGit will not show current time.
-| fancygit --separator-default               | Change the separator to default style.
-| fancygit --separator-blocs                 | Change the separator to blocs style.
-| fancygit --separator-blocs-tiny            | Change the separator to blocs-tiny style.
-| fancygit --separator-curve                 | Change the separator to curve style.
-| fancygit --separator-fire                  | Change the separator to fire style.
-| fancygit --separator-lego                  | Change the separator to lego style.
-| fancygit --separator-paint                 | Change the separator to paint style.
-| fancygit simple                            | Change prompt to the simple style.
-| fancygit simple-double-line                | Change prompt to the simple style in double line.
-| fancygit default                           | Change prompt to the default (colored) style.
-| fancygit double-line                       | Change prompt to the default (colored) style in double line.
-| fancygit human                             | Change prompt to the human readable style.
-| fancygit human-dark                        | Change prompt to the human readable style.
-| fancygit dark                              | Change prompt to the dark style.
-| fancygit dark-double-line                  | Change prompt to the dark style in double line.
-| fancygit dark-col-double-line              | Change prompt to the dark (colored) style in double line.
-| fancygit light                             | Change prompt to the light style.
-| fancygit light-double-line                 | Change prompt to the light style in double line.
+| Command                                      | Description
+| -------------------------------------------- | ---------------------------------------------------------
+| fancygit -h, --help                          | Show this help.
+| fancygit -v, --version                       | Show the FancyGit version.
+| fancygit --update                            | Update FancyGit code with the latest release from GitHub.
+| fancygit --fonts-install                     | Install font in order to render icons properly.
+| fancygit --suggested-global-git-config       | Show suggested global git config.
+| fancygit --suggested-global-git-config-apply | Apply the suggested global git config.
+| fancygit --config-list                       | Show FancyGit config.
+| fancygit --reset                             | Reset the configuration as if you have just installed FancyGit.
+| fancygit --changelog-show                    | Show changelog for the last version.
+| fancygit --show-themes                       | Show all available themes.
+| fancygit --show-color-schemes                | Show available color schemes for current theme.
+| fancygit --show-color-schemes-all            | Show all available color schemes.
+| fancygit --enable-full-path                  | Show the entire path.
+| fancygit --disable-full-path                 | Show only the the working directory name.
+| fancygit --enable-show-user-at-machine       | Show (user@machine) info, as usual.
+| fancygit --disable-show-user-at-machine      | Hide (user@machine) info.
+| fancygit --enable-time                       | Show current time.
+| fancygit --disable-time                      | Hide current time.
+| fancygit --enable-double-line                | Show a double line prompt.
+| fancygit --disable-double-line               | Show a single line prompt.
+| fancygit --enable-rich-notification          | Show notification area with icons.
+| fancygit --disable-rich-notification         | Show notification area with simple symbols.
+| fancygit --separator-default                 | Change the separator to default style.
+| fancygit --separator-blocs                   | Change the separator to blocs style.
+| fancygit --separator-blocs-tiny              | Change the separator to blocs-tiny style.
+| fancygit --separator-fire                    | Change the separator to fire style.
+| fancygit --separator-lego                    | Change the separator to lego style.
+| fancygit --separator-curve                   | Change the separator to curve style.
+| fancygit --separator-paint                   | Change the separator to paint style.
+| fancygit --theme-\<name\>                    | Change prompt to the selected theme.
+| fancygit --color-scheme-\<name\>             | Change to the selected color scheme.
 
 # :toolbox: Aliases
 
@@ -205,15 +214,45 @@ After that, just change your terminal font config to **Sauce-Code-Pro-Nerd-Font-
 | gu \<file\> ...            | Remove files from staging area. (`git reset HEAD <file>`)
 | pve                        | Show the current Python virtual environment name. ([file](https://github.com/diogocavilha/fancy-git/blob/master/alias_functions/pve.sh))
 
-# :gear: Advanced tweaking - override values from config.sh
+# :gear: Advanced tweaking - override some default config values
 
-If you like to tweak things more in-depth, like color values, special characters and such, you can create a new file `~/.fancy-git/config-override.sh`. This file is sourced after reading the standard configuration, so that you can override any variable found in the main `config.sh`.
+If you like to tweak things more in-depth, like special characters and such, you can create environment variables. These variables override any value found in FancyGit default configuration.
 
 Example:  
-You want to change the branch icon, because you are using a different console font and the icon is on a different character position inside the font. Simply create the override file and add a line like this (for sure, you will likely have changed the symbol):
+You want to change the branch icon, because you are using a different console font and the icon is on a different character position inside the font. Simply create the correspondent environment variable.  
+For sure, you will likely have changed the symbol:
 
 ```sh
-branch_icon=""
+# Branch icon.
+FANCYGIT_ICON_LOCAL_REMOTE_BRANCH=""
+```
+
+Here you can see a list of available environment variables FancyGit will search and replace:
+
+```sh
+# Only local branch icon.
+FANCYGIT_ICON_LOCAL_BRANCH
+
+# Branch icon.
+FANCYGIT_ICON_LOCAL_REMOTE_BRANCH
+
+# Merged branch icon.
+FANCYGIT_ICON_MERGED_BRANCH
+
+# Staged files.
+FANCYGIT_ICON_HAS_STASHES
+
+# Untracked files.
+FANCYGIT_ICON_HAS_UNTRACKED_FILES
+
+# Changed files.
+FANCYGIT_ICON_HAS_CHANGED_FILES
+
+# Added files.
+FANCYGIT_ICON_HAS_ADDED_FILES
+
+# Unpushed commits.
+FANCYGIT_ICON_HAS_UNPUSHED_COMMITS
 ```
 
 # :pick: Troubleshooting
