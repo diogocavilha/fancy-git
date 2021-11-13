@@ -166,13 +166,13 @@ __fancygit_get_venv_icon() {
 fancygit_theme_get_venv_name() {
     if ! [ -z ${VIRTUAL_ENV} ]
     then
-        echo "($(basename \"$VIRTUAL_ENV\")) "
+        echo "$(basename ${VIRTUAL_ENV})"
         return
     fi
 
     if ([ "$CONDA_DEFAULT_ENV" != "base" ] && ! [ -z ${CONDA_DEFAULT_ENV} ])
     then
-        echo "($(basename \"$CONDA_DEFAULT_ENV\")) "
+        echo "$(basename ${CONDA_DEFAULT_ENV})"
         return
     fi
 

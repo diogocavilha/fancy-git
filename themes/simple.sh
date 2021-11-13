@@ -53,6 +53,11 @@ fancygit_theme_builder() {
         user_at_host="$user$at$host:"
     fi
 
+    if [ "" != "$venv_name" ]
+    then
+        venv_name="($venv_name) "
+    fi
+
     PS1="${venv_name}${prompt_time}${user_at_host}$where\$${branch_area}${is_double_line} "
 }
 

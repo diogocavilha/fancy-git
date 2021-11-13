@@ -89,7 +89,7 @@ fancygit_theme_builder() {
 
     if [ "" != "$venv_name" ]
     then
-        venv_name=" as env(${user}${venv_name}${color_reset})"
+        venv_name=" env ${user}${venv_name}${color_reset}"
     fi
 
     if fancygit_config_is "show_user_at_machine" "true"
