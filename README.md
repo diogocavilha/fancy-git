@@ -87,28 +87,28 @@ Here you have a list of available themes and their corresponding color schemes.
 > Screenshot font: JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf
 
 **fancygit --theme-default** (default color scheme: --color-scheme-default)  
-![Theme default](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-default.png)
+![Theme default](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-default.png)
 
 **fancygit --color-scheme-dracula**  
-![Color scheme dracula](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-dracula.png)
+![Color scheme dracula](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-dracula.png)
 
 **fancygit --color-scheme-batman**  
-![Color scheme batman](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-batman.png)
+![Color scheme batman](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-batman.png)
 
 **fancygit --color-scheme-robin**  
-![Color scheme robin](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-robin.png)
+![Color scheme robin](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-robin.png)
 
 **fancygit --color-scheme-superman**  
-![Color scheme superman](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-superman.png)
+![Color scheme superman](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-superman.png)
 
 **fancygit --color-scheme-light**  
-![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/color-scheme-light.png)
+![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-light.png)
 
 **fancygit --theme-human** (default color scheme: --color-scheme-human)  
-![Theme human](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-human.png)
+![Theme human](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-human.png)
 
 **fancygit --theme-simple** (default color scheme: --color-scheme-simple)  
-![Theme simple](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/theme-simple.png)
+![Theme simple](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-simple.png)
 
 # :link: Separators styles
 
@@ -129,7 +129,7 @@ In order to install the fonts you can run `fancygit --fonts-install`.
 
 > Screenshot font: Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf  
 
-![Separators](https://github.com/diogocavilha/fancy-git/blob/rc7.0.0-improve-themes-handling/images/screenshots/separators.png)
+![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separators.png)
 
 # :dizzy: Feature switchers
 
