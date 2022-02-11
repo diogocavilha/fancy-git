@@ -50,6 +50,7 @@ COLOR SCHEME COMMANDS:
    fancygit --color-scheme-robin                  Available for theme-default.
    fancygit --color-scheme-superman               Available for theme-default.
    fancygit --color-scheme-light                  Available for theme-default.
+   fancygit --color-scheme-neon                   Available for theme-default.
 
 SEPARATOR STYLE COMMANDS:
    fancygit --separator-default                   Change the separator (if it's present on current theme) to default style.

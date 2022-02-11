@@ -49,6 +49,7 @@ _fancygit() {
         --color-scheme-batman \
         --color-scheme-robin \
         --color-scheme-light \
+        --color-scheme-neon \
         --color-scheme-superman \
         --reset
     '
