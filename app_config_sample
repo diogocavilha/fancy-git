@@ -9,3 +9,6 @@ time_format:%H:%M:%S
 separator:
 ps2:➜
 fresh_file
+user_name:
+host_name:
+show_tag_name:true

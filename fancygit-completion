@@ -25,6 +25,12 @@ _fancygit() {
         --disable-double-line \
         --enable-rich-notification \
         --disable-rich-notification \
+        --enable-tag-name \
+        --disable-tag-name \
+        --set-user-name \
+        --unset-user-name \
+        --set-host-name \
+        --unset-host-name \
         --config-list \
         --separator-default \
         --separator-blocs \

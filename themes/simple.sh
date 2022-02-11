@@ -28,9 +28,15 @@ fancygit_theme_builder() {
     local workdir_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_WORKDIR_FOREGROUND}m\\]"
     local color_reset="\\[\\e[39m\\]"
 
+    local user_name
+    user_name=$(fancygit_config_get "user_name" "\\u")
+
+    local host_name
+    host_name=$(fancygit_config_get "host_name" "\\h")
+
     # Prompt style.
-    local user="${user_color_font_tag}\u${color_reset}"
-    local host="${host_color_font_tag}\h${color_reset}"
+    local user="${user_color_font_tag}${user_name}${color_reset}"
+    local host="${host_color_font_tag}${host_name}${color_reset}"
     local at="${at_color_font_tag}@${color_reset}"
     local path="${workdir_color_font_tag}"
     local prompt_time
@@ -68,8 +74,10 @@ __fancygit_theme_get_branch_area() {
     local is_rich_notification
     local branch_name
     local branch_status
+    local show_tag_name
 
     is_rich_notification=$(fancygit_config_get "show_rich_notification" "false")
+    show_tag_name=$(fancygit_config_get "show_tag_name" "true")
 
     branch_name=$(fancygit_git_get_branch)
     branch_status=$(fancygit_get_notification_area "$is_rich_notification")
@@ -80,6 +88,11 @@ __fancygit_theme_get_branch_area() {
         if [ "true" = "$is_rich_notification" ]
         then
             branch_status=" [ $(echo "$branch_status" | sed -e 's/^[[:space:]]*//') ]"
+        fi
+
+        if [ "HEAD" = "$branch_name" ] && [ "true" = "$show_tag_name" ]
+        then
+            branch_name=$(fancygit_git_get_tag)
         fi
 
         branch_name="${branch_name}${branch_status}"

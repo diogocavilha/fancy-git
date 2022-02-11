@@ -37,6 +37,14 @@ case "$1" in
     "--disable-double-line") fancygit_config_save "double_line" "false";;
     "--enable-rich-notification") fancygit_config_save "show_rich_notification" "true";;
     "--disable-rich-notification") fancygit_config_save "show_rich_notification" "false";;
+    "--enable-tag-name") fancygit_config_save "show_tag_name" "true";;
+    "--disable-tag-name") fancygit_config_save "show_tag_name" "false";;
+
+    # Set Name and Host
+    "--set-user-name") fancygit_config_save "user_name" "$2";;
+    "--unset-user-name") fancygit_config_save "user_name" "";;
+    "--set-host-name") fancygit_config_save "host_name" "$2";;
+    "--unset-host-name") fancygit_config_save "host_name" "";;
 
     # Separator styles.
     "--separator-default") fancygit_config_save "separator" "";;
