@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -285,6 +285,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://svenfinke.com"><img src="https://avatars1.githubusercontent.com/u/564499?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sven Finke</b></sub></a><br /><a href="#ideas-svenfinke" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/ibury08"><img src="https://avatars3.githubusercontent.com/u/24845508?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ibury08</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=ibury08" title="Code">💻</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/josip-trupina-47155ab5/"><img src="https://avatars.githubusercontent.com/u/2964787?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josip Trupina</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=jtrupina" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dquartino"><img src="https://avatars.githubusercontent.com/u/23630214?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Quartino</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=dquartino" title="Code">💻</a></td>
   </tr>
 </table>
 
