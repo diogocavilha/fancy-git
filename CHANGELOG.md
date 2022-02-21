@@ -2,6 +2,16 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.1.0
+
+- Add tag name instead of "HEAD"
+- Add `fancygit --set-user-name` command to set the user name.
+- Add `fancygit --unset-user-name` command to go back to the default user name.
+- Add `fancygit --set-host-name` command to set the host name.
+- Add `fancygit --unset-host-name` to go back to the default host name .
+- Add "neon" color scheme for default theme.
+- Add `fancygit --color-scheme-neon` command to select the color scheme. (Available for theme-default).
+
 ## v7.0.0
 
 **!! ATENTION !!**
