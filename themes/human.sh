@@ -59,9 +59,6 @@ fancygit_theme_builder() {
     local prompt_symbol
     local prompt_path
 
-    local show_tag_name
-    show_tag_name=$(fancygit_config_get "show_tag_name" "true")
-
     local user_name
     user_name=$(fancygit_config_get "user_name" "\\u")
 
@@ -109,7 +106,7 @@ fancygit_theme_builder() {
     # If we have a branch name, it means we are in a git repo, so we need to make some changes on PS1.
     branch_name=$(fancygit_git_get_branch)
 
-    if [ "HEAD" = "$branch_name" ] && [ "true" = "$show_tag_name" ]
+    if [ "HEAD" = "$branch_name" ]
     then
         branch_name="$(fancygit_git_get_tag)"
     fi

@@ -74,9 +74,6 @@ fancygit_theme_builder() {
     local prompt_double_line
     local is_rich_notification
 
-    local show_tag_name
-    show_tag_name=$(fancygit_config_get "show_tag_name" "true")
-
     local user_name
     user_name=$(fancygit_config_get "user_name" "\\u")
 
@@ -102,7 +99,9 @@ fancygit_theme_builder() {
         prompt_path="${path}${prompt_env} ${prompt_path} ${path_end}${workdir_color_tag}${separator}${none}"
         PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_double_line} "
         return
-    elif [ "HEAD" = "$branch_name" ] && [ "true" = "$show_tag_name" ]
+    fi
+    
+    if [ "HEAD" = "$branch_name" ]
     then
         branch_name=$(fancygit_git_get_tag)
     fi

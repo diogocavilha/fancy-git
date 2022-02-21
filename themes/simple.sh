@@ -74,10 +74,8 @@ __fancygit_theme_get_branch_area() {
     local is_rich_notification
     local branch_name
     local branch_status
-    local show_tag_name
 
     is_rich_notification=$(fancygit_config_get "show_rich_notification" "false")
-    show_tag_name=$(fancygit_config_get "show_tag_name" "true")
 
     branch_name=$(fancygit_git_get_branch)
     branch_status=$(fancygit_get_notification_area "$is_rich_notification")
@@ -90,7 +88,7 @@ __fancygit_theme_get_branch_area() {
             branch_status=" [ $(echo "$branch_status" | sed -e 's/^[[:space:]]*//') ]"
         fi
 
-        if [ "HEAD" = "$branch_name" ] && [ "true" = "$show_tag_name" ]
+        if [ "HEAD" = "$branch_name" ]
         then
             branch_name=$(fancygit_git_get_tag)
         fi
