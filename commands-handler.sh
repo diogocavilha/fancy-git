@@ -38,6 +38,12 @@ case "$1" in
     "--enable-rich-notification") fancygit_config_save "show_rich_notification" "true";;
     "--disable-rich-notification") fancygit_config_save "show_rich_notification" "false";;
 
+    # Set Name and Host
+    "--set-user-name") fancygit_config_save "user_name" "$2";;
+    "--unset-user-name") fancygit_config_save "user_name" "";;
+    "--set-host-name") fancygit_config_save "host_name" "$2";;
+    "--unset-host-name") fancygit_config_save "host_name" "";;
+
     # Separator styles.
     "--separator-default") fancygit_config_save "separator" "";;
     "--separator-blocs") fancygit_config_save "separator" "";;
@@ -61,6 +67,7 @@ case "$1" in
     "--color-scheme-robin") fancygit_theme_color_scheme_set "default_robin";;
     "--color-scheme-light") fancygit_theme_color_scheme_set "default_light";;
     "--color-scheme-superman") fancygit_theme_color_scheme_set "default_superman";;
+    "--color-scheme-neon") fancygit_theme_color_scheme_set "default_neon";;
 
     # Deprecated commands.
     "--config-reset") fancygit_app_command_deprecation_warning "--reset";;

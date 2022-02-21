@@ -59,6 +59,12 @@ fancygit_theme_builder() {
     local prompt_symbol
     local prompt_path
 
+    local user_name
+    user_name=$(fancygit_config_get "user_name" "\\u")
+
+    local host_name
+    host_name=$(fancygit_config_get "host_name" "\\h")
+
     # Get git repo info.
     branch_status=$(fancygit_git_get_status)
     staged_files=$(fancygit_git_get_staged_files)
@@ -94,11 +100,17 @@ fancygit_theme_builder() {
 
     if fancygit_config_is "show_user_at_machine" "true"
     then
-        prompt_user_at_host="${user}\\u${color_reset}${at} at ${color_reset}${host}\\h${color_reset}${user_at_host_end} in "
+        prompt_user_at_host="${user}${user_name}${color_reset}${at} at ${color_reset}${host}${host_name}${color_reset}${user_at_host_end} in "
     fi
 
     # If we have a branch name, it means we are in a git repo, so we need to make some changes on PS1.
     branch_name=$(fancygit_git_get_branch)
+
+    if [ "HEAD" = "$branch_name" ]
+    then
+        branch_name="$(fancygit_git_get_tag)"
+    fi
+
     if [ "${branch_name}" != "" ]
     then
         prompt_path="${path_git}${path_sign}${path_end}"

@@ -33,6 +33,8 @@ FEATURE SWITCHER COMMANDS:
    fancygit --disable-double-line                 Show a single line prompt.
    fancygit --enable-rich-notification            Show notification area with icons.
    fancygit --disable-rich-notification           Show notification area with simple symbols.
+   fancygit --enable-tag-name                     Show the current tag name.
+   fancygit --disable-tag-name                    Hide the current tag name.
 
 THEME COMMANDS:
    fancygit --theme-default                       Change prompt to the default theme.
@@ -48,6 +50,7 @@ COLOR SCHEME COMMANDS:
    fancygit --color-scheme-robin                  Available for theme-default.
    fancygit --color-scheme-superman               Available for theme-default.
    fancygit --color-scheme-light                  Available for theme-default.
+   fancygit --color-scheme-neon                   Available for theme-default.
 
 SEPARATOR STYLE COMMANDS:
    fancygit --separator-default                   Change the separator (if it's present on current theme) to default style.
@@ -57,6 +60,12 @@ SEPARATOR STYLE COMMANDS:
    fancygit --separator-fire                      Change the separator (if it's present on current theme) to fire style.
    fancygit --separator-lego                      Change the separator (if it's present on current theme) to lego style.
    fancygit --separator-paint                     Change the separator (if it's present on current theme) to paint style.
+
+SET USER AND HOST NAME:
+   fancygit --set-user-name {name}                Set the user name
+   fancygit --unset-user-name                     Restore the user name to default
+   fancygit --set-host-name {name}                Set the host name
+   fancygit --unset-host-name                     Restore the host name to default
 
 ICONS MEANING (rich notification area enabled):
         The current directory is a git repository.

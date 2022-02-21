@@ -74,6 +74,12 @@ fancygit_theme_builder() {
     local prompt_double_line
     local is_rich_notification
 
+    local user_name
+    user_name=$(fancygit_config_get "user_name" "\\u")
+
+    local host_name
+    host_name=$(fancygit_config_get "host_name" "\\h")
+
     # Get some theme config.
     prompt_time="${time}$(fancygit_theme_get_time)${time_end}"
     prompt_path=$(fancygit_theme_get_path_sign)
@@ -82,7 +88,7 @@ fancygit_theme_builder() {
 
     if fancygit_config_is "show_user_at_machine" "true"
     then
-        prompt_user="${user_at_host}${user}\\u${none}${at}@${none}${host}\\h${none} ${user_at_host_end}"
+        prompt_user="${user_at_host}${user}${user_name}${none}${at}@${none}${host}${host_name}${none} ${user_at_host_end}"
     fi
 
     branch_name=$(fancygit_git_get_branch)
@@ -93,6 +99,11 @@ fancygit_theme_builder() {
         prompt_path="${path}${prompt_env} ${prompt_path} ${path_end}${workdir_color_tag}${separator}${none}"
         PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_double_line} "
         return
+    fi
+    
+    if [ "HEAD" = "$branch_name" ]
+    then
+        branch_name=$(fancygit_git_get_tag)
     fi
 
     # We're in a git repo =D

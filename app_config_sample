@@ -8,4 +8,6 @@ double_line:false
 time_format:%H:%M:%S
 separator:
 ps2:➜
+user_name:
+host_name:
 fresh_file
