@@ -2,6 +2,10 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.1.1
+
+- Add "cga" color scheme for default theme.
+
 ## v7.1.0
 
 - Add tag name instead of "HEAD"
