@@ -68,6 +68,7 @@ case "$1" in
     "--color-scheme-light") fancygit_theme_color_scheme_set "default_light";;
     "--color-scheme-superman") fancygit_theme_color_scheme_set "default_superman";;
     "--color-scheme-neon") fancygit_theme_color_scheme_set "default_neon";;
+    "--color-scheme-cga") fancygit_theme_color_scheme_set "default_cga";;
 
     # Deprecated commands.
     "--config-reset") fancygit_app_command_deprecation_warning "--reset";;

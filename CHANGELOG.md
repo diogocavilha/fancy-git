@@ -6,6 +6,10 @@
 
 - Bug fix: Add a separator between time and username when they have the same background color. (It avoids a weird presentation).
 
+## v7.1.1
+
+- Add "cga" color scheme for default theme.
+
 ## v7.1.0
 
 - Add tag name instead of "HEAD"
