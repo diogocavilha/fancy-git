@@ -16,6 +16,8 @@ Please follow these steps:
 2. **Fork** the project.
 3. **Clone** the project to your own machine.
 4. Create a branch. (`git checkout -b your-branch-name` or `gcb your-branch-name`).
-5. **Commit** changes to the branch you've just created.
-6. **Push** your work back up to your fork.
-7. Submit a **Pull request** and take a coffee (or even better, you could take a coffee before it).
+    - Don't forget to change the `version.sh` file for creating the new version.
+    - Don't forget to update the `CHANGELOG.md` file by adding some topics containing briefs of the changes you did. As you can see, there are plenty of entries there, so it's quite simple to create yours by following some example.
+6. **Commit** changes to the branch you've just created.
+7. **Push** your work back up to your fork.
+8. Submit a **Pull Request** and take a coffee (or even better, you could take a coffee before it).
