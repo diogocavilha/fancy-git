@@ -2,6 +2,14 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.1.3
+
+- Improve "default_cga" colors for better contrast and readability.
+
+## v7.1.2
+
+- Bug fix: Add a separator between time and username when they have the same background color. (It avoids a weird presentation).
+
 ## v7.1.1
 
 - Add "cga" color scheme for default theme.
