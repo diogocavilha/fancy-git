@@ -24,6 +24,7 @@ fancygit_theme_builder() {
     # Create color tags to change prompt style.
     local time_color_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_TIME_FOREGROUND}m\\]"
     local time_color_bg_tag="\\[\\e[48;5;${FANCYGIT_COLOR_SCHEME_TIME_BACKGROUND}m\\]"
+    local time_symbol_color_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_TIME_BACKGROUND}m\\]"
     local user_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_USER_FOREGROUND}m\\]"
     local host_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_HOST_FOREGROUND}m\\]"
     local at_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_AT_FOREGROUND}m\\]"
@@ -73,6 +74,16 @@ fancygit_theme_builder() {
     local prompt_path
     local prompt_double_line
     local is_rich_notification
+    local time_raw
+
+    time_raw="$(fancygit_theme_get_time)"
+
+    # When time background color and user background color are the same, we need to add a separator between time and username.
+    # This prevents a weird presentation. Life is not easy :/
+    if [[ "$FANCYGIT_COLOR_SCHEME_TIME_BACKGROUND" != "$FANCYGIT_COLOR_SCHEME_USER_AT_HOST_BACKGROUND" && "" != "$time_raw" ]]
+    then
+        time_end="${bold_none}${bg_none}${time_symbol_color_tag}${user_at_host_color_bg_tag}${separator} "
+    fi
 
     local user_name
     user_name=$(fancygit_config_get "user_name" "\\u")
@@ -81,7 +92,7 @@ fancygit_theme_builder() {
     host_name=$(fancygit_config_get "host_name" "\\h")
 
     # Get some theme config.
-    prompt_time="${time}$(fancygit_theme_get_time)${time_end}"
+    prompt_time="${time}${time_raw}${time_end}"
     prompt_path=$(fancygit_theme_get_path_sign)
     prompt_symbol="${user_symbol} \$ ${user_symbol_end}"
     prompt_double_line=$(fancygit_theme_get_double_line)
@@ -100,7 +111,7 @@ fancygit_theme_builder() {
         PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_double_line} "
         return
     fi
-    
+
     if [ "HEAD" = "$branch_name" ]
     then
         branch_name=$(fancygit_git_get_tag)
