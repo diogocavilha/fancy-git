@@ -2,11 +2,6 @@
 # Themes will handle the color values properly.
 # You can check how that works here: https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
-# Black = 0
-# Magenta = 13
-# Cyan = 14
-# White = 15
-
 # TIME
 FANCYGIT_COLOR_SCHEME_TIME_BACKGROUND="0"
 FANCYGIT_COLOR_SCHEME_TIME_FOREGROUND="14"
