@@ -212,11 +212,10 @@ __fancygit_reset_update_checker() {
 # Show changelog content for the last version.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_changelog_show() {
-    sed '/####/q' "$FANCYGIT_CHANGELOG_FILE" \
-        | grep -oz '>.*' \
-        | sed 's/>/ >/' \
-        | sed 's/^## / /' \
-        | sed 's/^-/ -/' \
-        | sed 's/*/ */' \
-        | sed '/^#### v.*/d'
+    sed '0,/##/! s/## //g' "$FANCYGIT_CHANGELOG_FILE" \
+        | sed '/^v/q' \
+        | sed '/^v/d' \
+        | sed 's/^##/ Version:/' \
+        | sed '1,4d' \
+        | sed 's/-/ -/'
 }
