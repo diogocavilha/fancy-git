@@ -2,19 +2,19 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
-## v7.1.3
+#### v7.1.3
 
 - Improve "default_cga" colors for better contrast and readability.
 
-## v7.1.2
+#### v7.1.2
 
 - Bug fix: Add a separator between time and username when they have the same background color. (It avoids a weird presentation).
 
-## v7.1.1
+#### v7.1.1
 
 - Add "cga" color scheme for default theme.
 
-## v7.1.0
+#### v7.1.0
 
 - Add tag name instead of "HEAD"
 - Add `fancygit --set-user-name` command to set the user name.
@@ -24,7 +24,7 @@
 - Add "neon" color scheme for default theme.
 - Add `fancygit --color-scheme-neon` command to select the color scheme. (Available for theme-default).
 
-## v7.0.0
+#### v7.0.0
 
 **!! ATENTION !!**
 **THIS VERSION INTRODUCES LOTS OF BREAKING CHANGES!**
