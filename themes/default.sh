@@ -140,13 +140,7 @@ fancygit_theme_builder() {
     fi
 
     notification_area=$(fancygit_get_notification_area "$is_rich_notification")
-
-    if [ "" != "$notification_area" ]
-    then
-        notification_area="$notification_area "
-    fi
-
-    prompt_path="${path_git}${notification_area}${prompt_path} ${path_end}"
+    prompt_path="${path_git}${notification_area} ${prompt_path} ${path_end}"
     prompt_branch="${branch} $(fancygit_git_get_branch_icon "${branch_name}") ${branch_name} ${branch_end}"
     PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${prompt_double_line} "
 }
