@@ -64,7 +64,7 @@ __fancygit_get_rich_notification_area() {
     venv=$(__fancygit_get_venv_icon)
     notification_area="${venv}${icon_git_stash}${icon_untracked_files}${icon_changed_files}${icon_added_files}${icon_unpushed_commits}"
 
-    echo "${notification_area//[[:space:]]*$/} "
+    echo "${notification_area//[[:space:]]*$/}"
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -137,7 +137,7 @@ __fancygit_get_poor_notification_area() {
         # Trim notification_area content
         notification_area=$(echo "$notification_area" | sed -e 's/[[:space:]]*$//' | sed -e 's/^[[:space:]]*//')
 
-        echo " [ ${notification_area//[[:space:]]*$/} ] "
+        echo "${notification_area//[[:space:]]*$/}"
         return
     fi
 

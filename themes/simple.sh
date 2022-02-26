@@ -83,10 +83,7 @@ __fancygit_theme_get_branch_area() {
 
     if [ "$branch_status" != "" ]
     then
-        if [ "true" = "$is_rich_notification" ]
-        then
-            branch_status=" [ ${branch_status//^[[:space:]]*/} ]"
-        fi
+        branch_status=" [ ${branch_status//^[[:space:]]*/} ]"
 
         if [ "HEAD" = "$branch_name" ]
         then
