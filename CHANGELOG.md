@@ -2,6 +2,10 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.1.5
+
+- Fix code stye according to ShellCheck rules.
+
 ## v7.1.4
 
 - Fix changelog presentation after updating.
