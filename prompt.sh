@@ -5,6 +5,7 @@
 #
 # Changes de prompt by loading the style configured in ~/.fancygit/app_config file.
 
+# shellcheck source=/dev/null
 . "$HOME/.fancy-git/fancygit-completion"
 . "$HOME/.fancy-git/aliases"
 . "$HOME/.fancy-git/version.sh"

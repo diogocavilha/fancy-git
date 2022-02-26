@@ -71,14 +71,14 @@ __fancygit_update_checker() {
     local current_version
     local new_version
 
-    cd ~/.fancy-git
+    cd ~/.fancy-git || return
     current_version=$(git tag | tail -1)
 
     git fetch -t 2> /dev/null
     new_version=$(git tag | tail -1)
 
-    current_version_filter_number=$(echo "$current_version" | sed 's/[vV\.]//g')
-    new_version_filter_number=$(echo "$new_version" | sed 's/[vV\.]//g')
+    current_version_filter_number=${current_version//[vV\.]/}
+    new_version_filter_number=${new_version//[vV\.]/}
 
     if [[ "$current_version_filter_number" -lt "$new_version_filter_number" ]]
     then
@@ -170,7 +170,7 @@ __fancygit_create_app_config() {
 # Auxiliar function to help on version compatibility.
 # ----------------------------------------------------------------------------------------------------------------------
 __fancygit_copy_style_from_mode_file_to_app_config() {
-    if [ -f ~/.fancy-git/mode -a -f ~/.fancy-git/app_config ]
+    if [ -f ~/.fancy-git/mode ] && [ -f ~/.fancy-git/app_config ]
     then
         local style
         style=$(cat ~/.fancy-git/mode)

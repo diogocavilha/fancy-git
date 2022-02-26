@@ -22,7 +22,7 @@ fancygit_app_command_show_version() {
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Show default error message when a command is not found.
-# 
+#
 # param string $1 Command.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_app_command_not_found() {
@@ -93,7 +93,7 @@ fancygit_show_color_schemes() {
         printf "\nAll available color schemes:\n\n"
         tput sgr0
 
-        printf "%s\n" $(ls ${color_schemes_path}/* | sed "s,${color_schemes_path}/.*_,--color-scheme-,")
+        printf "%s\n" "$(find "${color_schemes_path}" | sed s,"${color_schemes_path}/.*_",--color-scheme-, | sed '1d')"
         echo ""
         return
     fi
@@ -102,10 +102,10 @@ fancygit_show_color_schemes() {
 
     tput bold
     tput setaf 2
-    printf "\nAvailable color schemes for current theme (--theme-${current_theme}):\n\n"
+    printf "\n%s\n\n" "Available color schemes for current theme (--theme-${current_theme}):"
     tput sgr0
 
-    printf "%s\n" $(ls ${color_schemes_path}/${current_theme}_* | sed "s,${color_schemes_path}/${current_theme}_,--color-scheme-,")
+    printf "%s\n" "$(find "${color_schemes_path}/${current_theme}"_* | sed "s,${color_schemes_path}/${current_theme}_,--color-scheme-,")"
     echo ""
 }
 
@@ -120,6 +120,6 @@ fancygit_show_themes() {
     printf "\nAll available themes:\n\n"
     tput sgr0
 
-    printf "%s\n" $(ls ${themes_path}/* | sed "s,${themes_path}/*,--theme-," | sed 's/.sh//')
+    printf "%s\n" "$(find "${themes_path}"/* | sed "s,${themes_path}/*,--theme-," | sed 's/.sh//')"
     echo ""
 }

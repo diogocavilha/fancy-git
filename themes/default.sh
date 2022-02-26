@@ -16,6 +16,7 @@ fancygit_theme_builder() {
     color_scheme=$(fancygit_config_get "color_scheme" "default_default")
 
     # Load the color scheme.
+    # shellcheck source=/dev/null
     . "${HOME}/.fancy-git/color_schemes/${color_scheme}"
 
     # !! WARNING !!

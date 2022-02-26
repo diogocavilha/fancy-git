@@ -5,6 +5,7 @@
 #
 # Commands manager.
 
+# shellcheck source=/dev/null
 . ~/.fancy-git/modules/settings-manager.sh
 . ~/.fancy-git/modules/git-manager.sh
 . ~/.fancy-git/modules/update-manager.sh

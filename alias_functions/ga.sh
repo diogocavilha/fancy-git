@@ -5,6 +5,6 @@
 #
 # git add
 
-git add $* && \
+git add "$*" && \
 clear && \
 git status

@@ -5,6 +5,6 @@
 #
 # git checkout --
 
-git checkout -- $* && \
+git checkout -- "$*" && \
 clear && \
 git status

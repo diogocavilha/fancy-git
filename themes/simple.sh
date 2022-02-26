@@ -16,6 +16,7 @@ fancygit_theme_builder() {
     color_scheme=$(fancygit_config_get "color_scheme" "simple_simple")
 
     # Load the color scheme.
+    # shellcheck source=/dev/null
     . "${HOME}/.fancy-git/color_schemes/${color_scheme}"
 
     # !! WARNING !!
@@ -79,13 +80,12 @@ __fancygit_theme_get_branch_area() {
 
     branch_name=$(fancygit_git_get_branch)
     branch_status=$(fancygit_get_notification_area "$is_rich_notification")
-    branch_status=$(echo "$branch_status" | sed -e 's/[[:space:]]*$//')
 
     if [ "$branch_status" != "" ]
     then
         if [ "true" = "$is_rich_notification" ]
         then
-            branch_status=" [ $(echo "$branch_status" | sed -e 's/^[[:space:]]*//') ]"
+            branch_status=" [ ${branch_status//^[[:space:]]*/} ]"
         fi
 
         if [ "HEAD" = "$branch_name" ]
