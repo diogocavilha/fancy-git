@@ -6,6 +6,7 @@
 
 - Fix code stye according to ShellCheck rules.
 - Remove commands to enable/disable tag name.
+- Fix minor bugs.
 
 ## v7.1.4
 
