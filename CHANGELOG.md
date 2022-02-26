@@ -5,6 +5,7 @@
 ## v7.1.5
 
 - Fix code stye according to ShellCheck rules.
+- Remove commands to enable/disable tag name.
 
 ## v7.1.4
 
