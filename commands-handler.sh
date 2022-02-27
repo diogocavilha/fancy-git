@@ -47,8 +47,8 @@ case "$1" in
 
     # Separator styles.
     "--separator-default") fancygit_config_save "separator" "";;
-    "--separator-blocs") fancygit_config_save "separator" "";;
-    "--separator-blocs-tiny") fancygit_config_save "separator" "";;
+    "--separator-blocks") fancygit_config_save "separator" "";;
+    "--separator-blocks-tiny") fancygit_config_save "separator" "";;
     "--separator-fire") fancygit_config_save "separator" "";;
     "--separator-lego") fancygit_config_save "separator" "";;
     "--separator-curve") fancygit_config_save "separator" "";;
@@ -72,6 +72,8 @@ case "$1" in
     "--color-scheme-cga") fancygit_theme_color_scheme_set "default_cga";;
 
     # Deprecated commands.
+    "--separator-blocs") fancygit_app_command_deprecation_warning "--separator-blocks";;
+    "--separator-blocs-tiny") fancygit_app_command_deprecation_warning "--separator-blocks-tiny";;
     "--config-reset") fancygit_app_command_deprecation_warning "--reset";;
     "--colors") fancygit_app_command_deprecation_warning "--suggested-global-git-config";;
     "--colors-set") fancygit_app_command_deprecation_warning "--suggested-global-git-config-apply";;
