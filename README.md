@@ -135,7 +135,26 @@ In order to install the fonts you can run `fancygit --fonts-install`.
 
 > Screenshot font: Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf  
 
-![Separators](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separators.png)
+**fancygit --separator-default**  
+![Separator default](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separator-default.png)
+
+**fancygit --separator-blocks**  
+![Separator blocks](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separator-blocks.png)
+
+**fancygit --separator-blocks-tiny**  
+![Separator blocks-tiny](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separator-blocks-tiny.png)
+
+**fancygit --separator-curve**  
+![Separator curve](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separator-curve.png)
+
+**fancygit --separator-fire**  
+![Separator fire](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separator-fire.png)
+
+**fancygit --separator-lego**  
+![Separator lego](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separator-lego.png)
+
+**fancygit --separator-paint**  
+![Separator paint](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/separator-paint.png)
 
 # :dizzy: Feature switchers
 
@@ -170,8 +189,8 @@ Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER
 | fancygit --enable-rich-notification          | Show notification area with icons.
 | fancygit --disable-rich-notification         | Show notification area with simple symbols.
 | fancygit --separator-default                 | Change the separator to default style.
-| fancygit --separator-blocs                   | Change the separator to blocs style.
-| fancygit --separator-blocs-tiny              | Change the separator to blocs-tiny style.
+| fancygit --separator-blocks                  | Change the separator to blocks style.
+| fancygit --separator-blocks-tiny             | Change the separator to blocks-tiny style.
 | fancygit --separator-fire                    | Change the separator to fire style.
 | fancygit --separator-lego                    | Change the separator to lego style.
 | fancygit --separator-curve                   | Change the separator to curve style.

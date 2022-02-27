@@ -54,8 +54,8 @@ COLOR SCHEME COMMANDS:
 
 SEPARATOR STYLE COMMANDS:
    fancygit --separator-default                   Change the separator (if it's present on current theme) to default style.
-   fancygit --separator-blocs                     Change the separator (if it's present on current theme) to blocs style.
-   fancygit --separator-blocs-tiny                Change the separator (if it's present on current theme) to blocs-tiny style.
+   fancygit --separator-blocks                    Change the separator (if it's present on current theme) to blocks style.
+   fancygit --separator-blocks-tiny               Change the separator (if it's present on current theme) to blocks-tiny style.
    fancygit --separator-curve                     Change the separator (if it's present on current theme) to curve style.
    fancygit --separator-fire                      Change the separator (if it's present on current theme) to fire style.
    fancygit --separator-lego                      Change the separator (if it's present on current theme) to lego style.

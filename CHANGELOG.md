@@ -2,6 +2,12 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.1.5
+
+- Update screenshots on readme file.
+- Replace `fancygit --separator-blocs` by `fancygit --separator-blocks`.
+- Replace `fancygit --separator-blocs-tiny` by `fancygit --separator-blocks-tiny`.
+
 ## v7.1.4
 
 - Fix changelog presentation after updating.
