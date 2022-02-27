@@ -104,6 +104,12 @@ Here you have a list of available themes and their corresponding color schemes.
 **fancygit --color-scheme-light**  
 ![Color scheme light](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-light.png)
 
+**fancygit --color-scheme-neon**  
+![Color scheme neon](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-neon.png)
+
+**fancygit --color-scheme-cga**  
+![Color scheme cga](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/color-scheme-cga.png)
+
 **fancygit --theme-human** (default color scheme: --color-scheme-human)  
 ![Theme human](https://github.com/diogocavilha/fancy-git/blob/master/images/screenshots/theme-human.png)
 
