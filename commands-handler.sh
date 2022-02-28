@@ -39,7 +39,7 @@ case "$1" in
     "--enable-rich-notification") fancygit_config_save "show_rich_notification" "true";;
     "--disable-rich-notification") fancygit_config_save "show_rich_notification" "false";;
 
-    # Set Name and Host
+    # Set Name and Host.
     "--set-user-name") fancygit_config_save "user_name" "$2";;
     "--unset-user-name") fancygit_config_save "user_name" "";;
     "--set-host-name") fancygit_config_save "host_name" "$2";;
@@ -96,6 +96,8 @@ case "$1" in
     "dark") fancygit_app_command_deprecation_warning "--color-scheme-batman";;
     "dark-col") fancygit_app_command_deprecation_warning "--color-scheme-robin";;
     "light") fancygit_app_command_deprecation_warning "--color-scheme-light";;
+
+    # Default.
     "") fancygit_app_command_return;;
     *) fancygit_app_command_not_found "$1";;
 esac
