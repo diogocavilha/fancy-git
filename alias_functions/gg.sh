@@ -12,4 +12,4 @@ msg="$1"
 
 git add --all && \
 git commit -m "$msg" && \
-git push origin $branch_name
+git push origin "$branch_name"

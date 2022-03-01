@@ -9,4 +9,4 @@
 
 new_branch_name="$1"
 
-git branch -m $new_branch_name
+git branch -m "$new_branch_name"

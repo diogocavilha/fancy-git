@@ -9,7 +9,7 @@ FANCYGIT_RUNNING_OS=$(uname)
 FANCYGIT_GIT_PATH=$(whereis git | cut -d ":" -f 2)
 
 errcho() {
-    >&2 echo $@;
+    >&2 echo "$@";
 }
 
 if [ "" = "$FANCYGIT_GIT_PATH" ]; then

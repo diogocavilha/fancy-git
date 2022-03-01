@@ -7,8 +7,8 @@
 
 venv_name="none"
 
-if ! [ -z ${VIRTUAL_ENV} ]; then
-    venv_name="`basename \"$VIRTUAL_ENV\"`"
+if [[ -n ${VIRTUAL_ENV} ]]; then
+    venv_name=$(basename "$VIRTUAL_ENV")
 fi
 
 echo ""

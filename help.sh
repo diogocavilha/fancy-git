@@ -33,8 +33,6 @@ FEATURE SWITCHER COMMANDS:
    fancygit --disable-double-line                 Show a single line prompt.
    fancygit --enable-rich-notification            Show notification area with icons.
    fancygit --disable-rich-notification           Show notification area with simple symbols.
-   fancygit --enable-tag-name                     Show the current tag name.
-   fancygit --disable-tag-name                    Hide the current tag name.
 
 THEME COMMANDS:
    fancygit --theme-default                       Change prompt to the default theme.

@@ -6,4 +6,4 @@
 # git checkout --track origin/<current_branch_name>
 
 branch_name="$1"
-git checkout --track origin/$branch_name
+git checkout --track origin/"$branch_name"

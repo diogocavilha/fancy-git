@@ -16,6 +16,7 @@ fancygit_theme_builder() {
     color_scheme=$(fancygit_config_get "color_scheme" "human_human")
 
     # Load the color scheme.
+    # shellcheck source=/dev/null
     . "${HOME}/.fancy-git/color_schemes/${color_scheme}"
 
     # !! WARNING !!
@@ -115,7 +116,7 @@ fancygit_theme_builder() {
     then
         prompt_path="${path_git}${path_sign}${path_end}"
         prompt_branch="${branch}${branch_name}${branch_end}"
-        PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} on ${prompt_branch}$(fancygit_get_notification_area "$is_rich_notification")"
+        PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} on ${prompt_branch} $(fancygit_get_notification_area "$is_rich_notification") "
         PS1="${PS1}${prompt_symbol}${is_double_line} "
         return
     fi

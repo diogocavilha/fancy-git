@@ -122,7 +122,7 @@ fancygit_git_get_branch() {
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_git_get_tag() {
     local tag
-    
+
     tag=$(git describe --tags --exact-match 2> /dev/null)
 
     if [ "" != "$tag" ]
@@ -158,7 +158,7 @@ fancygit_git_get_changed_files() {
 __fancygit_git_get_remote_branch() {
     local branch_name
 
-    branch_name=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null | cut -d"/" -f1)
+    branch_name=$(git rev-parse --abbrev-ref --symbolic-full-name "@{u}" 2> /dev/null | cut -d"/" -f1)
     branch_name=${branch_name:-origin}
     echo "$branch_name"
 }
@@ -195,11 +195,11 @@ git config --global color.status.untracked \"cyan\"
 # Apply the suggested global git config.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_git_suggested_git_config_apply() {
-    `git config --global color.ui true`
-    `git config --global color.diff.meta "yellow bold"`
-    `git config --global color.diff.old "red bold"`
-    `git config --global color.diff.new "green bold"`
-    `git config --global color.status.added "green bold"`
-    `git config --global color.status.changed "yellow"`
-    `git config --global color.status.untracked "cyan"`
+    eval git config --global color.ui true
+    eval git config --global color.diff.meta "yellow bold"
+    eval git config --global color.diff.old "red bold"
+    eval git config --global color.diff.new "green bold"
+    eval git config --global color.status.added "green bold"
+    eval git config --global color.status.changed "yellow"
+    eval git config --global color.status.untracked "cyan"
 }

@@ -3,5 +3,4 @@
 # Author: Diogo Alexsander Cavilha <diogocavilha@gmail.com>
 # Date:   11.17.2017
 
-FANCYGIT_VERSION="7.1.5"
-export FANCYGIT_VERSION
+export FANCYGIT_VERSION="7.1.6"

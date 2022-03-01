@@ -16,6 +16,7 @@ fancygit_theme_builder() {
     color_scheme=$(fancygit_config_get "color_scheme" "default_default")
 
     # Load the color scheme.
+    # shellcheck source=/dev/null
     . "${HOME}/.fancy-git/color_schemes/${color_scheme}"
 
     # !! WARNING !!
@@ -73,6 +74,7 @@ fancygit_theme_builder() {
     local prompt_env
     local prompt_path
     local prompt_double_line
+    local notification_area
     local is_rich_notification
     local time_raw
 
@@ -137,7 +139,8 @@ fancygit_theme_builder() {
         branch_end="${bg_none}${bold_none}${branch_color_staged_files_tag}${separator}${none}"
     fi
 
-    prompt_path="${path_git}$(fancygit_get_notification_area "$is_rich_notification")${prompt_path} ${path_end}"
+    notification_area=$(fancygit_get_notification_area "$is_rich_notification")
+    prompt_path="${path_git}${notification_area} ${prompt_path} ${path_end}"
     prompt_branch="${branch} $(fancygit_git_get_branch_icon "${branch_name}") ${branch_name} ${branch_end}"
     PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${prompt_double_line} "
 }

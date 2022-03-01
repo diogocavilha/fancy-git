@@ -6,4 +6,4 @@
 # git stash apply stash@{<stash_id>}
 
 stash_id="$1"
-git stash apply stash@{$stash_id}
+git stash apply "stash@{$stash_id}"

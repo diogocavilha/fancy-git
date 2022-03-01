@@ -20,7 +20,7 @@ fi
 git diff "$1"
 
 echo ""
-read -p " Add this file to commit? [y/N]: " r
+read -rp " Add this file to commit? [y/N]: " r
 
 if [ "$r" = "y" ]; then
     git add "$1"
@@ -29,7 +29,7 @@ if [ "$r" = "y" ]; then
     fg_return
 fi
 
-read -p " Rollback this file changes? [y/N]: " r
+read -rp " Rollback this file changes? [y/N]: " r
 
 if [ "$r" = "y" ]; then
     git checkout "$1"

@@ -7,4 +7,4 @@
 
 branch_name=$(git branch | grep -oP '(?<=\* ).*')
 
-git push origin $branch_name
+git push origin "$branch_name"

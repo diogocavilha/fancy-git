@@ -64,7 +64,7 @@ __fancygit_get_rich_notification_area() {
     venv=$(__fancygit_get_venv_icon)
     notification_area="${venv}${icon_git_stash}${icon_untracked_files}${icon_changed_files}${icon_added_files}${icon_unpushed_commits}"
 
-    echo "$notification_area "
+    echo "${notification_area//[[:space:]]*$/}"
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -136,7 +136,8 @@ __fancygit_get_poor_notification_area() {
     then
         # Trim notification_area content
         notification_area=$(echo "$notification_area" | sed -e 's/[[:space:]]*$//' | sed -e 's/^[[:space:]]*//')
-        echo " [ $notification_area ] "
+
+        echo "${notification_area//[[:space:]]*$/}"
         return
     fi
 
@@ -151,7 +152,7 @@ __fancygit_get_venv_icon() {
 
     icon_venv=" "
 
-    if ! [ -z $VIRTUAL_ENV ] || ([ "$CONDA_DEFAULT_ENV" != "base" ] && ! [ -z $CONDA_DEFAULT_ENV ])
+    if [[ -n $VIRTUAL_ENV ]] || [ "$CONDA_DEFAULT_ENV" != "base" ] && [[ -n $CONDA_DEFAULT_ENV ]]
     then
         echo "$icon_venv"
         return
@@ -164,15 +165,15 @@ __fancygit_get_venv_icon() {
 # Return the virtual environment name if it exists.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_theme_get_venv_name() {
-    if ! [ -z ${VIRTUAL_ENV} ]
+    if [[ -n ${VIRTUAL_ENV} ]]
     then
-        echo "$(basename ${VIRTUAL_ENV})"
+        printf "%s" "$(basename "${VIRTUAL_ENV}")"
         return
     fi
 
-    if ([ "$CONDA_DEFAULT_ENV" != "base" ] && ! [ -z ${CONDA_DEFAULT_ENV} ])
+    if [ "$CONDA_DEFAULT_ENV" != "base" ] && [[ -n ${CONDA_DEFAULT_ENV} ]]
     then
-        echo "$(basename ${CONDA_DEFAULT_ENV})"
+        printf "%s" "$(basename "${CONDA_DEFAULT_ENV}")"
         return
     fi
 
@@ -218,7 +219,7 @@ fancygit_theme_get_time() {
 fancygit_theme_get_double_line() {
     if fancygit_config_is "double_line" "true"
     then
-        echo "\n$(fancygit_config_get "ps2" "➜")"
+        printf "\n%s" "\n$(fancygit_config_get "ps2" "➜")"
     fi
 
     echo ""
@@ -246,7 +247,7 @@ fancygit_theme_color_scheme_set() {
     then
         tput bold
         tput setaf 3
-        printf "\n> Color scheme (--color-scheme-${color_scheme}) is not supported by current theme (--theme-${current_theme}).\n"
+        printf "\n%s\n" "> Color scheme (--color-scheme-${color_scheme}) is not supported by current theme (--theme-${current_theme})."
         printf "> Type \"fancygit --show-color-schemes\" to check available color schemes for current theme.\n\n"
         tput sgr0
         return
@@ -274,7 +275,7 @@ fancygit_theme_set() {
     then
         tput bold
         tput setaf 3
-        printf "\n> You're already using --theme-${param_theme_name}\n\n"
+        printf "\n%s\n\n" "> You're already using --theme-${param_theme_name}"
         tput sgr0
         return
     fi

@@ -5,6 +5,7 @@
 #
 # git pull
 
+# shellcheck source=/dev/null
 . ~/.fancy-git/random_messages.sh
 
 run() {
