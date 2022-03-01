@@ -13,7 +13,7 @@
 
 FancyGit is a tool which works for Linux and MAC OS, that changes the terminal prompt in order to show you a few cool git informations when you're working on a git repo. It'll always keep you informed about the current branch status.
 
-:rocket: [Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md) | :monocle_face: [Changelog](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md) | :hammer: [Troubleshooting](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
+:rocket: [Contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md) | :monocle_face: [Changelog](https://github.com/diogocavilha/fancy-git/blob/master/CHANGELOG.md) | :hammer: [Troubleshooting](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
 # :cupid: Installing
 
@@ -280,14 +280,6 @@ FANCYGIT_ICON_HAS_ADDED_FILES
 # Unpushed commits.
 FANCYGIT_ICON_HAS_UNPUSHED_COMMITS
 ```
-
-# :pick: Troubleshooting
-
-[Troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
-
-# :rocket: Contributing
-
-[Guidelines for contributing](https://github.com/diogocavilha/fancy-git/blob/master/CONTRIBUTING.md#rocket-contributing-to-fancygit)
 
 # Contributors ✨
 
