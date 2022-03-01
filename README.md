@@ -189,6 +189,10 @@ Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER
 | fancygit --disable-double-line               | Show a single line prompt.
 | fancygit --enable-rich-notification          | Show notification area with icons.
 | fancygit --disable-rich-notification         | Show notification area with simple symbols.
+| fancygit --set-user-name {name}              | Set the user name.
+| fancygit --unset-user-name                   | Restore the user name to default.
+| fancygit --set-host-name {name}              | Set the host name.
+| fancygit --unset-host-name                   | Restore the host name to default.
 | fancygit --separator-default                 | Change the separator to default style.
 | fancygit --separator-blocks                  | Change the separator to blocks style.
 | fancygit --separator-blocks-tiny             | Change the separator to blocks-tiny style.
