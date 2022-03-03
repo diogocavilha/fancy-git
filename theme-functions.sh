@@ -145,6 +145,18 @@ __fancygit_get_poor_notification_area() {
 }
 
 # ----------------------------------------------------------------------------------------------------------------------
+# Return a boolean informing if there is a conda virtualenv.
+# ----------------------------------------------------------------------------------------------------------------------
+__has_conda_env() {
+    if [ "$CONDA_DEFAULT_ENV" != "base" ] && [[ -n $CONDA_DEFAULT_ENV ]]
+    then
+        return 0
+    fi
+
+    return 1
+}
+
+# ----------------------------------------------------------------------------------------------------------------------
 # Return the icon that indicates we're working in a virtual environment.
 # ----------------------------------------------------------------------------------------------------------------------
 __fancygit_get_venv_icon() {
@@ -152,7 +164,7 @@ __fancygit_get_venv_icon() {
 
     icon_venv=" "
 
-    if [[ -n $VIRTUAL_ENV ]] || [ "$CONDA_DEFAULT_ENV" != "base" ] && [[ -n $CONDA_DEFAULT_ENV ]]
+    if [[ -n $VIRTUAL_ENV ]] || __has_conda_env
     then
         echo "$icon_venv"
         return
@@ -165,13 +177,13 @@ __fancygit_get_venv_icon() {
 # Return the virtual environment name if it exists.
 # ----------------------------------------------------------------------------------------------------------------------
 fancygit_theme_get_venv_name() {
-    if [[ -n ${VIRTUAL_ENV} ]]
+    if [[ -n $VIRTUAL_ENV ]]
     then
         printf "%s" "$(basename "${VIRTUAL_ENV}")"
         return
     fi
 
-    if [ "$CONDA_DEFAULT_ENV" != "base" ] && [[ -n ${CONDA_DEFAULT_ENV} ]]
+    if __has_conda_env
     then
         printf "%s" "$(basename "${CONDA_DEFAULT_ENV}")"
         return
@@ -219,7 +231,7 @@ fancygit_theme_get_time() {
 fancygit_theme_get_double_line() {
     if fancygit_config_is "double_line" "true"
     then
-        printf "\n%s" "\n$(fancygit_config_get "ps2" "➜")"
+        printf "\n%s" "$(fancygit_config_get "ps2" "➜")"
     fi
 
     echo ""

@@ -7,7 +7,7 @@
 
 venv_name="none"
 
-if [[ -n ${VIRTUAL_ENV} ]]; then
+if [ -n "${VIRTUAL_ENV}" ]; then
     venv_name=$(basename "$VIRTUAL_ENV")
 fi
 
