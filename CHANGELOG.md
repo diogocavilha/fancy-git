@@ -2,6 +2,12 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.1.7
+
+- Fix double line for default theme.
+- Fix "pve" command.
+- Fix python virtualenv checking.
+
 ## v7.1.6
 
 - Fix code stye according to ShellCheck rules.
