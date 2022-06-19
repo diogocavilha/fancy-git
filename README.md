@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Build](https://github.com/diogocavilha/fancy-git/actions/workflows/main.yml/badge.svg)](https://github.com/diogocavilha/fancy-git/actions/workflows/main.yml)
@@ -308,6 +308,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.linkedin.com/in/josip-trupina-47155ab5/"><img src="https://avatars.githubusercontent.com/u/2964787?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josip Trupina</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=jtrupina" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/dquartino"><img src="https://avatars.githubusercontent.com/u/23630214?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Quartino</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=dquartino" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/rafaelbdb"><img src="https://avatars.githubusercontent.com/u/3081776?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Borjovsky</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=rafaelbdb" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/EDIflyer"><img src="https://avatars.githubusercontent.com/u/13610277?v=4?s=100" width="100px;" alt=""/><br /><sub><b>EDIflyer</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=EDIflyer" title="Code">💻</a></td>
   </tr>
 </table>
 
