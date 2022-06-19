@@ -7,6 +7,7 @@
 
 FANCYGIT_RUNNING_OS=$(uname)
 FANCYGIT_GIT_PATH=$(whereis git | cut -d ":" -f 2)
+FANCYGIT_FONTCONFIG_PATH=$(dpkg-query -l fontconfig 2>&1)   #redirect STDERR to STDOUT to capture output
 
 errcho() {
     >&2 echo "$@";
@@ -15,6 +16,13 @@ errcho() {
 if [ "" = "$FANCYGIT_GIT_PATH" ]; then
     errcho ""
     errcho " ⚠ Please install git before running this command."
+    errcho ""
+    exit 0
+fi
+
+if [ "dpkg-query: no packages found matching fontconfig" = "$FANCYGIT_FONTCONFIG_PATH" ]; then
+    errcho ""
+    errcho " ⚠ Please install fontconfig before running this command."
     errcho ""
     exit 0
 fi
