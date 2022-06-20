@@ -20,11 +20,17 @@ if [ "" = "$FANCYGIT_GIT_PATH" ]; then
     exit 0
 fi
 
-if [ "dpkg-query: no packages found matching fontconfig" = "$FANCYGIT_FONTCONFIG_PATH" ]; then
-    errcho ""
-    errcho " ⚠ Please install fontconfig before running this command."
-    errcho ""
-    exit 0
+if [ "--nofontconfig" = "$1" ]; then
+    echo "--nofontconfig selected: skipping fontconfig check"
+else
+    if [ "dpkg-query: no packages found matching fontconfig" = "$FANCYGIT_FONTCONFIG_PATH" ]; then
+        errcho ""
+        errcho " ⚠ Please either install fontconfig before running this command"
+        errcho "   or use the --nofontconfig option to install fancygit"
+        errcho "   without fontconfig present - e.g., if only using SSH"
+        errcho ""
+        exit 0
+    fi
 fi
 
 git clone https://github.com/diogocavilha/fancy-git.git ~/.fancy-git
@@ -51,11 +57,15 @@ if [ "Darwin" = "$FANCYGIT_RUNNING_OS" ]; then
     cat ~/.fancy-git/app_config_sample > ~/.fancy-git/app_config
 fi
 
-mkdir -p ~/.fonts
-cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
-cp -i ~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf ~/.fonts
-cp -i ~/.fancy-git/fonts/DejaVu-Sans-Mono-Nerd-Font-Complete.ttf ~/.fonts
-cp -i ~/.fancy-git/fonts/DejaVu-Sans-Mono-Nerd-Font-Complete-Mono.ttf ~/.fonts
-cp -i ~/.fancy-git/fonts/JetBrains-Mono-Regular-Nerd-Font-Complete-Mono.ttf ~/.fonts
-cp -i ~/.fancy-git/fonts/JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf ~/.fonts
-fc-cache -fv
+if [ "--nofontconfig" = "$1" ]; then
+    echo "--nofontconfig selected: skipping font installation"
+else
+    mkdir -p ~/.fonts
+    cp -i ~/.fancy-git/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts
+    cp -i ~/.fancy-git/fonts/Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible.ttf ~/.fonts
+    cp -i ~/.fancy-git/fonts/DejaVu-Sans-Mono-Nerd-Font-Complete.ttf ~/.fonts
+    cp -i ~/.fancy-git/fonts/DejaVu-Sans-Mono-Nerd-Font-Complete-Mono.ttf ~/.fonts
+    cp -i ~/.fancy-git/fonts/JetBrains-Mono-Regular-Nerd-Font-Complete-Mono.ttf ~/.fonts
+    cp -i ~/.fancy-git/fonts/JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf ~/.fonts
+    fc-cache -fv
+fi
