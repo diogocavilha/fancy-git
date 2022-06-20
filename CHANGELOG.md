@@ -2,6 +2,9 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.1.9
+- Add --nofontconfig option to install.sh to skip creation of ~/.fonts and requirement for fontconfig to be installed (useful option for those only accessing a headless server via SSH where the font needs to be set on their local terminal application)
+
 ## v7.1.8
 - Update installed to check fontconfig is installed prior to running script
 
