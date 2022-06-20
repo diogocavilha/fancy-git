@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Build](https://github.com/diogocavilha/fancy-git/actions/workflows/main.yml/badge.svg)](https://github.com/diogocavilha/fancy-git/actions/workflows/main.yml)
@@ -309,6 +309,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/dquartino"><img src="https://avatars.githubusercontent.com/u/23630214?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Quartino</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=dquartino" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/rafaelbdb"><img src="https://avatars.githubusercontent.com/u/3081776?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Borjovsky</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=rafaelbdb" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/EDIflyer"><img src="https://avatars.githubusercontent.com/u/13610277?v=4?s=100" width="100px;" alt=""/><br /><sub><b>EDIflyer</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=EDIflyer" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/gghgaby"><img src="https://avatars.githubusercontent.com/u/20984473?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gaby</b></sub></a><br /><a href="#financial-gghgaby" title="Financial">💵</a></td>
   </tr>
 </table>
 
