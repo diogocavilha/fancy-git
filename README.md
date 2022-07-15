@@ -37,6 +37,7 @@ curl -sS https://raw.githubusercontent.com/diogocavilha/fancy-git/master/uninsta
    - **JetBrains-Mono-Medium-Nerd-Font-Complete-Mono.ttf**.  
    It's necessary for rendering icons/symbols properly.  
    If you can't find the font, it's still possible to install it manually by running `fancygit --fonts-install` or even installing the ttf file which is placed at `~/.fancy-git/fonts/`.
+   NB for Windows Terminal only the Sauce Code option above will display git icons correctly.
 2. Restart your terminal.
 
 Run `fancygit -h` to check FancyGit help.
