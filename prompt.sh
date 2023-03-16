@@ -26,6 +26,8 @@ function fancygit_theme_handler() {
             . "$HOME/.fancy-git/themes/human.sh";;
         "simple")
             . "$HOME/.fancy-git/themes/simple.sh";;
+        "pill")
+            . "$HOME/.fancy-git/themes/pill.sh";;
     esac
 }
 

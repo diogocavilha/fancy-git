@@ -58,6 +58,7 @@ case "$1" in
     "--theme-default") fancygit_theme_set "default" "true";;
     "--theme-human") fancygit_theme_set "human" "false";;
     "--theme-simple") fancygit_theme_set "simple" "false";;
+    "--theme-pill") fancygit_theme_set "pill" "true";;
 
     # Color schemes.
     "--color-scheme-simple") fancygit_theme_color_scheme_set "simple_simple";;
@@ -70,6 +71,7 @@ case "$1" in
     "--color-scheme-superman") fancygit_theme_color_scheme_set "default_superman";;
     "--color-scheme-neon") fancygit_theme_color_scheme_set "default_neon";;
     "--color-scheme-cga") fancygit_theme_color_scheme_set "default_cga";;
+    "--color-scheme-pill") fancygit_theme_color_scheme_set "pill_pill";;
 
     # Deprecated commands.
     "--separator-blocs") fancygit_app_command_deprecation_warning "--separator-blocks";;

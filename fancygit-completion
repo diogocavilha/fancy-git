@@ -40,6 +40,7 @@ _fancygit() {
         --theme-default \
         --theme-human \
         --theme-simple \
+        --theme-pill \
         --color-scheme-simple \
         --color-scheme-human \
         --color-scheme-default \
@@ -50,6 +51,7 @@ _fancygit() {
         --color-scheme-neon \
         --color-scheme-cga \
         --color-scheme-superman \
+        --color-scheme-pill \
         --reset
     '
 
