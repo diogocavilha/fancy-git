@@ -52,7 +52,14 @@ _fancygit() {
         --color-scheme-cga \
         --color-scheme-superman \
         --color-scheme-pill \
-        --reset
+        --color-scheme-pill-dracula \
+        --color-scheme-pill-batman \
+        --color-scheme-pill-robin \
+        --color-scheme-pill-light \
+        --color-scheme-pill-superman \
+        --color-scheme-pill-neon \
+        --color-scheme-pill-cga \
+        --reset \
     '
 
     if [[ ${cur} == * ]] ; then

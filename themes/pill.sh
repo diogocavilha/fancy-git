@@ -54,8 +54,8 @@ fancygit_theme_builder() {
     local separator_init
     local separator
     # separator=$(fancygit_config_get "separator" "")
-    separator_init=""
-    separator=""
+    separator_init=""
+    separator=""
 
     local icon_git_repo=""
     local user="${user_color_font_tag}"
