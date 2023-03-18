@@ -58,6 +58,7 @@ case "$1" in
     "--theme-default") fancygit_theme_set "default" "true";;
     "--theme-human") fancygit_theme_set "human" "false";;
     "--theme-simple") fancygit_theme_set "simple" "false";;
+    "--theme-pill") fancygit_theme_set "pill" "true";;
 
     # Color schemes.
     "--color-scheme-simple") fancygit_theme_color_scheme_set "simple_simple";;
@@ -70,6 +71,14 @@ case "$1" in
     "--color-scheme-superman") fancygit_theme_color_scheme_set "default_superman";;
     "--color-scheme-neon") fancygit_theme_color_scheme_set "default_neon";;
     "--color-scheme-cga") fancygit_theme_color_scheme_set "default_cga";;
+    "--color-scheme-pill") fancygit_theme_color_scheme_set "pill_pill";;
+    "--color-scheme-pill-dracula") fancygit_theme_color_scheme_set "pill_dracula";;
+    "--color-scheme-pill-batman") fancygit_theme_color_scheme_set "pill_batman";;
+    "--color-scheme-pill-robin") fancygit_theme_color_scheme_set "pill_robin";;
+    "--color-scheme-pill-light") fancygit_theme_color_scheme_set "pill_light";;
+    "--color-scheme-pill-superman") fancygit_theme_color_scheme_set "pill_superman";;
+    "--color-scheme-pill-neon") fancygit_theme_color_scheme_set "pill_neon";;
+    "--color-scheme-pill-cga") fancygit_theme_color_scheme_set "pill_cga";;
 
     # Deprecated commands.
     "--separator-blocs") fancygit_app_command_deprecation_warning "--separator-blocks";;

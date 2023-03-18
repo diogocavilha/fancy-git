@@ -38,6 +38,7 @@ THEME COMMANDS:
    fancygit --theme-default                       Change prompt to the default theme.
    fancygit --theme-human                         Change prompt to the human theme readable theme.
    fancygit --theme-simple                        Change prompt to the simple theme.
+   fancygit --theme-pill                          Change prompt to the pill theme.
 
 COLOR SCHEME COMMANDS:
    fancygit --color-scheme-simple                 Available for theme-simple.
@@ -49,6 +50,14 @@ COLOR SCHEME COMMANDS:
    fancygit --color-scheme-superman               Available for theme-default.
    fancygit --color-scheme-light                  Available for theme-default.
    fancygit --color-scheme-neon                   Available for theme-default.
+   fancygit --color-scheme-pill                   Available for theme-pill.
+   fancygit --color-scheme-pill-dracula           Available for theme-pill.
+   fancygit --color-scheme-pill-batman            Available for theme-pill.
+   fancygit --color-scheme-pill-robin             Available for theme-pill.
+   fancygit --color-scheme-pill-light             Available for theme-pill.
+   fancygit --color-scheme-pill-superman          Available for theme-pill.
+   fancygit --color-scheme-pill-neon              Available for theme-pill.
+   fancygit --color-scheme-pill-cga               Available for theme-pill.
 
 SEPARATOR STYLE COMMANDS:
    fancygit --separator-default                   Change the separator (if it's present on current theme) to default style.
