@@ -46,6 +46,14 @@ fancygit_theme_builder() {
     local venv_name
     local branch_area
     local where
+    local bold_prompt=""
+    local normal_prompt=""
+
+    if fancygit_config_is "bold_prompt" "true"
+    then
+        bold_prompt="$(tput bold)"
+        normal_prompt="$(tput sgr0)"
+    fi
 
     # Get theme config.
     prompt_time="$(fancygit_theme_get_time)"
@@ -65,7 +73,7 @@ fancygit_theme_builder() {
         venv_name="($venv_name) "
     fi
 
-    PS1="${venv_name}${prompt_time}${user_at_host}$where\$${branch_area}${is_double_line} "
+    PS1="${bold_prompt}${venv_name}${prompt_time}${user_at_host}$where\$${branch_area}${is_double_line}${normal_prompt} "
 }
 
 # ----------------------------------------------------------------------------------------------------------------------

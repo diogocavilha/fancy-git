@@ -49,6 +49,15 @@ fancygit_theme_builder() {
     local none="\\[\\e[39m\\]"
     local bold_none="\\[\\e[0m\\]"
     local bg_none="\\[\\e[49m\\]"
+    local bold_prompt=""
+    local normal_prompt=""
+
+    if fancygit_config_is "bold_prompt" "true"
+    then
+        bold_none=""
+        bold_prompt="$(tput bold)"
+        normal_prompt="$(tput sgr0)"
+    fi
 
     # Prompt style
     local separator
@@ -110,7 +119,7 @@ fancygit_theme_builder() {
         # No branch found, so we're not in a git repo.
         prompt_env=$(__fancygit_get_venv_icon)
         prompt_path="${path}${prompt_env} ${prompt_path} ${path_end}${workdir_color_tag}${separator}${none}"
-        PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_double_line} "
+        PS1="${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_double_line}${normal_prompt} "
         return
     fi
 
@@ -142,7 +151,7 @@ fancygit_theme_builder() {
     notification_area=$(fancygit_get_notification_area "$is_rich_notification")
     prompt_path="${path_git}${notification_area} ${prompt_path} ${path_end}"
     prompt_branch="${branch} $(fancygit_git_get_branch_icon "${branch_name}") ${branch_name} ${branch_end}"
-    PS1="${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${prompt_double_line} "
+    PS1="${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${prompt_double_line}${normal_prompt} "
 }
 
 # Here's where the magic happens!

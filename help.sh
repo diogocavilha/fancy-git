@@ -33,6 +33,8 @@ FEATURE SWITCHER COMMANDS:
    fancygit --disable-double-line                 Show a single line prompt.
    fancygit --enable-rich-notification            Show notification area with icons.
    fancygit --disable-rich-notification           Show notification area with simple symbols.
+   fancygit --enable-bold-prompt                  Show bold prompt font.
+   fancygit --disable-bold-prompt                 Show regular prompt font.
 
 THEME COMMANDS:
    fancygit --theme-default                       Change prompt to the default theme.
