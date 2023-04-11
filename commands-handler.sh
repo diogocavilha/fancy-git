@@ -68,6 +68,7 @@ case "$1" in
     # Color schemes.
     "--color-scheme-simple") fancygit_theme_color_scheme_set "simple_simple";;
     "--color-scheme-human") fancygit_theme_color_scheme_set "human_human";;
+    "--color-scheme-human-dracula") fancygit_theme_color_scheme_set "human_dracula";;
     "--color-scheme-default") fancygit_theme_color_scheme_set "default_default";;
     "--color-scheme-dracula") fancygit_theme_color_scheme_set "default_dracula";;
     "--color-scheme-batman") fancygit_theme_color_scheme_set "default_batman";;
