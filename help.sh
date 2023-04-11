@@ -35,6 +35,8 @@ FEATURE SWITCHER COMMANDS:
    fancygit --disable-rich-notification           Show notification area with simple symbols.
    fancygit --enable-bold-prompt                  Show bold prompt font.
    fancygit --disable-bold-prompt                 Show regular prompt font.
+   fancygit --enable-host-name                    Show host name. (It works for human theme only)
+   fancygit --disable-host-name                   Hide host name. (It works for human theme only)
 
 THEME COMMANDS:
    fancygit --theme-default                       Change prompt to the default theme.

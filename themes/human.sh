@@ -84,6 +84,11 @@ fancygit_theme_builder() {
     prompt_symbol="${user_symbol}\$${user_symbol_end}"
     prompt_path="${path}${path_sign}${path_end}${color_reset}"
 
+    if fancygit_config_is "show_user_symbol_prompt" "false"
+    then
+        prompt_symbol=""
+    fi
+
     if [ "$branch_status" != "" ]
     then
         branch="${branch_color_changed_files_font_tag}"
@@ -104,6 +109,11 @@ fancygit_theme_builder() {
     if fancygit_config_is "show_user_at_machine" "true"
     then
         prompt_user_at_host="${user}${user_name}${color_reset}${at} at ${color_reset}${host}${host_name}${color_reset}${user_at_host_end} in "
+    fi
+
+    if fancygit_config_is "show_host_prompt" "false"
+    then
+        prompt_user_at_host="${user}${user_name}${color_reset} in "
     fi
 
     if fancygit_config_is "bold_prompt" "true"

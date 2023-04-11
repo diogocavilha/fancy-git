@@ -68,6 +68,11 @@ fancygit_theme_builder() {
         user_at_host="$user$at$host:"
     fi
 
+    if fancygit_config_is "show_host_prompt" "false"
+    then
+        user_at_host="$user:"
+    fi
+
     if [ "" != "$venv_name" ]
     then
         venv_name="($venv_name) "

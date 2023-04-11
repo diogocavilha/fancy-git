@@ -191,6 +191,10 @@ Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER
 | fancygit --disable-rich-notification         | Show notification area with simple symbols.
 | fancygit --enable-bold-prompt                | Show bold prompt font.
 | fancygit --disable-bold-prompt               | Show regular prompt font.
+| fancygit --enable-host-name                  | Show host name.
+| fancygit --disable-host-name                 | Hide host name.
+| fancygit --enable-user-symbol                | Show user symbol.
+| fancygit --disable-user-symbol               | Hide user symbol.
 | fancygit --set-user-name {name}              | Set the user name.
 | fancygit --unset-user-name                   | Restore the user name to default.
 | fancygit --set-host-name {name}              | Set the host name.

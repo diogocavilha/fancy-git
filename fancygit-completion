@@ -27,6 +27,10 @@ _fancygit() {
         --disable-rich-notification \
         --enable-bold-prompt \
         --disable-bold-prompt \
+        --enable-host-name \
+        --disable-host-name \
+        --enable-user-symbol \
+        --disable-user-symbol \
         --set-user-name \
         --unset-user-name \
         --set-host-name \
