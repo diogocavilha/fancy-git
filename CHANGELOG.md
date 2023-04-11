@@ -2,6 +2,9 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.5.1
+- Improve human dracula color-scheme branch color.
+
 ## v7.5.0
 - Add `fancygit --color-scheme-human-dracula` command to select the color scheme human dracula. (Available for theme-human).
 
