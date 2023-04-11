@@ -84,6 +84,11 @@ fancygit_theme_builder() {
     prompt_symbol="${user_symbol}\$${user_symbol_end}"
     prompt_path="${path}${path_sign}${path_end}${color_reset}"
 
+    if fancygit_config_is "show_user_symbol_prompt" "false"
+    then
+        prompt_symbol=""
+    fi
+
     if [ "$branch_status" != "" ]
     then
         branch="${branch_color_changed_files_font_tag}"
