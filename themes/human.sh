@@ -59,6 +59,8 @@ fancygit_theme_builder() {
     local venv_name
     local prompt_symbol
     local prompt_path
+    local bold_prompt=""
+    local normal_prompt=""
 
     local user_name
     user_name=$(fancygit_config_get "user_name" "\\u")
@@ -104,6 +106,12 @@ fancygit_theme_builder() {
         prompt_user_at_host="${user}${user_name}${color_reset}${at} at ${color_reset}${host}${host_name}${color_reset}${user_at_host_end} in "
     fi
 
+    if fancygit_config_is "bold_prompt" "true"
+    then
+        bold_prompt="$(tput bold)"
+        normal_prompt="$(tput sgr0)"
+    fi
+
     # If we have a branch name, it means we are in a git repo, so we need to make some changes on PS1.
     branch_name=$(fancygit_git_get_branch)
 
@@ -117,11 +125,11 @@ fancygit_theme_builder() {
         prompt_path="${path_git}${path_sign}${path_end}"
         prompt_branch="${branch}${branch_name}${branch_end}"
         PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} on ${prompt_branch} $(fancygit_get_notification_area "$is_rich_notification")"
-        PS1="${PS1}${prompt_symbol}${is_double_line} "
+        PS1="${bold_prompt}${PS1}${prompt_symbol}${is_double_line}${normal_prompt} "
         return
     fi
 
-    PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} ${prompt_symbol}${is_double_line} "
+    PS1="${bold_prompt}${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} ${prompt_symbol}${is_double_line}${normal_prompt} "
 }
 
 # Here's where the magic happens!

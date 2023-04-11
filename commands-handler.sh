@@ -38,6 +38,8 @@ case "$1" in
     "--disable-double-line") fancygit_config_save "double_line" "false";;
     "--enable-rich-notification") fancygit_config_save "show_rich_notification" "true";;
     "--disable-rich-notification") fancygit_config_save "show_rich_notification" "false";;
+    "--enable-bold-prompt") fancygit_config_save "bold_prompt" "true";;
+    "--disable-bold-prompt") fancygit_config_save "bold_prompt" "false";;
 
     # Set Name and Host.
     "--set-user-name") fancygit_config_save "user_name" "$2";;

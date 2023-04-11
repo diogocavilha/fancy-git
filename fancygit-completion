@@ -25,6 +25,8 @@ _fancygit() {
         --disable-double-line \
         --enable-rich-notification \
         --disable-rich-notification \
+        --enable-bold-prompt \
+        --disable-bold-prompt \
         --set-user-name \
         --unset-user-name \
         --set-host-name \

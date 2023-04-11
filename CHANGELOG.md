@@ -2,6 +2,10 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.3.0
+- Add `fancygit --enable-bold-prompt` command to show prompt in bold font.
+- Add `fancygit --disable-bold-prompt` command to show prompt in regular font.
+
 ## v7.2.0
 - Fix theme human prompt space between symbols.
 
