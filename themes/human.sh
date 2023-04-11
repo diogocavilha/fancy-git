@@ -106,6 +106,11 @@ fancygit_theme_builder() {
         prompt_user_at_host="${user}${user_name}${color_reset}${at} at ${color_reset}${host}${host_name}${color_reset}${user_at_host_end} in "
     fi
 
+    if fancygit_config_is "show_host_prompt" "false"
+    then
+        prompt_user_at_host="${user}${user_name}${color_reset} in "
+    fi
+
     if fancygit_config_is "bold_prompt" "true"
     then
         bold_prompt="$(tput bold)"

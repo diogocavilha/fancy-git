@@ -113,6 +113,11 @@ fancygit_theme_builder() {
         prompt_user="${user_at_host}${user}${user_name}${none}${at}@${none}${host}${host_name}${none} ${user_at_host_end}"
     fi
 
+    if fancygit_config_is "show_host_prompt" "false"
+    then
+        prompt_user="${user_at_host}${user}${user_name}${none}${none} ${user_at_host_end}"
+    fi
+
     branch_name=$(fancygit_git_get_branch)
     if [ "" = "$branch_name" ]
     then
