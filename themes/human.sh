@@ -27,6 +27,7 @@ fancygit_theme_builder() {
     local user_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_USER_FOREGROUND}m\\]"
     local host_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_HOST_FOREGROUND}m\\]"
     local at_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_AT_FOREGROUND}m\\]"
+    local preposition_color="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_PREPOSITION_FOREGROUND}m\\]"
     local user_symbol_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_USER_SYMBOL_FOREGROUND}m\\]"
     local workdir_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_WORKDIR_FOREGROUND}m\\]"
     local branch_color_staged_files_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_BRANCH_STAGED_FILES_FOREGROUND}m\\]"
@@ -113,7 +114,7 @@ fancygit_theme_builder() {
 
     if fancygit_config_is "show_host_prompt" "false"
     then
-        prompt_user_at_host="${user}${user_name}${color_reset} in "
+        prompt_user_at_host="${user}${user_name}${color_reset}${preposition_color} in "
     fi
 
     if fancygit_config_is "bold_prompt" "true"
@@ -134,7 +135,7 @@ fancygit_theme_builder() {
     then
         prompt_path="${path_git}${path_sign}${path_end}"
         prompt_branch="${branch}${branch_name}${branch_end}"
-        PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} on ${prompt_branch} $(fancygit_get_notification_area "$is_rich_notification")"
+        PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name}${preposition_color} on ${prompt_branch} $(fancygit_get_notification_area "$is_rich_notification")"
         PS1="${bold_prompt}${PS1}${prompt_symbol}${is_double_line}${normal_prompt} "
         return
     fi

@@ -46,6 +46,7 @@ THEME COMMANDS:
 COLOR SCHEME COMMANDS:
    fancygit --color-scheme-simple                 Available for theme-simple.
    fancygit --color-scheme-human                  Available for theme-human.
+   fancygit --color-scheme-human-dracula          Available for theme-human.
    fancygit --color-scheme-default                Available for theme-default.
    fancygit --color-scheme-dracula                Available for theme-default.
    fancygit --color-scheme-batman                 Available for theme-default.

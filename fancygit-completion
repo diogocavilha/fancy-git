@@ -48,6 +48,7 @@ _fancygit() {
         --theme-simple \
         --color-scheme-simple \
         --color-scheme-human \
+        --color-scheme-human-dracula \
         --color-scheme-default \
         --color-scheme-dracula \
         --color-scheme-batman \
