@@ -137,7 +137,7 @@ __fancygit_get_poor_notification_area() {
         # Trim notification_area content
         notification_area=$(echo "$notification_area" | sed -e 's/[[:space:]]*$//' | sed -e 's/^[[:space:]]*//')
 
-        echo "${notification_area//[[:space:]]*$/} "
+        echo "${notification_area//[[:space:]]*$/}"
         return
     fi
 

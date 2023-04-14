@@ -119,8 +119,8 @@ fancygit_theme_builder() {
 
     if fancygit_config_is "bold_prompt" "true"
     then
-        bold_prompt="$(tput bold)"
-        normal_prompt="$(tput sgr0)"
+        bold_prompt="\\[\\e[1m\\]"
+        normal_prompt="\\[\\e[0m\\]"
     fi
 
     # If we have a branch name, it means we are in a git repo, so we need to make some changes on PS1.
@@ -140,7 +140,7 @@ fancygit_theme_builder() {
         return
     fi
 
-    PS1="${bold_prompt}${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} ${prompt_symbol}${is_double_line}${normal_prompt} "
+    PS1="${bold_prompt}${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name}${prompt_symbol}${is_double_line}${normal_prompt} "
 }
 
 # Here's where the magic happens!
