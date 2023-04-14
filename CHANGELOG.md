@@ -2,6 +2,11 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.5.3
+- Fix 4 stuck characters when navigating through history commands.
+- Fix prompt color leak for default theme.
+- Fix human theme double space after notification area.
+
 ## v7.5.2
 - Improve human dracula color-scheme branch color.
 
