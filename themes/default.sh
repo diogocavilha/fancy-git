@@ -47,14 +47,14 @@ fancygit_theme_builder() {
     local branch_color_bg_tag="\\[\\e[48;5;${FANCYGIT_COLOR_SCHEME_BRANCH_BACKGROUND}m\\]"
     local branch_color_font_tag="\\[\\e[38;5;${FANCYGIT_COLOR_SCHEME_BRANCH_FOREROUND}m\\]"
     local none="\\[\\e[39m\\]"
-    local bold_none="\\[\\e[0m\\]"
+    local clear="\\[\\e[0m\\]"
     local bg_none="\\[\\e[49m\\]"
     local bold_prompt=""
     local normal_prompt=""
 
     if fancygit_config_is "bold_prompt" "true"
     then
-        bold_none=""
+        clear=""
         bold_prompt="\\[\\e[1m\\]"
         normal_prompt="\\[\\e[0m\\]"
     fi
@@ -68,16 +68,16 @@ fancygit_theme_builder() {
     local at="${at_color_font_tag}"
     local host="${host_color_font_tag}"
     local user_at_host="${user_at_host_color_bg_tag}"
-    local user_at_host_end="${bold_none}${bg_none}${user_at_host_color_tag}${user_symbol_color_bg_tag}${separator}"
+    local user_at_host_end="${user_at_host_color_tag}${user_symbol_color_bg_tag}${separator}"
     local user_symbol="${user_symbol_color_bg_tag}${user_symbol_color_font_tag}"
-    local user_symbol_end="${none}${bold_none}${bg_none}${user_symbol_color_tag}${workdir_color_bg_tag}${separator}"
+    local user_symbol_end="${none}${user_symbol_color_tag}${workdir_color_bg_tag}${separator}"
     local path="${workdir_color_bg_tag}${workdir_color_font_tag}"
     local path_git="${workdir_color_bg_tag}${workdir_color_font_tag} ${icon_git_repo} "
-    local path_end="${none}${bold_none}"
+    local path_end="${none}"
     local branch="${workdir_color_tag}${branch_color_bg_tag}${separator}${branch_color_font_tag}"
-    local branch_end="${branch_color_tag}${bg_none}${separator}${bold_none}${none}"
+    local branch_end="${branch_color_tag}${bg_none}${separator}${none}"
     local time="${time_color_bg_tag}${time_color_tag}"
-    local time_end="${bold_none}${bg_none}"
+    local time_end=""
     local prompt_time
     local prompt_user
     local prompt_env
@@ -93,7 +93,7 @@ fancygit_theme_builder() {
     # This prevents a weird presentation. Life is not easy :/
     if [[ "$FANCYGIT_COLOR_SCHEME_TIME_BACKGROUND" != "$FANCYGIT_COLOR_SCHEME_USER_AT_HOST_BACKGROUND" && "" != "$time_raw" ]]
     then
-        time_end="${bold_none}${bg_none}${time_symbol_color_tag}${user_at_host_color_bg_tag}${separator} "
+        time_end="${time_symbol_color_tag}${user_at_host_color_bg_tag}${separator} "
     fi
 
     local user_name
@@ -123,8 +123,8 @@ fancygit_theme_builder() {
     then
         # No branch found, so we're not in a git repo.
         prompt_env=$(__fancygit_get_venv_icon)
-        prompt_path="${path}${prompt_env} ${prompt_path} ${path_end}${workdir_color_tag}${separator}${none}"
-        PS1="${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_double_line}${normal_prompt} "
+        prompt_path="${path}${prompt_env} ${prompt_path} ${path_end}${workdir_color_tag}${bg_none}${separator}${none}"
+        PS1="${clear}${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${clear}${normal_prompt}${prompt_double_line} "
         return
     fi
 
@@ -143,20 +143,20 @@ fancygit_theme_builder() {
     if [ "" != "$(fancygit_git_get_status)" ]
     then
         branch="${workdir_color_tag}${branch_color_changed_files_bg_tag}${separator}${branch_color_changed_files_font_tag}"
-        branch_end="${bg_none}${bold_none}${branch_color_changed_files_tag}${separator}${none}"
+        branch_end="${branch_color_changed_files_tag}${bg_none}${separator}${none}"
     fi
 
     # Configure a specific background color to branch name, if it has staged files.
     if [ "" != "$(fancygit_git_get_staged_files)" ]
     then
         branch="${workdir_color_tag}${branch_color_staged_files_bg_tag}${separator}${branch_color_staged_files_font_tag}"
-        branch_end="${bg_none}${bold_none}${branch_color_staged_files_tag}${separator}${none}"
+        branch_end="${branch_color_staged_files_tag}${bg_none}${separator}${none}"
     fi
 
     notification_area=$(fancygit_get_notification_area "$is_rich_notification")
     prompt_path="${path_git}${notification_area} ${prompt_path} ${path_end}"
     prompt_branch="${branch} $(fancygit_git_get_branch_icon "${branch_name}") ${branch_name} ${branch_end}"
-    PS1="${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${prompt_double_line}${normal_prompt} "
+    PS1="${clear}${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${clear}${normal_prompt}${prompt_double_line} "
 }
 
 # Here's where the magic happens!
