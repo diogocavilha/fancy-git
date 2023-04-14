@@ -140,7 +140,7 @@ fancygit_theme_builder() {
         return
     fi
 
-    PS1="${bold_prompt}${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name} ${prompt_symbol}${is_double_line}${normal_prompt} "
+    PS1="${bold_prompt}${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name}${prompt_symbol}${is_double_line}${normal_prompt} "
 }
 
 # Here's where the magic happens!
