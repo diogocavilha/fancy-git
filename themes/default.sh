@@ -55,8 +55,8 @@ fancygit_theme_builder() {
     if fancygit_config_is "bold_prompt" "true"
     then
         bold_none=""
-        bold_prompt="$(tput bold)"
-        normal_prompt="$(tput sgr0)"
+        bold_prompt="\\[\\e[1m\\]"
+        normal_prompt="\\[\\e[0m\\]"
     fi
 
     # Prompt style
