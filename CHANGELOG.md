@@ -2,6 +2,9 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.5.4
+- Fix double space after branch name when using human theme and double line mode is disabled.
+
 ## v7.5.3
 - Fix 4 stuck characters when navigating through history commands.
 - Fix prompt color leak for default theme.
