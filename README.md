@@ -199,6 +199,8 @@ Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER
 | fancygit --unset-user-name                   | Restore the user name to default.
 | fancygit --set-host-name {name}              | Set the host name.
 | fancygit --unset-host-name                   | Restore the host name to default.
+| fancygit --enable-git-clear                  | Clear the terminal as part of some git aliases
+| fancygit --disable-git-clear                 | Do not clear the terminal with any git aliases
 | fancygit --separator-default                 | Change the separator to default style.
 | fancygit --separator-blocks                  | Change the separator to blocks style.
 | fancygit --separator-blocks-tiny             | Change the separator to blocks-tiny style.

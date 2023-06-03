@@ -1,5 +1,5 @@
 alias fancygit="sh ~/.fancy-git/commands-handler.sh $1"
-alias gs="clear && git status"
+alias gs="sh ~/.fancy-git/alias_functions/gs.sh"
 alias ga="sh ~/.fancy-git/alias_functions/ga.sh"
 alias gap="git add -p"
 alias gaa="sh ~/.fancy-git/alias_functions/gaa.sh"
