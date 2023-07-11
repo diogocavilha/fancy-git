@@ -60,8 +60,10 @@ fancygit_theme_builder() {
     local venv_name
     local prompt_symbol
     local prompt_path
+    local term_title
     local bold_prompt=""
     local normal_prompt=""
+    local term_title_tag="\\[\\e]0;\\h:\\w\\a\\]"
 
     local user_name
     user_name=$(fancygit_config_get "user_name" "\\u")
@@ -88,6 +90,11 @@ fancygit_theme_builder() {
     if fancygit_config_is "show_user_symbol_prompt" "false"
     then
         prompt_symbol=""
+    fi
+
+    if fancygit_config_is "set_term_title" "true"
+    then
+        term_title="${term_title_tag}"
     fi
 
     if [ "$branch_status" != "" ]
@@ -136,11 +143,11 @@ fancygit_theme_builder() {
         prompt_path="${path_git}${path_sign}${path_end}"
         prompt_branch="${branch}${branch_name}${branch_end}"
         PS1="${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name}${preposition_color} on ${prompt_branch}$(fancygit_get_notification_area "$is_rich_notification")"
-        PS1="${bold_prompt}${PS1}${prompt_symbol}${is_double_line}${normal_prompt} "
+        PS1="${term_title}${bold_prompt}${PS1}${prompt_symbol}${is_double_line}${normal_prompt} "
         return
     fi
 
-    PS1="${bold_prompt}${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name}${prompt_symbol}${is_double_line}${normal_prompt} "
+    PS1="${term_title}${bold_prompt}${prompt_time}${prompt_user_at_host}${prompt_path}${venv_name}${prompt_symbol}${is_double_line}${normal_prompt} "
 }
 
 # Here's where the magic happens!

@@ -195,6 +195,8 @@ Type `fancygit -h` to see all available feature switchers on **"FEATURE SWITCHER
 | fancygit --disable-host-name                 | Hide host name.
 | fancygit --enable-user-symbol                | Show user symbol.
 | fancygit --disable-user-symbol               | Hide user symbol.
+| fancygit --enable-term-title                 | Enables terminal title bar setting.
+| fancygit --disable-term-title                | Disables terminal title bar setting.
 | fancygit --set-user-name {name}              | Set the user name.
 | fancygit --unset-user-name                   | Restore the user name to default.
 | fancygit --set-host-name {name}              | Set the host name.

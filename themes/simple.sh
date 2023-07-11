@@ -41,6 +41,7 @@ fancygit_theme_builder() {
     local at="${at_color_font_tag}@${color_reset}"
     local path="${workdir_color_font_tag}"
     local prompt_time
+    local term_title
     local path_sign
     local is_double_line
     local venv_name
@@ -48,6 +49,7 @@ fancygit_theme_builder() {
     local where
     local bold_prompt=""
     local normal_prompt=""
+    local term_title_tag="\\[\\e]0;\\h:\\w\\a\\]"
 
     if fancygit_config_is "bold_prompt" "true"
     then
@@ -73,12 +75,17 @@ fancygit_theme_builder() {
         user_at_host="$user:"
     fi
 
+    if fancygit_config_is "set_term_title" "true"
+    then
+        term_title="${term_title}"
+    fi
+
     if [ "" != "$venv_name" ]
     then
         venv_name="($venv_name) "
     fi
 
-    PS1="${bold_prompt}${venv_name}${prompt_time}${user_at_host}$where\$${branch_area}${is_double_line}${normal_prompt} "
+    PS1="${term_title}${bold_prompt}${venv_name}${prompt_time}${user_at_host}$where\$${branch_area}${is_double_line}${normal_prompt} "
 }
 
 # ----------------------------------------------------------------------------------------------------------------------

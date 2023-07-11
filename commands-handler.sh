@@ -42,6 +42,8 @@ case "$1" in
     "--disable-bold-prompt") fancygit_config_save "bold_prompt" "false";;
     "--enable-host-name") fancygit_config_save "show_host_prompt" "true";;
     "--disable-host-name") fancygit_config_save "show_host_prompt" "false";;
+    "--enable-term-title") fancygit_config_save "set_term_title" "true";;
+    "--disable-term-title") fancygit_config_save "set_term_title" "false";;
     "--enable-user-symbol") fancygit_config_save "show_user_symbol_prompt" "true";;
     "--disable-user-symbol") fancygit_config_save "show_user_symbol_prompt" "false";;
 
