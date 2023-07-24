@@ -63,7 +63,6 @@ fancygit_theme_builder() {
     local term_title
     local bold_prompt=""
     local normal_prompt=""
-    local term_title_tag="\\[\\e]0;\\h:\\w\\a\\]"
 
     local user_name
     user_name=$(fancygit_config_get "user_name" "\\u")
@@ -92,10 +91,16 @@ fancygit_theme_builder() {
         prompt_symbol=""
     fi
 
-    if fancygit_config_is "set_term_title" "true"
+    local term_title_tag="\\[\\e]0;"
+    if fancygit_config_is "set_term_title_host" "true"
     then
-        term_title="${term_title_tag}"
+        term_title_tag="${term_title_tag}\\h:"
     fi
+    if fancygit_config_is "set_term_title_path" "true"
+    then
+        term_title_tag="${term_title_tag}\\w"
+    fi
+    term_title="${term_title_tag}\\a\\]"
 
     if [ "$branch_status" != "" ]
     then

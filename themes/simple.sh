@@ -49,7 +49,6 @@ fancygit_theme_builder() {
     local where
     local bold_prompt=""
     local normal_prompt=""
-    local term_title_tag="\\[\\e]0;\\h:\\w\\a\\]"
 
     if fancygit_config_is "bold_prompt" "true"
     then
@@ -75,10 +74,16 @@ fancygit_theme_builder() {
         user_at_host="$user:"
     fi
 
-    if fancygit_config_is "set_term_title" "true"
+    local term_title_tag="\\[\\e]0;"
+    if fancygit_config_is "set_term_title_host" "true"
     then
-        term_title="${term_title}"
+        term_title_tag="${term_title_tag}\\h:"
     fi
+    if fancygit_config_is "set_term_title_path" "true"
+    then
+        term_title_tag="${term_title_tag}\\w"
+    fi
+    term_title="${term_title_tag}\\a\\]"
 
     if [ "" != "$venv_name" ]
     then

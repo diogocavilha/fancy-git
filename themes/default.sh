@@ -51,7 +51,6 @@ fancygit_theme_builder() {
     local bg_none="\\[\\e[49m\\]"
     local bold_prompt=""
     local normal_prompt=""
-    local term_title_tag="\\[\\e]0;\\h:\\w\\a\\]"
 
     if fancygit_config_is "bold_prompt" "true"
     then
@@ -120,10 +119,16 @@ fancygit_theme_builder() {
         prompt_user="${user_at_host}${user}${user_name}${none}${none} ${user_at_host_end}"
     fi
 
-    if fancygit_config_is "set_term_title" "true"
+    local term_title_tag="\\[\\e]0;"
+    if fancygit_config_is "set_term_title_host" "true"
     then
-        term_title="${term_title_tag}"
+        term_title_tag="${term_title_tag}\\h:"
     fi
+    if fancygit_config_is "set_term_title_path" "true"
+    then
+        term_title_tag="${term_title_tag}\\w"
+    fi
+    term_title="${term_title_tag}\\a\\]"
 
     branch_name=$(fancygit_git_get_branch)
     if [ "" = "$branch_name" ]
