@@ -63,7 +63,7 @@ fancygit_theme_builder() {
     local separator
     separator=$(fancygit_config_get "separator" "")
 
-    local icon_git_repo=""
+    local icon_git_repo="${FANCYGIT_ICON_GIT_REPO:-}"
     local user="${user_color_font_tag}"
     local at="${at_color_font_tag}"
     local host="${host_color_font_tag}"
