@@ -266,6 +266,9 @@ FANCYGIT_ICON_LOCAL_REMOTE_BRANCH=""
 Here you can see a list of available environment variables FancyGit will search and replace:
 
 ```sh
+# Path is a git repository
+FANCYGIT_ICON_GIT_REPO
+
 # Only local branch icon.
 FANCYGIT_ICON_LOCAL_BRANCH
 
@@ -289,6 +292,9 @@ FANCYGIT_ICON_HAS_ADDED_FILES
 
 # Unpushed commits.
 FANCYGIT_ICON_HAS_UNPUSHED_COMMITS
+
+# Path is a python virtual environment
+FANCYGIT_ICON_VENV
 ```
 
 # Contributors ✨

@@ -162,7 +162,7 @@ __has_conda_env() {
 __fancygit_get_venv_icon() {
     local icon_venv
 
-    icon_venv=" "
+    icon_venv=" ${FANCYGIT_ICON_VENV:-}"
 
     if [[ -n $VIRTUAL_ENV ]] || __has_conda_env
     then
