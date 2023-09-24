@@ -42,6 +42,10 @@ case "$1" in
     "--disable-bold-prompt") fancygit_config_save "bold_prompt" "false";;
     "--enable-host-name") fancygit_config_save "show_host_prompt" "true";;
     "--disable-host-name") fancygit_config_save "show_host_prompt" "false";;
+    "--enable-term-title-host") fancygit_config_save "set_term_title_host" "true";;
+    "--disable-term-title-host") fancygit_config_save "set_term_title_host" "false";;
+    "--enable-term-title-path") fancygit_config_save "set_term_title_path" "true";;
+    "--disable-term-title-path") fancygit_config_save "set_term_title_path" "false";;
     "--enable-user-symbol") fancygit_config_save "show_user_symbol_prompt" "true";;
     "--disable-user-symbol") fancygit_config_save "show_user_symbol_prompt" "false";;
 

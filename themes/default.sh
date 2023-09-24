@@ -80,6 +80,7 @@ fancygit_theme_builder() {
     local time_end=""
     local prompt_time
     local prompt_user
+    local term_title
     local prompt_env
     local prompt_path
     local prompt_double_line
@@ -118,13 +119,24 @@ fancygit_theme_builder() {
         prompt_user="${user_at_host}${user}${user_name}${none}${none} ${user_at_host_end}"
     fi
 
+    local term_title_tag="\\[\\e]0;"
+    if fancygit_config_is "set_term_title_host" "true"
+    then
+        term_title_tag="${term_title_tag}\\h:"
+    fi
+    if fancygit_config_is "set_term_title_path" "true"
+    then
+        term_title_tag="${term_title_tag}\\w"
+    fi
+    term_title="${term_title_tag}\\a\\]"
+
     branch_name=$(fancygit_git_get_branch)
     if [ "" = "$branch_name" ]
     then
         # No branch found, so we're not in a git repo.
         prompt_env=$(__fancygit_get_venv_icon)
         prompt_path="${path}${prompt_env} ${prompt_path} ${path_end}${workdir_color_tag}${bg_none}${separator}${none}"
-        PS1="${clear}${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${clear}${normal_prompt}${prompt_double_line} "
+        PS1="${term_title}${clear}${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${clear}${normal_prompt}${prompt_double_line} "
         return
     fi
 
@@ -156,7 +168,7 @@ fancygit_theme_builder() {
     notification_area=$(fancygit_get_notification_area "$is_rich_notification")
     prompt_path="${path_git}${notification_area} ${prompt_path} ${path_end}"
     prompt_branch="${branch} $(fancygit_git_get_branch_icon "${branch_name}") ${branch_name} ${branch_end}"
-    PS1="${clear}${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${clear}${normal_prompt}${prompt_double_line} "
+    PS1="${term_title}${clear}${bold_prompt}${prompt_time}${prompt_user}${prompt_symbol}${prompt_path}${prompt_branch}${clear}${normal_prompt}${prompt_double_line} "
 }
 
 # Here's where the magic happens!

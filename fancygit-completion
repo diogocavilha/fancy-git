@@ -31,6 +31,10 @@ _fancygit() {
         --disable-host-name \
         --enable-user-symbol \
         --disable-user-symbol \
+        --enable-term-title-host \
+        --disable-term-title-host \
+        --enable-term-title-path \
+        --disable-term-title-path \
         --set-user-name \
         --unset-user-name \
         --set-host-name \

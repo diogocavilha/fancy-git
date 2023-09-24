@@ -37,6 +37,10 @@ FEATURE SWITCHER COMMANDS:
    fancygit --disable-bold-prompt                 Show regular prompt font.
    fancygit --enable-host-name                    Show host name. (It works for human theme only)
    fancygit --disable-host-name                   Hide host name. (It works for human theme only)
+   fancygit --enable-term-title-host              Enables setting the hostname in the terminal title bar.
+   fancygit --disable-term-title-host             Disables setting the hostname in the terminal title bar.
+   fancygit --enable-term-title-path              Enables setting the path in the terminal title bar.
+   fancygit --disable-term-title-path             Disables setting the path in the terminal title bar.
 
 THEME COMMANDS:
    fancygit --theme-default                       Change prompt to the default theme.
