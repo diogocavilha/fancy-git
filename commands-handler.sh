@@ -44,6 +44,8 @@ case "$1" in
     "--disable-host-name") fancygit_config_save "show_host_prompt" "false";;
     "--enable-user-symbol") fancygit_config_save "show_user_symbol_prompt" "true";;
     "--disable-user-symbol") fancygit_config_save "show_user_symbol_prompt" "false";;
+    "--enable-git-clear") fancygit_config_save "git_use_clear" "true";;
+    "--disable-git-clear") fancygit_config_save "git_use_clear" "false";;
 
     # Set Name and Host.
     "--set-user-name") fancygit_config_save "user_name" "$2";;

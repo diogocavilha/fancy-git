@@ -5,6 +5,11 @@
 #
 # git add
 
+. ~/.fancy-git/modules/settings-manager.sh
+git_use_clear=$(fancygit_config_get "git_use_clear" "true")
+
 git add "$*" && \
-clear && \
+if [ "$git_use_clear" = "true" ]; then \
+  clear; \
+fi && \
 git status

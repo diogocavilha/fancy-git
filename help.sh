@@ -37,6 +37,8 @@ FEATURE SWITCHER COMMANDS:
    fancygit --disable-bold-prompt                 Show regular prompt font.
    fancygit --enable-host-name                    Show host name. (It works for human theme only)
    fancygit --disable-host-name                   Hide host name. (It works for human theme only)
+   fancygit --enable-git-clear                    Clear the terminal as part of some git aliases
+   fancygit --disable-git-clear                   Do not clear the terminal with any git aliases
 
 THEME COMMANDS:
    fancygit --theme-default                       Change prompt to the default theme.

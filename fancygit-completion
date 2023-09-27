@@ -31,6 +31,8 @@ _fancygit() {
         --disable-host-name \
         --enable-user-symbol \
         --disable-user-symbol \
+        --enable-git-clear \
+        --disable-git-clear \
         --set-user-name \
         --unset-user-name \
         --set-host-name \
