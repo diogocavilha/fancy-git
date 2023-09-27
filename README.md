@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Build](https://github.com/diogocavilha/fancy-git/actions/workflows/main.yml/badge.svg)](https://github.com/diogocavilha/fancy-git/actions/workflows/main.yml)
@@ -329,6 +329,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gghgaby"><img src="https://avatars.githubusercontent.com/u/20984473?v=4?s=100" width="100px;" alt="Gaby"/><br /><sub><b>Gaby</b></sub></a><br /><a href="#financial-gghgaby" title="Financial">💵</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nboehm99"><img src="https://avatars.githubusercontent.com/u/15960192?v=4?s=100" width="100px;" alt="nboehm99"/><br /><sub><b>nboehm99</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=nboehm99" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://jumptuck.com"><img src="https://avatars.githubusercontent.com/u/367685?v=4?s=100" width="100px;" alt="Mike Szczys"/><br /><sub><b>Mike Szczys</b></sub></a><br /><a href="https://github.com/diogocavilha/fancy-git/commits?author=szczys" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
