@@ -148,6 +148,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "szczys",
+      "name": "Mike Szczys",
+      "avatar_url": "https://avatars.githubusercontent.com/u/367685?v=4",
+      "profile": "http://jumptuck.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
