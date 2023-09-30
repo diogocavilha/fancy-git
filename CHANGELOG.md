@@ -2,6 +2,9 @@
 
 > Any trouble, please visit the [troubleshooting page](https://github.com/diogocavilha/fancy-git/blob/master/TROUBLESHOOTING.md)
 
+## v7.6.1
+- Fix shellcheck issues.
+
 ## v7.6.0
 - Add `fancygit --enable-git-clear` command to clear terminal on some Git aliases (ga, gaa, gck, gd, gs).
 - Add `fancygit --disable-git-clear` command to prevent clearing terminal on some Git aliases (ga, gaa, gck, gd, gs).
