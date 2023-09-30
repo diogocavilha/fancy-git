@@ -5,6 +5,7 @@
 #
 # git add --all
 
+# shellcheck source=/dev/null
 . ~/.fancy-git/modules/settings-manager.sh
 git_use_clear=$(fancygit_config_get "git_use_clear" "true")
 
